@@ -9,7 +9,7 @@ const allowedHosts = {
 // allowedDomains = ["www.peripay.com", "peri2.wpenginepowered.com", "hollandersostg.wpengine.com"];
 
 const getCurrentHost = () => {
-    return Object.keys(allowedHosts).find(key => allowedHosts[key] === window.location.hostname) || false;
+    return Object.keys(allowedHosts).find(key => allowedHosts[key] === window.location.hostname) || !1;
 };
 
 const validateEmail = (email) => {
