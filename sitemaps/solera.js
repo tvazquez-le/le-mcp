@@ -54,90 +54,91 @@ const globalOnAction = (actionEvent) => {
                 { name: "global_exit_intent" }
             ]
         },
-        pageTypes: [{
-            name: "per - home",
-            isMatch: () => /^\//.test(window.location.pathname),
-            interaction: {
-                name: "PER - Home Page"
-            },
-            listeners: [
-                _.listener("click", "a[href='/#contact']", () => {
-                    _.sendEvent({
-                        interaction: {
-                            name: "PER-Access Contact Us"
-                        }
-                    });
-                }),
-                _.listener("click", "a[href='https://www.ucp-inc.com/peristore']", () => {
-                    _.sendEvent({
-                        interaction: {
-                            name: "PER-Click To Peri Store"
-                        }
-                    });
-                }),
-                _.listener("click", "rs-layer[data-type='button']", () => {
-                    _.sendEvent({
-                        interaction: {
-                            name: "PER-Access Contact Us"
-                        }
-                    });
-                }),
-                _.listener("click", "a[href='tel:888-974-2952']", () => {
-                    _.sendEvent({
-                        interaction: {
-                            name: "PER-Click To Call"
-                        }
-                    });
-                }),
-                _.listener("submit", "#gform_1", () => {
-                    let email = _.cashDom("#input_1_2")?.val();
-                    let firstName = _.cashDom("#input_1_1_3")?.val();
-                    let lastName = _.cashDom("#input_1_1_6")?.val();
-                    let business = _.cashDom("#input_1_4")?.val();
-                    let phone = _.cashDom("#input_1_3")?.val();
-
-                    if (validateEmail(email)) {
+        pageTypes: [
+            {
+                name: "per - home",
+                isMatch: () => /^\//.test(window.location.pathname),
+                interaction: {
+                    name: "PER - Home Page"
+                },
+                listeners: [
+                    _.listener("click", "a[href='/#contact']", () => {
                         _.sendEvent({
                             interaction: {
-                                name: "PER - Request an Analysis Submit"
-                            },
-                            user: {
-                                identities: {
-                                    emailAddress: email
-                                },
-                                attributes: {
-                                    firstName: firstName,
-                                    lastName: lastName,
-                                    business: business,
-                                    phone: phone
-                                }
+                                name: "PER-Access Contact Us"
                             }
-                        })
-                    }
-                }),
-                _.listener("click", ".uagb-question", (event) => {
-                    _.sendEvent({
-                        interaction: {
-                            name: "PER - FAQ Click: " + event?.currentTarget.textContent.replace('Question: ', '')
+                        });
+                    }),
+                    _.listener("click", "a[href='https://www.ucp-inc.com/peristore']", () => {
+                        _.sendEvent({
+                            interaction: {
+                                name: "PER-Click To Peri Store"
+                            }
+                        });
+                    }),
+                    _.listener("click", "rs-layer[data-type='button']", () => {
+                        _.sendEvent({
+                            interaction: {
+                                name: "PER-Access Contact Us"
+                            }
+                        });
+                    }),
+                    _.listener("click", "a[href='tel:888-974-2952']", () => {
+                        _.sendEvent({
+                            interaction: {
+                                name: "PER-Click To Call"
+                            }
+                        });
+                    }),
+                    _.listener("submit", "#gform_1", () => {
+                        let email = _.cashDom("#input_1_2")?.val();
+                        let firstName = _.cashDom("#input_1_1_3")?.val();
+                        let lastName = _.cashDom("#input_1_1_6")?.val();
+                        let business = _.cashDom("#input_1_4")?.val();
+                        let phone = _.cashDom("#input_1_3")?.val();
+
+                        if (validateEmail(email)) {
+                            _.sendEvent({
+                                interaction: {
+                                    name: "PER - Request an Analysis Submit"
+                                },
+                                user: {
+                                    identities: {
+                                        emailAddress: email
+                                    },
+                                    attributes: {
+                                        firstName: firstName,
+                                        lastName: lastName,
+                                        business: business,
+                                        phone: phone
+                                    }
+                                }
+                            })
                         }
-                    });
-                }),
-                _.listener("click", "a[href='#contact_us']", () => {
-                    _.sendEvent({
-                        interaction: {
-                            name: "PER - Access Contact Us"
-                        }
-                    });
-                })
-            ]
-        },
-        {
-            name: "per-contact-thanks",
-            isMatch: () => /\/contact-thanks/.test(window.location.href),
-            interaction: {
-                name: "PER - Contact Thanks"
+                    }),
+                    _.listener("click", ".uagb-question", (event) => {
+                        _.sendEvent({
+                            interaction: {
+                                name: "PER - FAQ Click: " + event?.currentTarget.textContent.replace('Question: ', '')
+                            }
+                        });
+                    }),
+                    _.listener("click", "a[href='#contact_us']", () => {
+                        _.sendEvent({
+                            interaction: {
+                                name: "PER - Access Contact Us"
+                            }
+                        });
+                    })
+                ]
+            },
+            {
+                name: "per-contact-thanks",
+                isMatch: () => /\/contact-thanks/.test(window.location.href),
+                interaction: {
+                    name: "PER - Contact Thanks"
+                }
             }
-        }
         ],
         pageTypeDefault: {
             name: "per - default",
@@ -164,13 +165,15 @@ const globalOnAction = (actionEvent) => {
                     { name: "global_exit_intent" }
                 ]
             },
-            pageTypes: [{
-                name: "Test",
-                isMatch: () => /^\//.test(window.location.pathname),
-                interaction: {
-                    name: "Test"
+            pageTypes: [
+                {
+                    name: "Test",
+                    isMatch: () => /^\//.test(window.location.pathname),
+                    interaction: {
+                        name: "Test"
+                    }
                 }
-            }],
+            ],
             pageTypeDefault: {
                 name: "idx - default",
                 interaction: {
@@ -196,22 +199,24 @@ const globalOnAction = (actionEvent) => {
                     { name: "global_exit_intent" }
                 ]
             },
-            pageTypes: [{
-                name: "hol - home",
-                isMatch: () => /^\//.test(window.location.pathname),
-                interaction: {
-                    name: "HOL Home Page"
-                },
-                listeners: [
-                    _.listener("click", "a[href='https://hollandersostg.wpengine.com/products/']", () => {
-                        _.sendEvent({
-                            interaction: {
-                                name: "HOL - About Our Products"
-                            }
-                        });
-                    })
-                ]
-            }],
+            pageTypes: [
+                {
+                    name: "hol - home",
+                    isMatch: () => /^\//.test(window.location.pathname),
+                    interaction: {
+                        name: "HOL Home Page"
+                    },
+                    listeners: [
+                        _.listener("click", "a[href='https://hollandersostg.wpengine.com/products/']", () => {
+                            _.sendEvent({
+                                interaction: {
+                                    name: "HOL - About Our Products"
+                                }
+                            });
+                        })
+                    ]
+                }
+            ],
             pageTypeDefault: {
                 name: "hol - default",
                 interaction: {
