@@ -46,9 +46,7 @@ const globalOnAction = (actionEvent) => {
 }).then(() => {
     const sitemapConfig = {
         global: {
-            onActionEvent: (actionEvent) => {
-                return globalOnAction(actionEvent);
-            },
+            onActionEvent: actionEvent => globalOnAction(actionEvent),
             contentZones: [
                 { name: "global_popup" },
                 { name: "global_exit_intent" }
@@ -157,9 +155,7 @@ const globalOnAction = (actionEvent) => {
     }).then(() => {
         const sitemapConfig = {
             global: {
-                onActionEvent: (actionEvent) => {
-                    return globalOnAction(actionEvent);
-                },
+                onActionEvent: actionEvent => globalOnAction(actionEvent),
                 contentZones: [
                     { name: "global_popup" },
                     { name: "global_exit_intent" }
@@ -167,10 +163,178 @@ const globalOnAction = (actionEvent) => {
             },
             pageTypes: [
                 {
-                    name: "Test",
+                    name: "idx - home",
                     isMatch: () => /^\//.test(window.location.pathname),
                     interaction: {
-                        name: "Test"
+                        name: "IDX Home Page"
+                    }
+                },
+                {
+                    name: "idx - all products",
+                    isMatch: () => /^\/all-products\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX All Products"
+                    }
+                },
+                {
+                    name: "idx - product bundles",
+                    isMatch: () => /^\/all-products\/product-bundles\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Product Bundles"
+                    }
+                },
+                {
+                    name: "idx - direct hit overview",
+                    isMatch: () => /^\/direct-hit\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Direct Hit Overview"
+                    }
+                },
+                {
+                    name: "idx - direct hit pro academy",
+                    isMatch: () => /^\/direct-hit\/pro-academy\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Direct Hit Pro Academy"
+                    }
+                },
+                {
+                    name: "idx - direct hit pro",
+                    isMatch: () => /^\/direct-hit\/directhitpro\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Direct Hit Pro"
+                    }
+                },
+                {
+                    name: "idx - direct hit diy",
+                    isMatch: () => /^\/direct-hit\/direct-hit-diy\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Direct Hit Diy"
+                    }
+                },
+                {
+                    name: "idx - direct hit mobile",
+                    isMatch: () => /^\/direct-hit\/mobile\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Direct Hit Mobile"
+                    }
+                },
+                {
+                    name: "idx - on demand",
+                    isMatch: () => /^\/on-demand\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX On Demand"
+                    }
+                },
+                {
+                    name: "idx - stealthid",
+                    isMatch: () => /^\/stealthid\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX StealthID"
+                    }
+                },
+                {
+                    name: "idx - direct target",
+                    isMatch: () => /^\/direct-target\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Direct Target"
+                    }
+                },
+                {
+                    name: "idx - xpertcx",
+                    isMatch: () => /^\/xpertcx\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX XpertCX"
+                    }
+                },
+                {
+                    name: "idx - service suite",
+                    isMatch: () => /^\/service-suite\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Service Suite"
+                    }
+                },
+                {
+                    name: "idx - shop manager",
+                    isMatch: () => /^\/shop-manager\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Shop Manager"
+                    }
+                },
+                {
+                    name: "idx - direct help",
+                    isMatch: () => /^\/direct-help\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Direct Help"
+                    }
+                },
+                {
+                    name: "idx - autodata training",
+                    isMatch: () => /^\/autodata-training\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Autodata Training"
+                    }
+                },
+                {
+                    name: "idx - autodata training",
+                    isMatch: () => /^\/autodata-training\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Autodata Training"
+                    }
+                },
+                {
+                    name: "idx - all-solutions",
+                    isMatch: () => /^\/all-solutions\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX All Solutions"
+                    }
+                },
+                {
+                    name: "idx - diagnostics and repair",
+                    isMatch: () => /^\/diagnostics-and-repair\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Diagnostics and Repair"
+                    }
+                },
+                {
+                    name: "idx - shop management",
+                    isMatch: () => /^\/shop-management\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Shop Management"
+                    }
+                },
+                {
+                    name: "idx - digital marketing",
+                    isMatch: () => /^\/digital-marketing\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Digital Marketing"
+                    }
+                },
+                {
+                    name: "idx - technicians training",
+                    isMatch: () => /^\/technicians-training\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Technicians Training"
+                    }
+                },
+                {
+                    name: "idx - solera merchant services",
+                    isMatch: () => /^\/solera-merchant-services\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Solera Merchant Services"
+                    }
+                },
+                {
+                    name: "idx - call center services",
+                    isMatch: () => /^\/call-center-services\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Call Center Services"
+                    }
+                },
+                {
+                    name: "idx - shuttle services",
+                    isMatch: () => /^\/shuttle-services\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Shuttle Services"
                     }
                 }
             ],
@@ -191,9 +355,7 @@ const globalOnAction = (actionEvent) => {
     }).then(() => {
         const sitemapConfig = {
             global: {
-                onActionEvent: (actionEvent) => {
-                    return globalOnAction(actionEvent);
-                },
+                onActionEvent: actionEvent => globalOnAction(actionEvent),
                 contentZones: [
                     { name: "global_popup" },
                     { name: "global_exit_intent" }
