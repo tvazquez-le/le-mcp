@@ -17,6 +17,10 @@ const validateEmail = (email) => {
     return emailRegex.test(email);
 };
 
+const getElementByXpath = (path) => {
+    return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+};
+
 const globalOnAction = (actionEvent) => {
 
     let subKey = _.mcis.getParameterByName("subKey");
@@ -156,6 +160,43 @@ const globalOnAction = (actionEvent) => {
         const sitemapConfig = {
             global: {
                 onActionEvent: actionEvent => globalOnAction(actionEvent),
+                listeners: [
+                    _.listener("click", "#main > div.double-sticky-quickbar > a", () => {
+                        _.sendEvent({
+                            interaction: {
+                                name: "Clicked on Buy Direct Hit Infobar"
+                            }
+                        })
+                    }),
+                    _.listener("click", "button#messenger_btn", () => {
+                        _.sendEvent({
+                            interaction: {
+                                name: "Clicked on Talk to an Agent"
+                            }
+                        })
+                    }),
+                    _.listener("click", "a[href='https://www.identifix.com/store']", () => {
+                        _.sendEvent({
+                            interaction: {
+                                name: "Clicked on Buy Now"
+                            }
+                        })
+                    }),
+                    _.listener("click", "a[href='https://www.identifix.com/contact-us']", () => {
+                        _.sendEvent({
+                            interaction: {
+                                name: "Clicked on Contact Us"
+                            }
+                        })
+                    }),
+                    _.listener("click", "#menu-item-246 > a", () => {
+                        _.sendEvent({
+                            interaction: {
+                                name: "Clicked on Login"
+                            }
+                        })
+                    })
+                ],
                 contentZones: [
                     { name: "global_popup" },
                     { name: "global_exit_intent" }
@@ -336,6 +377,106 @@ const globalOnAction = (actionEvent) => {
                     interaction: {
                         name: "IDX Shuttle Services"
                     }
+                },
+                {
+                    name: "idx - common car problems",
+                    isMatch: () => /^\/common-car-problems\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Common Car Problems"
+                    }
+                },
+                {
+                    name: "idx - blogs",
+                    isMatch: () => /^\/blogs\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Blogs"
+                    }
+                },
+                {
+                    name: "idx - testimonials",
+                    isMatch: () => /^\/testimonials\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Testimonials"
+                    }
+                },
+                {
+                    name: "idx - news",
+                    isMatch: () => /^\/news\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX News"
+                    }
+                },
+                {
+                    name: "idx - videos",
+                    isMatch: () => /^\/videos\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Videos"
+                    }
+                },
+                {
+                    name: "idx - affiliate program",
+                    isMatch: () => /^\/affiliate-program\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Affiliate Program"
+                    }
+                },
+                {
+                    name: "idx - our story",
+                    isMatch: () => /^\/our-story\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Our Story"
+                    }
+                },
+                {
+                    name: "idx - faqs",
+                    isMatch: () => /^\/faqs\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX FAQs"
+                    }
+                },
+                {
+                    name: "idx - store",
+                    isMatch: () => /^\/store\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Store"
+                    },
+                    listeners: [
+                        _.listener("click", "a.woo-button", (event) => {
+                            let lineItem = _.cashDom("a.woo-button").filter(function () {
+                                return this.innerText === 'ADD TO CART';
+                            }).event.currentTarget.parentElement.firstChild.nextElementSibling.innerText.replace(/[™®©]/g, '');
+                            _.sendEvent({
+                                interaction: {
+                                    name: _.CartInteractionName.AddToCart,
+                                    lineItem: lineItem // check lineitem
+                                }
+                            })
+                        }),
+                        _.listener("click", getElementByXpath("/html/body/div[4]/div[1]/div[3]/div[1]/a"), () => {
+                            _.sendEvent({
+                                interaction: {
+                                    name: "Direct-Hit DIY - Choose your Vehicle"
+                                }
+                            })
+                        })
+                    ]
+                },
+                {
+                    name: "idx - direct hit diy auto repair software",
+                    isMatch: () => /^\/direct-hit-diy-auto-repair-software\/$/.test(window.location.pathname),
+                    interaction: {
+                        name: "IDX Direct Hit DIY Auto Repair Software"
+                    },
+                    listeners: [
+                        _.listener("click", "button.button.ymm-submit-any-selection", () => {
+                            _.sendEvent({
+                                interaction: {
+                                    name: _.CartInteractionName.AddToCart,
+                                    lineItem: "Direct-Hit DIY"
+                                }
+                            })
+                        })
+                    ]
                 }
             ],
             pageTypeDefault: {
