@@ -1,4 +1,4 @@
-const _ = SalesforceInteractions;
+window._ = SalesforceInteractions;
 
 const allowedHosts = {
     peripay: "www.peripay.com",
@@ -52,8 +52,7 @@ const globalOnAction = (actionEvent) => {
         global: {
             onActionEvent: actionEvent => globalOnAction(actionEvent),
             contentZones: [
-                { name: "global_popup" },
-                { name: "global_exit_intent" }
+                { name: "global_popup" }, { name: "global_exit_intent" }
             ]
         },
         pageTypes: [
@@ -67,21 +66,21 @@ const globalOnAction = (actionEvent) => {
                     _.listener("click", "a[href='/#contact']", () => {
                         _.sendEvent({
                             interaction: {
-                                name: "PER-Access Contact Us"
+                                name: "PER - Access Contact Us"
                             }
                         });
                     }),
                     _.listener("click", "a[href='https://www.ucp-inc.com/peristore']", () => {
                         _.sendEvent({
                             interaction: {
-                                name: "PER-Click To Peri Store"
+                                name: "PER - Click To Peri Store"
                             }
                         });
                     }),
                     _.listener("click", "rs-layer[data-type='button']", () => {
                         _.sendEvent({
                             interaction: {
-                                name: "PER-Access Contact Us"
+                                name: "PER - Access Contact Us"
                             }
                         });
                     }),
@@ -198,8 +197,7 @@ const globalOnAction = (actionEvent) => {
                     })
                 ],
                 contentZones: [
-                    { name: "global_popup" },
-                    { name: "global_exit_intent" }
+                    { name: "global_popup" }, { name: "global_exit_intent" }
                 ]
             },
             pageTypes: [
@@ -498,8 +496,7 @@ const globalOnAction = (actionEvent) => {
             global: {
                 onActionEvent: actionEvent => globalOnAction(actionEvent),
                 contentZones: [
-                    { name: "global_popup" },
-                    { name: "global_exit_intent" }
+                    { name: "global_popup" }, { name: "global_exit_intent" }
                 ]
             },
             pageTypes: [
