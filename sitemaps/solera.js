@@ -61,7 +61,7 @@ const globalOnAction = (actionEvent) => {
 };
 
 const addToCartListener1 = () => {
-    if(domIsInteractive()) {
+    if (domIsInteractive()) {
         const addToCart1 = document.querySelector("#month > div.col-container > div.col.box.parent.best > div.p-5.bg-whit.specialbox.pb-3 > a");
 
         addToCart1?.addEventListener("click", (event) => {
@@ -81,7 +81,7 @@ const addToCartListener1 = () => {
 };
 
 const addToCartListener2 = () => {
-    if(domIsInteractive()) {    
+    if (domIsInteractive()) {
         const addToCart2 = document.querySelector("#month > div.col-container > div:nth-child(2) > div.p-5.bg-white.pb-3 > a");
 
         addToCart2?.addEventListener("click", (event) => {
@@ -100,10 +100,32 @@ const addToCartListener2 = () => {
     }
 };
 
+const addToCartListener3 = () => {
+    if (domIsInteractive()) {
+        const addToCart3 = document.querySelector("button.button.ymm-submit-any-selection");
+
+        addToCart3?.addEventListener("click", (event) => {
+            _sf.sendEvent({
+                interaction: {
+                    name: _sf.CartInteractionName.AddToCart,
+                    lineItem: {
+                        catalogObjectType: "Product",
+                        catalogObjectId: "Direct-Hit DIY",
+                        price: 1,
+                        quantity: 1
+                    }
+                }
+            });
+        });
+    }
+};
+
 document.addEventListener("DOMContentLoaded", () => {
     addToCartListener1();
     addToCartListener2();
+    addToCartListener3();
 });
+
 
 // --------------------------
 // Peripay Sitemp
@@ -116,102 +138,102 @@ document.addEventListener("DOMContentLoaded", () => {
             global: {
                 onActionEvent: (actionEvent) => globalOnAction(actionEvent),
                 contentZones: [{
-                    name: "global_popup"
-                },
-                {
-                    name: "global_exit_intent"
-                },
+                        name: "global_popup"
+                    },
+                    {
+                        name: "global_exit_intent"
+                    },
                 ],
             },
             pageTypes: [{
-                name: "per - home",
-                isMatch: () => /^\//.test(window.location.pathname),
-                interaction: {
-                    name: "PER - Home Page",
-                },
-                listeners: [
-                    _sf.listener("click", "a[href='/#contact']", () => {
-                        _sf.sendEvent({
-                            interaction: {
-                                name: "PER - Access Contact Us",
-                            },
-                        });
-                    }),
-                    _sf.listener(
-                        "click",
-                        "a[href='https://www.ucp-inc.com/peristore']",
-                        () => {
+                    name: "per - home",
+                    isMatch: () => /^\//.test(window.location.pathname),
+                    interaction: {
+                        name: "PER - Home Page",
+                    },
+                    listeners: [
+                        _sf.listener("click", "a[href='/#contact']", () => {
                             _sf.sendEvent({
                                 interaction: {
-                                    name: "PER - Click To Peri Store",
+                                    name: "PER - Access Contact Us",
                                 },
                             });
-                        }
-                    ),
-                    _sf.listener("click", "rs-layer[data-type='button']", () => {
-                        _sf.sendEvent({
-                            interaction: {
-                                name: "PER - Access Contact Us",
-                            },
-                        });
-                    }),
-                    _sf.listener("click", "a[href='tel:888-974-2952']", () => {
-                        _sf.sendEvent({
-                            interaction: {
-                                name: "PER-Click To Call",
-                            },
-                        });
-                    }),
-                    _sf.listener("submit", "#gform_1", () => {
-                        let email = _sf.cashDom("#input_1_2")?.val();
-                        let firstName = _sf.cashDom("#input_1_1_3")?.val();
-                        let lastName = _sf.cashDom("#input_1_1_6")?.val();
-                        let business = _sf.cashDom("#input_1_4")?.val();
-                        let phone = _sf.cashDom("#input_1_3")?.val();
+                        }),
+                        _sf.listener(
+                            "click",
+                            "a[href='https://www.ucp-inc.com/peristore']",
+                            () => {
+                                _sf.sendEvent({
+                                    interaction: {
+                                        name: "PER - Click To Peri Store",
+                                    },
+                                });
+                            }
+                        ),
+                        _sf.listener("click", "rs-layer[data-type='button']", () => {
+                            _sf.sendEvent({
+                                interaction: {
+                                    name: "PER - Access Contact Us",
+                                },
+                            });
+                        }),
+                        _sf.listener("click", "a[href='tel:888-974-2952']", () => {
+                            _sf.sendEvent({
+                                interaction: {
+                                    name: "PER-Click To Call",
+                                },
+                            });
+                        }),
+                        _sf.listener("submit", "#gform_1", () => {
+                            let email = _sf.cashDom("#input_1_2")?.val();
+                            let firstName = _sf.cashDom("#input_1_1_3")?.val();
+                            let lastName = _sf.cashDom("#input_1_1_6")?.val();
+                            let business = _sf.cashDom("#input_1_4")?.val();
+                            let phone = _sf.cashDom("#input_1_3")?.val();
 
-                        if (validateEmail(email)) {
+                            if (validateEmail(email)) {
+                                _sf.sendEvent({
+                                    interaction: {
+                                        name: "PER - Request an Analysis Submit",
+                                    },
+                                    user: {
+                                        identities: {
+                                            emailAddress: email,
+                                        },
+                                        attributes: {
+                                            firstName: firstName,
+                                            lastName: lastName,
+                                            business: business,
+                                            phone: phone,
+                                        },
+                                    },
+                                });
+                            }
+                        }),
+                        _sf.listener("click", ".uagb-question", (event) => {
                             _sf.sendEvent({
                                 interaction: {
-                                    name: "PER - Request an Analysis Submit",
-                                },
-                                user: {
-                                    identities: {
-                                        emailAddress: email,
-                                    },
-                                    attributes: {
-                                        firstName: firstName,
-                                        lastName: lastName,
-                                        business: business,
-                                        phone: phone,
-                                    },
+                                    name: "PER - FAQ Click: " +
+                                        event?.currentTarget.textContent.replace("Question: ", ""),
                                 },
                             });
-                        }
-                    }),
-                    _sf.listener("click", ".uagb-question", (event) => {
-                        _sf.sendEvent({
-                            interaction: {
-                                name: "PER - FAQ Click: " +
-                                    event?.currentTarget.textContent.replace("Question: ", ""),
-                            },
-                        });
-                    }),
-                    _sf.listener("click", "a[href='#contact_us']", () => {
-                        _sf.sendEvent({
-                            interaction: {
-                                name: "PER - Access Contact Us",
-                            },
-                        });
-                    }),
-                ],
-            },
-            {
-                name: "per-contact-thanks",
-                isMatch: () => /\/contact-thanks/.test(window.location.href),
-                interaction: {
-                    name: "PER - Contact Thanks",
+                        }),
+                        _sf.listener("click", "a[href='#contact_us']", () => {
+                            _sf.sendEvent({
+                                interaction: {
+                                    name: "PER - Access Contact Us",
+                                },
+                            });
+                        }),
+                    ],
                 },
-            },
+                {
+                    name: "per-contact-thanks",
+                    isMatch: () => /\/contact-thanks/.test(window.location.href),
+                    interaction: {
+                        name: "PER - Contact Thanks",
+                    },
+                },
             ],
             pageTypeDefault: {
                 name: "per - default",
@@ -222,74 +244,74 @@ document.addEventListener("DOMContentLoaded", () => {
         };
         _sf.initSitemap(sitemapConfig);
     })) ||
-    // --------------------------
-    // Identifix Sitemp
-    // --------------------------
-    (getCurrentHost() === "identifix" &&
-        _sf.init({
-            cookieDomain: "identifix.com",
-        }).then(() => {
-            const sitemapConfig = {
-                global: {
-                    onActionEvent: (actionEvent) => globalOnAction(actionEvent),
-                    listeners: [
-                        _sf.listener(
-                            "click",
-                            "#main > div.double-sticky-quickbar > a",
-                            () => {
-                                _sf.sendEvent({
-                                    interaction: {
-                                        name: "Clicked on Buy Direct Hit Infobar",
-                                    },
-                                });
-                            }
-                        ),
-                        _sf.listener("click", "button#messenger_btn", () => {
+// --------------------------
+// Identifix Sitemp
+// --------------------------
+(getCurrentHost() === "identifix" &&
+    _sf.init({
+        cookieDomain: "identifix.com",
+    }).then(() => {
+        const sitemapConfig = {
+            global: {
+                onActionEvent: (actionEvent) => globalOnAction(actionEvent),
+                listeners: [
+                    _sf.listener(
+                        "click",
+                        "#main > div.double-sticky-quickbar > a",
+                        () => {
                             _sf.sendEvent({
                                 interaction: {
-                                    name: "Clicked on Talk to an Agent",
+                                    name: "Clicked on Buy Direct Hit Infobar",
                                 },
                             });
-                        }),
-                        _sf.listener(
-                            "click",
-                            "a[href='https://www.identifix.com/store']",
-                            () => {
-                                _sf.sendEvent({
-                                    interaction: {
-                                        name: "Clicked on Buy Now",
-                                    },
-                                });
-                            }
-                        ),
-                        _sf.listener(
-                            "click",
-                            "a[href='https://www.identifix.com/contact-us']",
-                            () => {
-                                _sf.sendEvent({
-                                    interaction: {
-                                        name: "Clicked on Contact Us",
-                                    },
-                                });
-                            }
-                        ),
-                        _sf.listener("click", "#menu-item-246 > a", () => {
+                        }
+                    ),
+                    _sf.listener("click", "button#messenger_btn", () => {
+                        _sf.sendEvent({
+                            interaction: {
+                                name: "Clicked on Talk to an Agent",
+                            },
+                        });
+                    }),
+                    _sf.listener(
+                        "click",
+                        "a[href='https://www.identifix.com/store']",
+                        () => {
                             _sf.sendEvent({
                                 interaction: {
-                                    name: "Clicked on Login",
+                                    name: "Clicked on Buy Now",
                                 },
                             });
-                        }),
-                    ],
-                    contentZones: [{
+                        }
+                    ),
+                    _sf.listener(
+                        "click",
+                        "a[href='https://www.identifix.com/contact-us']",
+                        () => {
+                            _sf.sendEvent({
+                                interaction: {
+                                    name: "Clicked on Contact Us",
+                                },
+                            });
+                        }
+                    ),
+                    _sf.listener("click", "#menu-item-246 > a", () => {
+                        _sf.sendEvent({
+                            interaction: {
+                                name: "Clicked on Login",
+                            },
+                        });
+                    }),
+                ],
+                contentZones: [{
                         name: "global_popup"
                     },
                     {
                         name: "global_exit_intent"
                     },
-                    ],
-                },
-                pageTypes: [{
+                ],
+            },
+            pageTypes: [{
                     name: "idx - home",
                     isMatch: () => /^\/$/.test(window.location.pathname),
                     interaction: {
@@ -558,8 +580,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                     name: "Direct-Hit DIY - Choose your Vehicle"
                                 }
                             });
-                        }
-                        )
+                        })
                     ]
                 },
                 {
@@ -570,76 +591,62 @@ document.addEventListener("DOMContentLoaded", () => {
                         ),
                     interaction: {
                         name: "IDX Direct Hit DIY Auto Repair Software",
-                    },
-                    listeners: [
-                        _sf.listener(
-                            "click",
-                            "button.button.ymm-submit-any-selection",
-                            () => {
-                                _sf.sendEvent({
-                                    interaction: {
-                                        name: _sf.CartInteractionName.AddToCart,
-                                        lineItem: "Direct-Hit DIY",
-                                    },
-                                });
-                            }
-                        ),
-                    ],
+                    }
+                }
+            ],
+            pageTypeDefault: {
+                name: "idx - default",
+                interaction: {
+                    name: "IDX Default Page",
                 },
-                ],
-                pageTypeDefault: {
-                    name: "idx - default",
-                    interaction: {
-                        name: "IDX Default Page",
-                    },
-                },
-            };
-            _sf.initSitemap(sitemapConfig);
-        })) ||
-    // --------------------------
-    // Hollander Sitemp
-    // --------------------------
-    (getCurrentHost() === "hollander" &&
-        _sf.init({
-            cookieDomain: "hollandersolutions.com",
-        }).then(() => {
-            const sitemapConfig = {
-                global: {
-                    onActionEvent: (actionEvent) => globalOnAction(actionEvent),
-                    contentZones: [{
+            },
+        };
+        _sf.initSitemap(sitemapConfig);
+    })) ||
+// --------------------------
+// Hollander Sitemp
+// --------------------------
+(getCurrentHost() === "hollander" &&
+    _sf.init({
+        cookieDomain: "hollandersolutions.com",
+    }).then(() => {
+        const sitemapConfig = {
+            global: {
+                onActionEvent: (actionEvent) => globalOnAction(actionEvent),
+                contentZones: [{
                         name: "global_popup"
                     },
                     {
                         name: "global_exit_intent"
                     },
-                    ],
+                ],
+            },
+            pageTypes: [{
+                name: "hol - home",
+                isMatch: () => /^\//.test(window.location.pathname),
+                interaction: {
+                    name: "HOL Home Page",
                 },
-                pageTypes: [{
-                    name: "hol - home",
-                    isMatch: () => /^\//.test(window.location.pathname),
-                    interaction: {
-                        name: "HOL Home Page",
-                    },
-                    listeners: [
-                        _sf.listener(
-                            "click",
-                            "a[href='https://hollandersostg.wpengine.com/products/']",
-                            () => {
-                                _sf.sendEvent({
-                                    interaction: {
-                                        name: "HOL - About Our Products",
-                                    },
-                                });
-                            }
-                        ),
-                    ],
-                },],
-                pageTypeDefault: {
-                    name: "hol - default",
-                    interaction: {
-                        name: "HOL Default Page",
-                    },
+                listeners: [
+                    _sf.listener(
+                        "click",
+                        "a[href='https://hollandersostg.wpengine.com/products/']",
+                        () => {
+                            _sf.sendEvent({
+                                interaction: {
+                                    name: "HOL - About Our Products",
+                                },
+                            });
+                        }
+                    ),
+                ],
+            }, ],
+            pageTypeDefault: {
+                name: "hol - default",
+                interaction: {
+                    name: "HOL Default Page",
                 },
-            };
-            _sf.initSitemap(sitemapConfig);
-        }));
+            },
+        };
+        _sf.initSitemap(sitemapConfig);
+    }));
