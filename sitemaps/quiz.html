@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Skincare Survey</title>
+
+  <!-- ✅ Working remote script that exposes global Survey object -->
+  <script src="https://unpkg.com/survey-javascript@1.9.136/survey.min.js" defer></script>
+  <link href="https://unpkg.com/survey-core@1.9.136/modern.min.css" rel="stylesheet">
+  <link rel="icon" href="data:,">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      padding: 40px;
+    }
+    #surveyContainer {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div id="surveyContainer"></div>
+
+  <!-- ✅ Your actual script runs AFTER survey.min.js has loaded -->
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const interval = setInterval(() => {
+        if (window.Survey) {
+          clearInterval(interval);
+
+          Survey.StylesManager.applyTheme("modern");
+
+          const skinConcerns = [
+            "Dry skin", "Dull skin", "Oily skin or clogged pores", "Crow’s feet and smile lines",
+            "Fine lines and wrinkles", "Uneven tone or age spots", "Loss of firmness",
+            "Maintaining healthy-looking skin", "Dark circles under eyes", "Grooming"
+          ];
+
+          const surveyJSON = {
+            title: "Skincare Survey",
+            pages: [
+              {
+                name: "gender",
+                title: "Gender",
+                elements: [{
+                  type: "radiogroup",
+                  name: "gender",
+                  title: "Select your gender",
+                  choices: ["Male", "Female"],
+                  isRequired: true,
+                  renderAs: "button"
+                }]
+              },
+              {
+                name: "age",
+                title: "Age Range",
+                elements: [{
+                  type: "radiogroup",
+                  name: "ageRange",
+                  title: "Select your age range",
+                  choices: ["Under 24", "25-34", "35-49", "50+"],
+                  isRequired: true,
+                  renderAs: "button"
+                }]
+              },
+              {
+                name: "primaryConcern",
+                title: "Primary Skin Concern",
+                elements: [{
+                  type: "radiogroup",
+                  name: "primaryConcern",
+                  title: "What is your primary skin concern?",
+                  choices: skinConcerns,
+                  isRequired: true,
+                  colCount: 2,
+                  renderAs: "button"
+                }]
+              },
+              {
+                name: "additionalConcern",
+                title: "Additional Skin Concern",
+                elements: [{
+                  type: "radiogroup",
+                  name: "additionalConcern",
+                  title: "Any additional concerns?",
+                  choices: skinConcerns,
+                  isRequired: true,
+                  colCount: 2,
+                  renderAs: "button",
+                  choicesVisibleIf: "{item} != {primaryConcern}"
+                }]
+              },
+              {
+                name: "multivitamin",
+                title: "Multivitamin",
+                elements: [{
+                  type: "radiogroup",
+                  name: "multivitamin",
+                  title: "Are you currently taking a multivitamin?",
+                  choices: ["Yes", "No"],
+                  isRequired: true,
+                  renderAs: "button"
+                }]
+              },
+              {
+                name: "email",
+                title: "Email Address",
+                elements: [{
+                  type: "text",
+                  name: "email",
+                  title: "Enter your email address",
+                  inputType: "email",
+                  isRequired: true
+                }]
+              }
+            ]
+          };
+
+          const survey = new Survey.Model(surveyJSON);
+          survey.onComplete.add(() => {
+            document.getElementById("surveyContainer").innerHTML =
+              "<h3>Thanks! Your response has been recorded.</h3>";
+          });
+
+          survey.render("surveyContainer");
+        }
+      }, 100);
+    });
+  </script>
+</body>
+</html>

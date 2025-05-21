@@ -9,19 +9,17 @@ const domIsInteractive = () => {
 };
 
 const allowedHosts = {
-    peripay: "www.peripay.com",
-    identifix: "www.identifix.com",
-    hollander: "www.hollandersolutions.com",
-    identifix: "store.identifix.com" // check domians
+    peripay: ["www.peripay.com", "peri2.wpenginepowered.com"],
+    identifix: ["www.identifix.com", "store.identifix.com"],
+    hollander: ["www.hollandersolutions.com", "hollandersostg.wpengine.com"]
 };
 
-// allowedDomains = ["www.peripay.com", "peri2.wpenginepowered.com", "hollandersostg.wpengine.com"];
-
 const getCurrentHost = () => {
+    const hostname = window.location.hostname;
     return (
-        Object.keys(allowedHosts).find(
-            (key) => allowedHosts[key] === window.location.hostname
-        ) || !1
+        Object.keys(allowedHosts).find((key) =>
+            allowedHosts[key].includes(hostname)
+        ) || false
     );
 };
 
@@ -778,4 +776,3 @@ document.addEventListener("DOMContentLoaded", () => {
             };
             _sf.initSitemap(sitemapConfig);
         }));
-
