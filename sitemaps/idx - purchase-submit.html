@@ -1,0 +1,626 @@
+
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push(
+                {
+                    'gtm.start': new Date().getTime(),
+                    event: 'gtm.js'
+                }
+            );
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KDCCTS');
+
+    </script>
+    <!-- End Google Tag Manager -->
+    <title>Checkout</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <meta name="description" content="Identifix Direct-Pro auto repair software for professional auto technicians to save time finding the right fix." />
+    <meta name="keywords" content="Identifix Direct-Hit Professional Pro Auto Repair Software Automotive Technician" />
+    <meta name="generator" content="nopCommerce" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="facebook-domain-verification" content="r223r076smfcnornqetwrfw50yg0pd" />
+    <script type="text/javascript" src="//cdn.evgnet.com/beacon/audatexna/prodperipay/scripts/evergage.min.js"></script>
+
+    
+    
+    
+    <link href="/Content/jquery-ui-themes/smoothness/jquery-ui-1.13.0.custom.min.css" rel="stylesheet" type="text/css" />
+<link href="/Themes/IdentifixTwoColumnCategory/Content/css/Identifix.css" rel="stylesheet" type="text/css" />
+<link href="/Themes/IdentifixTwoColumnCategory/Content/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="/Themes/IdentifixTwoColumnCategory/Content/css/styles.css" rel="stylesheet" type="text/css" />
+<link href="/Themes/IdentifixTwoColumnCategory/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="/Scripts/jquery-3.6.0.min.js" type="text/javascript"></script>
+<script src="/Scripts/jquery.validate.min.js" type="text/javascript"></script>
+<script src="/Scripts/jquery.validate.unobtrusive.min.js" type="text/javascript"></script>
+<script src="/Scripts/jquery-ui-1.13.0.custom.min.js" type="text/javascript"></script>
+<script src="/Scripts/jquery-migrate-3.3.2.min.js" type="text/javascript"></script>
+<script src="/Scripts/public.common.js" type="text/javascript"></script>
+<script src="/Scripts/public.ajaxcart.js?v=638810218720000000" type="text/javascript"></script>
+<script src="https://js.braintreegateway.com/web/3.107.0/js/client.min.js" type="text/javascript"></script>
+<script src="https://js.braintreegateway.com/web/3.107.0/js/hosted-fields.min.js" type="text/javascript"></script>
+<script src="https://js.braintreegateway.com/web/3.107.0/js/data-collector.min.js" type="text/javascript"></script>
+<script src="/Scripts/braintree/braintree.js?v=638810218700000000" type="text/javascript"></script>
+<script src="/Scripts/public.accordion.js" type="text/javascript"></script>
+<script src="/Scripts/public.onepagecheckout.js?v=638810218720000000" type="text/javascript"></script>
+<script src="/Scripts/bootstrap.min.js" type="text/javascript"></script>
+<script src="/Scripts/Identifix.js" type="text/javascript"></script>
+
+    
+    
+    
+    
+    
+<link rel="shortcut icon" href="https://store.identifix.com/favicon.ico" />
+    <script type="text/javascript">
+        (function (a, b, c, d, e, f, g) { e['ire_o'] = c; e[c] = e[c] || function () { (e[c].a = e[c].a || []).push(arguments) }; f = d.createElement(b); g = d.getElementsByTagName(b)[0]; f.async = 1; f.src = a; g.parentNode.insertBefore(f, g); })('https://utt.impactcdn.com/A3692438-12df-4d12-9fca-1fa8913fecef1.js', 'script', 'ire', document, window);
+    </script>
+    
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KDCCTS"
+                height="0"
+                width="0"
+                style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <nav class="navbar bg-white box-shadow py-3">
+        <div class="container">
+            <a id="lnkHomePageLogo" class="pt-2 navbar-brand" href="/Identifix">
+                <img src="/Themes/IdentifixTwoColumnCategory/Content/images/Identifix/VehicleRepairIdentifix.png" alt="Identifix Logo" />
+            </a>
+            <div>
+                <div id="headerLinks" class="d-inline-block p-1"></div>
+                <div id="inline-currencyddl" class="d-inline-block ml-1">
+                    |     <div class="currency-selector inlineBlock">
+<select aria-label="currency" class="noBorder" id="ddlCurrency" name="customerCurrency" onchange="setLocation(this.value);"><option selected="selected" value="/changecurrency/1?returnurl=%2fonepagecheckout%3freturnurl%3d%252fcart">USD</option>
+<option value="/changecurrency/4?returnurl=%2fonepagecheckout%3freturnurl%3d%252fcart">CAD</option>
+</select>
+    </div>
+
+                </div>
+                
+<div id="flyout-cart" class="flyout-cart">
+    <div class="mini-shopping-cart">
+        <div class="count">
+There are <a href="/cart">1 item(s)</a> in your cart.        </div>
+            <div class="items">
+                    <div class="item first">
+                            <div class="picture">
+                                <a id="0CartProductImage" href="/direct-hit-pro-academy" title="Show details for DIRECT-HIT&#174; Pro Academy with Mobile">
+                                    <img alt="Picture of DIRECT-HIT&#174; Pro Academy with Mobile" src="https://store.identifix.com/content/images/thumbs/default-image_70.png" title="Show details for DIRECT-HIT&#174; Pro Academy with Mobile" />
+                                </a>
+                            </div>
+                        <div class="product">
+                            <div class="name">
+                                <a id="0ProductName" href="/direct-hit-pro-academy">DIRECT-HIT&#174; Pro Academy with Mobile</a>
+                            </div>
+                            <div id="0ProductPrice" class="price">Unit price: <span>$299.00 USD</span></div>
+                        </div>
+                    </div>
+            </div>
+            <div class="totals">Sub-Total: <strong id="cartSubTotal">$299.00</strong></div>
+            <div class="buttons">
+                    <input id="btnGoToCart" type="button" value="Go to cart" class="button-1 IdentifixButton" onclick="setLocation('/cart')" />
+                            </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </nav>
+    <div class="container footerBottomBuffer containerMinWidth">
+        
+
+
+<div class="ajax-loading-block-window" style="display: none">
+</div>
+<div id="dialog-notifications-success" title="Notification" style="display:none;">
+</div>
+<div id="dialog-notifications-error" title="Error" style="display:none;">
+</div>
+<div id="bar-notification" class="bar-notification">
+    <span class="close" role="button" aria-label="Close" title="Close" tabindex="0">&nbsp;</span>
+</div>
+
+
+
+
+<!--[if lte IE 7]>
+    <div style="clear:both;height:59px;text-align:center;position:relative;">
+        <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx" target="_blank">
+            <img src="/Themes/IdentifixTwoColumnCategory/Content/images/ie_warning.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        </a>
+    </div>
+<![endif]-->
+
+
+
+
+
+
+<script type="text/javascript">
+    AjaxCart.init(false, '#topcartlink .cart-qty', '.header-links .wishlist-qty', '#flyout-cart');
+</script>
+
+
+<div class="container">
+    
+<!-- IDENTIFIX SPECIFIC CODE -->
+<iframe height="300" width="300" id="pfpFrame" style="display: none"></iframe>
+<div class="mt-5 page checkout-page">
+    <div class="row">
+        <div class=" col-sm-3 page-title">
+            <h1>Checkout</h1>
+        </div>
+        <script type="text/javascript">
+            function showBraintreeErrorMessage(brainTreeMessage) {
+                const errorModal = document.querySelector('#errorDiv');
+                const modalDiv = new bootstrap.Modal(errorModal);
+                let errorMessage = $("#modal-body");
+                let splitMessage = brainTreeMessage.split(",");
+                let errorCode = "";
+                splitMessage.forEach((messageElement) => {
+                    if (messageElement.trim().startsWith('Code:')) {
+                        errorCode = messageElement.replace('Code:', '').trim();
+                    }
+                });
+                if (errorCode != "") {
+                    errorMessage[0].innerHTML = splitMessage[0]
+                        + "<br><br>"
+                        + splitMessage[1]
+                        + "<br><br>"
+                        + "Please review your credit card and address details and try again. If problems persist, please call us at "
+                        + "<b>1-800-745-9649.</b>";
+                } else {
+                    errorMessage[0].innerHTML = brainTreeMessage;
+                }
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                modalDiv.show();
+            }
+            function showCheckoutErrorMessage(message, callbackAction) {
+                const errorModal = document.querySelector('#errorDiv');
+                if (callbackAction != undefined && callbackAction != null) {
+                    errorModal.addEventListener('hidden.bs.modal', callbackAction, { once: true });
+                }
+                const modalDiv = new bootstrap.Modal(errorModal);
+                let errorMessage = $("#modal-body");
+                errorMessage[0].innerText = message;
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                modalDiv.show();
+            }
+        </script>
+        <div class="modal fade" id="errorDiv" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" style="display:none;">
+            <div class="modal-dialog" role="document">
+                <div class="Identifix-modal-content Identifix-border-top-blue">
+                    <div class="modal-header border-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 16px; height: 16px; margin-top: 4px;">
+                            <path fill="#6D7881" fill-rule="evenodd" d="M10.4318343,2.85526146 L0.247265745,19.4095155 C-0.0819895044,19.9452776 -0.0828540422,20.6094605 0.247265745,21.1447226 C0.577385532,21.6799847 1.17781123,22.0015367 1.82395611,22 L22.1760478,22 C22.8221875,22.0026156 23.4226267,21.6799847 23.7527383,21.1447226 C24.08285,20.6094605 24.0819909,19.9452776 23.7527383,19.4095155 L13.56817,2.85526146 C13.2389829,2.32103621 12.6447564,2 12,2 C11.3552479,2 10.7610213,2.32103621 10.4318343,2.85526146 Z M11.9658034,4.56578439 C12.1743582,4.56578439 12.4050694,4.69376402 12.5041737,4.85584967 L21.1981266,19.0973682 C21.2972053,19.2598501 21.2974777,19.5010033 21.1981266,19.6633493 C21.0987754,19.8256953 20.8614176,19.9609874 20.652481,19.9604907 L3.27912565,19.9604907 C3.07018676,19.9604907 2.83283378,19.8256953 2.73348031,19.6633493 C2.63412672,19.5010033 2.6343991,19.2598501 2.73348031,19.0973682 L11.4274331,4.85584967 C11.5265375,4.69376402 11.7572487,4.56578439 11.9658034,4.56578439 Z M12,9 C11.447718,9 11,9.49746279 11,10.1111074 L11.2,14.1110919 C11.2,14.6020235 11.558174,15 12,15 C12.441824,15 12.8,14.6020235 12.8,14.1110919 L13,10.1111074 C13,9.49746279 12.552282,9 12,9 Z M12,16 C11.447716,16 11,16.44772 11,17 C11,17.55226 11.447716,18 12,18 C12.552284,18 13,17.55226 13,17 C13,16.44772 12.552284,16 12,16 Z"></path>
+                        </svg>
+                        <div class="gdc-notification-header-content" style="height: 24px;">
+                            <p class="gdc-notification-header-text" style="padding-left: 7px; font-size: 20px; color: #444854; font-weight: bold;">Payment Error</p>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="modal-body" style="margin-top: -10px; margin-bottom: 40px; color: #444854;"></div>
+                    <div class="modal-footer border-0">
+                        <button type="button" class="btn btn-primary IdentifixButton" data-dismiss="modal" style="margin-top: -50px;">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9 progressBarContainer">
+            <div class="stepper-wrapper">
+                <div id="progressStep1" class="stepper-item completed">
+                    <div class="step-counter"></div>
+                    <div class="step-name">Billing Address</div>
+                </div>
+                <div id="progressStep2" class="stepper-item indicator">
+                    <div class="step-counter">2</div>
+                    <div class="step-name">Payment Information</div>
+                </div>
+                <div id="progressStep3" class="stepper-item indicator">
+                    <div class="step-counter">3</div>
+                    <div class="step-name">Purchase</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-body checkout-data">
+        <ol class="opc" id="checkout-steps">
+            <li id="opc-billing" class="tab-section allow">
+                <div id="checkout-step-billing" class="step a-item" style="display: none;">
+                    <form id="co-billing-form" action="">
+                        <div id="checkout-billing-load">
+                            <div class="checkout-data">
+    
+    
+    <div class="section new-billing-address" id="billing-new-address-form">
+        <div class="enter-address">
+
+                <script type="text/javascript">
+        $(function () {
+            $("#BillingNewAddress_CountryId").change(function () {
+                var selectedItem = $(this).val();
+                var ddlStates = $("#BillingNewAddress_StateProvinceId");
+                var statesProgress = $("#states-loading-progress");
+                statesProgress.show();
+                $.ajax({
+                    cache: false,
+                    type: "GET",
+                    url: "/country/getstatesbycountryid",
+                    data: { "countryId": selectedItem, "addSelectStateItem": "true" },
+                    success: function (data) {
+                        ddlStates.html('');
+                        $.each(data, function (id, option) {
+                            ddlStates.append($('<option></option>').val(option.id).html(option.name));
+                        });
+                        statesProgress.hide();
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        alert('Failed to retrieve states.');
+                        statesProgress.hide();
+                    }
+                });
+            });
+        });
+    </script>
+<input data-val="true" data-val-number="The field Id must be a number." data-val-required="&#39;Id&#39; must not be empty." id="BillingNewAddress_Id" name="BillingNewAddress.Id" type="hidden" value="0" />
+
+<p class="mandatoryFieldsLabel contentleft">*Mandatory fields</p>
+<div class="edit-address">
+    <div class="class-md-12 row">
+        <div class="col-sm-6 paddingHBuffer">
+            <div class="form-group flexcolumn contentleft ">
+                <div>
+                    <label for="BillingNewAddress_FirstName" htmlAttributes="{ class = formLabel }">First Name</label>
+                    <span class="required">*</span>
+                </div>
+                <input class="form-control text-box single-line" data-val="true" data-val-maxlength="Name must be less than 24 characters" data-val-maxlength-max="24" data-val-regex="Please enter a valid Name." data-val-regex-pattern="^[a-zA-Z]+[&#39;.-]?( *[a-zA-Z]*[&#39;.-]?)*$" data-val-required="First Name is required." id="BillingNewAddress_FirstName" name="BillingNewAddress.FirstName" type="text" value="" />
+                <span class="field-validation-valid text-danger" data-valmsg-for="BillingNewAddress.FirstName" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+        <div class="col-sm-6 paddingHBuffer">
+            <div class="form-group flexcolumn contentleft ">
+                <div>
+                    <label for="BillingNewAddress_LastName" htmlAttributes="{ class = formLabel }">Last Name</label>
+                    <span class="required">*</span>
+                </div>
+                <input class="form-control text-box single-line" data-val="true" data-val-maxlength="Last Name must be less than 25 characters" data-val-maxlength-max="25" data-val-regex="Please enter a valid Last Name." data-val-regex-pattern="^[a-zA-Z]+[&#39;.-]?( *[a-zA-Z]*[&#39;.-]?)*$" data-val-required="Last Name is required." id="BillingNewAddress_LastName" name="BillingNewAddress.LastName" type="text" value="" />
+                <span class="field-validation-valid" data-valmsg-for="BillingNewAddress.LastName" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+    </div>
+    <div class="class-md-12 row">
+        <div class="col-sm-6 paddingHBuffer">
+            <div class="form-group flexcolumn contentleft ">
+                <div>
+                    <label for="BillingNewAddress_Email" htmlAttributes="{ class = formLabel }">Email</label>
+                    <span class="required">*</span>
+                </div>
+                <input class="form-control text-box single-line" data-val="true" data-val-email="Wrong email" data-val-maxlength="Email must be less than 80 characters" data-val-maxlength-max="80" data-val-required="Email is required." id="BillingNewAddress_Email" name="BillingNewAddress.Email" type="text" value="" />
+                <span class="field-validation-valid text-danger" data-valmsg-for="BillingNewAddress.Email" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+        <div class="col-sm-6 paddingHBuffer">
+            <div class="form-group flexcolumn contentleft ">
+                    <div>
+                        <label for="BillingNewAddress_Company" htmlAttributes="{ class = formLabel }">Company</label>
+                        <span class="required">*</span>
+                    </div>
+<input class="form-control text-box single-line" data-val="true" data-val-maxlength="The field Company must be a string or array type with a maximum length of &#39;70&#39;." data-val-maxlength-max="70" data-val-regex="Please enter a valid Company." data-val-regex-pattern="^[a-zA-Z]+[,-.&amp;#&#39;]?( *[a-zA-Z]*[,-.&amp;#&#39;]?)*$" data-val-required="Company name is required" id="BillingNewAddress_Company" name="BillingNewAddress.Company" type="text" value="" /><span class="field-validation-valid" data-valmsg-for="BillingNewAddress.Company" data-valmsg-replace="true"></span>            </div>
+        </div>
+    </div>
+    <div class="class-md-12 row">
+        <div class="col-sm-6 paddingHBuffer">
+            <div class="form-group flexcolumn contentleft ">
+                <div>
+                    <label for="BillingNewAddress_CountryId" htmlAttributes="{ class = formLabel }">Country</label>
+                    <span class="required">*</span>
+                </div>
+                <select data-val="true" data-val-number="The field Country must be a number." data-val-required="Country is required." htmlAttributes="{ class = form-control }" id="BillingNewAddress_CountryId" name="BillingNewAddress.CountryId"><option value="0">Select country</option>
+<option value="1">United States</option>
+<option value="2">Canada</option>
+</select>
+                <span class="field-validation-valid" data-valmsg-for="BillingNewAddress.CountryId" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+        <div class="col-sm-6 paddingHBuffer">
+            <div class="form-group flexcolumn contentleft ">
+                <div>
+                    <label for="BillingNewAddress_StateProvinceId" htmlAttributes="{ class = formLabel }">State / Province</label>
+                    <span class="required">*</span>
+                </div>
+                <select data-val="true" data-val-number="The field State / Province must be a number." htmlAttributes="{ class = form-control }" id="BillingNewAddress_StateProvinceId" name="BillingNewAddress.StateProvinceId"><option value="0">Select state</option>
+</select>
+                <span id="states-loading-progress" style="display: none;" class="please-wait">Wait...</span>
+                <span class="field-validation-valid" data-valmsg-for="BillingNewAddress.StateProvinceId" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+    </div>
+    <div class="class-md-12 row">
+        <div class="col-sm-6 paddingHBuffer">
+            <div class="form-group flexcolumn contentleft ">
+                <div>
+                    <label for="BillingNewAddress_City" htmlAttributes="{ class = formLabel }">City</label>
+<span class="required">*</span>                </div>
+                <input class="form-control text-box single-line" data-val="true" data-val-maxlength="The field City must be a string or array type with a maximum length of &#39;30&#39;." data-val-maxlength-max="30" data-val-regex="Please enter a valid City." data-val-regex-pattern="^[a-zA-Z]+[.&amp;&#39;]?( *[a-zA-Z]*[.&amp;&#39;]?)*$" data-val-required="City is required" id="BillingNewAddress_City" name="BillingNewAddress.City" type="text" value="" />
+                <span class="field-validation-valid" data-valmsg-for="BillingNewAddress.City" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+        <div class="col-sm-6 paddingHBuffer">
+            <div class="form-group flexcolumn contentleft ">
+                <div>
+                    <label for="BillingNewAddress_Address1" htmlAttributes="{ class = formLabel }">Address</label>
+<span class="required">*</span>                </div>
+                <input class="form-control text-box single-line" data-val="true" data-val-maxlength="The field Address must be a string or array type with a maximum length of &#39;50&#39;." data-val-maxlength-max="50" data-val-regex="Please enter a valid value in the first Address field." data-val-regex-pattern="^[A-Za-z0-9]+[.,#&#39;&amp;-]?( *[A-Za-z0-9]*[.,#&#39;&amp;-]?)*" data-val-required="Street address is required" id="BillingNewAddress_Address1" name="BillingNewAddress.Address1" type="text" value="" />
+                <span class="field-validation-valid" data-valmsg-for="BillingNewAddress.Address1" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+    </div>
+    <div class="class-md-12 row">
+        <div class="col-sm-6 paddingHBuffer">
+            <div class="form-group flexcolumn contentleft ">
+                <div>
+                    <label for="BillingNewAddress_ZipPostalCode" htmlAttributes="{ class = formLabel }">Zip / Postal Code</label>
+<span class="required">*</span>                </div>
+                <input class="form-control text-box single-line" data-val="true" data-val-maxlength="The Zip / Postal Code maximum length exceeded" data-val-maxlength-max="10" data-val-regex="Please enter a valid Zip / Postal Code." data-val-regex-pattern="^((\d{5}-\d{4})|(\d{5})|([a-zA-Z0-9]{3}[\s\-]?[a-zA-Z0-9]{3}))$" data-val-required="Zip / postal code is required" id="BillingNewAddress_ZipPostalCode" name="BillingNewAddress.ZipPostalCode" type="text" value="" />
+                <span class="field-validation-valid" data-valmsg-for="BillingNewAddress.ZipPostalCode" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+        <div class="col-sm-6 paddingHBuffer">
+            <div class="form-group flexcolumn contentleft ">
+                <div>
+                    <label for="BillingNewAddress_PhoneNumber" htmlAttributes="{ class = formLabel }">Phone Number</label>
+<span class="required">*</span>                </div>
+                <input class="form-control text-box single-line" data-val="true" data-val-maxlength="The field Phone Number must be a string or array type with a maximum length of &#39;15&#39;." data-val-maxlength-max="15" data-val-regex="Please enter a phone number with 10 digits." data-val-regex-pattern="^\D*(\d{3})\D*(\d{3})\D*(\d{4})$" data-val-required="Phone is required" id="BillingNewAddress_PhoneNumber" name="BillingNewAddress.PhoneNumber" type="text" value="" />
+                <span class="field-validation-valid" data-valmsg-for="BillingNewAddress.PhoneNumber" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+    </div>
+    <div class="class-md-12 row">
+        <div class="col-sm-6 paddingHBuffer">
+        </div>
+        <div class="col-sm-6 paddingHBuffer">
+            <div class="form-group continueBtnContainer">
+                <input id="btnBillingAddressContinue" type="button" title="Continue" class="button-1 new-address-next-step-button IdentifixButton" onclick="Billing.save()" value="Continue" />
+                <br />
+                <br />
+                <span class="please-wait" id="billing-please-wait" style="display: none;">Loading next step...</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+    
+</div>
+
+                            
+                        </div>
+                    </form>
+                    <script type="text/javascript">
+                        Billing.init('#co-billing-form', 'https://store.identifix.com/checkout/OpcSaveBilling/', false);
+                        if ($("#billing-address-select").length > 0) {
+                            Billing.newAddress(!$('#billing-address-select').val());
+                        }
+                    </script>
+                </div>
+            </li>
+            <li id="opc-payment_info" class="tab-section">
+                <div id="checkout-step-payment-info" class="step a-item" style="display: none;">
+
+<div>
+    <p class="back-link contentleft">
+        <a id="linkPaymentInformationBack" href="#" onclick="Checkout.back(); return false;">
+            <img src="/Themes/IdentifixTwoColumnCategory/Content/images/icon_arrow.svg" alt="back" />
+            Back to previous step
+        </a>
+    </p>
+</div>
+<!-- Braintree Hosted Fields -->
+<div class="hostedFields-container contentleft" id="hostedFields">
+    <input type="hidden" id="payment-method-nonce" />
+    <input type="hidden" id="device_data" />
+
+    <div class="row paddingVBuffer paddingHBuffer">
+        <div class="row col-sm-6 mb-3">
+            <div class="col-sm-8">
+                <label for="cc-number" class="formLabel">Credit card number</label>
+                <div class="form-control" id="cc-number"></div>
+                <small class="text-muted">Do not include spaces or dashes</small>
+                <div class="invalid-feedback hidden">
+                    Credit card number is required
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="cardLogoContainer">
+                    <img class="cardLogo" id="logoDiscover" src="/Themes/IdentifixTwoColumnCategory/Content/images/Discover_logo_gray.svg" alt="Discover logo"/>
+                    <img class="cardLogo" id="logoAmerican" src="/Themes/IdentifixTwoColumnCategory/Content/images/American_logo_gray.svg" alt="American express logo"/>
+                    <img class="cardLogo" id="logoMaster" src="/Themes/IdentifixTwoColumnCategory/Content/images/Mastercard_logo_gray.svg" alt="Mastercard logo"/>
+                    <img class="cardLogo" id="logoVisa" src="/Themes/IdentifixTwoColumnCategory/Content/images/Visa_logo_gray.svg"  alt="Visa logo"/>
+                </div>
+            </div>
+        </div>
+        <div class="row col-sm-6 mb-3">
+            <div class="col-sm-6">
+                <label for="cc-expiration" class="formLabel">Expiration Date</label>
+                <div class="form-control" id="cc-expiration"></div>
+                <div class="invalid-feedback hidden">
+                    Expiration date required
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row paddingVBuffer paddingHBuffer">
+        <div class="row col-sm-6 mb-3">
+            <div class="col-sm-4">
+                <label for="cc-expiration" class="formLabel">
+                    Security Code <span data-toggle="tooltip" title="It's a three digit code can be found it at reverse of the card."><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                </label>
+                <div class="form-control" id="cc-cvv"></div>
+
+                <div class="invalid-feedback hidden">
+                    Security code required
+                </div>
+            </div>
+        </div>
+        <div id="cardnameContainer" class="row col-sm-6 mb-3">
+            <div class="col-sm-12">
+                <label for="cc-name" class="formLabel">Cardholder Name</label>
+                <div class="form-control" id="cc-name"></div>
+                <div class="invalid-feedback hidden">
+                    Name on card is required
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row paddingVBuffer paddingHBuffer">
+        <div class="row col-sm-6 mb-3">           
+        </div>
+        <div class="row col-sm-6 mb-3 continueBtnContainer">
+            <div class="col-sm-12">
+                <input id="btnPaymentInformationContinue" type="button" class="button-1 payment-info-next-step-button IdentifixButton" onclick="PaymentInfo.save()" value="Continue" />
+                <br />
+                <br />
+                <span class="please-wait" id="payment-info-please-wait" style="display: none;">Loading next step...</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    <script type="text/javascript">
+                        PaymentInfo.initbt('https://store.identifix.com/checkout/OpcSavePaymentInfoBrainTree/');
+                    </script>
+                </div>
+            </li>
+            <li id="opc-confirm_order" class="tab-section">
+                <div id="checkout-step-confirm-order" class="step a-item" style="display: none;">
+                    <div id="checkout-confirm-order-load">
+                        
+                    </div>
+                    <script type="text/javascript">
+                        ConfirmOrder.init('https://store.identifix.com/checkout/OpcConfirmOrderBrainTree/', 'https://store.identifix.com/checkout/completed/');
+                    </script>
+                </div>
+            </li>
+        </ol>
+    </div>
+    <div class="container">
+    <div class="text-center my-4">
+        <div>
+            <span class="phone-number">Questions? Call us at (866) 530-5361</span> <br />
+        </div>
+        <div>
+            <span class="phone-number-hours">Monday thru Friday, 7am to 7pm CST</span>
+        </div>
+        <div>
+            <span class="contact-page-link">Or, contact us <a class="product-details" href="https://www.identifix.com/contact-us/?lead_source=Website&lead_source_detail=eCommercePage&utm_source=marketing_outreach&utm_medium=Website&utm_campaign=AO+Website&utm_content=directhit" style="font-size: 20px;color: #0000FF;"><b>here</b> </a></span>
+        </div>
+    </div>
+    <div class="text-center mb-5">
+        <a id="btnOrderCompleteContinue" role="button" aria-label="(opens in a new window)" class="button-1 btn btn-default IdentifixButton" href="https://www.Identifix.com" target="_blank">
+            GO TO IDENTIFIX.COM
+        </a>
+    </div>
+</div>
+    <script type="text/javascript">
+        Accordion.init('checkout-steps', '.step-title', true);
+        Accordion.openSection('#opc-billing');
+        Checkout.init('https://store.identifix.com/cart/');
+        if (Billing.disableBillingAddressCheckoutStep)
+        {
+            Accordion.hideSection('#opc-billing');
+            Billing.save();
+        }
+    </script>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<script language="javascript" type="text/javascript" src="/Scripts/jQuery.Cookie.min.js"></script>
+<script language="javascript" type="text/javascript" src="/Scripts/Identifix.CurrencySelector.js"></script>
+<script language="javascript" type="text/javascript">
+    window.Identifix.CurrencySelector.setDefaultCurrency();
+</script>
+    </div>
+    <div class="bg-gradient py-3">
+        <div class="container">
+            <div class="row mx-0 justify-content-between text-left lightText">
+                <div class="col-xs-12 col-md-8 footer-link-nav">
+                    <div class="footerLinkNav">
+                        <a id="lnkTerms" href="/Terms-of-Use">Terms of Use</a>
+                    </div><span class="pipe">|</span>
+                    <div class="footerLinkNav">
+                        <a id="lnkSystemRequirements" href="https://www.identifix.com/system-requirements/">System Requirements</a>
+                    </div><span class="pipe">|</span>
+                    <div class="footerLinkNav">
+                        <a id="lnkContact" href="https://www.identifix.com/contact-us/?lead_source=Website&lead_source_detail=eCommercePage&utm_source=marketing_outreach&utm_medium=Website&utm_campaign=AO+Website&utm_content=directhit">Contact</a>
+                    </div><span class="pipe">|</span>
+                    <div class="footerLinkNav">
+                        <a id="lnkPrivacyPolicy" href="/Privacy-Notice">Privacy Notice</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="footerLinkNav copyRight">
+                        <span>Copyright &copy; 2025 Identifix, LLC</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <div class="captcha-box">
+        <input type="hidden" id="recaptcha-public-key" value="6LfOxzUqAAAAAC3uQ4_FheMxp-zZv0_mGYLBz17w">
+        <script src="https://www.google.com/recaptcha/api.js?render=6LfOxzUqAAAAAC3uQ4_FheMxp-zZv0_mGYLBz17w"></script>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#headerLinks").load('/Common/HeaderLinks');
+            window.addEventListener("pageshow", function (event) {
+                if (event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2)) {// detects page opened from cache, 2 indicates is from back button
+                    setTimeout(function () {
+                        $("#headerLinks").load('/Common/HeaderLinks');
+                    }, 200);
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        ire('identify', { customerId: '', customerEmail: '' });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    
+    
+    
+
+
+</body>
+</html>

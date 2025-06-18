@@ -76,64 +76,223 @@ const globalOnAction = (actionEvent) => {
     return actionEvent;
 };
 
-const addToCartListener1 = () => {
-    if (domIsInteractive()) {
-        const addToCart1 = document.querySelector("#month > div.col-container > div.col.box.parent.best > div.p-5.bg-whit.specialbox.pb-3 > a");
-
-        addToCart1?.addEventListener("click", (event) => {
-            _sf.sendEvent({
-                interaction: {
-                    name: _sf.CartInteractionName.AddToCart,
-                    lineItem: {
-                        catalogObjectType: "Product",
-                        catalogObjectId: event.currentTarget.parentElement.firstChild.nextElementSibling.innerText.replace(/[™®©]/g, ""),
-                        price: 1,
-                        quantity: 1
-                    }
-                }
-            });
-        });
+const checkoutSpaListener = () => {
+    // Only run this logic on the one-page checkout URL
+    if (!/^\/onepagecheckout/.test(window.location.pathname)) {
+        return;
     }
+
+    let checkoutFormFound = false;
+    
+    // Poll the document until the main checkout container '#checkout-steps' exists.
+    const setupObserverInterval = setInterval(() => {
+        const targetNode = document.getElementById('checkout-steps');
+
+        if (targetNode) {
+            checkoutFormFound = true;
+            clearInterval(setupObserverInterval);
+
+            let paymentInfoFired = false;
+            let purchaseListenerAttached = false; // Use a new flag for the click listener
+
+            const observer = new MutationObserver(() => {
+                window.requestAnimationFrame(() => {
+                    // Track when the Payment Info step becomes visible
+                    const paymentStep = document.getElementById('checkout-step-payment-info');
+                    if (!paymentInfoFired && paymentStep && window.getComputedStyle(paymentStep).display !== 'none') {
+                        paymentInfoFired = true;
+                        _sf.sendEvent({
+                            interaction: {
+                                name: "IDX Checkout Page - Payment Info"
+                            }
+                        });
+                    }
+
+                    // Track when the final Confirm Order step becomes visible
+                    const confirmStep = document.getElementById('checkout-step-confirm-order');
+                    if (!purchaseListenerAttached && confirmStep && window.getComputedStyle(confirmStep).display !== 'none') {
+                        // Set flag to true immediately to ensure this block only runs once
+                        purchaseListenerAttached = true; 
+
+                        // Fire the "view" event for reaching this step
+                        _sf.sendEvent({
+                            interaction: {
+                                name: "IDX Purchase Page"
+                            }
+                        });
+
+                        // Now that the step is visible, poll for the #btnConfirmOrder button
+                        const buttonInterval = setInterval(() => {
+                            const confirmButton = document.getElementById('btnConfirmOrder');
+                            if (confirmButton) {
+                                clearInterval(buttonInterval); // Button found, stop polling
+
+                                // Attach the final "Purchase" click listener
+                                confirmButton.addEventListener('click', () => {
+                                    _sf.sendEvent({
+                                        interaction: {
+                                            name: "IDX Purchase Submit"
+                                        }
+                                    });
+                                    // NOTE: We do NOT call event.preventDefault().
+                                    // This allows the website's original purchase submission to proceed normally.
+                                });
+                            }
+                        }, 500);
+
+                        // Failsafe for the button polling
+                        setTimeout(() => clearInterval(buttonInterval), 10000);
+                    }
+
+                    // Once both listeners are set up, we can stop observing
+                    if (paymentInfoFired && purchaseListenerAttached) {
+                        observer.disconnect();
+                    }
+                });
+            });
+
+            // Start observing the target node.
+            observer.observe(targetNode, {
+                attributes: true,
+                childList: true,
+                subtree: true,
+                attributeFilter: ['style', 'class']
+            });
+        }
+    }, 500);
+
+    // Failsafe to stop polling for the main container.
+    setTimeout(() => {
+        if (!checkoutFormFound) {
+            clearInterval(setupObserverInterval);
+        }
+    }, 10000);
+};
+
+const addToCartListener1 = () => {
+    const selector = "a.woo-button[href*='/cart/addproduct/1009']";
+    let elementFound = false;
+
+    const interval = setInterval(() => {
+        const addToCartButton = document.querySelector(selector);
+
+        if (addToCartButton) {
+            elementFound = true;
+            clearInterval(interval);
+
+            addToCartButton.addEventListener("click", (event) => {
+
+                event.preventDefault();
+
+                _sf.sendEvent({
+                    interaction: {
+                        name: _sf.CartInteractionName.AddToCart,
+                        lineItem: {
+                            catalogObjectType: "Product",
+                            catalogObjectId: "Direct Hit Pro Academy",
+                            price: 219,
+                            quantity: 1
+                        }
+                    }
+                });
+
+                const destinationUrl = addToCartButton.href;
+                setTimeout(() => {
+                    window.location.href = destinationUrl;
+                }, 500);
+            });
+        }
+    }, 500);
+
+    setTimeout(() => {
+        if (!elementFound) {
+            clearInterval(interval);
+        }
+    }, 10000);
 };
 
 const addToCartListener2 = () => {
-    if (domIsInteractive()) {
-        const addToCart2 = document.querySelector("#month > div.col-container > div:nth-child(2) > div.p-5.bg-white.pb-3 > a");
+    const selector = "a.woo-button[href*='/cart/addproduct/1008']";
+    let elementFound = false;
 
-        addToCart2?.addEventListener("click", (event) => {
-            _sf.sendEvent({
-                interaction: {
-                    name: _sf.CartInteractionName.AddToCart,
-                    lineItem: {
-                        catalogObjectType: "Product",
-                        catalogObjectId: event.currentTarget.parentElement.firstChild.nextElementSibling.innerText.replace(/[™®©]/g, ""),
-                        price: 1,
-                        quantity: 1
+    const interval = setInterval(() => {
+        const addToCartButton = document.querySelector(selector);
+
+        if (addToCartButton) {
+            elementFound = true;
+            clearInterval(interval);
+
+            addToCartButton.addEventListener("click", (event) => {
+
+                event.preventDefault();
+
+                _sf.sendEvent({
+                    interaction: {
+                        name: _sf.CartInteractionName.AddToCart,
+                        lineItem: {
+                            catalogObjectType: "Product",
+                            catalogObjectId: "Direct Hit Pro",
+                            price: 219,
+                            quantity: 1
+                        }
                     }
-                }
+                });
+
+                const destinationUrl = addToCartButton.href;
+                setTimeout(() => {
+                    window.location.href = destinationUrl;
+                }, 500);
             });
-        });
-    }
+        }
+    }, 500);
+
+    setTimeout(() => {
+        if (!elementFound) {
+            clearInterval(interval);
+        }
+    }, 10000);
 };
 
 const addToCartListener3 = () => {
-    if (domIsInteractive()) {
-        const addToCart3 = document.querySelector("button.button.ymm-submit-any-selection");
+    const selector = "button.button.ymm-submit-any-selection";
+    let elementFound = false;
 
-        addToCart3?.addEventListener("click", (event) => {
-            _sf.sendEvent({
-                interaction: {
-                    name: _sf.CartInteractionName.AddToCart,
-                    lineItem: {
-                        catalogObjectType: "Product",
-                        catalogObjectId: "Direct-Hit DIY",
-                        price: 1,
-                        quantity: 1
+    const interval = setInterval(() => {
+        const addToCartButton = document.querySelector(selector);
+
+        if (addToCartButton) {
+            elementFound = true;
+            clearInterval(interval);
+
+            addToCartButton.addEventListener("click", (event) => {
+
+                event.preventDefault();
+
+                _sf.sendEvent({
+                    interaction: {
+                        name: _sf.CartInteractionName.AddToCart,
+                        lineItem: {
+                            catalogObjectType: "Product",
+                            catalogObjectId: "Direct Hit DIY",
+                            price: 219,
+                            quantity: 1
+                        }
                     }
-                }
+                });
+
+                const destinationUrl = addToCartButton.href;
+                setTimeout(() => {
+                    window.location.href = destinationUrl;
+                }, 500);
             });
-        });
-    }
+        }
+    }, 500);
+
+    setTimeout(() => {
+        if (!elementFound) {
+            clearInterval(interval);
+        }
+    }, 10000);
 };
 
 const formSubmitListener = () => {
@@ -174,14 +333,6 @@ const formSubmitListener = () => {
         window.localStorage.setItem("additionalProducts", additionalProducts?.val());
     })
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    addToCartListener1();
-    addToCartListener2();
-    addToCartListener3();
-    formSubmitListener();
-});
-
 
 // --------------------------
 // Peripay Sitemp
@@ -410,12 +561,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             attributes: {
                                 sku: {
                                     id: () => { return "Direct Hit Pro Academy" }
-                                },
-                                description: _sf.resolvers.fromMeta("og:description")(),
-                                url: SalesforceInteractions.resolvers.fromHref(),
-                                imageUrl: () => domIsInteractive().then(() => { return _sf.cashDom(".aligncenter.wp-image-2899.size-large")[0].src }),
-                                inventoryCount: 1,
-                                price: 219.00
+                                }
                             }
                         }
                     }
@@ -432,12 +578,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             attributes: {
                                 sku: {
                                     id: () => { return "Direct Hit Pro" }
-                                },
-                                description: _sf.resolvers.fromMeta("og:description")(),
-                                url: SalesforceInteractions.resolvers.fromHref(),
-                                imageUrl: () => domIsInteractive().then(() => { return _sf.cashDom(".alignnone.size-full.wp-image-2785")[0].src }),
-                                inventoryCount: 1,
-                                price: 219.00
+                                }
                             }
                         }
                     }
@@ -447,7 +588,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     isMatch: () =>
                         /^\/direct-hit\/direct-hit-diy\/$/.test(window.location.pathname),
                     interaction: {
-                        name: "IDX Direct Hit Diy"
+                        name: _sf.CatalogObjectInteractionName.ViewCatalogObject,
+                        catalogObject: {
+                            type: "Product",
+                            id: () => { return "Direct Hit DIY" },
+                            attributes: {
+                                sku: {
+                                    id: () => { return "Direct Hit DIY" }
+                                }
+                            }
+                        }
                     }
                 },
                 {
@@ -687,37 +837,29 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 },
                 {
-                    name: "idx - checkout - billing address",
-                    isMatch: () => _sf.DisplayUtils.pageElementLoaded(".page-body.checkout-data").then(() => {
-                        return /^\/onepagecheckout/.test(window.location.pathname)
-                    }),
+                    name: "idx - checkout",
+                    isMatch: () => /^\/onepagecheckout/.test(window.location.pathname),
                     interaction: {
-                        name: "IDX Checkout Page - Billing Address"
+                        name: "IDX Checkout Page - Billing Address" // Fires the first event on page load
                     },
                     listeners: [
-                        _sf.listener("click", getElementByXpath("/html/body/div[1]/div[5]/div/div[2]/ol/li[1]/div/form/div/div/div/div/div/div[6]/div[2]/div/input"), () => {
+                        // The listener for the email submit on the billing address form
+                        _sf.listener("click", "#btnBillingAddressContinue", () => {
                             let emailAddress = _sf.cashDom('input[name="BillingNewAddress.Email"]').val();
-                            _sf.sendEvent({
-                                interaction: {
-                                    name: "IDX Checkout Page - Email Submit"
-                                },
-                                user: {
-                                    identities: {
-                                        emailAddress: emailAddress?.val() // fix
+                             if (emailAddress) {
+                                _sf.sendEvent({
+                                    interaction: {
+                                        name: "IDX Checkout Page - Email Submit"
+                                    },
+                                    user: {
+                                        identities: {
+                                            emailAddress: emailAddress
+                                        }
                                     }
-                                }
-                            })
+                                });
+                            }
                         })
                     ]
-                },
-                {
-                    name: "idx - checkout - payment info",
-                    isMatch: () => _sf.DisplayUtils.pageElementLoaded("#opc-payment_info").then(() => {
-                        return /^\/onepagecheckout/.test(window.location.pathname)
-                    }),
-                    interaction: {
-                        name: "IDX Checkout Page - Payment Info"
-                    }
                 }
                 ],
                 pageTypeDefault: {
@@ -728,6 +870,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 },
             };
             _sf.initSitemap(sitemapConfig);
+            addToCartListener1();
+            addToCartListener2();
+            addToCartListener3();
+            formSubmitListener();
+            checkoutSpaListener();
         })) ||
     // --------------------------
     // Hollander Sitemp
