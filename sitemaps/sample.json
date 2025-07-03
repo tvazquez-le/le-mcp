@@ -1,0 +1,1622 @@
+{
+  "campaign": "testCampaignId",
+  "experience": "testExperienceId",
+  "user": {
+    "gender": "FEMALE",
+    "age_range": "0-24",
+    "primaryConcern": "Oily skin or clogged pores",
+    "secondary_concern": "Maintaining healthy-looking skin",
+    "multivitamin": "YES",
+    "firstName": "Ava",
+    "heroProductsArr": [
+      {
+        "category": "heroProducts",
+        "concern": "Oily skin or clogged pores",
+        "rank": "rank1",
+        "sku": "32640",
+        "name": "YOUTH® Superoxidant Boost C Serum™ 1 oz.",
+        "tag": "Oily skin or clogged pores",
+        "product": {
+          "id": "32640",
+          "location": null,
+          "attributes": {
+            "memberPrice": {
+              "value": "89.15",
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-06-05_01-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749146915000
+              }
+            },
+            "name": {
+              "value": "YOUTH® Superoxidant Boost C Serum™ 1 oz.",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749143559000
+              }
+            },
+            "description": {
+              "value": "Your skin's daily multivitamin C serum. Showcasing 13 antioxidants and essential skin nutrients, including three next-generation forms of vitamin C and a unique tropical fruit cocktail, it's a glow-getting powerhouse for instant brightness, nutrition for the skin, plus antipollution benefits."
+            },
+            "ratingUrl": {
+              "value": "https://image.mail.shaklee.com/lib/fe3c157075640474771477/m/1/4be1080d-4081-4eb3-9073-42a32e4b1a59.png",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749143559000
+              }
+            },
+            "archived": {
+              "value": false,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749143559000
+              }
+            },
+            "rating": {
+              "value": 4.92,
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-06-05_11-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749145932000
+              }
+            },
+            "esUrl": {
+              "value": "https://www.shaklee.com/Belleza/Cuidado-de-la-Piel/Antienvejecimiento/YOUTH%C2%AE-Superoxidant-Boost-C-Serum%E2%84%A2/p/32640",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-06-05_04-03-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749147243000
+              }
+            },
+            "url": {
+              "value": "https://us.shakleeuat.com/Beauty/Skin-Care/Anti-Aging/YOUTH%C2%AE-Superoxidant-Boost-C-Serum%E2%84%A2/p/32640",
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-06-05_11-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749145932000
+              }
+            },
+            "distributorPrice": {
+              "value": "76.90",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749143559000
+              }
+            },
+            "esSummary": {
+              "value": "Un suero C multivitamÃ­nico supercargado para aumentar la luminosidad, la salud de la piel y la resiliencia",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-06-05_04-03-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749147243000
+              }
+            },
+            "esDescription": {
+              "value": null
+            },
+            "promotable": {
+              "value": true
+            },
+            "summary": {
+              "value": "A Supercharged Multivitamin C Serum to Boost Luminosity, Skin Health, and Resilience"
+            },
+            "price": {
+              "value": 89.15,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749143559000
+              }
+            },
+            "productShortName": {
+              "value": "YOUTH® Superoxidant Boost C Serum™",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749143559000
+              }
+            },
+            "directorPrice": {
+              "value": "78.65",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749143559000
+              }
+            },
+            "baseProductName": {
+              "value": "YOUTH® Superoxidant Boost C Serum™",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749143559000
+              }
+            },
+            "retailPrice": {
+              "value": "104.85",
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-06-05_01-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749146915000
+              }
+            },
+            "inventoryCount": {
+              "value": 12263,
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-06-05_11-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749145932000
+              }
+            },
+            "listPrice": {
+              "value": 104.85,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749143559000
+              }
+            },
+            "lowestPrice": {
+              "value": "69.90",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749143559000
+              }
+            },
+            "imageUrl": {
+              "value": "https://www.shaklee.com/medias/shkconversionMediaFormat660x660-32640-01.png?context=bWFzdGVyfGltYWdlc3wxMjQxOTJ8aW1hZ2UvcG5nfGltYWdlcy9jYXRhbG9nQXdhcmUvaGJlL2hkNy8xMDczMzg0MTkwNzc0Mi5wbmd8NWFkNzFhMzkzMDZiZGFlMWJmZjkwYjY2NTE5Y2JlMGM5MTBhZGYzYzZlOTk5ZGE3ZjMyNGU3NmEzNjNlYzI4MQ",
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-06-05_11-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749146738000
+              }
+            }
+          },
+          "dimensions": {
+            "BaseProduct": [
+              "YOUTH® Superoxidant Boost C Serum™"
+            ],
+            "OrderableBy": [
+              "BUSINESS_LEADER",
+              "DISTRIBUTOR",
+              "MEMBER",
+              "GUEST"
+            ],
+            "Purchasable": [
+              "TRUE"
+            ],
+            "StockLevelStatus": [
+              "INSTOCK"
+            ],
+            "StockStatus": [
+              "A"
+            ],
+            "Style": [
+              "1OZ/30ML"
+            ]
+          },
+          "categories": [
+            "BEAUTY|SKIN CARE - FACE SERUMS",
+            "BEAUTY|SKIN CARE - ANTI-AGING",
+            "BEAUTY|SHOP BY CONCERN - OILY SKIN",
+            "BEAUTY|SHOP BY CONCERN - AGE SPOTS & DULLNESS",
+            "PERSONAL CARE|SKIN CARE - ANTI-AGING"
+          ],
+          "skus": {}
+        },
+        "iconUrl": "https://images.shaklee.com/smartskinquiz/skqi-oily.png"
+      },
+      {
+        "category": "heroProducts",
+        "concern": "Maintaining healthy-looking skin",
+        "rank": "rank1",
+        "sku": "32566",
+        "name": "YOUTH® Luminous Gel Oil Cleanser",
+        "tag": "Maintaining healthy-looking skin",
+        "product": {
+          "id": "32566",
+          "location": null,
+          "attributes": {
+            "name": {
+              "value": "YOUTH® Luminous Gel Oil Cleanser",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-01-13_13-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1736798907000
+              }
+            },
+            "memberPrice": {
+              "value": "44.55",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-03-12_15-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741815977000
+              }
+            },
+            "esUrl": {
+              "value": "https://www.shaklee.com/Belleza/M%C3%A1s-vendidos/YOUTH%C2%AE-Luminous-Gel-Oil-Cleanser/p/32566",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-06-05_04-03-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749147243000
+              }
+            },
+            "price": {
+              "value": 44.55,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-03-11_17-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741737736000
+              }
+            },
+            "rating": {
+              "value": 4.6,
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-03-10_16-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741644383000
+              }
+            },
+            "baseProductName": {
+              "value": null,
+              "metadata": {
+                "provider": "ETL:testing/convertcsv4.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741156916000
+              }
+            },
+            "lowestPrice": {
+              "value": "34.90",
+              "metadata": {
+                "provider": "ETL:processed/product-2025-03-12_14-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741811016000
+              }
+            },
+            "inventoryCount": {
+              "value": 47898,
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-06-05_11-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749145932000
+              }
+            },
+            "summary": {
+              "value": "A Facial Cleanser that Exfoliates and Moisturizes",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-01-13_13-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1736798907000
+              }
+            },
+            "url": {
+              "value": "https://us.shakleeuat.com/Beauty/Best-Sellers/YOUTH%C2%AE-Luminous-Gel-Oil-Cleanser/p/32566",
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-06-05_11-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749145932000
+              }
+            },
+            "listPrice": {
+              "value": 52.4,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-03-11_17-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741737736000
+              }
+            },
+            "productShortName": {
+              "value": "YOUTH® Luminous Gel Oil Cleanser",
+              "metadata": {
+                "provider": "ETL:testing/convertcsv4.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741156916000
+              }
+            },
+            "esSummary": {
+              "value": "Un limpiador facial que exfolia e hidrata",
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-01-30_12-03-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1738260491000
+              }
+            },
+            "distributorPrice": {
+              "value": "38.40",
+              "metadata": {
+                "provider": "ETL:processed/product-2025-03-12_14-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741811016000
+              }
+            },
+            "promotable": {
+              "value": true,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-01-13_13-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1736798907000
+              }
+            },
+            "imageUrl": {
+              "value": "https://www.shaklee.com/medias/shkconversionMediaFormat660x660-32566-01.png?context=bWFzdGVyfGltYWdlc3w4ODUxN3xpbWFnZS9wbmd8aW1hZ2VzL2NhdGFsb2dBd2FyZS9oOTQvaDRlLzEwNTMxMDE5OTgwODMwLnBuZ3w2N2MzMDU3ZmNkMzc3ZTIyMTExNDc2MmQyN2EyMDlmOTI1ODU0NzYyOGI4ODZiMmQzMTIyMDIyNzdiZWVkMGE0",
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-06-05_11-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749146738000
+              }
+            },
+            "directorPrice": {
+              "value": "39.30",
+              "metadata": {
+                "provider": "ETL:processed/product-2025-03-12_14-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741811016000
+              }
+            },
+            "retailPrice": {
+              "value": "52.40",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-03-12_15-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741815977000
+              }
+            },
+            "description": {
+              "value": null,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749143559000
+              }
+            },
+            "archived": {
+              "value": false,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-01-13_13-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1736798907000
+              }
+            },
+            "esDescription": {
+              "value": "<p>Este limpiador facial sin jabon y con pH equilibrado combina gel limpiador, aceite de aguacate hidratante, un complejo exfoliante de algas y una mezcla patentada de vitaminas, polifenoles y botanicos para limpiar, exfoliar, nutrir y preparar suavemente tu rostro para tu rutina de cuidado de la piel. Al igual que todos los productos YOUTH, Luminous Gel Oil Cleanser esta probado por oftalmologos, dermatologos, es hipoalergenico, vegano, y no cruel con los animales.</p>",
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-01-30_12-03-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1738260491000
+              }
+            },
+            "ratingUrl": {
+              "value": "https://image.mail.shaklee.com/lib/fe3c157075640474771477/m/1/4be1080d-4081-4eb3-9073-42a32e4b1a59.png",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-02-13_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1739480544000
+              }
+            }
+          },
+          "dimensions": {
+            "BaseProduct": [
+              "YOUTH® Luminous Gel Oil Cleanser"
+            ],
+            "OrderableBy": [
+              "BUSINESS_LEADER",
+              "DISTRIBUTOR",
+              "MEMBER",
+              "GUEST"
+            ],
+            "Purchasable": [
+              "TRUE"
+            ],
+            "StockLevelStatus": [
+              "INSTOCK"
+            ],
+            "StockStatus": [
+              "A"
+            ],
+            "Style": [
+              "BEST SELLERS",
+              "ANTI-AGING",
+              "AUTOSHIP $10 COUPON REDEEMABLE PRODUCTS.",
+              "CLEANSERS & EXFOLIATORS",
+              "EWG VERIFIED",
+              "SIGNS OF AGING",
+              "OILY SKIN"
+            ]
+          },
+          "categories": [
+            "PERSONAL CARE|BEST SELLERS",
+            "PERSONAL CARE|SHOP BY CONCERN - OILY SKIN",
+            "PERSONAL CARE|SKIN CARE - CLEANSERS & EXFOLIATORS",
+            "PERSONAL CARE|SHOP BY CONCERN - ANTI-AGING",
+            "BEAUTY|BEST SELLERS"
+          ],
+          "skus": {}
+        },
+        "iconUrl": "https://images.shaklee.com/smartskinquiz/skqi-maintain.png"
+      }
+    ],
+    "regimenArr": [
+      {
+        "category": "regimen",
+        "concern": "Oily skin or clogged pores",
+        "rank": "rank1",
+        "sku": "89717",
+        "name": "Pomifera™ Glow Up Bundle",
+        "tag": "Oily skin or clogged pores",
+        "product": {
+          "id": "89717",
+          "location": null,
+          "attributes": {
+            "productShortName": {
+              "value": "Pomifera™ Glow Up Bundle",
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-03-10_16-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741644383000
+              }
+            },
+            "listPrice": {
+              "value": 166.45,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-03-11_17-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741737736000
+              }
+            },
+            "name": {
+              "value": "Pomifera™ Glow Up Bundle",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-01-13_13-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1736798907000
+              }
+            },
+            "memberPrice": {
+              "value": "141.50",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-03-12_15-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741815977000
+              }
+            },
+            "promotable": {
+              "value": true,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-01-13_13-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1736798907000
+              }
+            },
+            "ratingUrl": {
+              "value": "https://image.mail.shaklee.com/lib/fe3c157075640474771477/m/1/4be1080d-4081-4eb3-9073-42a32e4b1a59.png",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-02-13_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1739480544000
+              }
+            },
+            "description": {
+              "value": null,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749143559000
+              }
+            },
+            "url": {
+              "value": "https://us.shakleeuat.com/Beauty/Skin-Care/Anti-Aging/Pomifera%E2%84%A2-Glow-Up-Bundle/p/89717",
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-06-05_11-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749145932000
+              }
+            },
+            "distributorPrice": {
+              "value": "122.10",
+              "metadata": {
+                "provider": "ETL:processed/product-2025-03-12_14-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741811016000
+              }
+            },
+            "price": {
+              "value": 141.5,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-03-11_17-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741737736000
+              }
+            },
+            "directorPrice": {
+              "value": "124.85",
+              "metadata": {
+                "provider": "ETL:processed/product-2025-03-12_14-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741811016000
+              }
+            },
+            "baseProductName": {
+              "value": null,
+              "metadata": {
+                "provider": "ETL:testing/convertcsv4.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741156916000
+              }
+            },
+            "esUrl": {
+              "value": "https://www.shaklee.com/Belleza/Cuidado-de-la-Piel/Antienvejecimiento/Pomifera%E2%84%A2-Glow-Up-Bundle/p/89717",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-06-05_04-03-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749147243000
+              }
+            },
+            "lowestPrice": {
+              "value": "111.00",
+              "metadata": {
+                "provider": "ETL:processed/product-2025-03-12_14-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741811016000
+              }
+            },
+            "rating": {
+              "value": 4.58,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749143559000
+              }
+            },
+            "archived": {
+              "value": false,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-01-13_13-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1736798907000
+              }
+            },
+            "imageUrl": {
+              "value": "https://www.shaklee.com/medias/89717-1-1200-shkconversionMediaFormat660x660?context=bWFzdGVyfGltYWdlc3wyNTMyMjV8aW1hZ2UvcG5nfGltYWdlcy9jYXRhbG9nQXdhcmUvaDY0L2g0NC8xMDA0MjM0NTQyMjg3OC5wbmd8NzVjZDU5ZDc0M2VjNDliMmJiMDI4YjEwYzY5MDkzYjc2MzZkZjRhN2Y2YjYzMmI3YTgwNWI3MjY2YzY3YzlmZQ",
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-06-05_11-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749146738000
+              }
+            },
+            "esSummary": {
+              "value": "Una rutina de cuatro pasos para piel normal a seca.",
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-01-30_12-03-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1738260491000
+              }
+            },
+            "esDescription": {
+              "value": "Pomifera Glow Up Bundle te ayuda a hidratar, alizar y suavizar para obtener una piel visiblemente saludable. Este set antiedad para el cuidado de la piel incluye un limpiador facial, exfoliante facial, crema hidratante facial y suero antiedad. Cada producto en esta rutina de cuatro pasos estí¡ formulado con aceite de pomifera, una potente fuente de antioxidantes, omega-6 y otros bioactivos. </p>",
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-01-30_12-03-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1738260491000
+              }
+            },
+            "inventoryCount": {
+              "value": 999,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-01-13_13-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1736798907000
+              }
+            },
+            "summary": {
+              "value": "A four-step routine for normal to dry skin.",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-01-13_13-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1736798907000
+              }
+            },
+            "retailPrice": {
+              "value": "166.45",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-03-12_15-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741815977000
+              }
+            }
+          },
+          "dimensions": {
+            "BaseProduct": [
+              "Pomifera™ Glow Up Bundle"
+            ],
+            "OrderableBy": [
+              "BUSINESS_LEADER",
+              "DISTRIBUTOR",
+              "MEMBER",
+              "GUEST"
+            ],
+            "Purchasable": [
+              "TRUE"
+            ],
+            "StockLevelStatus": [
+              "INSTOCK"
+            ],
+            "StockStatus": [
+              "A"
+            ],
+            "Style": [
+              "ANTI-AGING",
+              "HYDRATING",
+              "BUNDLE & BOOST",
+              "SIGNS OF AGING"
+            ]
+          },
+          "categories": [
+            "CUIDADO PERSONAL|LOS MEJORES PAQUETES",
+            "PERSONAL CARE|BEST OF BUNDLES",
+            "PERSONAL CARE|NEW ARRIVALS",
+            "PERSONAL CARE|SKIN CARE - ANTI-AGING",
+            "PERSONAL CARE|SKIN CARE - HYDRATING",
+            "BEAUTY|BEST OF BUNDLES"
+          ],
+          "skus": {}
+        },
+        "iconUrl": "https://images.shaklee.com/smartskinquiz/skqi-oily.png"
+      }
+    ],
+    "nutritionArr": [
+      {
+        "category": "nutrition",
+        "concern": "Oily skin or clogged pores",
+        "rank": "rank1",
+        "sku": "21320",
+        "name": "Optiflora® DI",
+        "tag": "Oily skin or clogged pores",
+        "product": {
+          "id": "21320",
+          "location": null,
+          "attributes": {
+            "esUrl": {
+              "value": "https://www.shaklee.com/Nutrici%C3%B3n/Soluciones-Dirigidas/Prebi%C3%B3ticos-y-Probi%C3%B3ticos/Optiflora%C2%AE-DI/p/21320",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-03-10_15-03-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741643450000
+              }
+            },
+            "price": {
+              "value": 33.4,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-03-11_17-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741737736000
+              }
+            },
+            "ratingUrl": {
+              "value": "https://image.mail.shaklee.com/lib/fe3c157075640474771477/m/1/4be1080d-4081-4eb3-9073-42a32e4b1a59.png",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749143559000
+              }
+            },
+            "inventoryCount": {
+              "value": 42208,
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-06-05_11-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749145932000
+              }
+            },
+            "imageUrl": {
+              "value": "https://www.shaklee.com/medias/shkconversionMediaFormat660x660-21320-01.png?context=bWFzdGVyfGltYWdlc3wxNjk0MjF8aW1hZ2UvcG5nfGltYWdlcy9jYXRhbG9nQXdhcmUvaDhkL2g3Ni8xMDY0MTA0MTYyMTAyMi5wbmd8MWY4YzQwZTNhZWQ1MmRiM2Y0NGMyOGNhMGM2MDg0ZTFlMDk3MTZiM2I5YWEyZGVlMTFjNmIwNjdkMjg3OTMzNg",
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-06-05_11-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749146738000
+              }
+            },
+            "baseProductName": {
+              "value": "Optiflora® DI",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749143559000
+              }
+            },
+            "directorPrice": {
+              "value": "29.55",
+              "metadata": {
+                "provider": "ETL:processed/product-2025-03-12_14-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741811016000
+              }
+            },
+            "name": {
+              "value": "Optiflora® DI",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-01-13_13-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1736798907000
+              }
+            },
+            "summary": {
+              "value": "Probiotic clinically proven for digestive and immune health*",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-01-13_13-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1736798907000
+              }
+            },
+            "distributorPrice": {
+              "value": "28.90",
+              "metadata": {
+                "provider": "ETL:processed/product-2025-03-12_14-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741811016000
+              }
+            },
+            "retailPrice": {
+              "value": "39.40",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-03-12_15-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741815977000
+              }
+            },
+            "description": {
+              "value": null,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749143559000
+              }
+            },
+            "esDescription": {
+              "value": "<p>Eentrega beneficios íºnicos ví­a una fórmula exclusiva con 10 billones CFUs de 4 cepas bacterianas, incluyendo <em>Bifidobacterium lactis</em> HN019™, la cual ha demostrado en estudios clí­nicos brindar apoyo a la salud digestiva e inmunológica.* </p>",
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-01-30_12-03-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1738260491000
+              }
+            },
+            "url": {
+              "value": "https://us.shakleeuat.com/Nutrition/Targeted-Solutions/Prebiotics-%26-Probiotics/Optiflora%C2%AE-DI/p/21320",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749143559000
+              }
+            },
+            "archived": {
+              "value": false,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-01-13_13-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1736798907000
+              }
+            },
+            "listPrice": {
+              "value": 39.4,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-03-11_17-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741737736000
+              }
+            },
+            "lowestPrice": {
+              "value": "26.20",
+              "metadata": {
+                "provider": "ETL:processed/product-2025-03-12_14-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741811016000
+              }
+            },
+            "promotable": {
+              "value": true,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-01-13_13-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1736798907000
+              }
+            },
+            "rating": {
+              "value": 4.95,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749143559000
+              }
+            },
+            "memberPrice": {
+              "value": "33.40",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-03-12_15-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741815977000
+              }
+            },
+            "esSummary": {
+              "value": "ProbiÃ³tico clÃ­nicamente comprobado para la salud digestiva e inmune*",
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-01-30_12-03-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1738260491000
+              }
+            },
+            "productShortName": {
+              "value": "Optiflora® DI",
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-03-10_16-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741644383000
+              }
+            }
+          },
+          "dimensions": {
+            "BaseProduct": [
+              "Optiflora® DI"
+            ],
+            "OrderableBy": [
+              "BUSINESS_LEADER",
+              "DISTRIBUTOR",
+              "MEMBER",
+              "GUEST"
+            ],
+            "Purchasable": [
+              "TRUE"
+            ],
+            "StockLevelStatus": [
+              "INSTOCK"
+            ],
+            "StockStatus": [
+              "A"
+            ],
+            "Style": [
+              "AUTOSHIP $10 COUPON REDEEMABLE PRODUCTS.",
+              "PROBIOTIC COMPLEX CAPSULES"
+            ]
+          },
+          "categories": [
+            "NUTRITION|TARGETED SOLUTIONS - PREBIOTICS & PROBIOTICS",
+            "NUTRITION|HEALTHY WEIGHT - GLP-1 SUPPORT",
+            "NUTRITION|TARGETED SOLUTIONS - DIGESTIVE HEALTH"
+          ],
+          "skus": {}
+        },
+        "iconUrl": "https://images.shaklee.com/smartskinquiz/skqi-oily.png"
+      },
+      {
+        "category": "nutrition",
+        "concern": "Maintaining healthy-looking skin",
+        "rank": "rank1",
+        "sku": "21409",
+        "name": "Collagen-9™ 40 servings (pouch)",
+        "tag": "Maintaining healthy-looking skin",
+        "product": {
+          "id": "21409",
+          "location": null,
+          "attributes": {
+            "memberPrice": {
+              "value": "56.60",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-03-12_15-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741815977000
+              }
+            },
+            "listPrice": {
+              "value": 66.6,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-03-11_17-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741737736000
+              }
+            },
+            "imageUrl": {
+              "value": "https://www.shaklee.com/medias/21409-01.png?context=bWFzdGVyfGltYWdlc3w5MjgzM3xpbWFnZS9wbmd8aW1hZ2VzL2NhdGFsb2dBd2FyZS9oZWYvaGRjLzk5MTgwOTY4NjczNTgucG5nfDBmYjFiMDZhMGFlMDYwMDMwMmVhMTc0YTU3MDgwNWIwMjVmYmI4MWM0OTUwYTI0MmEwZTEyYzQ3NDc5YzI4ZDE",
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-06-05_11-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749146738000
+              }
+            },
+            "name": {
+              "value": "Collagen-9™ 40 servings (pouch)",
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-03-10_16-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741644383000
+              }
+            },
+            "promotable": {
+              "value": true,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-01-13_13-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1736798907000
+              }
+            },
+            "inventoryCount": {
+              "value": 6732,
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-06-05_11-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749145932000
+              }
+            },
+            "directorPrice": {
+              "value": "49.95",
+              "metadata": {
+                "provider": "ETL:processed/product-2025-03-12_14-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741811016000
+              }
+            },
+            "lowestPrice": {
+              "value": "44.40",
+              "metadata": {
+                "provider": "ETL:processed/product-2025-03-12_14-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741811016000
+              }
+            },
+            "baseProductName": {
+              "value": "Collagen-9™",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749143559000
+              }
+            },
+            "rating": {
+              "value": 4.19,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749143559000
+              }
+            },
+            "ratingUrl": {
+              "value": "https://image.mail.shaklee.com/lib/fe3c157075640474771477/m/1/e9ebe381-bcc6-48fe-b2f8-03901a4d383a.png",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749143559000
+              }
+            },
+            "url": {
+              "value": "https://us.shakleeuat.com/Nutrition/Targeted-Solutions/Aging-Well/Collagen-9%E2%84%A2/p/21409",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749143559000
+              }
+            },
+            "archived": {
+              "value": false,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-01-13_13-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1736798907000
+              }
+            },
+            "esDescription": {
+              "value": "<p>Promueve la salud de la piel, cabello, uñas y articulaciones con una poderosa combinación de los 9 aminoácidos esenciales, 10 g de colágeno alimentado con pasto y criado en pastos, biotina y vitamina C.* Añádelo a tu batido, smoothie o café matutino favorito para darle a tu rutina de belleza un impulso que comienza en el interior.</p>",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-03-10_15-03-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741643450000
+              }
+            },
+            "esUrl": {
+              "value": "https://www.shaklee.com/Nutrici%C3%B3n/Soluciones-Dirigidas/Envejecimiento-Bueno/Collagen-9%E2%84%A2/p/21409",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-03-10_15-03-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741643450000
+              }
+            },
+            "price": {
+              "value": 56.6,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-03-11_17-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741737736000
+              }
+            },
+            "description": {
+              "value": "Includes all 9 essential amino acids, 10 g of collagen, and a powerful combination of biotin and vitamin C, to promote healthy skin, hair, nails, and joints.*"
+            },
+            "retailPrice": {
+              "value": "66.60",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-03-12_15-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741815977000
+              }
+            },
+            "productShortName": {
+              "value": "Collagen-9™",
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-03-10_16-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741644383000
+              }
+            },
+            "distributorPrice": {
+              "value": "48.80",
+              "metadata": {
+                "provider": "ETL:processed/product-2025-03-12_14-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741811016000
+              }
+            },
+            "esSummary": {
+              "value": "El producto de colÃ¡geno mÃ¡s completo del mercado",
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-01-30_12-03-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1738260491000
+              }
+            },
+            "summary": {
+              "value": "The most complete collagen product",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-01-13_13-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1736798907000
+              }
+            }
+          },
+          "dimensions": {
+            "BaseProduct": [
+              "Collagen-9™"
+            ],
+            "OrderableBy": [
+              "BUSINESS_LEADER",
+              "DISTRIBUTOR",
+              "MEMBER",
+              "GUEST"
+            ],
+            "Purchasable": [
+              "TRUE"
+            ],
+            "StockLevelStatus": [
+              "INSTOCK"
+            ],
+            "StockStatus": [
+              "A"
+            ],
+            "Style": [
+              "40 (POUCH)",
+              "AUTOSHIP $10 COUPON REDEEMABLE PRODUCTS."
+            ]
+          },
+          "categories": [
+            "NUTRITION|TARGETED SOLUTIONS - COLLAGEN",
+            "NUTRITION|TARGETED SOLUTIONS - AGING WELL",
+            "TARGETED SOLUTIONS|AGING WELL"
+          ],
+          "skus": {}
+        },
+        "iconUrl": "https://images.shaklee.com/smartskinquiz/skqi-maintain.png"
+      },
+      {
+        "product": {
+          "id": "21514",
+          "location": null,
+          "attributes": {
+            "lowestPrice": {
+              "value": "26.25",
+              "metadata": {
+                "provider": "ETL:processed/product-2025-03-12_14-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741811016000
+              }
+            },
+            "summary": {
+              "value": "The perfect gummy multivitamin to fill core nutrient gaps",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-01-13_13-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1736798907000
+              }
+            },
+            "distributorPrice": {
+              "value": "28.90",
+              "metadata": {
+                "provider": "ETL:processed/product-2025-03-12_14-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741811016000
+              }
+            },
+            "memberPrice": {
+              "value": "33.50",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-03-12_15-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741815977000
+              }
+            },
+            "rating": {
+              "value": 4.69,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749143559000
+              }
+            },
+            "esUrl": {
+              "value": "https://www.shaklee.com/Nutrici%C3%B3n/Nutrici%C3%B3n-Esencial/Multivitam%C3%ADnicos/Vita-Lea%C2%AE-Gummy/p/21514",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-03-10_15-03-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741643450000
+              }
+            },
+            "inventoryCount": {
+              "value": 14462,
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-06-05_11-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749145932000
+              }
+            },
+            "esDescription": {
+              "value": "Vita-Lea® Gummy es una gomita multivitamí­nica de fresa que contiene nutrientes bí¡sicos para apoyar la salud en general, incluida la salud del cerebro, corazón y sistema inmune, y ayudar a aumentar los niveles de energí­a. Esta gomita proporciona lo que puede faltar en las comidas con el 100% del DV o mí¡s de los nutrientes clave pertinentes, incluidas vitaminas A, C, D y E.",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-03-10_15-03-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741643450000
+              }
+            },
+            "name": {
+              "value": "Vita-Lea® Gummy 90 gummies",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-01-13_13-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1736798907000
+              }
+            },
+            "archived": {
+              "value": false,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-01-13_13-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1736798907000
+              }
+            },
+            "imageUrl": {
+              "value": "https://www.shaklee.com/medias/21514-1-1200-shkconversionMediaFormat660x660?context=bWFzdGVyfGltYWdlc3wxODQ1ODR8aW1hZ2UvcG5nfGltYWdlcy9jYXRhbG9nQXdhcmUvaGY3L2hhOC8xMDM5MDIyNzg0NTE1MC5wbmd8ZDVhZDdhZWE1ZWY4Y2JiMjgyYmIwNmI4Y2M0ZTFjYWJkNzhhOGVjNGI5YmMyOWE0MTVjNjk5YzA1YTU3MGU4YQ",
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-06-05_11-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749146738000
+              }
+            },
+            "ratingUrl": {
+              "value": "https://image.mail.shaklee.com/lib/fe3c157075640474771477/m/1/4be1080d-4081-4eb3-9073-42a32e4b1a59.png",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749143559000
+              }
+            },
+            "baseProductName": {
+              "value": "Vita-Lea® Gummy",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749143559000
+              }
+            },
+            "productShortName": {
+              "value": "Vita-Lea® Gummy",
+              "metadata": {
+                "provider": "ETL:inbound/product-2025-03-10_16-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741644383000
+              }
+            },
+            "directorPrice": {
+              "value": "29.55",
+              "metadata": {
+                "provider": "ETL:processed/product-2025-03-12_14-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741811016000
+              }
+            },
+            "listPrice": {
+              "value": 39.4,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-03-11_17-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741737736000
+              }
+            },
+            "price": {
+              "value": 33.5,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-03-11_17-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741737736000
+              }
+            },
+            "promotable": {
+              "value": true,
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-01-13_13-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1736798907000
+              }
+            },
+            "esSummary": {
+              "value": "La perfecta gomita multivitamÃ­nica para llenar los vacÃ­os de nutrientes bÃ¡sicos",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-03-10_15-03-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741643450000
+              }
+            },
+            "retailPrice": {
+              "value": "39.40",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-03-12_15-01-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1741815977000
+              }
+            },
+            "description": {
+              "value": "Vita-Lea® Gummy is a strawberry multivitamin gummy that contains core nutrients to support overall health, including brain, heart, and immune health and help boost energy levels.* This gummy provides what you may be missing at meals with 100% DV or more of key nutrients of concern, including vitamins A, C, D, and E."
+            },
+            "url": {
+              "value": "https://us.shakleeuat.com/Nutrition/Essential-Nutrition/Multivitamins/Vita-Lea%C2%AE-Gummy/p/21514",
+              "metadata": {
+                "origin": "ETL",
+                "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+                "gearId": "commerce",
+                "lastUpdated": 1749143559000
+              }
+            }
+          },
+          "dimensions": {
+            "BaseProduct": [
+              "Vita-Lea® Gummy"
+            ],
+            "OrderableBy": [
+              "BUSINESS_LEADER",
+              "DISTRIBUTOR",
+              "MEMBER",
+              "GUEST"
+            ],
+            "Purchasable": [
+              "TRUE"
+            ],
+            "StockLevelStatus": [
+              "INSTOCK"
+            ],
+            "StockStatus": [
+              "A"
+            ],
+            "Style": [
+              "30 (90 GUMMIES)"
+            ]
+          },
+          "categories": [
+            "NUTRITION|ESSENTIAL NUTRITION - MULTIVITAMINS"
+          ],
+          "skus": {}
+        },
+        "tag": "Oily skin or clogged pores",
+        "iconUrl": "https://images.shaklee.com/smartskinquiz/skqi-oily.png"
+      }
+    ],
+    "staticGummies": {
+      "product": {
+        "id": "21514",
+        "location": null,
+        "attributes": {
+          "price": {
+            "value": 33.5,
+            "metadata": {
+              "origin": "ETL",
+              "provider": "ETL:/processing/product-2025-03-11_17-00-00.csv",
+              "gearId": "commerce",
+              "lastUpdated": 1741737736000
+            }
+          },
+          "baseProductName": {
+            "value": "Vita-Lea® Gummy",
+            "metadata": {
+              "origin": "ETL",
+              "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+              "gearId": "commerce",
+              "lastUpdated": 1749143559000
+            }
+          },
+          "imageUrl": {
+            "value": "https://www.shaklee.com/medias/21514-1-1200-shkconversionMediaFormat660x660?context=bWFzdGVyfGltYWdlc3wxODQ1ODR8aW1hZ2UvcG5nfGltYWdlcy9jYXRhbG9nQXdhcmUvaGY3L2hhOC8xMDM5MDIyNzg0NTE1MC5wbmd8ZDVhZDdhZWE1ZWY4Y2JiMjgyYmIwNmI4Y2M0ZTFjYWJkNzhhOGVjNGI5YmMyOWE0MTVjNjk5YzA1YTU3MGU4YQ",
+            "metadata": {
+              "provider": "ETL:inbound/product-2025-06-05_11-00-00.csv",
+              "gearId": "commerce",
+              "lastUpdated": 1749146738000
+            }
+          },
+          "lowestPrice": {
+            "value": "26.25",
+            "metadata": {
+              "provider": "ETL:processed/product-2025-03-12_14-01-00.csv",
+              "gearId": "commerce",
+              "lastUpdated": 1741811016000
+            }
+          },
+          "memberPrice": {
+            "value": "33.50",
+            "metadata": {
+              "origin": "ETL",
+              "provider": "ETL:/processing/product-2025-03-12_15-01-00.csv",
+              "gearId": "commerce",
+              "lastUpdated": 1741815977000
+            }
+          },
+          "productShortName": {
+            "value": "Vita-Lea® Gummy",
+            "metadata": {
+              "provider": "ETL:inbound/product-2025-03-10_16-00-00.csv",
+              "gearId": "commerce",
+              "lastUpdated": 1741644383000
+            }
+          },
+          "distributorPrice": {
+            "value": "28.90",
+            "metadata": {
+              "provider": "ETL:processed/product-2025-03-12_14-01-00.csv",
+              "gearId": "commerce",
+              "lastUpdated": 1741811016000
+            }
+          },
+          "esUrl": {
+            "value": "https://www.shaklee.com/Nutrici%C3%B3n/Nutrici%C3%B3n-Esencial/Multivitam%C3%ADnicos/Vita-Lea%C2%AE-Gummy/p/21514",
+            "metadata": {
+              "origin": "ETL",
+              "provider": "ETL:/processing/product-2025-03-10_15-03-00.csv",
+              "gearId": "commerce",
+              "lastUpdated": 1741643450000
+            }
+          },
+          "esDescription": {
+            "value": "Vita-Lea® Gummy es una gomita multivitamí­nica de fresa que contiene nutrientes bí¡sicos para apoyar la salud en general, incluida la salud del cerebro, corazón y sistema inmune, y ayudar a aumentar los niveles de energí­a. Esta gomita proporciona lo que puede faltar en las comidas con el 100% del DV o mí¡s de los nutrientes clave pertinentes, incluidas vitaminas A, C, D y E.",
+            "metadata": {
+              "origin": "ETL",
+              "provider": "ETL:/processing/product-2025-03-10_15-03-00.csv",
+              "gearId": "commerce",
+              "lastUpdated": 1741643450000
+            }
+          },
+          "url": {
+            "value": "https://us.shakleeuat.com/Nutrition/Essential-Nutrition/Multivitamins/Vita-Lea%C2%AE-Gummy/p/21514",
+            "metadata": {
+              "origin": "ETL",
+              "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+              "gearId": "commerce",
+              "lastUpdated": 1749143559000
+            }
+          },
+          "retailPrice": {
+            "value": "39.40",
+            "metadata": {
+              "origin": "ETL",
+              "provider": "ETL:/processing/product-2025-03-12_15-01-00.csv",
+              "gearId": "commerce",
+              "lastUpdated": 1741815977000
+            }
+          },
+          "esSummary": {
+            "value": "La perfecta gomita multivitamÃ­nica para llenar los vacÃ­os de nutrientes bÃ¡sicos",
+            "metadata": {
+              "origin": "ETL",
+              "provider": "ETL:/processing/product-2025-03-10_15-03-00.csv",
+              "gearId": "commerce",
+              "lastUpdated": 1741643450000
+            }
+          },
+          "description": {
+            "value": "Vita-Lea® Gummy is a strawberry multivitamin gummy that contains core nutrients to support overall health, including brain, heart, and immune health and help boost energy levels.* This gummy provides what you may be missing at meals with 100% DV or more of key nutrients of concern, including vitamins A, C, D, and E."
+          },
+          "name": {
+            "value": "Vita-Lea® Gummy 90 gummies",
+            "metadata": {
+              "origin": "ETL",
+              "provider": "ETL:/processing/product-2025-01-13_13-00-00.csv",
+              "gearId": "commerce",
+              "lastUpdated": 1736798907000
+            }
+          },
+          "rating": {
+            "value": 4.69,
+            "metadata": {
+              "origin": "ETL",
+              "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+              "gearId": "commerce",
+              "lastUpdated": 1749143559000
+            }
+          },
+          "summary": {
+            "value": "The perfect gummy multivitamin to fill core nutrient gaps",
+            "metadata": {
+              "origin": "ETL",
+              "provider": "ETL:/processing/product-2025-01-13_13-00-00.csv",
+              "gearId": "commerce",
+              "lastUpdated": 1736798907000
+            }
+          },
+          "archived": {
+            "value": false,
+            "metadata": {
+              "origin": "ETL",
+              "provider": "ETL:/processing/product-2025-01-13_13-00-00.csv",
+              "gearId": "commerce",
+              "lastUpdated": 1736798907000
+            }
+          },
+          "listPrice": {
+            "value": 39.4,
+            "metadata": {
+              "origin": "ETL",
+              "provider": "ETL:/processing/product-2025-03-11_17-00-00.csv",
+              "gearId": "commerce",
+              "lastUpdated": 1741737736000
+            }
+          },
+          "directorPrice": {
+            "value": "29.55",
+            "metadata": {
+              "provider": "ETL:processed/product-2025-03-12_14-01-00.csv",
+              "gearId": "commerce",
+              "lastUpdated": 1741811016000
+            }
+          },
+          "inventoryCount": {
+            "value": 14462,
+            "metadata": {
+              "provider": "ETL:inbound/product-2025-06-05_11-00-00.csv",
+              "gearId": "commerce",
+              "lastUpdated": 1749145932000
+            }
+          },
+          "ratingUrl": {
+            "value": "https://image.mail.shaklee.com/lib/fe3c157075640474771477/m/1/4be1080d-4081-4eb3-9073-42a32e4b1a59.png",
+            "metadata": {
+              "origin": "ETL",
+              "provider": "ETL:/processing/product-2025-05-29_14-00-00.csv",
+              "gearId": "commerce",
+              "lastUpdated": 1749143559000
+            }
+          },
+          "promotable": {
+            "value": true,
+            "metadata": {
+              "origin": "ETL",
+              "provider": "ETL:/processing/product-2025-01-13_13-00-00.csv",
+              "gearId": "commerce",
+              "lastUpdated": 1736798907000
+            }
+          }
+        },
+        "dimensions": {
+          "BaseProduct": [
+            "Vita-Lea® Gummy"
+          ],
+          "OrderableBy": [
+            "BUSINESS_LEADER",
+            "DISTRIBUTOR",
+            "MEMBER",
+            "GUEST"
+          ],
+          "Purchasable": [
+            "TRUE"
+          ],
+          "StockLevelStatus": [
+            "INSTOCK"
+          ],
+          "StockStatus": [
+            "A"
+          ],
+          "Style": [
+            "30 (90 GUMMIES)"
+          ]
+        },
+        "categories": [
+          "NUTRITION|ESSENTIAL NUTRITION - MULTIVITAMINS"
+        ],
+        "skus": {}
+      },
+      "tag": "Oily skin or clogged pores",
+      "iconUrl": "https://images.shaklee.com/smartskinquiz/skqi-oily.png"
+    }
+  },
+  "userGroup": "testUserGroup",
+  "contentZone": null
+}

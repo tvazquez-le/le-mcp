@@ -1,0 +1,255 @@
+<div class="evgSkinQuizResults">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>SmartSkin Quiz</title>
+
+
+	<div class="container skq-page skq-results" id="smartskin2">
+		<!--Main Content Section-->
+		<main class="text-center row skq-maincontent">
+			<div class="skq-results-header">
+				<!--Logo-->
+				<img class="img-responsive skq-logo center-block"
+          src="https://images.shaklee.com/smartskinquiz/smartskin-logo-main.png" alt="SmartSkin logo">
+				<!--Heading and Instructions-->
+				<h1 id="question-title">[NAME],<br> Your Personalized Skin Care Results Are In!</h1>
+					<img class="img-responsive skq-icon center-block"
+          src="https://images.shaklee.com/smartskinquiz/skqi-dry.png" alt="Skin Icon">
+					<p class="skq-intro-text"> Based on your primary concern of <strong>dry skin</strong>, your skin
+						needs more hydration—both
+						inside and out. Try drinking more water and incorporating these product recommendations into
+						your routine.</p>
+			</div>
+		</main>
+	</div>
+
+	<div class="container skq-page skq-results" id="smartskin3">
+		<!--Main Content Section-->
+		<main class="text-center row skq-maincontent">
+			<div class="sectionRec skincareRec">
+				<h2>Your Targeted Skin Care Recommendation</h2>
+
+				<section class="prod-container">
+					{{~#each user.heroProductsArr}}
+					<div class="prodcard">
+						<img class="prodimg" src="{{product.attributes.imageUrl.value}}" alt="{{product.attributes.name.value}}">
+						<div class="prod-info">
+							<h3 class="prod-title">{{name}}</h3>
+							<p class="prod-description">{{product.attributes.summary.value}}</p>
+							<img class="starrating" src="{{product.attributes.ratingUrl.value}}">
+							<div class="skq-pill">
+								<img src="{{iconUrl}}">
+								<p>{{tag}}</p>
+							</div>
+							<div class="prod-pricing">
+								<p>Retail Price: ${{product.attributes.retailPrice.value}}</p>
+								<p>Member Price: ${{product.attributes.memberPrice.value}}</p>
+							</div>
+							<div class="prod-button-group">
+								<a class="btn btn-default skq-button-secondary"
+									href="{{product.attributes.url.value}}">Learn
+									More</a>
+								<form class="add-to-cart-form add_to_cart_form js-pdp-add-to-cart-form" action="/en_US/testminal/cart/add" method="post">
+                                    <input type="hidden" maxlength="3" size="1" id="qty" name="qty" value="1">									
+                                    <input type="hidden" name="productCodePost" value="{{product.id}}">
+                                    <input type="hidden" name="addToCartLocation" class="add-to-cart-location" value="PDP-Recommendation">
+									<button type="submit" title="Add to cart" class="add-to-cart-button btn btn-default skq-button-primary js-add-to-cart js-enable-btn pdp-button-position pdp-add-cust-btn" style="width: 160px;height: 38px !important;">
+								        Add to cart
+                                    </button>
+								</form>                                    
+							</div>
+						</div>
+					</div>
+					{{/each~}}
+				</section>
+
+			</div>
+		</main>
+	</div>
+
+	<div class="container skq-page skq-results" id="smartskin4">
+		<!--Main Content Section-->
+		<main class="text-center row skq-maincontent">
+			<div class="sectionRec regimenRec">
+				<h2>Your Daily Regimen</h2>
+				<section class="prod-container">
+					{{~#each user.regimenArr}}
+					<div class="prodcard">
+						<img class="prodimg" src="{{product.attributes.imageUrl.value}}" alt="{{product.attributes.name.value}}">
+						<div class="prod-info">
+							<h3 class="prod-title">{{name}}</h3>
+							<p class="prod-description">{{product.attributes.summary.value}}</p>
+							<img class="starrating" src="{{product.attributes.ratingUrl.value}}">
+                            <div class="skq-pill">
+								<img src="{{iconUrl}}">
+								<p>{{tag}}</p>
+							</div>
+							<div class="prod-pricing">
+								<p>Retail Price: ${{product.attributes.listPrice.value}}</p>
+								<p>Member Price: ${{product.attributes.memberPrice.value}}</p>
+							</div>
+							<div class="prod-button-group">
+								<a class="btn btn-default skq-button-secondary"
+									href="{{product.attributes.url.value}}">Learn
+									More</a>
+								<form class="add-to-cart-form add_to_cart_form js-pdp-add-to-cart-form" action="/en_US/testminal/cart/add" method="post">
+                                    <input type="hidden" maxlength="3" size="1" id="qty" name="qty" value="1">									
+                                    <input type="hidden" name="productCodePost" value="{{product.id}}">
+                                    <input type="hidden" name="addToCartLocation" class="add-to-cart-location" value="PDP-Recommendation">
+									<button type="submit" title="Add to cart" class="add-to-cart-button btn btn-default skq-button-primary js-add-to-cart js-enable-btn pdp-button-position pdp-add-cust-btn" style="width: 160px;height: 38px !important;">
+								        Add to cart
+                                    </button>
+								</form>
+							</div>
+						</div>
+					</div>
+					{{/each~}}
+				</section>
+			</div>
+		</main>
+	</div>
+
+	<div class="container skq-page skq-results" id="smartskin5" {{#if user.nutritionArr.[1]}}style="display:none"
+		{{/if}}>
+		<!--Main Content Section-->
+		<main class="text-center row skq-maincontent">
+			<div class="sectionRec nutritionRec">
+				<h2>Your Nutrition Support</h2>
+				<section class="prod-container">
+					<div class="prodcard">
+						<img class="prodimg" src="{{user.nutritionArr.[0].product.attributes.imageUrl.value}}" alt="{{user.nutritionArr.[0].product.attributes.name.value}}">
+						<div class="prod-info">
+							<h3 class="prod-title">{{user.nutritionArr.[0].name}}</h3>
+							<p class="prod-description">{{user.nutritionArr.[0].product.attributes.summary.value}}</p>
+							<img class="starrating" src="{{product.attributes.ratingUrl.value}}">
+                            <div class="skq-pill">
+								<img src="{{user.nutritionArr.[0].iconUrl}}">
+								<p>{{user.nutritionArr.[0].tag}}</p>
+							</div>
+							<div class="prod-pricing">
+								<p>Retail Price: ${{user.nutritionArr.[0].product.attributes.retailPrice.value}}</p>
+								<p>Member Price: ${{user.nutritionArr.[0].product.attributes.memberPrice.value}}</p>
+							</div>
+							<div class="prod-button-group">
+								<a class="btn btn-default skq-button-secondary"
+									href="{{user.nutritionArr.[0].product.attributes.url.value}}">Learn
+									More</a>
+								<form class="add-to-cart-form add_to_cart_form js-pdp-add-to-cart-form" action="/en_US/testminal/cart/add" method="post">
+                                    <input type="hidden" maxlength="3" size="1" id="qty" name="qty" value="1">									
+                                    <input type="hidden" name="productCodePost" value="{{user.nutritionArr.[0].product.id}}">
+                                    <input type="hidden" name="addToCartLocation" class="add-to-cart-location" value="PDP-Recommendation">
+									<button type="submit" title="Add to cart" class="add-to-cart-button btn btn-default skq-button-primary js-add-to-cart js-enable-btn pdp-button-position pdp-add-cust-btn" style="width: 160px;height: 38px !important;">
+								        Add to cart
+                                    </button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+	</div>
+
+	<div class="container skq-page skq-results" id="smartskin5-1" {{^if user.nutritionArr.[1]}}style="display:none"
+		{{/if}}>
+		<!--Main Content Section-->
+		<main class="text-center row skq-maincontent">
+			<div class="sectionRec nutritionRec">
+				<h2>Your Nutrition Support</h2>
+				<section class="prod-container">
+					<div class="prodcard">
+						<img class="prodimg" src="{{user.nutritionArr.[0].product.attributes.imageUrl.value}}" alt="{{user.nutritionArr.[0].product.attributes.name.value}}">
+						<div class="prod-info">
+							<h3 class="prod-title">{{user.nutritionArr.[0].name}}</h3>
+							<p class="prod-description">{{user.nutritionArr.[0].product.attributes.summary.value}}</p>
+							<img class="starrating" src="{{user.nutritionArr.[0].product.attributes.ratingUrl.value}}">
+                            <div class="skq-pill">
+								<img src="{{user.nutritionArr.[0].iconUrl}}">
+								<p>{{user.nutritionArr.[0].tag}}</p>
+							</div>
+							<div class="prod-pricing">
+								<p>Retail Price: ${{user.nutritionArr.[0].product.attributes.retailPrice.value}}</p>
+								<p>Member Price: ${{user.nutritionArr.[0].product.attributes.memberPrice.value}}</p>
+							</div>
+							<div class="prod-button-group">
+								<a class="btn btn-default skq-button-secondary"
+									href="{{user.nutritionArr.[0].product.attributes.url.value}}">Learn
+									More</a>
+								<form class="add-to-cart-form add_to_cart_form js-pdp-add-to-cart-form" action="/en_US/testminal/cart/add" method="post">
+                                    <input type="hidden" maxlength="3" size="1" id="qty" name="qty" value="1">									
+                                    <input type="hidden" name="productCodePost" value="{{user.nutritionArr.[0].product.id}}">
+                                    <input type="hidden" name="addToCartLocation" class="add-to-cart-location" value="PDP-Recommendation">
+									<button type="submit" title="Add to cart" class="add-to-cart-button btn btn-default skq-button-primary js-add-to-cart js-enable-btn pdp-button-position pdp-add-cust-btn" style="width: 160px;height: 38px !important;">
+								        Add to cart
+                                    </button>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="prodcard">
+						<img class="prodimg" src="{{user.staticGummies.product.attributes.imageUrl.value}}" alt="{{user.staticGummies.attributes.name.value}}">
+						<div class="prod-info">
+							<h3 class="prod-title">{{user.staticGummies.product.attributes.name.value}}</h3>
+							<p class="prod-description">{{user.staticGummies.product.attributes.summary.value}}</p>
+							<img class="starrating" src="{{user.staticGummies.product.attributes.ratingUrl.value}}">
+                            <div class="skq-pill" style="visibility: hidden;">
+								<img src="{{user.staticGummies.iconUrl}}">
+								<p>{{user.staticGummies.tag}}</p>
+							</div>
+							<div class="prod-pricing">
+								<p>Retail Price: ${{user.staticGummies.product.attributes.retailPrice.value}}</p>
+								<p>Member Price: ${{user.staticGummies.product.attributes.memberPrice.value}}</p>
+							</div>
+							<div class="prod-button-group">
+								<a class="btn btn-default skq-button-secondary"
+									href="{{user.staticGummies.product.attributes.url.value}}">Learn
+									More</a>
+								<form class="add-to-cart-form add_to_cart_form js-pdp-add-to-cart-form" action="/en_US/testminal/cart/add" method="post">
+                                    <input type="hidden" maxlength="3" size="1" id="qty" name="qty" value="1">									
+                                    <input type="hidden" name="productCodePost" value="21514">
+                                    <input type="hidden" name="addToCartLocation" class="add-to-cart-location" value="PDP-Recommendation">
+									<button type="submit" title="Add to cart" class="add-to-cart-button btn btn-default skq-button-primary js-add-to-cart js-enable-btn pdp-button-position pdp-add-cust-btn" style="width: 160px;height: 38px !important;">
+								        Add to cart
+                                    </button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+	</div>
+
+	<div class="container skq-page skq-results" id="smartskin6">
+		<!--Main Content Section-->
+		<main class="text-center row skq-maincontent">
+			<div class="skq-results-membership sectionRec">
+				<p>Become a Member for $19.95 or Get a Free Membership with a $150 Purchase.<br><a href="#">View Membership Perks.</a>
+                </p>
+                <form class="add-to-cart-form add_to_cart_form js-pdp-add-to-cart-form" action="/en_US/testminal/cart/add" method="post">
+                    <input type="hidden" maxlength="3" size="1" id="qty" name="qty" value="1">									
+                    <input type="hidden" name="productCodePost" value="59710">
+                    <input type="hidden" name="addToCartLocation" class="add-to-cart-location" value="PDP-Recommendation">
+                    <button type="submit" title="Add to cart" class="add-to-cart-button btn btn-default skq-button-primary js-add-to-cart js-enable-btn pdp-button-position pdp-add-cust-btn" style="width: 160px;height: 38px !important;">
+                        Include Membership
+                    </button>
+                </form>                        
+			</div>
+		</main>
+	</div>
+
+	<div class="container skq-page skq-results" id="smartskin7">
+		<!--Main Content Section-->
+		<main class="text-center row skq-maincontent">
+			<div class="skq-results-footer sectionRec">
+				<div class="footContent">
+					<a class="btn btn-default skq-button-secondary" href="/en_US/testimal/cart" type="button">Take Me to Cart</a>
+					<div>
+						<a class="backtotop" href="#top">Back to Top</a>
+						<a class="retakequiz" href="https://us.shakleeuat.com/en_US/mytest/smart-skin-quiz">Retake Quiz</a>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+</div>
