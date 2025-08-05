@@ -4,213 +4,6473 @@ if (window.Evergage && window.SalesforceInteractions && window.SalesforceInterac
     } catch(e) {}
 } else {
 window.evergageBeaconParseTimeStart = (new Date().getTime());
-'use strict';var Evergage=function(n){function tc(c,d){var a=Object.keys(c);if(Object.getOwnPropertySymbols){var b=Object.getOwnPropertySymbols(c);d&&(b=b.filter(function(a){return Object.getOwnPropertyDescriptor(c,a).enumerable}));a.push.apply(a,b)}return a}function t(c){for(var d=1;d<arguments.length;d++){var a=null!=arguments[d]?arguments[d]:{};d%2?tc(Object(a),!0).forEach(function(b){L(c,b,a[b])}):Object.getOwnPropertyDescriptors?Object.defineProperties(c,Object.getOwnPropertyDescriptors(a)):
-tc(Object(a)).forEach(function(b){Object.defineProperty(c,b,Object.getOwnPropertyDescriptor(a,b))})}return c}function uc(c){a:if("object"==typeof c&&c){var d=c[Symbol.toPrimitive];if(void 0!==d){c=d.call(c,"string");if("object"!=typeof c)break a;throw new TypeError("@@toPrimitive must return a primitive value.");}c=String(c)}return"symbol"==typeof c?c:String(c)}function A(c){"@babel/helpers - typeof";return A="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(c){return typeof c}:
-function(c){return c&&"function"==typeof Symbol&&c.constructor===Symbol&&c!==Symbol.prototype?"symbol":typeof c},A(c)}function ha(c,d){if(!(c instanceof d))throw new TypeError("Cannot call a class as a function");}function vc(c,d){for(var a=0;a<d.length;a++){var b=d[a];b.enumerable=b.enumerable||!1;b.configurable=!0;"value"in b&&(b.writable=!0);Object.defineProperty(c,uc(b.key),b)}}function ia(c,d,a){d&&vc(c.prototype,d);a&&vc(c,a);Object.defineProperty(c,"prototype",{writable:!1});return c}function L(c,
-d,a){d=uc(d);d in c?Object.defineProperty(c,d,{value:a,enumerable:!0,configurable:!0,writable:!0}):c[d]=a;return c}function Na(c,d){if("function"!==typeof d&&null!==d)throw new TypeError("Super expression must either be null or a function");c.prototype=Object.create(d&&d.prototype,{constructor:{value:c,writable:!0,configurable:!0}});Object.defineProperty(c,"prototype",{writable:!1});d&&mb(c,d)}function R(c){R=Object.setPrototypeOf?Object.getPrototypeOf.bind():function(c){return c.__proto__||Object.getPrototypeOf(c)};
-return R(c)}function mb(c,d){mb=Object.setPrototypeOf?Object.setPrototypeOf.bind():function(a,b){a.__proto__=b;return a};return mb(c,d)}function qe(){if("undefined"===typeof Reflect||!Reflect.construct||Reflect.construct.sham)return!1;if("function"===typeof Proxy)return!0;try{return Boolean.prototype.valueOf.call(Reflect.construct(Boolean,[],function(){})),!0}catch(c){return!1}}function xa(c,d){if(null==c)return{};if(null==c)var a={};else{a={};var b=Object.keys(c),e;for(e=0;e<b.length;e++){var f=
-b[e];0<=d.indexOf(f)||(a[f]=c[f])}}if(Object.getOwnPropertySymbols)for(e=Object.getOwnPropertySymbols(c),f=0;f<e.length;f++)b=e[f],0<=d.indexOf(b)||Object.prototype.propertyIsEnumerable.call(c,b)&&(a[b]=c[b]);return a}function Oa(c){var d=qe();return function(){var a=R(c);if(d){var b=R(this).constructor;a=Reflect.construct(a,arguments,b)}else a=a.apply(this,arguments);if(!a||"object"!==typeof a&&"function"!==typeof a){if(void 0!==a)throw new TypeError("Derived constructors may only return object or undefined");
-if(void 0===this)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");a=this}return a}}function ja(){ja="undefined"!==typeof Reflect&&Reflect.get?Reflect.get.bind():function(c,d,a){var b;for(b=c;!Object.prototype.hasOwnProperty.call(b,d)&&(b=R(b),null!==b););if(b)return b=Object.getOwnPropertyDescriptor(b,d),b.get?b.get.call(3>arguments.length?c:a):b.value};return ja.apply(this,arguments)}function ya(c,d){var a=Array.isArray(c)?c:void 0;if(!a)a:{var b=null==c?null:
-"undefined"!=typeof Symbol&&c[Symbol.iterator]||c["@@iterator"];if(null!=b){var e,f,g,h=[],l=!0,E=!1;try{if(f=(b=b.call(c)).next,0===d){if(Object(b)!==b){a=void 0;break a}l=!1}else for(;!(l=(e=f.call(b)).done)&&(h.push(e.value),h.length!==d);l=!0);}catch(qa){E=!0;var k=qa}finally{try{if(!l&&null!=b.return&&(g=b.return(),Object(g)!==g)){a=void 0;break a}}finally{if(E)throw k;}}a=h}else a=void 0}if(!(c=a||wc(c,d)))throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-return c}function nb(c){var d=Array.isArray(c)?ob(c):void 0;d||(d="undefined"!==typeof Symbol&&null!=c[Symbol.iterator]||null!=c["@@iterator"]?Array.from(c):void 0);if(!(c=d||wc(c)))throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");return c}function wc(c,d){if(c){if("string"===typeof c)return ob(c,d);var a=Object.prototype.toString.call(c).slice(8,-1);"Object"===a&&c.constructor&&(a=c.constructor.name);
-if("Map"===a||"Set"===a)return Array.from(c);if("Arguments"===a||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(a))return ob(c,d)}}function ob(c,d){if(null==d||d>c.length)d=c.length;for(var a=0,b=Array(d);a<d;a++)b[a]=c[a];return b}function pb(c){var d=1<arguments.length&&void 0!==arguments[1]?arguments[1]:S;return d&&9===d.nodeType||d&&1===d.nodeType?re.test(c)?d.getElementsByClassName(c.slice(1)):se.test(c)?d.getElementsByTagName(c):d.querySelectorAll(c):[]}function za(c){return c.replace(te,function(c,
-a){return a.toUpperCase()})}function C(c,d,a){if(a)for(a=c.length;a--&&!1!==d.call(c[a],a,c[a]););else{a=0;for(var b=c.length;a<b&&!1!==d.call(c[a],a,c[a]);a++);}return c}function qb(c,d){var a=c&&(c.matches||c.webkitMatchesSelector||c.msMatchesSelector);return!!a&&a.call(c,d)}function rb(c){return!!c&&c===c.window}function ka(c){return"function"===typeof c}function G(c){return"string"===typeof c}function xc(c){return!isNaN(parseFloat(c))&&isFinite(c)}function sb(c){return G(c)?function(d,a){return qb(a,
-c)}:ka(c)?c:c instanceof Pa?function(d,a){return c.is(a)}:c?function(d,a){return a===c}:function(){return!1}}function ra(c,d){return d?c.filter(d):c}function Qa(c){return G(c)?c.match(ue)||[]:[]}function V(c,d,a){for(var b=[],e=ka(d),f=0,g=c.length;f<g;f++)if(e){var h=d(c[f]);h.length&&ve.apply(b,h)}else for(h=c[f][d];null!=h;)b.push(h),h=a?h[d]:null;return b}function T(c){return 1<c.length?tb.call(c,function(c,a,b){return yc.call(b,c)===a}):c}function la(c,d,a){if(c&&1===c.nodeType&&d)return c=Aa.getComputedStyle(c,
-null),d?a?c.getPropertyValue(d)||void 0:c[d]:c}function sa(c,d){return parseInt(la(c,d),10)||0}function zc(c){if(1<arguments.length&&void 0!==arguments[1]?arguments[1]:ub.test(c))return c;if(!vb[c]){var d=za(c),a="".concat(d[0].toUpperCase()).concat(d.slice(1));d="".concat(d," ").concat(we.join("".concat(a," "))).concat(a).split(" ");C(d,function(a,d){if(d in xe)return vb[c]=d,!1})}return vb[c]}function Ac(c,d){return(2<arguments.length&&void 0!==arguments[2]?arguments[2]:ub.test(c))||ye[c]||!xc(d)?
-d:"".concat(d,"px")}function Bc(c,d){c=c.dataset[d]||c.dataset[za(d)];try{return JSON.parse(c)}catch(a){}return c}function Cc(c,d){return sa(c,"border".concat(d?"Left":"Top","Width"))+sa(c,"padding".concat(d?"Left":"Top"))+sa(c,"padding".concat(d?"Right":"Bottom"))+sa(c,"border".concat(d?"Right":"Bottom","Width"))}function Dc(c,d){return!d||!wb.call(d,function(a){return 0>c.indexOf(a)})}function ze(c,d,a,b,e){e.guid=e.guid||p.guid++;var f=c.___ce=c.___ce||{};f[d]=f[d]||[];f[d].push([a,b,e]);c.addEventListener(d,
-e)}function xb(c){c=c.split(".");return[c[0],c.slice(1).sort()]}function Ra(c,d,a,b,e){var f=c.___ce=c.___ce||{};if(d)f[d]&&(f[d]=f[d].filter(function(f){var g=ya(f,3);f=g[0];var l=g[1];g=g[2];if(e&&g.guid!==e.guid||!Dc(f,a)||b&&b!==l)return!0;c.removeEventListener(d,g)}));else for(d in f)Ra(c,d,a,b,e)}function Ec(c){return c.multiple&&c.options?V(tb.call(c.options,function(c){return c.selected&&!c.disabled&&!c.parentNode.disabled}),"value"):c.value||""}function Fc(c){if(!G(c))return[];if(Ae.test(c))return[ma(RegExp.$1)];
-var d=Be.test(c)&&RegExp.$1;d=Gc[d]||Gc["*"];d.innerHTML=c;return p(d.childNodes).detach().get()}function Ce(c,d){c=p(c);c.filter("script").add(c.find("script")).each(function(a,b){if(De.test(b.type)&&yb.contains(b)){var c=ma("script");c.text=b.textContent.replace(Ee,"");C(Fe,function(a,d){b[d]&&(c[d]=b[d])});d.head.insertBefore(c,null);d.head.removeChild(c)}})}function ba(c,d,a,b,e,f,g,h){C(c,function(c,f){C(p(f),function(c,f){C(p(d),function(c,d){var g=a?d:f;d=a?f:d;c=c?g.cloneNode(!0):g;e?d.insertBefore(c,
-b?d.firstElementChild:null):d.parentNode.insertBefore(c,b?d:d.nextElementSibling);Ce(c,d.ownerDocument)},h)},g)},f);return d}function Hc(c,d){var a=Object.keys(c);if(Object.getOwnPropertySymbols){var b=Object.getOwnPropertySymbols(c);d&&(b=b.filter(function(a){return Object.getOwnPropertyDescriptor(c,a).enumerable}));a.push.apply(a,b)}return a}function z(c){for(var d=1;d<arguments.length;d++){var a=null!=arguments[d]?arguments[d]:{};d%2?Hc(Object(a),!0).forEach(function(b){Sa(c,b,a[b])}):Object.getOwnPropertyDescriptors?
-Object.defineProperties(c,Object.getOwnPropertyDescriptors(a)):Hc(Object(a)).forEach(function(b){Object.defineProperty(c,b,Object.getOwnPropertyDescriptor(a,b))})}return c}function Ic(c){a:if("object"==A(c)&&c){var d=c[Symbol.toPrimitive];if(void 0!==d){c=d.call(c,"string");if("object"!=A(c))break a;throw new TypeError("@@toPrimitive must return a primitive value.");}c=String(c)}return"symbol"==A(c)?c:String(c)}function J(c){"@babel/helpers - typeof";return J="function"==typeof Symbol&&"symbol"==
-typeof Symbol.iterator?function(c){return typeof c}:function(c){return c&&"function"==typeof Symbol&&c.constructor===Symbol&&c!==Symbol.prototype?"symbol":typeof c},J(c)}function Ba(c,d){if(!(c instanceof d))throw new TypeError("Cannot call a class as a function");}function Jc(c,d){for(var a=0;a<d.length;a++){var b=d[a];b.enumerable=b.enumerable||!1;b.configurable=!0;"value"in b&&(b.writable=!0);Object.defineProperty(c,Ic(b.key),b)}}function Ca(c,d,a){d&&Jc(c.prototype,d);a&&Jc(c,a);Object.defineProperty(c,
-"prototype",{writable:!1});return c}function Sa(c,d,a){d=Ic(d);d in c?Object.defineProperty(c,d,{value:a,enumerable:!0,configurable:!0,writable:!0}):c[d]=a;return c}function Ie(c,d){if("function"!==typeof d&&null!==d)throw new TypeError("Super expression must either be null or a function");c.prototype=Object.create(d&&d.prototype,{constructor:{value:c,writable:!0,configurable:!0}});Object.defineProperty(c,"prototype",{writable:!1});d&&zb(c,d)}function na(c){na=Object.setPrototypeOf?Object.getPrototypeOf.bind():
-function(c){return c.__proto__||Object.getPrototypeOf(c)};return na(c)}function zb(c,d){zb=Object.setPrototypeOf?Object.setPrototypeOf.bind():function(a,b){a.__proto__=b;return a};return zb(c,d)}function Je(){if("undefined"===typeof Reflect||!Reflect.construct||Reflect.construct.sham)return!1;if("function"===typeof Proxy)return!0;try{return Boolean.prototype.valueOf.call(Reflect.construct(Boolean,[],function(){})),!0}catch(c){return!1}}function Ke(c){var d=Je();return function(){var a=na(c);if(d){var b=
-na(this).constructor;a=Reflect.construct(a,arguments,b)}else a=a.apply(this,arguments);if(!a||"object"!==A(a)&&"function"!==typeof a){if(void 0!==a)throw new TypeError("Derived constructors may only return object or undefined");if(void 0===this)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");a=this}return a}}function Ta(){Ta="undefined"!==typeof Reflect&&Reflect.get?Reflect.get.bind():function(c,d,a){var b;for(b=c;!Object.prototype.hasOwnProperty.call(b,d)&&(b=
-na(b),null!==b););if(b)return b=Object.getOwnPropertyDescriptor(b,d),b.get?b.get.call(3>arguments.length?c:a):b.value};return Ta.apply(this,arguments)}function Kc(c){var d=Array.isArray(c)?Ab(c):void 0;d||(d="undefined"!==typeof Symbol&&null!=c[Symbol.iterator]||null!=c["@@iterator"]?Array.from(c):void 0);if(!(c=d||Lc(c)))throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");return c}function Lc(c,
-d){if(c){if("string"===typeof c)return Ab(c,d);var a=Object.prototype.toString.call(c).slice(8,-1);"Object"===a&&c.constructor&&(a=c.constructor.name);if("Map"===a||"Set"===a)return Array.from(c);if("Arguments"===a||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(a))return Ab(c,d)}}function Ab(c,d){if(null==d||d>c.length)d=c.length;for(var a=0,b=Array(d);a<d;a++)b[a]=c[a];return b}function Bb(c,d){var a="undefined"!==typeof Symbol&&c[Symbol.iterator]||c["@@iterator"];if(!a){if(Array.isArray(c)||(a=
-Lc(c))||d&&c&&"number"===typeof c.length){a&&(c=a);var b=0;d=function(){};return{s:d,n:function(){return b>=c.length?{done:!0}:{done:!1,value:c[b++]}},e:function(a){throw a;},f:d}}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}var e=!0,f=!1,g;return{s:function(){a=a.call(c)},n:function(){var b=a.next();e=b.done;return b},e:function(a){f=!0;g=a},f:function(){try{e||null==a.return||a.return()}finally{if(f)throw g;
-}}}}function Mc(c){r.setLoggingLevel(c)}function Nc(){return r.getLoggingLevel()}function Cb(c){var d,a,b,e=[],f=[a=1732584193,b=4023233417,~a,~b,3285377520],g=[],h=unescape(encodeURI(c))+"\u0080",l=h.length;for(g[c=--l/4+2|15]=8*l;~l;)g[l>>2]|=h.charCodeAt(l)<<8*~l--;for(d=l=0;d<c;d+=16){for(a=f;80>l;a=[a[4]+(e[l]=16>l?~~g[d+l]:2*h|0>h)+1518500249+[b&E|~b&k,h=341275144+(b^E^k),882459459+(b&E|b&k|E&k),h+1535694389][l++/5>>2]+((h=a[0])<<5|h>>>27),h,b<<30|b>>>2,E,k]){h=e[l-3]^e[l-8]^e[l-14]^e[l-16];
-b=a[1];var E=a[2];var k=a[3]}for(l=5;l;)f[--l]+=a[l]}for(h="";40>l;)h+=(f[l>>3]>>4*(7-l++)&15).toString(16);return h}function Oc(){var c=(window.navigator.userAgent||"")+(window.navigator.platform||"")+(new Date).getTime+JSON.stringify({})+Math.random();return Da(c).slice(0,16)}function Pc(c,d,a){return"function"===typeof a?{bind:c,selector:d,callback:a}:null}function Le(){Db=v.onFireException.on(function(c,d){document.dispatchEvent(new CustomEvent(w.OnException,{detail:{error:c,context:d}}))});Eb=
-v.onEventSend.on(function(c){document.dispatchEvent(new CustomEvent(w.OnBeforeEventSend,{detail:{actionEvent:c},cancelable:!0}))&&document.dispatchEvent(new CustomEvent(w.OnEventSend,{detail:{actionEvent:c}}))});Fb=v.onPageMatchStatusUpdated.on(function(c){document.dispatchEvent(new CustomEvent(w.OnPageMatchStatusUpdated,{detail:{matchStatus:c}}))});Gb=v.onInitSitemap.on(function(c){document.dispatchEvent(new CustomEvent(w.OnInitSitemap,{detail:{sitemapConfig:c}}))})}function W(c){Db&&Db();Eb&&Eb();
-Fb&&Fb();Gb&&Gb();document.dispatchEvent(new CustomEvent(w.OnShutDown,{detail:{message:c}}));Hb="shutDown";return!1}function Ua(c,d,a,b){return c.addEventListener?(c.addEventListener(d,a,b),!0):!1}function ca(c,d,a,b){return c.removeEventListener?(c.removeEventListener(d,a,b),!0):!1}function Ib(c){var d=document.createElement("a");d.href=c;return d}function Qc(c){try{return decodeURIComponent(c.replace(/\+/g," "))}catch(d){return null}}function Rc(c){if(c=c.detail&&c.detail.actionEvent)if(c.itemAction&&
-c.itemAction.includes("View"))Va();else{var d;if(d=c.interaction)c=c.interaction.name,d=c===oa.ViewCatalogObject||c===oa.ViewCatalogObjectDetail||c===oa.QuickViewCatalogObject||c===Ea.StopQuickViewCatalogObject;d&&Va()}}function Jb(c){-1!==X&&(Kb(!1,c),clearTimeout(X),X=-1)}function Va(){if(!q.beaconConfig.doNotTrackPingRequestsForActions){Jb(!0);document.removeEventListener(n.CustomEvents.OnEventSend,Rc);document.addEventListener(n.CustomEvents.OnEventSend,Rc);var c=Date.now();if(-1===H||c-H>=q.beaconConfig.minimumActivityTimeToRegister)H=
-c;X=setTimeout(function(){Kb(!0)},q.beaconConfig.timeOnPageTimerLengthMillis);r.info("Setting up time on page listeners.");ca(window,"unload",Lb);Ua(window,"unload",Lb);ca(window,"blur",Mb);Ua(window,"blur",Mb);ca(window,"focus",Nb);Ua(window,"focus",Nb);ca(document,"mousemove keydown scroll click",Fa);Ua(document,"mousemove keydown scroll click",Fa)}}function Kb(c,d){var a=Date.now();-1!==H&&(a-=H,q.beaconConfig.timeOnPageTimerLengthMillis<a?Wa():(r.trace("Evergage: timeOnPage before: sendActivityPingRequest: ".concat(D)),
-D+=a,r.trace("Evergage: timeOnPage after: sendActivityPingRequest: ".concat(D)),-1!==Y&&clearTimeout(Y),Y=setTimeout(Wa,q.beaconConfig.timeOnPageTimerLengthMillis-a)));if(0<D){D=Math.min(D,q.beaconConfig.timeOnPageTimerLengthMillis);if(!0!==d||2E3<=D)d=Me(D),Ne(d),Sc(d);D=0}0>D&&(D=0);c&&(-1!==X&&clearTimeout(X),X=setTimeout(function(){Kb(!0)},q.beaconConfig.timeOnPageTimerLengthMillis))}function Me(c){c={timeOnPageMillis:c};var d=Tc(),a={};if(d&&d.itemAction&&d.catalog)a=d.catalog;else if(d&&d.interaction&&
-d.interaction.catalogObject){a=d.interaction.catalogObject;var b={},e=a.id,f=a.type,g=xa(a,Oe);e&&f&&(b[a.type]={_id:e});a.relatedCatalogObjects&&(f=g.relatedCatalogObjects,e=f.Category,f=xa(f,Pe),Array.isArray(e)&&(b[a.type].categories=Uc(e)),0!==Object.keys(f).length&&(b[a.type].relatedCatalogObjects=f));a=b}0!==Object.keys(a).length&&(c.catalog=a);d&&d.interaction&&null!=d.interaction.name?c.action=d.interaction.name:d&&null!=d.action&&(c.action=d.action);Vc();c.performance={};d=xa(y,Qe);for(var h in d)y[h]&&
-(c.performance[h]=y[h]);return c}function Lb(c){Jb()}function Mb(c){try{r.trace("Evergage: window blurred"),Wa()}catch(d){x(d,"windowBlurFunction")}}function Nb(c){try{r.trace("Evergage: window focused"),Fa()}catch(d){x(d,"windowFocusFunction")}}function Wa(){try{-1!==Y&&(clearTimeout(Y),Y=-1);var c=Date.now(),d=0;-1!==H&&(d=c-H);r.trace("Evergage: timeOnPage before: setUserInactive: ".concat(D));D+=d;r.trace("Evergage: timeOnPage after: setUserInactive: ".concat(D));H=-1}catch(a){x(a,"setUserInactive")}}
-function Fa(){r.trace("activity registered");try{-1!==Y&&(clearTimeout(Y),Y=-1);var c=Date.now();if(-1===H||c-H>=q.beaconConfig.minimumActivityTimeToRegister)-1!==H&&(r.trace("Evergage: timeOnPage before: activityRegistered: ".concat(D)),D+=c-Math.max(H,-1),r.trace("Evergage: timeOnPage after: activityRegistered: ".concat(D))),H=c}catch(d){x(d,"activityRegistered")}}function Ob(c,d){c="string"===typeof c?Error(c):c;for(var a in d)Object.defineProperty(c,a,{value:d[a],enumerable:!1});return c}var M=
-function(c,d){return d={exports:{}},c(d,d.exports),d.exports}(function(c,d){c.exports=function(){function a(){for(var a=0,b={};a<arguments.length;a++){var c=arguments[a],d;for(d in c)b[d]=c[d]}return b}function b(c){function d(){}function e(b,e,f){if("undefined"!==typeof document){f=a({path:"/"},d.defaults,f);"number"===typeof f.expires&&(f.expires=new Date(1*new Date+864E5*f.expires));f.expires=f.expires?f.expires.toUTCString():"";try{var g=JSON.stringify(e);/^[\{\[]/.test(g)&&(e=g)}catch(xg){}e=
-c.write?c.write(e,b):encodeURIComponent(String(e)).replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g,decodeURIComponent);b=encodeURIComponent(String(b)).replace(/%(23|24|26|2B|5E|60|7C)/g,decodeURIComponent).replace(/[\(\)]/g,escape);g="";for(var h in f)f[h]&&(g+="; "+h,!0!==f[h]&&(g+="="+f[h].split(";")[0]));return document.cookie=b+"="+e+g}}function h(a,b){if("undefined"!==typeof document){for(var d={},e=document.cookie?document.cookie.split("; "):[],f=0;f<e.length;f++){var g=
-e[f].split("="),h=g.slice(1).join("=");b||'"'!==h.charAt(0)||(h=h.slice(1,-1));try{var l=g[0].replace(/(%[0-9A-Z]{2})+/g,decodeURIComponent);h=(c.read||c)(h,l)||h.replace(/(%[0-9A-Z]{2})+/g,decodeURIComponent);if(b)try{h=JSON.parse(h)}catch(Re){}d[l]=h;if(a===l)break}catch(Re){}}return a?d[a]:d}}d.set=e;d.get=function(a){return h(a,!1)};d.getJSON=function(a){return h(a,!0)};d.remove=function(b,c){e(b,"",a(c,{expires:-1}))};d.defaults={};d.withConverter=b;return d}return b(function(){})}()}),S=document,
-Aa=window,yb=S.documentElement,ma=S.createElement.bind(S),Wc=ma("div"),Pb=ma("table"),Se=ma("tbody"),Xc=ma("tr"),Qb=Array.isArray,da=Array.prototype,tb=da.filter,yc=da.indexOf,Te=da.map,ve=da.push,Yc=da.slice,wb=da.some,Ue=da.splice,Ve=/^#[\w-]*$/,re=/^\.[\w-]*$/,We=/<.+>/,se=/^\w+$/,Pa=function(){function c(d){var a=1<arguments.length&&void 0!==arguments[1]?arguments[1]:S;ha(this,c);if(d){if(d instanceof Pa)return d;var b=d;if(G(d)){if(b=a instanceof Pa?a[0]:a,b=Ve.test(d)?b.getElementById(d.slice(1)):
-We.test(d)?Fc(d):pb(d,b),!b)return}else if(ka(d))return this.ready(d);if(b.nodeType||b===Aa)b=[b];this.length=b.length;a=0;for(var e=this.length;a<e;a++)this[a]=b[a]}}ia(c,[{key:"init",value:function(d,a){return new c(d,a)}}]);return c}(),m=Pa.prototype,p=m.init;p.fn=p.prototype=m;m.length=0;m.splice=Ue;"function"===typeof Symbol&&(m[Symbol.iterator]=da[Symbol.iterator]);m.map=function(c){return p(Te.call(this,function(d,a){return c.call(d,a,d)}))};m.slice=function(c,d){return p(Yc.call(this,c,d))};
-var te=/-([a-z])/g;p.camelCase=za;p.each=C;m.each=function(c){return C(this,c)};m.removeProp=function(c){return this.each(function(d,a){delete a[c]})};p.extend=function(c){for(var d=arguments.length,a=Array(1<d?d-1:0),b=1;b<d;b++)a[b-1]=arguments[b];d=arguments.length;for(a=2>d?0:1;a<d;a++)for(var e in arguments[a])c[e]=arguments[a][e];return c};m.extend=function(c){return p.extend(m,c)};p.guid=1;p.matches=qb;p.isWindow=rb;p.isFunction=ka;p.isString=G;p.isNumeric=xc;p.isArray=Qb;m.prop=function(c,
-d){if(c){if(G(c))return 2>arguments.length?this[0]&&this[0][c]:this.each(function(a,e){e[c]=d});for(var a in c)this.prop(a,c[a]);return this}};m.get=function(c){return void 0===c?Yc.call(this):this[0>c?c+this.length:c]};m.eq=function(c){return p(this.get(c))};m.first=function(){return this.eq(0)};m.last=function(){return this.eq(-1)};m.filter=function(c){var d=sb(c);return p(tb.call(this,function(a,b){return d.call(a,b,a)}))};var ue=/\S+/g;m.hasClass=function(c){return!!c&&wb.call(this,function(d){return d.classList.contains(c)})};
-m.removeAttr=function(c){var d=Qa(c);return this.each(function(a,b){C(d,function(a,c){b.removeAttribute(c)})})};m.attr=function(c,d){if(c){if(G(c)){if(2>arguments.length){if(!this[0])return;var a=this[0].getAttribute(c);return null===a?void 0:a}return void 0===d?this:null===d?this.removeAttr(c):this.each(function(a,e){e.setAttribute(c,d)})}for(a in c)this.attr(a,c[a]);return this}};m.toggleClass=function(c,d){var a=Qa(c),b=void 0!==d;return this.each(function(c,f){C(a,function(a,c){b?d?f.classList.add(c):
-f.classList.remove(c):f.classList.toggle(c)})})};m.addClass=function(c){return this.toggleClass(c,!0)};m.removeClass=function(c){return arguments.length?this.toggleClass(c,!1):this.attr("class","")};p.unique=T;m.add=function(c,d){return p(T(this.get().concat(p(c,d).get())))};var ub=/^--/,vb={},xe=Wc.style,we=["webkit","moz","ms"];p.prefixedProp=zc;var ye={animationIterationCount:!0,columnCount:!0,flexGrow:!0,flexShrink:!0,fontWeight:!0,lineHeight:!0,opacity:!0,order:!0,orphans:!0,widows:!0,zIndex:!0};
-m.css=function(c,d){if(G(c)){var a=ub.test(c);c=zc(c,a);if(2>arguments.length)return this[0]&&la(this[0],c,a);if(!c)return this;d=Ac(c,d,a);return this.each(function(b,f){f&&1===f.nodeType&&(a?f.style.setProperty(c,d):f.style[c]=d)})}for(var b in c)this.css(b,c[b]);return this};m.data=function(c,d){if(!c){if(!this[0])return;var a={},b;for(b in this[0].dataset)a[b]=Bc(this[0],b);return a}if(G(c))return 2>arguments.length?this[0]&&Bc(this[0],c):this.each(function(a,b){a=d;try{a=JSON.stringify(a)}catch(g){}b.dataset[za(c)]=
-a});for(a in c)this.data(a,c[a]);return this};C([!0,!1],function(c,d){C(["Width","Height"],function(a,b){var c="".concat(d?"outer":"inner").concat(b);m[c]=function(e){if(this[0])return rb(this[0])?Aa[c]:this[0]["".concat(d?"offset":"client").concat(b)]+(e&&d?sa(this[0],"margin".concat(a?"Top":"Left"))+sa(this[0],"margin".concat(a?"Bottom":"Right")):0)}})});C(["width","height"],function(c,d){m[d]=function(a){if(!this[0])return void 0===a?void 0:this;if(!arguments.length)return rb(this[0])?this[0][za("outer-".concat(d))]:
-this[0].getBoundingClientRect()[d]-Cc(this[0],!c);var b=parseInt(a,10);return this.each(function(a,f){f&&1===f.nodeType&&(a=la(f,"boxSizing"),f.style[d]=Ac(d,b+("border-box"===a?Cc(f,!c):0)))})}});var Rb={};m.toggle=function(c){return this.each(function(d,a){if(void 0===c?"none"===la(a,"display"):c){if(a.style.display=a.___cd||"","none"===la(a,"display")){d=a.style;a=a.tagName;if(Rb[a])a=Rb[a];else{var b=ma(a);S.body.insertBefore(b,null);var e=la(b,"display");S.body.removeChild(b);a=Rb[a]="none"!==
-e?e:"block"}d.display=a}}else a.___cd=la(a,"display"),a.style.display="none"})};m.hide=function(){return this.toggle(!1)};m.show=function(){return this.toggle(!0)};var Sb={focus:"focusin",blur:"focusout"},Zc={mouseenter:"mouseover",mouseleave:"mouseout"},Xe=/^(mouse|pointer|contextmenu|drag|drop|click|dblclick)/i;m.off=function(c,d,a){var b=this;if(void 0===c)this.each(function(a,b){Ra(b)});else if(G(c))ka(d)&&(a=d,d=""),C(Qa(c),function(c,e){c=xb(Zc[e]||Sb[e]||e);c=ya(c,2);var f=c[0],g=c[1];b.each(function(b,
-c){Ra(c,f,g,d,a)})});else for(var e in c)this.off(e,c[e]);return this};m.on=function(c,d,a,b){var e=this;if(!G(c)){for(var f in c)this.on(f,d,c[f]);return this}ka(d)&&(a=d,d="");C(Qa(c),function(c,f){c=xb(Zc[f]||Sb[f]||f);c=ya(c,2);var g=c[0],h=c[1];e.each(function(c,e){c=function He(c){if(!c.namespace||Dc(h,c.namespace.split("."))){var f=e;if(d){for(var l=c.target;!qb(l,d);){if(l===e)return;l=l.parentNode;if(!l)return}f=l;c.___cd=!0}c.___cd&&Object.defineProperty(c,"currentTarget",{configurable:!0,
-get:function(){return f}});l=a.call(f,c,c.data);b&&Ra(e,g,h,d,He);!1===l&&(c.preventDefault(),c.stopPropagation())}};c.guid=a.guid=a.guid||p.guid++;ze(e,g,h,d,c)})});return this};m.one=function(c,d,a){return this.on(c,d,a,!0)};m.ready=function(c){"loading"!==S.readyState?c(p):S.addEventListener("DOMContentLoaded",function(){c(p)});return this};m.trigger=function(c,d){if(G(c)){var a=xb(c),b=ya(a,2);a=b[0];b=b[1];var e=Xe.test(a)?"MouseEvents":"HTMLEvents";c=S.createEvent(e);c.initEvent(a,!0,!0);c.namespace=
-b.join(".")}c.data=d;var f=c.type in Sb;return this.each(function(a,b){if(f&&ka(b[c.type]))b[c.type]();else b.dispatchEvent(c)})};var Ye=/%20/g,Ze=/file|reset|submit|button|image/i,$e=/radio|checkbox/i;m.serialize=function(){var c="";this.each(function(d,a){C(a.elements||[a],function(a,d){d.disabled||!d.name||"FIELDSET"===d.tagName||Ze.test(d.type)||$e.test(d.type)&&!d.checked||(a=Ec(d),void 0!==a&&(a=Qb(a)?a:[a],C(a,function(a,b){a=c;b="&".concat(encodeURIComponent(d.name),"=").concat(encodeURIComponent(b).replace(Ye,
-"+"));c=a+b})))})});return c.slice(1)};m.val=function(c){return void 0===c?this[0]&&Ec(this[0]):this.each(function(d,a){if("SELECT"===a.tagName){var b=Qb(c)?c:null===c?[]:[c];C(a.options,function(a,c){c.selected=0<=b.indexOf(c.value)})}else a.value=null===c?"":c})};m.clone=function(){return this.map(function(c,d){return d.cloneNode(!0)})};m.detach=function(){return this.each(function(c,d){d.parentNode&&d.parentNode.removeChild(d)})};var Be=/^\s*<(\w+)[^>]*>/,Ae=/^\s*<(\w+)\s*\/?>(?:<\/\1>)?\s*$/,
-Gc={"*":Wc,tr:Se,td:Xc,th:Xc,thead:Pb,tbody:Pb,tfoot:Pb};p.parseHTML=Fc;m.empty=function(){return this.each(function(c,d){for(;d.firstChild;)d.removeChild(d.firstChild)})};m.html=function(c){return void 0===c?this[0]&&this[0].innerHTML:this.each(function(d,a){a.innerHTML=c})};m.remove=function(){return this.detach().off()};m.text=function(c){return void 0===c?this[0]?this[0].textContent:"":this.each(function(d,a){a.textContent=c})};m.unwrap=function(){this.parent().each(function(c,d){c=p(d);c.replaceWith(c.children())});
-return this};m.offset=function(){var c=this[0];if(c)return c=c.getBoundingClientRect(),{top:c.top+Aa.pageYOffset-yb.clientTop,left:c.left+Aa.pageXOffset-yb.clientLeft}};m.offsetParent=function(){return p(this[0]&&this[0].offsetParent)};m.position=function(){var c=this[0];if(c)return{left:c.offsetLeft,top:c.offsetTop}};m.children=function(c){return ra(p(T(V(this,function(c){return c.children}))),c)};m.contents=function(){return p(T(V(this,function(c){return"IFRAME"===c.tagName?[c.contentDocument]:
-c.childNodes})))};m.find=function(c){return p(T(V(this,function(d){return pb(c,d)})))};var Ee=/^\s*<!(?:\[CDATA\[|--)|(?:\]\]|--)>\s*$/g,De=/^$|^module$|\/(java|ecma)script/i,Fe=["type","src","nonce","noModule"];m.after=function(){return ba(arguments,this,!1,!1,!1,!0,!0)};m.append=function(){return ba(arguments,this,!1,!1,!0)};m.appendTo=function(c){return ba(arguments,this,!0,!1,!0)};m.before=function(){return ba(arguments,this,!1,!0)};m.insertAfter=function(c){return ba(arguments,this,!0,!1,!1,
-!1,!1,!0)};m.insertBefore=function(c){return ba(arguments,this,!0,!0)};m.prepend=function(){return ba(arguments,this,!1,!0,!0,!0,!0)};m.prependTo=function(c){return ba(arguments,this,!0,!0,!0,!1,!1,!0)};m.replaceWith=function(c){return this.before(c).remove()};m.replaceAll=function(c){p(c).replaceWith(this);return this};m.wrapAll=function(c){c=p(c);for(var d=c[0];d.children.length;)d=d.firstElementChild;this.first().before(c);return this.appendTo(d)};m.wrap=function(c){return this.each(function(d,
-a){var b=p(c)[0];p(a).wrapAll(d?b.cloneNode(!0):b)})};m.wrapInner=function(c){return this.each(function(d,a){d=p(a);a=d.contents();a.length?a.wrapAll(c):d.append(c)})};m.has=function(c){var d=G(c)?function(a,b){return pb(c,b).length}:function(a,b){return b.contains(c)};return this.filter(d)};m.is=function(c){var d=sb(c);return wb.call(this,function(a,b){return d.call(a,b,a)})};m.next=function(c,d){return ra(p(T(V(this,"nextElementSibling",d))),c)};m.nextAll=function(c){return this.next(c,!0)};m.not=
-function(c){var d=sb(c);return this.filter(function(a,b){return!d.call(b,a,b)})};m.parent=function(c){return ra(p(T(V(this,"parentNode"))),c)};m.index=function(c){var d=c?p(c)[0]:this[0];c=c?this:p(d).parent().children();return yc.call(c,d)};m.closest=function(c){var d=this.filter(c);if(d.length)return d;var a=this.parent();return a.length?a.closest(c):d};m.parents=function(c){return ra(p(T(V(this,"parentElement",!0))),c)};m.prev=function(c,d){return ra(p(T(V(this,"previousElementSibling",d))),c)};
-m.prevAll=function(c){return this.prev(c,!0)};m.siblings=function(c){return ra(p(T(V(this,function(c){return p(c).parent().children().not(c)}))),c)};var Tb=["error","warn","info","debug","trace"],r=new (function(){function c(){var d=0<arguments.length&&void 0!==arguments[0]?arguments[0]:"",a=1<arguments.length&&void 0!==arguments[1]?arguments[1]:0;Ba(this,c);this.console=window.console;this.level=a;this.prefix=d;this.buildLogFunctions()}Ca(c,[{key:"shouldLog",value:function(c){return c<=this.level}},
-{key:"setLoggingLevel",value:function(c){this.level="string"===typeof c?Tb.indexOf(c.toLowerCase())+1:c||0;this.buildLogFunctions()}},{key:"getLoggingLevel",value:function(){return this.level}},{key:"setPrefix",value:function(c){this.prefix=c;this.buildLogFunctions()}},{key:"getPrefix",value:function(){return this.prefix}},{key:"buildLogFunctions",value:function(){var c=this;Tb.forEach(function(a,b){a=Tb[b];c[a]=c.shouldLog(b+1)?c.getLogFn(a):function(){}})}},{key:"getLogFn",value:function(c){return Function.prototype.bind.call(this.console.log,
-this.console,"[".concat(c.toUpperCase(),"]").concat(this.prefix?"("+this.prefix+")":"",":"))}}]);return c}()),w;(function(c){c.OnEventSend="interactions:onEventSend";c.OnBeforeEventSend="interactions:onBeforeEventSend";c.OnException="interactions:onException";c.OnPageMatchStatusUpdated="interactions:onPageMatchStatusUpdated";c.OnInit="interactions:onInit";c.OnInitSitemap="interactions:onInitSitemap";c.OnShutDown="interactions:onShutDown";c.OnSetAnonymousId="interactions:onSetAnonymousId";c.OnResetAnonymousId=
-"interactions:onResetAnonymousId";c.OnClearPersistedIdentities="interactions:onClearPersistedIdentities";c.OnClearCookie="interactions:onClearCookie";c.OnConsentRevoke="interactions:onConsentRevoke";c.OnBeforeInit="interactions:onBeforeInit"})(w||(w={}));var Da=Cb.default?Cb.default:Cb,$c,ea=window.location.hostname,Xa=function(c){ea=c;ad()},ad=function(){$c=Da("".concat(Da(ea+"/").slice(0,4))).slice(0,4)},Ga=function(){return"".concat("_sfid","_").concat($c)},bd;document.addEventListener(w.OnClearCookie,
-function(c){var d=c.detail&&c.detail.options||{};d.domain&&Xa(c.detail.options.domain);cd(z({domain:ea},d))});var Ub=function(){return M.getJSON(Ga())},cd=function(c){M.remove(Ga(),c)},dd=function(c){ta.write(z(z({},Ub()),{},{consents:c}),730)},ta={read:Ub,write:function(c,d){bd?M.set(Ga(),c,{expires:d,domain:ea,secure:!0}):M.set(Ga(),c,{expires:d,domain:ea});M.get(Ga())||r.warn("Web SDK cookie (_sfid) could not be set. This is possibly due to a restricted top level domain. See https://publicsuffix.org/learn/ for more information.")},
-remove:cd},af=[/bot/i,/spider/i,/facebookexternalhit/i,/simplepie/i,/yahooseeker/i,/embedly/i,/quora link preview/i,/outbrain/i,/vkshare/i,/monit/i,/Pingability/i,/Monitoring/i,/WinHttpRequest/i,/Apache-HttpClient/i,/getprismatic.com/i,/python-requests/i,/Twurly/i,/yandex/i,/browserproxy/i,/crawler/i,/Qwantify/i,/Yahoo! Slurp/i,/pinterest/i,/Tumblr\/14.0.835.186/i,/Tumblr Agent 14.0/i],bf=function(c){return af.some(function(d){return d.test(c)})},cf=navigator.vendor&&-1<navigator.vendor.indexOf("Apple")&&
-navigator.userAgent&&-1==navigator.userAgent.indexOf("CriOS")&&-1==navigator.userAgent.indexOf("FxiOS"),U="";document.addEventListener(w.OnResetAnonymousId,function(c){c=c.detail&&c.detail.options||{};c.domain&&Xa(c.domain);ta.remove(z({domain:ea},c));ed()});document.addEventListener(w.OnSetAnonymousId,function(c){c.detail&&c.detail.newAnonymousId&&(c=c.detail.newAnonymousId,ta.write(z(z({},Ub()),{},{anonymousId:c}),730))});var Ya=function(c){(U=c)?document.dispatchEvent(new CustomEvent(w.OnSetAnonymousId,
-{detail:{newAnonymousId:c}})):r.warn("Attempted to setAnonymousId but not parameter is undefined")},ed=function(){fd()?(U=ta.read().anonymousId,Ya(U),r.debug("Loaded anonymous identity record from cookie: ".concat(JSON.stringify(U)))):(Ya(Oc()),r.debug("Created new anonymous identity record. anonymousId: ".concat(U)));return U},fd=function(){var c=ta.read();return!!(c&&"object"===J(c)&&0<Object.keys(c).length)},Za=function(){function c(){Ba(this,c);this.listeners=[]}Ca(c,[{key:"on",value:function(c){var a=
-this;(this.listeners=this.listeners||[]).push(c);return function(){a.listeners=a.listeners.filter(function(a){return a!==c})}}},{key:"once",value:function(c){var a=this;return this.on(function(){a.unbindAll();try{for(var b=arguments.length,d=Array(b),f=0;f<b;f++)d[f]=arguments[f];c.apply(a,d)}catch(g){r.error("Signal listener callback error: "+g)}})}},{key:"emit",value:function(){for(var c=this,a=arguments.length,b=Array(a),e=0;e<a;e++)b[e]=arguments[e];0!==this.listeners.length&&this.listeners.forEach(function(a){try{a.apply(c,
-b)}catch(g){r.error("Signal listener callback error: "+g)}})}},{key:"unbindAll",value:function(){this.listeners=[]}}]);return c}(),df=function(c){r.debug("Unbinding all signals for type: ",c);Object.keys(c).forEach(function(d){c[d].unbindAll&&c[d].unbindAll()})},v=Ca(function d(){Ba(this,d)});v.onEventSend=new Za;v.onFireException=new Za;v.onPageMatchStatusUpdated=new Za;v.onInitSitemap=new Za;v.unbindAll=function(){df(v)};var u={currentPage:null,matchedConfig:null,matchStatus:null},N={pageTypes:[]},
-F=null,O;(function(d){d.Pending="pending";d.Running="running";d.Selected="selected";d.Matched="matched";d.Rejected="rejected"})(O||(O={}));var $a=function(d){return new Promise(function(a,b){var e=N.pageTypeDefault;e&&Ha({pageName:e.name,status:O.Pending});e&&!d.length?(Vb(e),a(e)):(ef(d),d.map(function(f){ff(f).then(function(g){g?(e&&gd(e),Vb(f),a(f)):(gd(f),gf(d)||(e?(Vb(e),a(e)):b("No matching page found")))}).catch(function(a){"sitemap_reinit"!==a&&v.onFireException.emit(Error("isMatch failed while evaluating the ".concat(f.name,
-" page config")),"Site-wide Javascript")})}))})},hd=function(){u.matchStatus&&(u.matchStatus.forEach(function(d){d.status===O.Running&&d._reject("sitemap_reinit")}),u.matchStatus=[]);v.onPageMatchStatusUpdated.emit(u.matchStatus)},ef=function(d){d.forEach(function(a){Ha({pageName:a.name,status:O.Pending})})},Vb=function(d){Ha({pageName:d.name,endTime:Date.now(),status:u.matchStatus.find(function(a){return a.status===O.Selected})?O.Matched:O.Selected})},gd=function(d){Ha({pageName:d.name,status:O.Rejected,
-endTime:Date.now()})},gf=function(d){return u.matchStatus.filter(function(a){return a.status===O.Rejected},0).length<d.length},ff=function(d){return new Promise(function(a,b){Ha({pageName:d.name,status:O.Running,startTime:Date.now(),_reject:b});"function"===typeof d.isMatch?(b=d.isMatch(),"object"===J(b)?b.then(function(b){a(b)}).catch(function(){}):a(b)):v.onFireException.emit(Error("isMatch failed while evaluating the ".concat(d.name," page config. isMatch must be a function.")),"Site-wide Javascript")})},
-Ha=function(d){u.matchStatus=[].concat(Kc(u.matchStatus||[]),[d]);v.onPageMatchStatusUpdated.emit(u.matchStatus)},oa;(function(d){d.ViewCatalogObject="View Catalog Object";d.ViewCatalogObjectDetail="View Catalog Object Detail";d.QuickViewCatalogObject="Quick View Catalog Object";d.ShareCatalogObject="Share Catalog Object";d.ReviewCatalogObject="Review Catalog Object";d.CommentCatalogObject="Comment Catalog Object";d.FavoriteCatalogObject="Favorite Catalog Object"})(oa||(oa={}));var Wb;(function(d){d.AddToCart=
-"Add To Cart";d.RemoveFromCart="Remove From Cart";d.ReplaceCart="Replace Cart"})(Wb||(Wb={}));var Xb;(function(d){d.Purchase="Purchase";d.Preorder="Preorder";d.Cancel="Cancel";d.Ship="Ship";d.Deliver="Deliver";d.Return="Return";d.Exchange="Exchange"})(Xb||(Xb={}));var ua;(ua||(ua={})).MetadataUpdate="MetadataUpdate";var id;(id||(id={})).Tracking="Tracking";(function(d){d.OptIn="Opt In";d.OptOut="Opt Out"})(n.ConsentStatus||(n.ConsentStatus={}));var x=function(d,a,b){v.onFireException.emit(d,a);r.warn("sendException",
-{event,errorSection:a})},P=[],jd=function(){return P},kd=function(d){return P.find(function(a){return d.purpose==a.consent.purpose})},Yb=function(d){ld(d,!0)},ld=function(d,a){Array.isArray(d)?d.forEach(function(b){md(b,a)}):md(d,a);dd(P)},md=function(d,a){if(d&&"object"==J(d)&&d.purpose&&d.provider&&d.status)var b=!0;else x(Error("Invalid consent, check that consent is a valid object and all fields are defined: ".concat(JSON.stringify(d))),"Salesforce Web SDK"),b=!1;if(b)if(b=kd(d)){var e=b.consent.status;
-if(b.consent.status!=d.status||b.consent.provider!=d.provider)b.consent=d,b.lastUpdateTime=(new Date).toISOString();a&&e==n.ConsentStatus.OptIn&&d.status==n.ConsentStatus.OptOut&&nd(b)}else d={consent:d,lastUpdateTime:(new Date).toISOString()},P.push(d),a&&d.consent.status==n.ConsentStatus.OptOut&&nd(d)},nd=function(d){document.dispatchEvent(new CustomEvent(w.OnConsentRevoke,{detail:{revokedConsent:d}}))},hf=function(d){var a=(new Date).toISOString();d.forEach(function(b){kd(b).lastSentTime=a});dd(P)},
-kf=function(d){jf();Promise.resolve(d).then(function(a){a&&0<a.length&&Yb(a)})},jf=function(){var d=ta.read();d&&(P=d.consents||[])},lf=function(d){return 0<=d.findIndex(function(a){return a.status==n.ConsentStatus.OptIn})},mf=function(){return lf(P.map(function(d){return d.consent}))},od=function(d){d.source=d.source||{};var a=z({},d.source||{}),b;(b=d.source.pageType)||(b=u.currentPage&&u.currentPage.source?u.currentPage.source.pageType:void 0);d.source=z(a,{},{pageType:b,url:d.source.url||window.location.href,
-urlReferrer:d.source.urlReferrer||document.referrer,channel:d.source.channel||"Web"});d.user=z(z({},d.user||{}),{},{anonymousId:U});nf(d)},nf=function(d){d.consents&&ld(d.consents,!1);d.consents=P.filter(function(a){return!a.lastSentTime||new Date(a.lastUpdateTime)>=new Date(a.lastSentTime)}).map(function(a){return a.consent});hf(d.consents)};document.addEventListener(w.OnConsentRevoke,function(d){d.detail&&d.detail.revokedConsent&&of({interaction:{name:ua.MetadataUpdate},consents:[d.detail.revokedConsent.consent]})});
-var qd=function(d){return pd(d,mf).catch(function(a){r.error(a.message);v.onFireException.emit(a,"Site-wide JavaScript");return d})},of=function(d){pd(d,function(){return!0}).then(function(){return r.debug("Consent revoked")},function(a){return v.onFireException.emit(a,"Site-wide JavaScript")})},pd=function(d,a){a:{var b=d,e=u.matchedConfig;try{b=e&&e.onActionEvent?e.onActionEvent(b):b;if("object"===J(b)){d=b;break a}v.onFireException.emit(Error("onActionEvent failed for the ".concat(u.matchedConfig.name,
-" page config. Must return an object or null.")),"Site-wide Javascript")}catch(f){v.onFireException.emit(Error("onActionEvent failed for the ".concat(u.matchedConfig.name," page config. ").concat(f.message,".")),"Site-wide Javascript")}d=void 0}a:{b=d;try{b=N.global&&N.global.onActionEvent?N.global.onActionEvent(b):b;if("object"===J(b)){d=b;break a}v.onFireException.emit(Error("onActionEvent failed for the global page config. Must return an object or null."),"Site-wide Javascript")}catch(f){v.onFireException.emit(Error("onActionEvent failed for the global page config. ".concat(f.message,
-".")),"Site-wide Javascript")}d=void 0}od(d);a&&!a()&&r.debug("No opt-in consents provided. Event will still be dispatched.");r.debug("Sent event: ",d);v.onEventSend.emit(d);return Promise.resolve(d)},pf=function(d){return new Promise(function(a,b){v.onInitSitemap.once(function(){return b("sitemap_reinit")});var e={name:null},f=[];Object.keys(d.interaction).forEach(function(a){var b=rd(d.interaction[a],a).then(function(b){e[a]=b});f.push(b)});Promise.all(f).then(function(){a(e)}).catch(function(a){v.onFireException.emit(Error("Catalog object interaction config was rejected"),
-"Site-wide Javascript")})})},rd=function(d,a){try{return F=a,"object"===J(d)&&!Array.isArray(d)&&0<Object.keys(d).length?qf(d):Promise.resolve(d).then(function(a){return"function"===typeof a?a():a})}catch(b){v.onFireException.emit(Error("getValue for ".concat(a," failed on ").concat(u.matchedConfig.name," while evaluating custom function. ").concat(b.message,".")),"Site-wide Javascript")}},qf=function(d){var a={},b=Object.keys(d),e={};b.forEach(function(b){var e=rd(d[b],b);a[b]=e});return Promise.all(Object.values(a)).then(function(a){a.forEach(function(a,
-d){e[b[d]]=a});return e})},ab,rf=function(){Zb();sd()&&(ab=setInterval(function(){var d=!1,a=(new Date).getTime(),b=u.matchedConfig.listeners.map(function(a){if(a.selectorFound)return a;a=bb(a);d=a.selectorFound||d;return a});d&&Object.assign(u.matchedConfig,z(z({},u.matchedConfig),{},{listeners:b}));(50<(new Date).getTime()-a||!sd())&&Zb()},1E3))},sd=function(){if(u.matchedConfig){var d=u.matchedConfig.listeners;return d?d.filter(function(a){return!a.selectorFound}).length:!1}return!1},Zb=function(){"number"===
-typeof ab&&clearInterval(ab);ab=null},bb=function(d){var a=p(d.selector),b=z(z({},d),{},{selectorFound:0<a.length});a.on(b.bind,function(a){try{b.callback(a)}catch(f){v.onFireException.emit(Error("Listener callback on ".concat(b.bind," bound to ").concat(b.selector," failed for the ").concat(u.matchedConfig.name," page config. ").concat(f.message,".")),"Site-wide Javascript")}});return b},sf=function(){u&&u.matchedConfig&&u.matchedConfig.listeners&&u.matchedConfig.listeners.forEach(function(d){p(d.selector).off(d.bind)})},
-td=function(d){d.global=d.global||{};"object"!=J(d.global)&&v.onFireException.emit(Error("The global config has a type of ".concat(J(d.global),", but it must be an object")),"Sitewide Javascript");Object.assign(N,z({},d));v.onInitSitemap.emit(N)},ud=function(d){tf(d);return!0},vd=function(d){u.matchedConfig=z(z({},d),{},{listeners:uf(d)});u.currentPage=z(z({},u.currentPage||{}),{},{source:{pageType:d.name,locale:vf(d)},user:{anonymousId:null},interaction:null,pageView:!0});return d.interaction?pf(d).then(function(a){u.currentPage.interaction=
-a}):Promise.resolve()},uf=function(d){return(d.listeners||[]).map(function(a){return bb(a)})},vf=function(d){return"function"===typeof d.locale?d.locale():d.locale},wf=function a(){for(var b=arguments.length,e=Array(b),f=0;f<b;f++)e[f]=arguments[f];return e.reduce(function(b,e){Object.keys(e).forEach(function(f){var g=b[f],h=e[f];Array.isArray(g)&&Array.isArray(h)?Object.assign(b,Sa({},f,g.concat.apply(g,Kc(h)))):g&&"object"===J(g)&&h&&"object"===J(h)?Object.assign(b,Sa({},f,a(g,h))):Object.assign(b,
-Sa({},f,h))});return b},{})},wd=function(a){var b=N.global||{},e=b.onActionEvent;delete b.onActionEvent;a=wf(b,a);b.onActionEvent=e;return a},xf=function(a){a.forEach(function(a){if(!a.name||!a.isMatch)throw Error("All page configs must have a name and isMatch attribute defined");})},yf=function(){var a=u;qd(u.currentPage);u=a},tf=function(a){td(a);sf();hd();Zb();u.currentPage=null;try{xf(a.pageTypes);var b=!0}catch(e){v.onFireException.emit(Error(e),"Sitemap"),b=!1}b&&$a(a.pageTypes).then(wd).then(vd).then(yf).then(rf).catch(function(a){"sitemap_reinit"!==
-a&&v.onFireException.emit(Error("Unhandled exception: ".concat(a)),"Site-wide Javascript")})},I=function(a,b){if(a)try{return a(b)}catch(e){return v.onFireException.emit(Error("getValue for ".concat(F," failed on ").concat(u.matchedConfig.name," inside of the custom transform function. ").concat(e)),"Site-wide Javascript"),null}return b},$b=function(a,b){b=b||window;a=a.split(".");a=Bb(a);var e;try{for(a.s();!(e=a.n()).done;){var f=e.value;var g=/(\w+)\[([0-9]+)\]/.exec(f);if(b[f])b=b[f];else if(g){if(b[g[1]]&&
-(b=b[g[1]][parseInt(g[2],10)],!b))return null}else return null}}catch(h){a.e(h)}finally{a.f()}return b},xd={fromSelector:function(a,b){return function(){if("string"!=typeof a)return v.onFireException.emit(Error("getValue for ".concat(F," failed on ").concat(u.matchedConfig.name,". Selector must be a string.")),"Site-wide Javascript"),null;var e=p(a).first().text();return e=I(b,e)}},fromSelectorAttribute:function(a,b,e){return function(){if("string"!=typeof a)return v.onFireException.emit(Error("getValue for ".concat(F,
-" failed on ").concat(u.matchedConfig.name,". Selector must be a string.")),"Site-wide Javascript"),null;if("string"!=typeof b)return v.onFireException.emit(Error("getValue for ".concat(F," failed on ").concat(u.matchedConfig.name,". Attribute must be a string.")),"Site-wide Javascript"),null;var f=p(a).first().attr(b);return f=I(e,f)}},fromSelectorMultiple:function(a,b){return function(){if("string"!=typeof a)return v.onFireException.emit(Error("getValue for ".concat(F," failed on ").concat(u.matchedConfig.name,
-". Selector must be a string.")),"Site-wide Javascript"),null;var e=p(a).get().map(function(a){return p(a).text()});return e=I(b,e)}},fromSelectorAttributeMultiple:function(a,b,e){return function(){if("string"!=typeof a)return v.onFireException.emit(Error("getValue for ".concat(F," failed on ").concat(u.matchedConfig.name,". Selector must be a string.")),"Site-wide Javascript"),null;if("string"!=typeof b)return v.onFireException.emit(Error("getValue for ".concat(F," failed on ").concat(u.matchedConfig.name,
-". Attribute must be a string.")),"Site-wide Javascript"),null;var f=p(a).get().map(function(a){return p(a).attr(b)});return f=I(e,f)}},fromItemProp:function(a,b){return function(){var e=p("[itemprop='"+a+"']").first().attr("content");return e=I(b,e)}},fromMeta:function(a,b){return function(){var e=p("meta[name='"+a+"']").first().attr("content")||p("meta[property='"+a+"']").first().attr("content");return e=I(b,e)}},fromWindow:function(a,b){return function(){var e=$b(a);return e=I(b,e)}},fromJsonLd:function(a,
-b){return function(){var e=p("script[type='application/ld+json']").first().text();try{var f=JSON.parse(e);if(a){var g=$b(a,f);return I(b,g)}return I(b,f)}catch(h){v.onFireException.emit(Error("Parsing JSON-LD for ".concat(F," failed on ").concat(u.matchedConfig.name,". ").concat(h)),"Site-wide Javascript")}}},fromCanonical:function(a){return function(){var b=p("link[rel=canonical]").attr("href");return b=I(a,b)}},fromHref:function(a){return function(){var b=window.location.href;return b=I(a,b)}},
-buildCategoryId:function(a,b,e,f){return function(){var g=Array.from(p(a));b&&(g=g.slice(b));e&&(g=g.slice(0,-1));var h=[];g.forEach(function(a){(a=p(a).text().trim())?h.push(a):v.onFireException.emit(Error("buildCategoryId for ".concat(F," failed on ").concat(u.matchedConfig.name,". A category part is null.")),"Site-wide Javascript")});g=h.join("|");return g=I(f,g)}},buildCategoryIdAttribute:function(a,b,e,f,g){return function(){var h=Array.from(p(a));e&&(h=h.slice(e));f&&(h=h.slice(0,-1));var l=
-[];h.forEach(function(a){(a=p(a).attr(b).trim())?l.push(a):v.onFireException.emit(Error("buildCategoryId for ".concat(F," failed on ").concat(u.matchedConfig.name,". A category part is null.")),"Site-wide Javascript")});h=l.join("|");return h=I(g,h)}}},B=p,fa={},Ia=function(a){if(!a||"string"!==typeof a||"function"!==typeof fa[a])return null;fa[a]();delete fa[a]},yd={resolveWhenTrue:{bind:function(a){var b=1<arguments.length&&void 0!==arguments[1]?arguments[1]:Math.random().toString(36).slice(2),
-e=2<arguments.length&&void 0!==arguments[2]?arguments[2]:2E3,f=3<arguments.length&&void 0!==arguments[3]?arguments[3]:100;if("function"===typeof a)return new Promise(function(g,h){var l=0,k=setInterval(function(){try{l+=f;var k=a();k?(Ia(b),g(k)):l>=e&&(Ia(b),g(!1))}catch(qa){Ia(b),h(qa)}},f);fa[b]=function(){clearInterval(k)}})},unbind:Ia,getBindings:function(){return fa},clearBindings:function(){for(var a in fa)fa.hasOwnProperty(a)&&"function"===typeof fa[a]&&Ia(a)}}};var Hb="shutDown";var va={cookieDomain:null,
-consents:null},zd=function(){function a(a,b,f){if(f)for(a=Math.random().toString(36).slice(2);e[a];)a=Math.random().toString(36).slice(2);else a=a||b;return a}function b(b,f){return{pageElementLoaded:function(h,l){if("string"!==typeof l||""===l)l=0<B("body").length?"body":"html";if("string"!==typeof h||""===h)throw Error("[pageElementLoaded] Invalid arguments");return new Promise(function(k){var m=B(h);if(0<m.length)k(m[0]);else{m=B(l)[0];if(!m)throw Error("pageElementLoaded cannot be bound. observerSelector ".concat(l,
-" is not on the page"));var E=new MutationObserver(function(a,e){a=Bb(a);var f;try{for(a.s();!(f=a.n()).done;){var l=f.value;if(l.addedNodes&&0<l.addedNodes.length){var m=Bb(l.addedNodes),E;try{for(m.s();!(E=m.n()).done;){var n=E.value,p=B(n).is(h)?n:B(n).find(h).get(0);if(p){b?g.unbind(b):e.disconnect();k(p);return}}}catch(ac){m.e(ac)}finally{m.f()}}}}catch(ac){a.e(ac)}finally{a.f()}});E.observe(m,{childList:!0,subtree:!0})}b=a(b,"<pageElementLoaded>"+h,f);e[b]=function(){E&&E.disconnect()}})},pageElementVisible:function(h,
-l){var k=l||0;if("string"!==typeof h||""===h||"number"!==typeof k||0>k||1<k)throw Error("[pageElementVisible] Invalid arguments");return new Promise(function(l){var m=B(h),n=new IntersectionObserver(function(a,e){for(var f=0;f<a.length;f++)if(a[f].isIntersecting){b?g.unbind(b):e.disconnect();l(a[f]);break}},{threshold:k});n.observe(m[0]);b=a(b,"<pageElementVisible>"+h,f);e[b]=function(){n.disconnect()}})},pageExit:function(h){h=h||0;if("number"!==typeof h||0>h)throw Error("[pageExit] Invalid arguments");
-return new Promise(function(l){function k(a){clearTimeout(p);10>=a.pageY-window.pageYOffset&&(p=0<h?setTimeout(m.bind(this,a),h):m.call(this,a))}function m(a){b?g.unbind(b):n.off("mousemove",k);clearTimeout(p);l(a)}var n=B(document),p;n.on("mousemove",k);b=a(b,"<pageExit>",f);e[b]=function(){n.off("mousemove",k)}})},pageInactive:function(h){function l(a,e){var f=new Promise(function(f){function h(a){a=a||new Event("pageInactive");b&&!e.isSubscribe?g.unbind(b):k.off("mousemove click scroll keyup keydown",
-l);f(a)}function l(b){clearTimeout(m);m=setTimeout(h.bind(this,b),a)}var k=B(document),m;l();k.on("mousemove click scroll keyup keydown",l)});f.subscribe=function(h){delete f.subscribe;e.isSubscribe=!0;f.then(function(f){f.disconnect=function(){b?g.unbind(b):e.isDisconnected=!0};h(f);!e.isDisconnected&&l(a,e).subscribe(h)});return f};return f}if("number"!==typeof h||0>=h)throw Error("[pageInactive] Invalid arguments");var k={isDisconnected:!1,isSubscribe:!1};b=a(b,"<pageInactive>",f);e[b]=function(){k.isDisconnected=
-!0};return l(h,k)},pageScroll:function(h){if("number"!==typeof h||0>h||1<h)throw Error("[pageScroll] Invalid arguments");return new Promise(function(l){function k(a){window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)>=h&&(l(a),b?g.unbind(b):m.off("scroll",k))}var m=B(document);m.on("scroll",k);b=a(b,"<pageScroll>",f);e[b]=function(){m.off("scroll",k)}})}}}var e={},f=b(null,!0),g=function(){return{bind:function(a){a&&e[a]&&(e[a](),delete e[a]);return b(a)},unbind:function(a){if(!a||
-"string"!==typeof a||"function"!==typeof e[a])return null;e[a]();delete e[a]},getBindings:function(){return e},clearBindings:function(){for(var a in e)e.hasOwnProperty(a)&&(e[a](),delete e[a])}}}();return Object.assign(f,g)}(),cb=function(){function a(b){var e=this;Ba(this,a);this.clearRateLimiter=function(){e.sentEvents=[]};this.eventWithinLimitTimeRange=function(a,b,e){return e-b.time<a};this.getTimeRangeMax=function(){return e.eventRateLimiterConfig.globalTimeRange};this.removeOldEvents=function(a){for(var b=
-e.getTimeRangeMax(),f=e.sentEvents.length-1;0<=f;f--)if(!e.eventWithinLimitTimeRange(b,e.sentEvents[f],a)){e.sentEvents.splice(0,f+1);break}};this.checkGlobalLimits=function(a,b){var f=z({},e.eventRateLimiterConfig),g=f.globalLimit;f=f.globalTimeRange;return e.eventWithinLimitTimeRange(f,e.sentEvents[a],b)&&(e.globalCounter++,e.globalCounter>g)?(r.info("Event rate limit exceeded. More than ".concat(g," events ")+"sent in ".concat(f,"ms.")),!0):!1};this.checkLimits=function(a,b){return e.checkGlobalLimits(a,
-b.time)};this.sentEvents=[];this.eventRateLimiterConfig=b}Ca(a,[{key:"resetCounters",value:function(){this.globalCounter=0}},{key:"isTriggerLimitExceeded",value:function(a){var b=Date.now();a=z(z({},a),{},{time:b});this.sentEvents.push(a);this.removeOldEvents(b);this.resetCounters();for(b=this.sentEvents.length-1;0<=b;b--)if(this.checkLimits(b,a))return!0;return!1}}]);return a}(),zf=function(a){function b(a){Ba(this,b);var f=e.call(this,a);f.getTimeRangeMax=function(){return f.eventRateLimiterConfig.perInteractionTimeRange?
-Math.max(f.eventRateLimiterConfig.globalTimeRange,f.eventRateLimiterConfig.perInteractionTimeRange):f.eventRateLimiterConfig.globalTimeRange};f.checkInteractionLimits=function(a,b,e){return f.eventRateLimiterConfig.perInteractionLimit&&f.eventRateLimiterConfig.perInteractionTimeRange&&f.eventWithinLimitTimeRange(f.eventRateLimiterConfig.perInteractionTimeRange,f.sentEvents[a],b)&&f.sentEvents[a].name===e&&(f.perEventCounter++,f.perEventCounter>f.eventRateLimiterConfig.perInteractionLimit)?(r.info("Event rate limit exceeded. More than ".concat(f.eventRateLimiterConfig.perInteractionLimit,
-" events ")+"with interaction name of ".concat(e," sent in ").concat(f.eventRateLimiterConfig.perInteractionTimeRange,"ms.")),!0):!1};f.checkLimits=function(a,b){return f.checkGlobalLimits(a,b.time)||f.checkInteractionLimits(a,b.time,b.name)};return f}Ie(b,a);var e=Ke(b);Ca(b,[{key:"resetCounters",value:function(){Ta(na(b.prototype),"resetCounters",this).call(this);this.perEventCounter=0}},{key:"isTriggerLimitExceeded",value:function(a){return Ta(na(b.prototype),"isTriggerLimitExceeded",this).call(this,
-a)}}]);return b}(cb),Db,Eb,Fb,Gb,bc=function(){var a=0<arguments.length&&void 0!==arguments[0]?arguments[0]:{};if(!(bf(window.navigator.userAgent||"")?W("You are a robot."):"prerender"===document.visibilityState&&cf?W("Page is pre-rendered and loaded in Safari."):1))return Promise.reject();"initialized"==Hb&&W("reinitializing Web SDK");a.cookieDomain&&Xa(a.cookieDomain);ad();va=z(z({},va),a);document.dispatchEvent(new CustomEvent(w.OnBeforeInit,{detail:{sdkConfig:va}}));Le();ed();Hb="initialized";
-document.dispatchEvent(new CustomEvent(w.OnInit,{detail:{sdkConfig:va}}));kf(va.consents);return Promise.resolve()};window.SalesforceInteractions={init:bc,reinit:function(){var a=P.map(function(a){return a.consent});bc(z(z({},va),{},{consents:a})).then(function(){ud(N)})},sendEvent:qd,sendException:x,getAnonymousId:function(){return U},setAnonymousId:Ya,getCookieDomain:function(){return ea},setCookieDomain:Xa,updateConsents:Yb,getConsents:jd,ConsentStatus:n.ConsentStatus,log:r,getLoggingLevel:Nc,
-setLoggingLevel:Mc,initSitemap:ud,getSitemapConfig:function(){return N},getSitemapResult:function(){return u},CatalogObjectInteractionName:oa,CartInteractionName:Wb,OrderInteractionName:Xb,listener:Pc,build:function(a){$a(a.pageTypes).then(wd).then(vd).catch(function(a){"sitemap_reinit"!==a&&v.onFireException.emit(Error("Unhandled exception: ".concat(a)),"Site-wide Javascript")})},cashDom:B,resolvers:xd,util:yd,DisplayUtils:zd,CustomEvents:w};var Af="cdn.".concat("evergage.com"),cc;(function(a){a.Impression=
-"i";a.Clickthrough="c";a.Dismissal="d";a.Unsubscribe="u";a.Send="s"})(cc||(cc={}));(function(a){a.Product="Product";a.Category="Category"})(n.ItemType||(n.ItemType={}));var Ea;(Ea||(Ea={})).StopQuickViewCatalogObject="Stop Quick View Catalog Object";var dc={Personalization:"Personalization"},ec;(function(a){a._id="_id";a.categories="categories";a.dimensions="dimensions";a.relatedCatalogObjects="relatedCatalogObjects"})(ec||(ec={}));(function(a){a.OnEventResponse="evergage:onEventResponse";a.OnEventSend=
-"evergage:onEventSend";a.OnStatSend="evergage:onStatSend";a.OnException="evergage:onException";a.OnTemplateDisplayEnd="evergage:onTemplateDisplayEnd";a.OnPageMatchStatusUpdated="evergage:onPageMatchStatusUpdated";a.OnInit="evergage:onInit";a.OnInitSitemap="evergage:onInitSitemap";a.OnShutDown="evergage:onShutDown";a.OnConsentRevoke="evergage:onConsentRevoke"})(n.CustomEvents||(n.CustomEvents={}));var pa;(function(a){a.OnEventResponse="mcis:onEventResponse";a.OnStatSend="mcis:onStatSend";a.OnTemplateDisplayEnd=
-"mcis:onTemplateDisplayEnd";a.OnBeforeEventSend="mcis:onBeforeEventSend";a.OnInit="mcis:onInit"})(pa||(pa={}));var q={endpointConfig:{},beaconConfig:{sendEvents:!0,minimumActivityTimeToRegister:300,timeOnPageTimerLengthMillis:6E4,trackAnonymousVisitors:!0,corsAllowedOrigins:["*"],identityAttributes:[],rememberMeUserIdsMillis:63072E6,actionRateLimiterConfig:{globalLimit:10,globalTimeRange:5E3,perActionLimit:5,perActionTimeRange:2E3},pingRateLimiterConfig:{globalLimit:10,globalTimeRange:5E3},campaignStatRateLimiterConfig:{globalLimit:10,
-globalTimeRange:5E3,perExperienceLimit:5,perExperienceTimeRange:2E3},errorRateLimiterConfig:{globalLimit:10,globalTimeRange:5E3}},beaconState:null},fc=function(){var a=q.beaconConfig;return t(t({},q.endpointConfig),a)},Ad=function(){var a=fc();return"account dataset cookieDomain consents cdnUrl trackerUrl siteConfigVersion minimumActivityTimeToRegister timeOnPageTimerLengthMillis sendEvents trackAnonymousVisitors doNotTrackPingRequestsForActions trackContextualRelatedItems identityAttributes actionRateLimiterConfig pingRateLimiterConfig campaignStatRateLimiterConfig errorRateLimiterConfig".split(" ").reduce(function(b,
-e){return b[e]=a[e],b},{})},Bd;document.addEventListener(w.OnClearCookie,function(a){a=a.detail&&a.detail.options||{};gc("a",t({domain:q.beaconConfig.cookieDomain},a));gc("n",t({domain:q.beaconConfig.cookieDomain},a))});var Ja=function(a){return"".concat("_evg").concat(a,"_").concat(Bd)},gc=function(a,b){M.remove(Ja(a),b)},Q={setCookieHash:function(a,b,e){Bd=Da("".concat(a,".").concat(b,".").concat(Da(e+"/").slice(0,4))).slice(0,4)},read:function(a){return M.getJSON(Ja(a))},write:function(a,b,e,f){q.beaconConfig.secureCookie?
-M.set(Ja(a),b,{expires:e,domain:f,secure:!0}):M.set(Ja(a),b,{expires:e,domain:f});M.get(Ja(a))||r.warn("Web SDK cookie (_evga) for the Interaction Studio module could not be set. This is possibly due to a restricted top level domain. See https://publicsuffix.org/learn/ for more information.")},remove:gc},Cd=function(a){return{uuid:a.uuid,affinityId:a.affinityId,persistedUserId:a.puid,persistedAccountId:a.paid}},Z=function(a){a=t(t({},K()),a);Q.write("a",{uuid:a.uuid,puid:a.persistedUserId,paid:a.persistedAccountId,
-affinityId:a.affinityId},730,q.beaconConfig.cookieDomain);var b=Q.read("a");b&&r.debug("Stored visitor cookie. ".concat(JSON.stringify(b)));return a},hc=function(a){return 0===a.indexOf("www")?a.substring(4,a.length):a},Dd=function(a){return!!(a&&"object"===A(a)&&0<Object.keys(a).length)},ic=function(){var a=K().uuid;Ya(a)},K=function(){var a=Q.read("a");return Dd(a)?Cd(a):{}},Bf=function(a){if(!a)return!1;a=(a||{}).user;a=void 0===a?{}:a;var b=t(t({},a.attributes),a.identities);return Object.keys(b).some(function(a){return q.beaconConfig.identityAttributes.includes(a)})||
-!!a.id||!!K().persistedUserId},k={result:t(t({},u),{},{backgroundPage:null}),config:t(t({},N),{},{settings:{canonicalizeIds:!1,runOnTranslatedPage:!1,setDefaultListPrice:!1,truncateTranslated:!0},currentKey:null}),campaignResponses:[]},Tc=function(){return k.result.currentPage||{}},db=function(){k.config.currentKey=F;return k},Ed=function(){return db().result||null},Fd=function(){return db().config||null},Gd=function(){return db().campaignResponses||[]},jc=function(a){a[".bv"]=16;a._ak=q.endpointConfig.account;
-a._ds=q.endpointConfig.dataset;a[".scv"]=q.endpointConfig.siteConfigVersion;a.channel="Web";a._r=String(Math.random()).slice(2,8)},kc=function(a){var b=K();a.userId?a._reqPersistedEntityIds="":b.persistedUserId&&(a._persistedUserId=b.persistedUserId);k&&k.result&&k.result.currentPage&&k.result.currentPage.user&&k.result.currentPage.user.attributes&&k.result.currentPage.user.attributes.customer_non_consent&&(a.customer_non_consent=k.result.currentPage.user.attributes.customer_non_consent);q.beaconConfig.trackAnonymousVisitors&&
-(a[".anonId"]=b.uuid,null!=b.affinityId&&(a[".aaId"]=b.affinityId),a.userId||a._persistedUserId||a._persistedAccountId||(a._anon="true"));return a},Ka=function(a){a="".concat(a);if(null==a||974>=a.length)return a;var b=731,e=244;974!=b+e&&(b+=974-(b+e));10<e?e-=5:10<b&&(b-=5);return a.substring(0,b)+" ... "+a.substring(a.length-e)},Hd=function(a,b){var e=b.header,f=b.fileName,g=b.line;b=b.column;e&&(a[".ef"]=Ka(e));a[".eu"]=Ka(f);a[".el"]=Ka(g);a[".ec"]=Ka(b);return a},Cf=L(L(L({},".eu","sourceURL"),
-".el","line"),".ec","column"),Df=L(L(L({},".eu","fileName"),".el","lineNumber"),".ec","columnNumber"),Id=function(a,b,e){return b?Hd(a,{header:!!b.stack&&"string"===typeof b.stack&&b.stack.substring(0,b.stack.indexOf("@")),fileName:b[e[".eu"]],line:b[e[".el"]],column:b[e[".ec"]]}):a},Ef=function(a){var b=Object.keys(a)[0];if(!b)return{};a=a[b];b={type:b,_id:a._id};Array.isArray(a.categories)&&(b.categories=a.categories.map(function(a){return"string"===typeof a?{_id:a,type:n.ItemType.Category}:a}));
-if("object"===A(a.dimensions)||"object"===A(a.relatedCatalogObjects)){b.dimensions={};a=a.relatedCatalogObjects||a.dimensions;for(var e in a)if(a.hasOwnProperty(e)){var f=a[e];Array.isArray(f)?b.dimensions[e]=f:b.dimensions[e]=[f]}}return b},Gf=function(a){var b=[];Object.keys(a).forEach(function(e){b=b.concat(Ff(e,a[e]))});return b},Ff=function(a,b){return b.map(function(b){var e=Hf(a);return{_id:b,type:e,tagType:"t"===e?a:void 0}})},Hf=function(a){switch(a){case "Product":return"p";case "Article":return"a";
-case "Blog":return"b";case "Category":return"c";case "Promotion":return"P";default:return"t"}},If=function(a){var b={type:"e",id:a.experienceId,stat:cc[a.stat],ug:a.control?"Control":void 0};a.catalog&&(b.piks=Gf(a.catalog));return b},Jf=function(a){var b={};b[".cStat"]=JSON.stringify(a.campaignStats.map(If));jc(b);kc(b);return b},Kf=function(a){var b={};b[".top"]=""+a.timeOnPageMillis;a.catalog&&0<Object.keys(a.catalog).length&&(b.item=JSON.stringify(Ef(a.catalog)));a.action&&(b.action=a.action);
-if(a.performance){var e=a.performance.networkTime;e&&(b[".tt"]=e);(e=a.performance.eventDnsTime)&&(b[".ttdns"]=e);(e=a.performance.domLoadTime)&&(b[".dt"]=e);(e=a.performance.pageLoadTime)&&(b[".lt"]=e);(e=a.performance.sdkLoadTime)&&(b[".bt"]=e);(e=a.performance.sdkParseTime)&&(b[".pt"]=e);(a=a.performance.sdkDnsTime)&&(b[".btdns"]=a)}jc(b);kc(b);return b},Lf=Object.prototype.hasOwnProperty,Mf=function(a){function b(a){ha(this,b);var f=e.call(this,a);f.getTimeRangeMax=function(){return f.eventRateLimiterConfig.perExperienceTimeRange?
-Math.max(f.eventRateLimiterConfig.globalTimeRange,f.eventRateLimiterConfig.perExperienceTimeRange):f.eventRateLimiterConfig.globalTimeRange};f.checkExperienceLimits=function(a,b){if(f.eventRateLimiterConfig.perExperienceLimit&&f.eventRateLimiterConfig.perExperienceTimeRange&&f.eventWithinLimitTimeRange(f.eventRateLimiterConfig.perExperienceTimeRange,f.sentEvents[a],b)&&f.sentEvents[a].experienceIds)for(a=f.sentEvents[a].experienceIds,b=0;b<a.length;b++){var e=a[b];f.experienceRates.has(e)||f.experienceRates.set(e,
-0);f.experienceRates.set(e,f.experienceRates.get(e)+1);if(f.experienceRates.get(e)>f.eventRateLimiterConfig.perExperienceLimit)return r.info("Event rate limit exceeded. More than ".concat(f.eventRateLimiterConfig.perExperienceLimit," events ")+"with experience id of ".concat(e," sent in ").concat(f.eventRateLimiterConfig.perExperienceTimeRange,"ms.")),!0}};f.checkLimits=function(a,b){return f.checkGlobalLimits(a,b.time)||f.checkExperienceLimits(a,b.time)};return f}Na(b,a);var e=Oa(b);ia(b,[{key:"resetCounters",
-value:function(){ja(R(b.prototype),"resetCounters",this).call(this);this.experienceRates=new Map}},{key:"isTriggerLimitExceeded",value:function(a){return ja(R(b.prototype),"isTriggerLimitExceeded",this).call(this,a)}}]);return b}(cb),lc=function(){function a(b){ha(this,a);this.baseURL=b}ia(a,[{key:"send",value:function(a){Nf(a);var b=this.baseURL+"?";var f="";var g=[],h;"string"!==typeof f&&(f="?");for(l in a)if(Lf.call(a,l)){(h=a[l])||null!==h&&void 0!==h&&!isNaN(h)||(h="");var l=encodeURIComponent(l);
-h=encodeURIComponent(h);null!==l&&null!==h&&g.push(l+"="+h)}a=g.length?f+g.join("&"):"";b+=a;if(navigator&&navigator.sendBeacon)return a=new Blob([],{type:"application/x-www-form-urlencoded"}),navigator.sendBeacon(b,a);a=new XMLHttpRequest;a.open("GET",b,!0);a.send()}}]);return a}(),Of=function(a){function b(a,g){ha(this,b);a=e.call(this,a);a.eventRateLimiter=g||new cb({globalLimit:q.beaconConfig.errorRateLimiterConfig.globalLimit,globalTimeRange:q.beaconConfig.errorRateLimiterConfig.globalTimeRange});
-return a}Na(b,a);var e=Oa(b);ia(b,[{key:"send",value:function(a){if(this.eventRateLimiter.isTriggerLimitExceeded())r.warn("Error event rate limiter triggered.");else return ja(R(b.prototype),"send",this).call(this,a)}}]);return b}(lc),Pf=function(a){function b(a,g){ha(this,b);a=e.call(this,a);a.eventRateLimiter=g||new cb({globalLimit:q.beaconConfig.pingRateLimiterConfig.globalLimit,globalTimeRange:q.beaconConfig.pingRateLimiterConfig.globalTimeRange});return a}Na(b,a);var e=Oa(b);ia(b,[{key:"send",
-value:function(a){if(this.eventRateLimiter.isTriggerLimitExceeded())r.warn("Ping event rate limiter triggered.");else return ja(R(b.prototype),"send",this).call(this,a)}}]);return b}(lc),Qf=function(a){function b(a,g){ha(this,b);a=e.call(this,a);a.eventRateLimiter=g||new Mf({globalLimit:q.beaconConfig.campaignStatRateLimiterConfig.globalLimit,globalTimeRange:q.beaconConfig.campaignStatRateLimiterConfig.globalTimeRange,perExperienceLimit:q.beaconConfig.campaignStatRateLimiterConfig.perExperienceLimit,
-perExperienceTimeRange:q.beaconConfig.campaignStatRateLimiterConfig.perExperienceTimeRange});return a}Na(b,a);var e=Oa(b);ia(b,[{key:"send",value:function(a,e){e=e?e:[];if(this.eventRateLimiter.isTriggerLimitExceeded({experienceIds:e}))r.warn("Campaign Stat event rate limiter triggered.");else return ja(R(b.prototype),"send",this).call(this,a)}}]);return b}(lc),Nf=function(a){Object.keys(a).forEach(function(b){var e=a[b];if("number"!=typeof e&&"boolean"!==typeof e&&null!=e)if("string"==typeof e){a:switch(b){case "url":case "urlref":e=
-e.substring(0,3072);break a;case "title":e=e.substring(0,1024);break a;default:e=e.substring(0,1024)}a[b]=e}else"function"==typeof e?delete a[b]:a[b]=JSON.stringify(e)})},eb,fb,gb,Jd=!1,Kd=!1,Ld=!1,y={sdkLoadTime:null,sdkParseTime:null,sdkDnsTime:null,pageLoadTime:null,domLoadTime:null,networkTime:null,eventDnsTime:null},Md=function(){return window.performance.getEntriesByType?window.performance.getEntriesByType("resource").reverse().find(function(a){return 0<=a.name.indexOf("/api2/event/")}):null},
-Nd=function(){return window.performance.getEntriesByType?window.performance.getEntriesByType("resource").find(function(a){return/\/evergage(Small)?(\.min)?\.js$/.test(a.name)}):null},Od=function(){if(window.performance.getEntriesByType){var a=window.performance.getEntriesByType("navigation");if(a&&0<a.length)return a=a[0],a||(a=window.performance.timing),a}return null},Sc=function(a){for(var b in a.performance)y[b]=null},Vc=function(){if(!Kd){var a=Od();a&&0<a.domContentLoadedEventEnd&&(void 0!=a.entryType?
-y.domLoadTime=Math.round(a.domContentLoadedEventEnd)||null:y.domLoadTime=Math.round(a.domContentLoadedEventEnd-window.performance.timing.navigationStart)||null);y.domLoadTime&&(Kd=!0)}if(!Jd){if(a=Od())void 0!=a.entryType?y.pageLoadTime=Math.round(a.loadEventEnd)||null:y.pageLoadTime=Math.round(a.loadEventEnd-window.performance.timing.navigationStart)||null;y.pageLoadTime&&(Jd=!0)}},Pd=function(a){a=a?(a=Ib(a))?a.pathname:"":"";return a},mc=function(a,b){b="undefined"===typeof b?location.search:b;
-for(var e=/([^=?&]+)=?([^&]*)/g,f={},g;g=e.exec(b);){var h=Qc(g[1]);g=Qc(g[2]);null===h||null===g||h in f||(f[h]=g)}return f[a]||""},Qd=function(a,b){return(a=a.exec(b))&&2===a.length?a[1]:null},Rd=function(a){return Qd(/[/]?([^/]*)[/]?$/,Pd(a))},nc=function(a){return"string"!==typeof a||""===a.trim()?null:Ib(a).href},hb=function(a){return a&&"string"===typeof a?(a=parseFloat(a.replace(/[^0-9.]+/g,"")),isNaN(a)?null:a):null},Sd=function(a){return a&&"string"===typeof a?(a=parseInt(a.trim().replace(/[^0-9.]+/g,
-""),10),isNaN(a)?null:a):null},Rf=function(a){var b=u;if(b.currentPage&&b.currentPage.interaction&&b.currentPage.interaction.catalogObject)return(b=b.currentPage.interaction.catalogObject)?{catalogObjectType:b.type,catalogObjectId:b.id,price:b.attributes&&b.attributes.price?b.attributes.price:null,quantity:hb(p(a).val())}:null},wa={extractFirstGroup:Qd,getLastPathComponent:Rd,getLastPathComponentWithoutExtension:function(a){a=Rd(nc(a));var b=a.lastIndexOf(".");return 0<=b?a.substring(0,b):a},getParameterByName:mc,
-getPathname:Pd,qualifyUrl:nc,removeQueryString:function(a){if(!a)return"";a=Ib(a);return[a.protocol,"//","http:"===a.protocol&&"80"===a.port||"https:"===a.protocol&&"443"===a.port?a.hostname:a.host,a?a.pathname:""].join("")},getFloatValue:hb,getIntegerValue:Sd,getUtagFirstForField:function(a){var b=window.utag_data;if(b&&b[a]&&0<=b[a].length)return Array.isArray(b[a])?b[a][0]:b[a]},getValueFromNestedObject:$b,buildLineItemFromPageState:function(a){if(k.result.currentPage&&k.result.currentPage.catalog){var b=
-k.result.currentPage.catalog[n.ItemType.Product];return b?{_id:b._id,price:b.price,quantity:hb(p(a).val())}:null}},resolveWhenTrue:yd.resolveWhenTrue,cookie:M},Sf=function(a){return new Promise(function(b,e){oc(e);aa(a,"lineItems",!1,!0).then(function(a){var e={complete:{Product:[]}};0===Object.keys(a).length&&b(e);a=aa(a,"lineItems",!0,!1);e.complete.Product=a;b(e)}).catch(function(){x(Error("Cart Config was rejected"),"Site-wide Javascript")})})},aa=function(a,b,e,f){try{F=b;if(a)if("dimensions"!==
-b&&"relatedCatalogObjects"!==b&&"lineItems"!==b&&"attributes"!==b||!f){var g="function"===typeof a?a():a;"categories"===b&&Array.isArray(g)&&"object"!==A(g[0])&&"c"!==g[0].type&&"string"!==typeof g[0]._id?g=Uc(g):"lineItems"===b&&"object"===A(g)&&(g=Tf(g))}else g=Uf(a,b);return e?pc(b,g,k.config.settings.canonicalizeIds):g}catch(h){x(Error("getValue for ".concat(b," failed on ").concat(k.result.matchedConfig.name," while evaluating custom function. ").concat(h.message,".")),"Site-wide Javascript")}},
-Td=function(a,b,e){if(a&&"object"===A(a)&&"function"===typeof a.then)x(Error("getValue for ".concat(b," failed on ").concat(k.result.matchedConfig.name," while evaluating custom function. ").concat(b," cannot be a Promise.")),"Site-wide Javascript");else if(a||"number"===typeof a||"boolean"===typeof a)e[b]=a},Vf=function(a,b){return new Promise(function(e,f){oc(f);var g=Object.keys(ec);f=[];for(var h=0;h<g.length;h++){var l=g[h];l=aa(a[l],l,!1,!0);f.push(l)}Promise.all(f).then(function(f){var h={_id:null};
-f.forEach(function(a,b){b=g[b];a=aa(a,b,!0,!1);Td(a,b,h)});Object.keys(a).forEach(function(b){if(!g.includes(b)){var e=aa(a[b],b,!0,!0);Td(e,b,h)}});f=L({},b,h);e(f)}).catch(function(){x(Error("Catalog Config was rejected"),"Site-wide Javascript")})})},Wf=function(a){return new Promise(function(b,e){oc(e);var f=[],g=Object.keys(a);g.forEach(function(b){F=b;b=aa(a[b],b,!1,!0);f.push(b)});Promise.all(f).then(function(a){var e={},f={Product:{}};a.forEach(function(a,b){b=g[b];e[b]=aa(a,b,!0,!1)});f.Product=
-e;b(f)}).catch(function(){x(Error("Order Config was rejected"),"Site-wide Javascript")})})},Tf=function(a){var b;a._id?b=a._id.length:a.sku?b=a.sku.length:x(Error("Either _id or sku must be defined for lineItems"),"Sitemap");for(var e=[],f=function(){var a=ya(h[g],2),f=a[0];a=a[1];a.length!=b?x(Error("Resolving multiple values for ".concat(f," failed on ").concat(k.result.matchedConfig.name,". ").concat(f," does not have the same number of values as _id")),"Site-wide Javascript"):a.forEach(function(a,
-b){e[b]||(e[b]={_id:null,quantity:null});e[b][f]=a})},g=0,h=Object.entries(a);g<h.length;g++)f();return e},Uc=function(a){return a.map(function(a){return{type:"c",_id:a}})},Uf=function(a,b){var e={},f=Object.keys(a),g={};f.forEach(function(b){e[b]=aa(a[b],b,!1,!0)});return"lineItems"===b||"dimensions"===b||"relatedCatalogObjects"===b?Promise.all(Object.values(e)).then(function(a){a.forEach(function(a,b){b=f[b];(a=aa(a,b,!1,!1))&&(g[b]=a)});return g}):e},pc=function(a,b){var e=2<arguments.length&&
-void 0!==arguments[2]?arguments[2]:!0;return b=Array.isArray(b)?"lineItems"===a?Xf(b,e):b.map(function(b){return Ud(a,b,e)}):Ud(a,b,e)},Xf=function(a){var b=1<arguments.length&&void 0!==arguments[1]?arguments[1]:!0;return a.map(function(a){return Yf(a,b)})},Yf=function(a){var b=1<arguments.length&&void 0!==arguments[1]?arguments[1]:!0,e;for(e in a)if("item"===e)for(var f in a[e])a[e][f]=pc(f,a[e][f],b);else a[e]=pc(e,a[e],b);return a},Ud=function(a,b){var e=2<arguments.length&&void 0!==arguments[2]?
-arguments[2]:!0,f=b;"price"!==a&&"listPrice"!==a&&"totalValue"!==a&&"rating"!==a||"string"!==typeof f||(f=hb(f));if("url"===a||"imageUrl"===a)f=nc(f);"_id"!==a&&"sku"!==a&&"orderId"!==a||"number"!==typeof f||(f=f.toString());!e||"string"!==typeof f||"_id"!==a&&"sku"!==a&&"orderId"!==a&&"alternateId"!==a&&"parentId"!==a||(f=f.toUpperCase());"string"===typeof f&&(0<=f.indexOf("&")&&(e=document.createElement("textarea"),Object.assign(e,{innerHTML:f}),f=e.value),f=f.trim());"description"===a&&"string"===
-typeof f&&200<f.length&&(f=f.substr(0,197)+"...");"quantity"!==a&&"inventoryCount"!==a&&"numRatings"!==a||"string"!==typeof f||(f=Sd(f));return f},oc=function(a){document.addEventListener(n.CustomEvents.OnInitSitemap,function(){a("sitemap_reinit")},{once:!0})},Zf=function(a){return P.some(function(b){return b.consent.purpose===a.purpose&&b.consent.status===a.status})},La=function(a){return q.beaconConfig.trackAnonymousVisitors||Bf(a)?!Zf({purpose:dc.Personalization,status:n.ConsentStatus.OptOut})&&
-q.beaconConfig.sendEvents:(r.debug("An anonymous event has been blocked. trackAnonymous has been turned off and event has no named user."),!1)},Qe=["sdkLoadTime","sdkParseTime"],Oe=["id","type"],Pe=["Category"],D=0,H=-1,X,Y,Ne=function(a){return La(a)?fb.send(Kf(a)):Promise.resolve(a)},$f={setupActivityTimers:Va,activityRegistered:Fa,setUserInactive:Wa};(function(a){a.ViewItem="View Item";a.ViewItemOutOfStock="View Item Out Of Stock";a.ViewItemDetail="View Item Detail";a.QuickViewItem="Quick View Item";
-a.StopQuickViewItem="Stop Quick View Item";a.ViewCategory="View Category";a.ViewTag="View Tag";a.AddToCart="Add To Cart";a.ViewCart="View Cart";a.Purchase="Purchase";a.Share="Share";a.Review="Review";a.Comment="Comment";a.Favorite="Favorite";a.Search="Search";a.SearchViewResults="Search View Results";a.SearchClick="Search Click";a.ClickThrough="Click Through";a.UpdateLineItem="Update Line Item";a.RemoveFromCart="Remove From Cart";a.ViewBanditItems="View Bandit Items"})(n.ItemAction||(n.ItemAction=
-{}));var ag=function(){function a(b,e){ha(this,a);this.baseURL=b;this.eventRateLimiter=e||new zf({globalLimit:q.beaconConfig.actionRateLimiterConfig.globalLimit,globalTimeRange:q.beaconConfig.actionRateLimiterConfig.globalTimeRange,perInteractionLimit:q.beaconConfig.actionRateLimiterConfig.perActionLimit,perInteractionTimeRange:q.beaconConfig.actionRateLimiterConfig.perActionTimeRange})}ia(a,[{key:"handleSpecialEvent",value:function(a){var b=a.interaction&&a.interaction.name?a.interaction.name:a.itemAction;
-if(b===n.ItemAction.QuickViewItem||b===oa.QuickViewCatalogObject)k.result=t(t({},k.result),{},{backgroundPage:k.result.backgroundPage||k.result.currentPage,currentPage:t({},a)}),b===n.ItemAction.QuickViewItem&&(k.result.currentPage.action=a.action||n.ItemAction.QuickViewItem,k.result.currentPage.itemAction=n.ItemAction.QuickViewItem);else if(b===n.ItemAction.StopQuickViewItem||b===Ea.StopQuickViewCatalogObject)k.result=t(t({},k.result),{},{backgroundPage:null,currentPage:k.result.backgroundPage||
-k.result.currentPage})}},{key:"handlePersistedIdentityInResponse",value:function(a){var b={},f=a.persistedUserId;a=a.anonAffinityId;if(f){var g=f.entityId;f=f.accountId;g&&(b.persistedUserId=g);f&&(b.persistedAccountId=f)}a&&a!==b.affinityId&&(b.affinityId=a);Z(b)}},{key:"handlePerformanceTimingBeforeEvent",value:function(){Vc();if(!Ld){y.sdkLoadTime=Math.round((Nd()||{}).duration)||null;window.evergageBeaconParseTimeStart&&window.window.evergageBeaconParseTimeEnd&&(y.sdkParseTime=window.evergageBeaconParseTimeEnd-
-window.evergageBeaconParseTimeStart);var a=Nd();a&&void 0!=a.domainLookupEnd&&void 0!=a.domainLookupStart&&(y.sdkDnsTime=Math.round(a.domainLookupEnd-a.domainLookupStart));Ld=!0}}},{key:"handlePerformanceTimingInResponse",value:function(){y.networkTime=Math.round((Md()||{}).duration)||null;var a=Md();a&&(y.eventDnsTime=Math.round(a.domainLookupEnd-a.domainLookupStart)||null);Jb();Va()}},{key:"handleDebug",value:function(a){a.interaction&&a.interaction.name&&a.debug&&a.debug.explanations&&(a.explain=
-a.debug.explanations,delete a.debug.explanations)}},{key:"onEventSend",value:function(a){var b=this;this.handlePerformanceTimingBeforeEvent();document.dispatchEvent(new CustomEvent(n.CustomEvents.OnEventSend,{detail:{actionEvent:a},cancelable:!0}))&&document.dispatchEvent(new CustomEvent(pa.OnBeforeEventSend,{detail:{actionEvent:a},cancelable:!0}))?(this.handleDebug(a),this.handleSpecialEvent(a),r.debug("Sending event: ",a),this.send(a).then(function(e){Sc(a);(a.pageView||a.flags&&a.flags.pageView)&&
-b.handlePerformanceTimingInResponse();b.handlePersistedIdentityInResponse(e);r.debug("Received event response: ",e);if(e.campaignResponses){var f=e.campaignResponses.map(function(a){return a.experienceId});k.campaignResponses=[].concat(nb(e.campaignResponses),nb(k.campaignResponses.filter(function(a){return!f.includes(a.experienceId)})))}document.dispatchEvent(new CustomEvent(n.CustomEvents.OnEventResponse,{detail:{response:e,actionEvent:a}}));document.dispatchEvent(new CustomEvent(pa.OnEventResponse,
-{detail:{response:e,actionEvent:a}}))}).catch(function(a){x(a,"Server Response")})):r.debug("MCIS Module onBeforeEventSend cancelled.")}},{key:"send",value:function(a){var b=this;return new Promise(function(e,g){if(b.eventRateLimiter.isTriggerLimitExceeded({name:a.action||a.interaction&&a.interaction.name}))g(Error("Event Rate Limiter triggered"));else{try{var f=JSON.stringify(a)}catch(qa){return g(qa)}var l=new XMLHttpRequest;l.onload=function(){if(200<=this.status&&300>this.status)try{var a=JSON.parse(l.response);
-e(a)}catch(Ge){g(Ob(Ge,{status:this.status,statusText:l.statusText}))}else g(Ob("Response was not OK: ".concat(l.responseText),{status:this.status,statusText:l.statusText}))};l.onerror=function(){if(""===l.responseType||"text"===l.responseType){var a=l.responseText||l.statusText;if(a){g(Ob("Response error: ".concat(a),{status:this.status,statusText:l.statusText}));return}}r.debug("An error was sent with no text.                                      This is un-actionable so it is being logged instead of written.")};
-if(a.debug&&a.debug.explanations||a.explain)l.withCredentials=!0;if("true"==mc("isReadableEvent"))b.sendPost(l,b.baseURL,f);else try{if(!/^[\x20-\x7E]+$/.test(f))throw Error("GET request payload contains non-ASCII characters, try sending POST request");var k=encodeURIComponent(window.btoa(f)),m=b.baseURL+"?event="+k;if(8192<m.length)throw Error("GET request URL exceeds 8192 characters, try sending POST request");b.sendGet(l,m)}catch(qa){b.sendPost(l,b.baseURL,f)}}})}},{key:"sendGet",value:function(a,
-e){a.open("GET",e,!0);a.setRequestHeader("Accept","application/json, text/javascript, */*; q=0.01");a.send()}},{key:"sendPost",value:function(a,e,f){a.open("POST",e,!0);a.setRequestHeader("Accept","application/json, text/javascript, */*; q=0.01");a.setRequestHeader("Content-Type","application/x-www-form-urlencoded");a.send("event="+encodeURIComponent(f))}}]);return a}(),Ma,Vd=function(a){return(a.contentZones||[]).reduce(function(a,e){e=qc(e);"string"===typeof(e||{}).name&&""!==(e||{}).name&&a.push(e);
-return a},[])},Wd=function(a){return(a.contentZones||[]).reduce(function(a,e){e=qc(e);"string"===typeof(e||{}).name&&""!==(e||{}).name&&a.push((e||{}).name);return a},[])},qc=function(a){var b=!(a||{}).selector||0<B((a||{}).selector).length;return t(t({},a),{},{selectorFound:b})},Xd=function(a){var b=(k.result.matchedConfig||{}).contentZones;return b?(b=b.find(function(b){return b.name===a}))&&b.selector?b.selector:null:null},ib,Zd=function(){var a=0<arguments.length&&void 0!==arguments[0]?arguments[0]:
-!0;jb();Yd(a)&&(ib=setInterval(function(){var b=!1,e=(new Date).getTime(),f=k.result.matchedConfig||{},g=f.listeners||[];f=f.contentZones||[];a&&(g=g.map(function(a){if(a.selectorFound)return a;a=bb(a);b=a.selectorFound||b;return a}));f=f.map(function(a){if(a.selectorFound)return a;a=qc(a);b=a.selectorFound||b;return a});b&&Object.assign(k.result.matchedConfig,t(t({},k.result.matchedConfig),{},{contentZones:f,listeners:g}));(50<(new Date).getTime()-e||!Yd(a))&&jb()},1E3))},Yd=function(a){if(k.result.matchedConfig){var b=
-k.result.matchedConfig,e=b.listeners;b=b.contentZones;var f,g=!1;e&&a&&(f=!!e.filter(function(a){return!a.selectorFound}).length);b&&(g=!!b.filter(function(a){return!a.selectorFound}).length);return f||g}return!1},jb=function(){"number"===typeof ib&&clearInterval(ib);ib=null},bg=function(){k.result&&k.result.matchedConfig&&k.result.matchedConfig.listeners&&k.result.matchedConfig.listeners.forEach(function(a){B(a.selector).off(a.bind)})},$d={_id:!0,id:!0,currency:!0,inventoryCount:!0,price:!0,tagType:!0,
-type:!0},rc=function(){var a=0<B('script[src*="//translate.googleusercontent.com"]').length,b=0<B("html.translated-ltr").length||0<B("html.translated-rtl").length;if(a||b)return r.debug("page is translated"),!0;try{var e=0<B(window.parent.document).find('script[src*="//www.microsofttranslator.com"]').length,f=0<B(window.parent.document).find('frame[src*="//www.worldlingo.com"]').length;if(e||f)return r.debug("page is translated"),!0;r.debug("page is not translated");return!1}catch(g){return r.debug("exception caught, assuming page is untranslated "+
-g),!1}},cg=function(a){Object.keys(a).forEach(function(b){var e=a[b];Object.keys(e).forEach(function(a){$d[a]||delete e[a]})});return a},dg=function(a){Object.keys(a).forEach(function(b){$d[b]||delete a[b]});return a},ae=function(){return k.config&&k.config.settings&&k.config.settings.truncateTranslated&&rc()},eg=["anonymousId"],be=function(a){(1<arguments.length&&void 0!==arguments[1]?arguments[1]:1)&&od(a);if(!La(a))return Promise.resolve(a);fg(a);gg(a);Ma.onEventSend(a);return new Promise(function(a){document.addEventListener(n.CustomEvents.OnEventResponse,
-function(b){b&&b.detail&&b.detail.response&&a(b.detail.response)})})},fg=function(a){var b=K(),e=xa(a.user||{},eg);a.user=t(t({},e||{}),{},{anonId:b.uuid});ce(a)},ce=function(a){var b=K();b.persistedUserId&&(a.user.encryptedId=b.persistedUserId);b=K();a.account=a.account||{};b.persistedAccountId&&(a.account.encryptedId=b.persistedAccountId);if(b=mc("evergageTestMessages"))a.debug?a.debug.testMessages=b:a.debug={testMessages:b};b=a.pageView||(a.flags||{}).pageView;a.source=t(t({},a.source||{}),{},
-{beaconVersion:16,configVersion:q.endpointConfig.siteConfigVersion,contentZones:hg(a.source,b)});if(y.domLoadTime||y.pageLoadTime||y.sdkParseTime||y.sdkLoadTime||y.sdkDnsTime)a.performance=t(t(t(t(t({},y.domLoadTime&&{domLoadTime:y.domLoadTime}),y.pageLoadTime&&{pageLoadTime:y.pageLoadTime}),y.sdkParseTime&&{sdkParseTime:y.sdkParseTime}),y.sdkLoadTime&&{sdkLoadTime:y.sdkLoadTime}),y.sdkDnsTime&&{sdkDnsTime:y.sdkDnsTime})},hg=function(a,b){return(a.contentZones||[]).reduce(function(a,f){!b&&"object"===
-A(f)&&(f||{}).name&&r.warn("Using content zone objects in 'sendEvent' will soon be deprecated in favor of zone names as strings");f="string"===typeof f&&""!==f?f:(f||{}).name;"string"===typeof f&&""!==f&&a.push(f);return a},[])},gg=function(a){a.catalog&&0<Object.keys(a.catalog).length&&Object.keys(a.catalog).forEach(function(b){if(a.catalog[b]){if(a.catalog[b].dimensions&&a.catalog[b].relatedCatalogObjects)return x(Error("Catalog cannot include both dimensions and relatedCatalogObjects"),"Sitemap"),
-!1;var e=a.catalog[b].relatedCatalogObjects||a.catalog[b].dimensions;e&&"object"===A(e)&&Object.keys(e).forEach(function(a){if(!Array.isArray(e[a]))return x(Error("".concat(a," is not an array. Related Catalog Objects must have type of string[]")),"Sitemap"),!1})}});return!0},ig=function(a){a&&("catalogObject"in a?kb(a.catalogObject):"lineItem"in a?kb(a.lineItem):"lineItems"in a?a.lineItems.map(function(a){return kb(a)}):"order"in a&&kb(a.order))},kb=function(a){if("object"===A(a))for(var b=0,e=Object.keys(a);b<
-e.length;b++){var f=e[b],g=a[f];if("lineItems"===f&&Array.isArray(g))g.map(function(a){a.catalogObjectId&&"string"===typeof a.catalogObjectId&&(a.catalogObjectId=a.catalogObjectId.trim())});else if("relatedCatalogObjects"===f){f=0;for(var h=Object.keys(g);f<h.length;f++){var l=h[f];Array.isArray(g[l])&&(g[l]=g[l].map(function(a){if("string"===typeof a)return a.trim()}))}}else"catalogObjectId"!==f&&"id"!==f||"string"!==typeof g||(a[f]=g.trim())}},lb=function(a){a:{var b=a,e=k.result.matchedConfig;
-try{b=e&&e.onActionEvent?e.onActionEvent(b):b;if("object"===A(b)){a=b;break a}x(Error("onActionEvent failed for the ".concat(k.result.matchedConfig.name," page config. Must return an object or null.")),"Site-wide Javascript")}catch(f){x(Error("onActionEvent failed for the ".concat(k.result.matchedConfig.name," page config. ").concat(f.message,".")),"Site-wide Javascript")}a=void 0}a:{b=a;e=k.config;try{b=e.global&&e.global.onActionEvent?e.global.onActionEvent(b):b;if("object"===A(b)){a=b;break a}x(Error("onActionEvent failed for the global page config. Must return an object or null."),
-"Site-wide Javascript")}catch(f){x(Error("onActionEvent failed for the global page config. ".concat(f.message,".")),"Site-wide Javascript")}a=void 0}return a.action===ua.MetadataUpdate?be(a,!1):be(a)},de=function(){k.config=t(t({},k.config),N);jb()},ee=function(a){a=a.detail.actionEvent;try{var b=JSON.parse(JSON.stringify(a))}catch(f){x(f,"Copy ActionEvent")}if(b){var e=u;k.result=t(t(t({},k.result),e),{currentPage:k.result.currentPage});a===e.currentPage&&(k.result.currentPage=b);!La(a)||!k.config.settings.runOnTranslatedPage&&
-rc()||(b.interaction&&b.interaction.catalogObject&&ae()&&dg(b.interaction.catalogObject),ig(b.interaction),ce(b),b&&b.source&&Array.isArray(b.source.contentZones)&&0<b.source.contentZones.length||(a=u.matchedConfig)&&b.pageView&&(k.result.matchedConfig=t(t({},a),{},{contentZones:Vd(a)}),k.result.currentPage=t(t({},k.result.currentPage||{}),{},{source:t(t({},k.result.currentPage.source||{}),{},{contentZones:Wd(a)})}),b.source.contentZones=k.result.currentPage.source.contentZones,Zd(!1)),Ma.onEventSend(b))}else r.warn("MCIS Module cannot parse event")},
-fe=function(a){k.result.matchStatus=u.matchStatus;document.dispatchEvent(new CustomEvent(n.CustomEvents.OnPageMatchStatusUpdated,{detail:{matchStatus:a.detail.matchStatus}}))},ge=function(a){if(a&&a.detail){var b=a.detail.error;var e=a.detail.context;document.dispatchEvent(new CustomEvent(n.CustomEvents.OnException,{detail:{error:b,context:e}}));a={};jc(a);kc(a);a[".em"]=Ka(b.message||b);a[".es"]=e;var f=window.navigator.userAgent.toLowerCase();e="unknown";var g="";switch(!0){case -1<f.indexOf("edge"):e=
-"ie";g="edge";break;case -1<f.indexOf("trident"):e="ie";g="trident";break;case -1<f.indexOf("chrome")&&!!window.chrome:g=e="chrome";break;case -1<f.indexOf("firefox"):g=e="mozilla";break;case -1<f.indexOf("safari"):g=e="safari"}"unknown"!==e?(f=(new RegExp("".concat(g,"/(.*?)s"),"gm")).exec(f),f=parseInt(!!f&&f[1]),f=isNaN(f)?null:f):f=null;a[".vt"]=e;f&&(a[".vn"]=f);switch(e){case "safari":Id(a,b,Cf);break;case "mozilla":Id(a,b,Df);break;default:b&&b.stack&&"string"===typeof b.stack&&(b=b.stack.split("\n")[1],
-b=b.substring(b.indexOf("at ")+3).match(/(.*) \((.*):(\d+):(\d+)\)/),Array.isArray(b)&&Hd(a,{header:b[1],fileName:b[2],line:b[3],column:b[4]}))}La(a)&&gb.send(a)}},he=function(a){document.dispatchEvent(new CustomEvent(n.CustomEvents.OnConsentRevoke,{detail:{revokedConsent:a.detail.revokedConsent}}))},ie=function(a){if(a.detail&&a.detail.newAnonymousId){var b=K();a=a.detail.newAnonymousId;b.uuid!==a&&Z({uuid:a})}},jg=function(a){var b=a.detail.actionEvent;b.interaction&&b.interaction.name===ua.MetadataUpdate&&
-(a.preventDefault(),lb({action:ua.MetadataUpdate,consents:b.consents,source:b.source,user:b.user}))},sc=function(){document.removeEventListener(w.OnInitSitemap,de);document.removeEventListener(w.OnEventSend,ee);document.removeEventListener(w.OnPageMatchStatusUpdated,fe);document.removeEventListener(w.OnException,ge);document.removeEventListener(w.OnConsentRevoke,he);document.removeEventListener(w.OnSetAnonymousId,ie)},kg=["cookieDomain","consents"],lg=function(a){return(a.listeners||[]).map(function(a){return bb(a)})},
-je=function(a){td(a);document.dispatchEvent(new CustomEvent(n.CustomEvents.OnInitSitemap,{detail:{sitemapConfig:k.config}}))},le=function(a){ke(a);return!0},me=function(a){k.result.matchedConfig=t(t({},a),{},{contentZones:Vd(a),listeners:lg(a)});var b=k.result,e=t({},k.result.currentPage||{});var f="function"===typeof a.action?a.action():a.action;var g=a.catalog?a.itemAction||n.ItemAction.ViewItem:null,h=a.name;var l="function"===typeof a.locale?a.locale():a.locale;b.currentPage=t(e,{},{action:f,
-itemAction:g,source:{pageType:h,locale:l,contentZones:Wd(a)},flags:{pageView:!0},user:{},performance:{},debug:{}});return mg(a)},mg=function(a){return a.itemAction===n.ItemAction.ViewCart||a&&a.cart&&a.cart.complete?ng(a).then(function(a){k.result.currentPage.itemAction=n.ItemAction.ViewCart;k.result.currentPage.cart=a}):a.itemAction===n.ItemAction.Purchase||a&&a.order?og(a).then(function(a){k.result.currentPage.itemAction=n.ItemAction.Purchase;k.result.currentPage.order=a}):pg(a).then(function(a){k.result.currentPage.catalog=
-a})},ng=function(a){var b={};if(!a.catalog&&!a.cart&&!a.order)return Promise.resolve(b);if(a.cart)var e=a.cart;else if(a.order||a.catalog){var f={},g=a.order||a.catalog;Object.keys(g).forEach(function(a){var b=g[a];b&&b.lineItems&&(f[a]=b.lineItems)});e={complete:f}}if(e.complete){a=e.complete;for(var h in a)return Array.isArray(h.match(/[A-Z]/))?"Product"!==h?(x(Error("Item type must be Product"),"Sitewide Javascript"),Promise.resolve(b)):Sf(a[h]):(x(Error("Item types must be capitalized. Did you mean ".concat(h.replace(/^\w/,
-function(a){return a.toUpperCase()}),"?")),"Sitewide Javascript"),Promise.resolve(b))}},og=function(a){var b={};if(!a.catalog&&!a.order)return Promise.resolve(b);a=a.order||a.catalog;for(var e in a)return Array.isArray(e.match(/[A-Z]/))?"Product"!==e?(x(Error("Item type must be Product"),"Sitewide Javascript"),Promise.resolve(b)):Wf(a[e]):(x(Error("Item types must be capitalized. Did you mean ".concat(e.replace(/^\w/,function(a){return a.toUpperCase()}),"?")),"Sitewide Javascript"),Promise.resolve(b))},
-pg=function(a){var b={};if(!a.catalog)return Promise.resolve(b);for(var e in a.catalog)return Array.isArray(e.match(/[A-Z]/))?qg(a.catalog[e],e):(x(Error("Item types must be capitalized. Did you mean ".concat(e.replace(/^\w/,function(a){return a.toUpperCase()}),"?")),"Sitewide Javascript"),Promise.resolve(b))},qg=function(a,b){return Vf(a,b).then(function(a){Object.keys(a).forEach(function(e){a[e]._id||x(Error("Invalid ".concat(b,", missing _id for the ").concat(k.result.matchedConfig.name," page config.")),
-"Site-wide Javascript")});return ae()?cg(a):a})},rg=function b(){for(var e=arguments.length,f=Array(e),g=0;g<e;g++)f[g]=arguments[g];return f.reduce(function(e,f){Object.keys(f).forEach(function(g){var h=e[g],k=f[g];Array.isArray(h)&&Array.isArray(k)?Object.assign(e,L({},g,h.concat.apply(h,nb(k)))):h&&"object"===A(h)&&k&&"object"===A(k)?Object.assign(e,L({},g,b(h,k))):Object.assign(e,L({},g,k))});return e},{})},ne=function(b){var e=k.config.global||{},f=e.onActionEvent;delete e.onActionEvent;b=rg(e,
-b);e.onActionEvent=f;return b},vg=function(b){try{return sg(b.global),tg(b.pageTypeDefault),ug(b.pageTypes),!0}catch(e){return x(Error(e),"Sitemap"),!1}},tg=function(b){b&&Object.keys(b).forEach(function(b){if("contentZones"!==b&&"listeners"!==b&&"locale"!==b&&"name"!==b&&"onActionEvent"!=b)throw Error("".concat(b," is not a valid default config attribute."));})},sg=function(b){b&&Object.keys(b).forEach(function(e){if("contentZones"!==e&&"listeners"!==e&&"locale"!==e&&"onActionEvent"!=e)throw Error("".concat(e,
-" is not a valid global config attribute."));if("contentZones"===e&&b[e]&&!Array.isArray(b[e]))throw Error("global config: contentZones must be provided as an array of objects");})},ug=function(b){b.forEach(function(b){if(!b.name||!b.isMatch)throw Error("All page configs must have a name and isMatch attribute defined");if(b&&b.contentZones&&!Array.isArray(b.contentZones))throw Error("".concat(b.name," pageType config: contentZones must be provided as an array of objects"));})},wg=function(){var b=
-k.result;lb(k.result.currentPage);k.result=b},ke=function(b){je(b);hd();bg();jb();if(k.config.settings.runOnTranslatedPage||!rc())k.result.currentPage=null,vg(b)&&$a(b.pageTypes).then(ne).then(me).then(wg).then(function(){return Zd()}).catch(function(b){"sitemap_reinit"!==b&&x(Error("Unhandled exception: ".concat(b)),"Site-wide Javascript")})};document.addEventListener(w.OnInit,function(b){var e=b.detail.sdkConfig;if("running"==q.beaconState)W("reinitializing MCIS Module");else{b=e.cookieDomain;var f=
-e.consents;e=xa(e,kg);b&&(q.beaconConfig.cookieDomain=b);f&&(q.beaconConfig.consents=f);var g=q.endpointConfig;b=g.account;f=g.dataset;g=g.trackerUrl;q.beaconConfig=t(t({},q.beaconConfig),{},{trackerUrl:g},e);e=Ad();g=document.dispatchEvent(new CustomEvent(n.CustomEvents.OnInit,{detail:{beaconConfig:e},cancelable:!0}));document.dispatchEvent(new CustomEvent(pa.OnInit,{detail:{sdkConfig:e}}));g?(Q.setCookieHash(b,f,ea),g=Q.read("a"),e=Q.read("n"),Dd(g)?(Z(Cd(g)).uuid!==U&&ic(),r.debug("Loaded visitor record from cookie: ".concat(JSON.stringify(K())))):
-"string"===typeof g&&0<g.length||null!=e&&"object"===A(e)?(g&&"object"!==A(g)&&(Q.remove("a",{domain:q.beaconConfig.cookieDomain}),Q.remove("a",{domain:hc(location.hostname)}),g=g.split("."),0<g.length&&(Z({uuid:g[0]}),1<g.length&&g[1]&&Z({affinityId:g[1]}))),e&&"object"===A(e)&&(Q.remove("n",{domain:q.beaconConfig.cookieDomain}),Q.remove("n",{domain:hc(location.hostname)}),e.puid&&"string"===typeof e.puid&&Z({persistedUserId:e.puid}),e.paid&&"string"===typeof e.paid&&Z({persistedAccountId:e.paid})),
-ic(),r.debug("Classic cookie detected with anonymousId: ".concat(K().uuid))):(fd()?Z({uuid:U}):(Z({uuid:Oc()}),ic()),r.debug("Created new visitor record. anonymousId: ".concat(K().uuid))),K(),e=q.beaconConfig.trackerUrl,Ma=new ag(e+"/api2/event/"+q.endpointConfig.dataset,Ma?Ma.eventRateLimiter:null),eb=new Qf(e+"/msreceiver",eb?eb.eventRateLimiter:null),fb=new Pf(e+"/pr",fb?fb.eventRateLimiter:null),gb=new Of(e+"/er",gb?gb.eventRateLimiter:null),sc(),document.addEventListener(w.OnInitSitemap,de),
-document.addEventListener(w.OnEventSend,ee),document.addEventListener(w.OnPageMatchStatusUpdated,fe),document.addEventListener(w.OnException,ge),document.addEventListener(w.OnConsentRevoke,he),document.addEventListener(w.OnSetAnonymousId,ie),$f.setupActivityTimers(),r.debug("Initialized Tracking Beacon v".concat(16," for account[").concat(b,"] dataset[").concat(f,"]")),q.beaconState="running"):(sc(),r.debug("Cancelling activity tracking."),clearTimeout(X),X=-1,ca(window,"unload",Lb),ca(window,"blur",
-Mb),ca(window,"focus",Nb),ca(document,"mousemove keydown scroll click",Fa),r.debug("IS Module initialization canceled due to a preventDefault call in a listener for the OnInit event."))}});document.addEventListener(w.OnShutDown,function(b){b=b.detail.message;r.info("Shutting down MCIS Module: ".concat(b));document.dispatchEvent(new CustomEvent(n.CustomEvents.OnShutDown,{detail:{message:b}}));q.beaconState="shutDown";sc()});document.addEventListener(w.OnBeforeInit,function(b){bd=q.beaconConfig.secureCookie?
-!0:!1});var oe=function(){var b=0<arguments.length&&void 0!==arguments[0]?arguments[0]:{};return new Promise(function(e){document.addEventListener(w.OnBeforeEventSend,jg);bc(b).catch(function(b){});"running"===q.beaconState&&e(q)})},pe=function(b){var e=[];b.campaignStats.forEach(function(b){var f=k.campaignResponses.find(function(e){return e.experienceId===b.experienceId});document.dispatchEvent(new CustomEvent(n.CustomEvents.OnStatSend,{detail:{campaignStat:b,campaignResponse:f}}));document.dispatchEvent(new CustomEvent(pa.OnStatSend,
-{detail:{campaignStat:b,campaignResponse:f}}));e.push(b.experienceId)});e=Array.from(new Set(e));return La(b)?eb.send(Jf(b),e):Promise.resolve(b)};window.SalesforceInteractions&&(window.SalesforceInteractions.mcis={extractFirstGroup:wa.extractFirstGroup,getLastPathComponentWithoutExtension:wa.getLastPathComponentWithoutExtension,getParameterByName:wa.getParameterByName,getValueFromNestedObject:wa.getValueFromNestedObject,buildLineItemFromPageState:Rf,cookie:wa.cookie,sendStat:pe,getContentZoneSelector:Xd,
-getSdkConfig:Ad,getSitemapConfig:Fd,getSitemapResult:Ed,getCampaignResponses:Gd,CustomEvents:pa,ConsentPurpose:dc,CatalogObjectInteractionName:Ea});n.ConsentPurpose=dc;n.DisplayUtils=zd;n.addEventListener=function(b){r.warn("Evergage.addEventListener is deprecated. Use the Evergage.CustomEvents.OnEventSend event instead.");return null};n.addResponseListener=function(b){r.warn("Evergage.addResponseListener is deprecated. Use the Evergage.CustomEvents.OnEventResponse event instead.");return null};n.build=
-function(b){$a(b.pageTypes).then(ne).then(me).catch(function(b){"sitemap_reinit"!==b&&x(Error("Unhandled exception: ".concat(b)),"Site-wide Javascript")})};n.cashDom=B;n.configure=function(b,e){"running"==q.beaconState&&r.debug("Unbinding signal subscriptions.");q.beaconState="initializing";q.endpointConfig=t(t({},q.endpointConfig),b);var f=q.endpointConfig;b=f.account;var g=f.dataset;f=f.siteConfigVersion;if(!b||!g)return W("account/dataset undefined. Check your beacon configuration.");if(!f)return W("beacon config version undefined");
-q.endpointConfig.cdnUrl||(q.endpointConfig.cdnUrl="https://".concat(Af));if(!q.endpointConfig.cdnUrl)return W("cdnUrl undefined. Check your beacon configuration.");q.endpointConfig.trackerUrl||(f=q.endpointConfig,b="https://".concat({account:b,dataset:g}.account,".").concat("evergage.com"),f.trackerUrl=b);if(!q.endpointConfig.trackerUrl)return W("trackerUrl undefined. Check your beacon configuration.");q.beaconConfig.trackerUrl=q.endpointConfig.trackerUrl;q.beaconConfig=t(t({},q.beaconConfig),e);
-q.beaconState="configured"};n.getCampaignResponses=Gd;n.getConfig=fc;n.getConsents=jd;n.getContentZoneSelector=Xd;n.getCurrentPage=Tc;n.getLoggingLevel=Nc;n.getSitemapConfig=Fd;n.getSitemapResult=Ed;n.getState=db;n.getVersion=function(){return 16};n.init=oe;n.initSitemap=le;n.listener=function(b,e,f){var g="object"===A(f)?function(){r.warn("ListenerOptions are deprecated. Please use a callback in the Listener instead.");var b=t(t({},f),{},{user:{}});lb(b)}:f;return Pc(b,e,g)};n.log=r;n.reinit=function(){var b=
-P.map(function(b){return b.consent});oe(t(t({},fc()),{},{consents:b})).then(function(){le(k.config)})};n.removeCookies=function(b){b&&Q.setCookieHash(q.endpointConfig.account,q.endpointConfig.dataset,b);document.dispatchEvent(new CustomEvent(w.OnClearCookie,{detail:{options:{domain:b||q.beaconConfig.cookieDomain||hc(location.hostname)}}}))};n.resolvers=xd;n.runSpecificConfig=function(b){Object.assign(k.config,{pageTypes:[b]});ke(k.config)};n.sendEvent=lb;n.sendException=x;n.sendStat=pe;n.setConfig=
-je;n.setLoggingLevel=Mc;n.shutDown=W;n.updateConsents=Yb;n.util=wa;return n}({});
+var Evergage = (function (exports) {
+  'use strict';
+
+  function _iterableToArrayLimit(r, l) {
+    var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
+    if (null != t) {
+      var e,
+        n,
+        i,
+        u,
+        a = [],
+        f = !0,
+        o = !1;
+      try {
+        if (i = (t = t.call(r)).next, 0 === l) {
+          if (Object(t) !== t) return;
+          f = !1;
+        } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0);
+      } catch (r) {
+        o = !0, n = r;
+      } finally {
+        try {
+          if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return;
+        } finally {
+          if (o) throw n;
+        }
+      }
+      return a;
+    }
+  }
+  function ownKeys(e, r) {
+    var t = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+      var o = Object.getOwnPropertySymbols(e);
+      r && (o = o.filter(function (r) {
+        return Object.getOwnPropertyDescriptor(e, r).enumerable;
+      })), t.push.apply(t, o);
+    }
+    return t;
+  }
+  function _objectSpread2(e) {
+    for (var r = 1; r < arguments.length; r++) {
+      var t = null != arguments[r] ? arguments[r] : {};
+      r % 2 ? ownKeys(Object(t), !0).forEach(function (r) {
+        _defineProperty(e, r, t[r]);
+      }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) {
+        Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+      });
+    }
+    return e;
+  }
+  function _toPrimitive(t, r) {
+    if ("object" != typeof t || !t) return t;
+    var e = t[Symbol.toPrimitive];
+    if (void 0 !== e) {
+      var i = e.call(t, r || "default");
+      if ("object" != typeof i) return i;
+      throw new TypeError("@@toPrimitive must return a primitive value.");
+    }
+    return ("string" === r ? String : Number)(t);
+  }
+  function _toPropertyKey(t) {
+    var i = _toPrimitive(t, "string");
+    return "symbol" == typeof i ? i : String(i);
+  }
+  function _typeof(o) {
+    "@babel/helpers - typeof";
+
+    return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
+      return typeof o;
+    } : function (o) {
+      return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
+    }, _typeof(o);
+  }
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+  function _defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor);
+    }
+  }
+  function _createClass(Constructor, protoProps, staticProps) {
+    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) _defineProperties(Constructor, staticProps);
+    Object.defineProperty(Constructor, "prototype", {
+      writable: false
+    });
+    return Constructor;
+  }
+  function _defineProperty(obj, key, value) {
+    key = _toPropertyKey(key);
+    if (key in obj) {
+      Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+      });
+    } else {
+      obj[key] = value;
+    }
+    return obj;
+  }
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function");
+    }
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        writable: true,
+        configurable: true
+      }
+    });
+    Object.defineProperty(subClass, "prototype", {
+      writable: false
+    });
+    if (superClass) _setPrototypeOf(subClass, superClass);
+  }
+  function _getPrototypeOf(o) {
+    _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) {
+      return o.__proto__ || Object.getPrototypeOf(o);
+    };
+    return _getPrototypeOf(o);
+  }
+  function _setPrototypeOf(o, p) {
+    _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) {
+      o.__proto__ = p;
+      return o;
+    };
+    return _setPrototypeOf(o, p);
+  }
+  function _isNativeReflectConstruct() {
+    if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+    if (Reflect.construct.sham) return false;
+    if (typeof Proxy === "function") return true;
+    try {
+      Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+  function _objectWithoutPropertiesLoose(source, excluded) {
+    if (source == null) return {};
+    var target = {};
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for (i = 0; i < sourceKeys.length; i++) {
+      key = sourceKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      target[key] = source[key];
+    }
+    return target;
+  }
+  function _objectWithoutProperties(source, excluded) {
+    if (source == null) return {};
+    var target = _objectWithoutPropertiesLoose(source, excluded);
+    var key, i;
+    if (Object.getOwnPropertySymbols) {
+      var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+      for (i = 0; i < sourceSymbolKeys.length; i++) {
+        key = sourceSymbolKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+        target[key] = source[key];
+      }
+    }
+    return target;
+  }
+  function _assertThisInitialized(self) {
+    if (self === void 0) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
+    return self;
+  }
+  function _possibleConstructorReturn(self, call) {
+    if (call && (typeof call === "object" || typeof call === "function")) {
+      return call;
+    } else if (call !== void 0) {
+      throw new TypeError("Derived constructors may only return object or undefined");
+    }
+    return _assertThisInitialized(self);
+  }
+  function _createSuper(Derived) {
+    var hasNativeReflectConstruct = _isNativeReflectConstruct();
+    return function _createSuperInternal() {
+      var Super = _getPrototypeOf(Derived),
+        result;
+      if (hasNativeReflectConstruct) {
+        var NewTarget = _getPrototypeOf(this).constructor;
+        result = Reflect.construct(Super, arguments, NewTarget);
+      } else {
+        result = Super.apply(this, arguments);
+      }
+      return _possibleConstructorReturn(this, result);
+    };
+  }
+  function _superPropBase(object, property) {
+    while (!Object.prototype.hasOwnProperty.call(object, property)) {
+      object = _getPrototypeOf(object);
+      if (object === null) break;
+    }
+    return object;
+  }
+  function _get() {
+    if (typeof Reflect !== "undefined" && Reflect.get) {
+      _get = Reflect.get.bind();
+    } else {
+      _get = function _get(target, property, receiver) {
+        var base = _superPropBase(target, property);
+        if (!base) return;
+        var desc = Object.getOwnPropertyDescriptor(base, property);
+        if (desc.get) {
+          return desc.get.call(arguments.length < 3 ? target : receiver);
+        }
+        return desc.value;
+      };
+    }
+    return _get.apply(this, arguments);
+  }
+  function _slicedToArray(arr, i) {
+    return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+  }
+  function _toConsumableArray(arr) {
+    return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
+  }
+  function _arrayWithoutHoles(arr) {
+    if (Array.isArray(arr)) return _arrayLikeToArray(arr);
+  }
+  function _arrayWithHoles(arr) {
+    if (Array.isArray(arr)) return arr;
+  }
+  function _iterableToArray(iter) {
+    if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
+  }
+  function _unsupportedIterableToArray(o, minLen) {
+    if (!o) return;
+    if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+    var n = Object.prototype.toString.call(o).slice(8, -1);
+    if (n === "Object" && o.constructor) n = o.constructor.name;
+    if (n === "Map" || n === "Set") return Array.from(o);
+    if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+  }
+  function _arrayLikeToArray(arr, len) {
+    if (len == null || len > arr.length) len = arr.length;
+    for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
+    return arr2;
+  }
+  function _nonIterableSpread() {
+    throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+  }
+  function _nonIterableRest() {
+    throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+  }
+
+  function createCommonjsModule(fn, module) {
+  	return module = { exports: {} }, fn(module, module.exports), module.exports;
+  }
+
+  var js_cookie = createCommonjsModule(function (module, exports) {
+    (function (factory) {
+      var registeredInModuleLoader;
+      {
+        module.exports = factory();
+        registeredInModuleLoader = true;
+      }
+      if (!registeredInModuleLoader) {
+        var OldCookies = window.Cookies;
+        var api = window.Cookies = factory();
+        api.noConflict = function () {
+          window.Cookies = OldCookies;
+          return api;
+        };
+      }
+    })(function () {
+      function extend() {
+        var i = 0;
+        var result = {};
+        for (; i < arguments.length; i++) {
+          var attributes = arguments[i];
+          for (var key in attributes) {
+            result[key] = attributes[key];
+          }
+        }
+        return result;
+      }
+      function decode(s) {
+        return s.replace(/(%[0-9A-Z]{2})+/g, decodeURIComponent);
+      }
+      function init(converter) {
+        function api() {}
+        function set(key, value, attributes) {
+          if (typeof document === 'undefined') {
+            return;
+          }
+          attributes = extend({
+            path: '/'
+          }, api.defaults, attributes);
+          if (typeof attributes.expires === 'number') {
+            attributes.expires = new Date(new Date() * 1 + attributes.expires * 864e+5);
+          }
+
+          // We're using "expires" because "max-age" is not supported by IE
+          attributes.expires = attributes.expires ? attributes.expires.toUTCString() : '';
+          try {
+            var result = JSON.stringify(value);
+            if (/^[\{\[]/.test(result)) {
+              value = result;
+            }
+          } catch (e) {}
+          value = converter.write ? converter.write(value, key) : encodeURIComponent(String(value)).replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g, decodeURIComponent);
+          key = encodeURIComponent(String(key)).replace(/%(23|24|26|2B|5E|60|7C)/g, decodeURIComponent).replace(/[\(\)]/g, escape);
+          var stringifiedAttributes = '';
+          for (var attributeName in attributes) {
+            if (!attributes[attributeName]) {
+              continue;
+            }
+            stringifiedAttributes += '; ' + attributeName;
+            if (attributes[attributeName] === true) {
+              continue;
+            }
+
+            // Considers RFC 6265 section 5.2:
+            // ...
+            // 3.  If the remaining unparsed-attributes contains a %x3B (";")
+            //     character:
+            // Consume the characters of the unparsed-attributes up to,
+            // not including, the first %x3B (";") character.
+            // ...
+            stringifiedAttributes += '=' + attributes[attributeName].split(';')[0];
+          }
+          return document.cookie = key + '=' + value + stringifiedAttributes;
+        }
+        function get(key, json) {
+          if (typeof document === 'undefined') {
+            return;
+          }
+          var jar = {};
+          // To prevent the for loop in the first place assign an empty array
+          // in case there are no cookies at all.
+          var cookies = document.cookie ? document.cookie.split('; ') : [];
+          var i = 0;
+          for (; i < cookies.length; i++) {
+            var parts = cookies[i].split('=');
+            var cookie = parts.slice(1).join('=');
+            if (!json && cookie.charAt(0) === '"') {
+              cookie = cookie.slice(1, -1);
+            }
+            try {
+              var name = decode(parts[0]);
+              cookie = (converter.read || converter)(cookie, name) || decode(cookie);
+              if (json) {
+                try {
+                  cookie = JSON.parse(cookie);
+                } catch (e) {}
+              }
+              jar[name] = cookie;
+              if (key === name) {
+                break;
+              }
+            } catch (e) {}
+          }
+          return key ? jar[key] : jar;
+        }
+        api.set = set;
+        api.get = function (key) {
+          return get(key, false /* read as raw */);
+        };
+        api.getJSON = function (key) {
+          return get(key, true /* read as json */);
+        };
+        api.remove = function (key, attributes) {
+          set(key, '', extend(attributes, {
+            expires: -1
+          }));
+        };
+        api.defaults = {};
+        api.withConverter = init;
+        return api;
+      }
+      return init(function () {});
+    });
+  });
+
+  /* MIT https://github.com/kenwheeler/cash */
+  var doc = document,
+    win = window,
+    docEle = doc.documentElement,
+    createElement = doc.createElement.bind(doc),
+    div = createElement('div'),
+    table = createElement('table'),
+    tbody = createElement('tbody'),
+    tr = createElement('tr'),
+    isArray = Array.isArray,
+    ArrayProtoType = Array.prototype,
+    filter = ArrayProtoType.filter,
+    indexOf = ArrayProtoType.indexOf,
+    map = ArrayProtoType.map,
+    push = ArrayProtoType.push,
+    slice = ArrayProtoType.slice,
+    some = ArrayProtoType.some,
+    splice = ArrayProtoType.splice;
+  var idRe = /^#[\w-]*$/,
+    classRe = /^\.[\w-]*$/,
+    htmlRe = /<.+>/,
+    tagRe = /^\w+$/;
+  // @require ./variables.ts
+  function find(selector) {
+    var context = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : doc;
+    return !isDocument(context) && !isElement(context) ? [] : classRe.test(selector) ? context.getElementsByClassName(selector.slice(1)) : tagRe.test(selector) ? context.getElementsByTagName(selector) : context.querySelectorAll(selector);
+  }
+  // @require ./find.ts
+  // @require ./variables.ts
+  var Cash = /*#__PURE__*/function () {
+    function Cash(selector) {
+      var context = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : doc;
+      _classCallCheck(this, Cash);
+      if (!selector) return;
+      if (isCash(selector)) return selector;
+      var eles = selector;
+      if (isString(selector)) {
+        var ctx = isCash(context) ? context[0] : context;
+        eles = idRe.test(selector) ? ctx.getElementById(selector.slice(1)) : htmlRe.test(selector) ? parseHTML(selector) : find(selector, ctx);
+        if (!eles) return;
+      } else if (isFunction(selector)) {
+        return this.ready(selector); //FIXME: `fn.ready` is not included in `core`, but it's actually a core functionality
+      }
+      if (eles.nodeType || eles === win) eles = [eles];
+      this.length = eles.length;
+      for (var i = 0, l = this.length; i < l; i++) {
+        this[i] = eles[i];
+      }
+    }
+    _createClass(Cash, [{
+      key: "init",
+      value: function init(selector, context) {
+        return new Cash(selector, context);
+      }
+    }]);
+    return Cash;
+  }();
+  var fn = Cash.prototype,
+    cash = fn.init;
+  cash.fn = cash.prototype = fn; // Ensuring that `cash () instanceof cash`
+  fn.length = 0;
+  fn.splice = splice; // Ensuring a cash collection gets printed as array-like in Chrome's devtools
+  if (typeof Symbol === 'function') {
+    // Ensuring a cash collection is iterable
+    fn[Symbol['iterator']] = ArrayProtoType[Symbol['iterator']];
+  }
+  fn.map = function (callback) {
+    return cash(map.call(this, function (ele, i) {
+      return callback.call(ele, i, ele);
+    }));
+  };
+  fn.slice = function (start, end) {
+    return cash(slice.call(this, start, end));
+  };
+  var dashAlphaRe = /-([a-z])/g;
+  function camelCase(str) {
+    return str.replace(dashAlphaRe, function (match, letter) {
+      return letter.toUpperCase();
+    });
+  }
+  cash.camelCase = camelCase;
+  function each(arr, callback, reverse) {
+    if (reverse) {
+      var i = arr.length;
+      while (i--) {
+        if (callback.call(arr[i], i, arr[i]) === false) return arr;
+      }
+    } else {
+      for (var _i = 0, l = arr.length; _i < l; _i++) {
+        if (callback.call(arr[_i], _i, arr[_i]) === false) return arr;
+      }
+    }
+    return arr;
+  }
+  cash.each = each;
+  fn.each = function (callback) {
+    return each(this, callback);
+  };
+  fn.removeProp = function (prop) {
+    return this.each(function (i, ele) {
+      delete ele[prop];
+    });
+  };
+  cash.extend = function (target) {
+    for (var _len = arguments.length, objs = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+      objs[_key - 1] = arguments[_key];
+    }
+    var length = arguments.length;
+    for (var i = length < 2 ? 0 : 1; i < length; i++) {
+      for (var key in arguments[i]) {
+        target[key] = arguments[i][key];
+      }
+    }
+    return target;
+  };
+  fn.extend = function (plugins) {
+    return cash.extend(fn, plugins);
+  };
+  cash.guid = 1;
+  function matches(ele, selector) {
+    var matches = ele && (ele['matches'] || ele['webkitMatchesSelector'] || ele['msMatchesSelector']);
+    return !!matches && matches.call(ele, selector);
+  }
+  cash.matches = matches;
+  function isCash(x) {
+    return x instanceof Cash;
+  }
+  function isWindow(x) {
+    return !!x && x === x.window;
+  }
+  function isDocument(x) {
+    return !!x && x.nodeType === 9;
+  }
+  function isElement(x) {
+    return !!x && x.nodeType === 1;
+  }
+  function isFunction(x) {
+    return typeof x === 'function';
+  }
+  function isString(x) {
+    return typeof x === 'string';
+  }
+  function isUndefined(x) {
+    return x === undefined;
+  }
+  function isNull(x) {
+    return x === null;
+  }
+  function isNumeric(x) {
+    return !isNaN(parseFloat(x)) && isFinite(x);
+  }
+  cash.isWindow = isWindow;
+  cash.isFunction = isFunction;
+  cash.isString = isString;
+  cash.isNumeric = isNumeric;
+  cash.isArray = isArray;
+  fn.prop = function (prop, value) {
+    if (!prop) return;
+    if (isString(prop)) {
+      if (arguments.length < 2) return this[0] && this[0][prop];
+      return this.each(function (i, ele) {
+        ele[prop] = value;
+      });
+    }
+    for (var key in prop) {
+      this.prop(key, prop[key]);
+    }
+    return this;
+  };
+  fn.get = function (index) {
+    if (isUndefined(index)) return slice.call(this);
+    return this[index < 0 ? index + this.length : index];
+  };
+  fn.eq = function (index) {
+    return cash(this.get(index));
+  };
+  fn.first = function () {
+    return this.eq(0);
+  };
+  fn.last = function () {
+    return this.eq(-1);
+  };
+  // @require ./matches.ts
+  // @require ./type_checking.ts
+  function getCompareFunction(comparator) {
+    return isString(comparator) ? function (i, ele) {
+      return matches(ele, comparator);
+    } : isFunction(comparator) ? comparator : isCash(comparator) ? function (i, ele) {
+      return comparator.is(ele);
+    } : !comparator ? function () {
+      return false;
+    } : function (i, ele) {
+      return ele === comparator;
+    };
+  }
+  fn.filter = function (comparator) {
+    var compare = getCompareFunction(comparator);
+    return cash(filter.call(this, function (ele, i) {
+      return compare.call(ele, i, ele);
+    }));
+  };
+  // @require collection/filter.ts
+  function filtered(collection, comparator) {
+    return !comparator ? collection : collection.filter(comparator);
+  }
+  // @require ./type_checking.ts
+  var splitValuesRe = /\S+/g;
+  function getSplitValues(str) {
+    return isString(str) ? str.match(splitValuesRe) || [] : [];
+  }
+  fn.hasClass = function (cls) {
+    return !!cls && some.call(this, function (ele) {
+      return ele.classList.contains(cls);
+    });
+  };
+  fn.removeAttr = function (attr) {
+    var attrs = getSplitValues(attr);
+    return this.each(function (i, ele) {
+      each(attrs, function (i, a) {
+        ele.removeAttribute(a);
+      });
+    });
+  };
+  function attr(attr, value) {
+    if (!attr) return;
+    if (isString(attr)) {
+      if (arguments.length < 2) {
+        if (!this[0]) return;
+        var _value = this[0].getAttribute(attr);
+        return isNull(_value) ? undefined : _value;
+      }
+      if (isUndefined(value)) return this;
+      if (isNull(value)) return this.removeAttr(attr);
+      return this.each(function (i, ele) {
+        ele.setAttribute(attr, value);
+      });
+    }
+    for (var key in attr) {
+      this.attr(key, attr[key]);
+    }
+    return this;
+  }
+  fn.attr = attr;
+  fn.toggleClass = function (cls, force) {
+    var classes = getSplitValues(cls),
+      isForce = !isUndefined(force);
+    return this.each(function (i, ele) {
+      each(classes, function (i, c) {
+        if (isForce) {
+          force ? ele.classList.add(c) : ele.classList.remove(c);
+        } else {
+          ele.classList.toggle(c);
+        }
+      });
+    });
+  };
+  fn.addClass = function (cls) {
+    return this.toggleClass(cls, true);
+  };
+  fn.removeClass = function (cls) {
+    if (arguments.length) return this.toggleClass(cls, false);
+    return this.attr('class', '');
+  };
+  function pluck(arr, prop, deep) {
+    var plucked = [],
+      isCallback = isFunction(prop);
+    for (var i = 0, l = arr.length; i < l; i++) {
+      if (isCallback) {
+        var _val = prop(arr[i]);
+        if (_val.length) push.apply(plucked, _val);
+      } else {
+        var _val2 = arr[i][prop];
+        while (_val2 != null) {
+          plucked.push(_val2);
+          _val2 = deep ? _val2[prop] : null;
+        }
+      }
+    }
+    return plucked;
+  }
+  function unique(arr) {
+    return arr.length > 1 ? filter.call(arr, function (item, index, self) {
+      return indexOf.call(self, item) === index;
+    }) : arr;
+  }
+  cash.unique = unique;
+  fn.add = function (selector, context) {
+    return cash(unique(this.get().concat(cash(selector, context).get())));
+  };
+  // @require core/type_checking.ts
+  // @require core/variables.ts
+  function computeStyle(ele, prop, isVariable) {
+    if (!isElement(ele) || !prop) return;
+    var style = win.getComputedStyle(ele, null);
+    return prop ? isVariable ? style.getPropertyValue(prop) || undefined : style[prop] : style;
+  }
+  // @require ./compute_style.ts
+  function computeStyleInt(ele, prop) {
+    return parseInt(computeStyle(ele, prop), 10) || 0;
+  }
+  var cssVariableRe = /^--/;
+  // @require ./variables.ts
+  function isCSSVariable(prop) {
+    return cssVariableRe.test(prop);
+  }
+  var prefixedProps = {},
+    style = div.style,
+    vendorsPrefixes = ['webkit', 'moz', 'ms'];
+  function getPrefixedProp(prop) {
+    var isVariable = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : isCSSVariable(prop);
+    if (isVariable) return prop;
+    if (!prefixedProps[prop]) {
+      var propCC = camelCase(prop),
+        propUC = "".concat(propCC[0].toUpperCase()).concat(propCC.slice(1)),
+        props = "".concat(propCC, " ").concat(vendorsPrefixes.join("".concat(propUC, " "))).concat(propUC).split(' ');
+      each(props, function (i, p) {
+        if (p in style) {
+          prefixedProps[prop] = p;
+          return false;
+        }
+      });
+    }
+    return prefixedProps[prop];
+  }
+  cash.prefixedProp = getPrefixedProp;
+  // @require core/type_checking.ts
+  // @require ./is_css_variable.ts
+  var numericProps = {
+    animationIterationCount: true,
+    columnCount: true,
+    flexGrow: true,
+    flexShrink: true,
+    fontWeight: true,
+    lineHeight: true,
+    opacity: true,
+    order: true,
+    orphans: true,
+    widows: true,
+    zIndex: true
+  };
+  function getSuffixedValue(prop, value) {
+    var isVariable = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : isCSSVariable(prop);
+    return !isVariable && !numericProps[prop] && isNumeric(value) ? "".concat(value, "px") : value;
+  }
+  function css(prop, value) {
+    if (isString(prop)) {
+      var isVariable = isCSSVariable(prop);
+      prop = getPrefixedProp(prop, isVariable);
+      if (arguments.length < 2) return this[0] && computeStyle(this[0], prop, isVariable);
+      if (!prop) return this;
+      value = getSuffixedValue(prop, value, isVariable);
+      return this.each(function (i, ele) {
+        if (!isElement(ele)) return;
+        if (isVariable) {
+          ele.style.setProperty(prop, value);
+        } else {
+          ele.style[prop] = value;
+        }
+      });
+    }
+    for (var key in prop) {
+      this.css(key, prop[key]);
+    }
+    return this;
+  }
+  fn.css = css;
+  // @optional ./css.ts
+  // @require core/camel_case.ts
+  function getData(ele, key) {
+    var value = ele.dataset[key] || ele.dataset[camelCase(key)];
+    try {
+      return JSON.parse(value);
+    } catch (_a) {}
+    return value;
+  }
+  // @require core/camel_case.ts
+  function setData(ele, key, value) {
+    try {
+      value = JSON.stringify(value);
+    } catch (_a) {}
+    ele.dataset[camelCase(key)] = value;
+  }
+  function data(name, value) {
+    if (!name) {
+      if (!this[0]) return;
+      var datas = {};
+      for (var key in this[0].dataset) {
+        datas[key] = getData(this[0], key);
+      }
+      return datas;
+    }
+    if (isString(name)) {
+      if (arguments.length < 2) return this[0] && getData(this[0], name);
+      return this.each(function (i, ele) {
+        setData(ele, name, value);
+      });
+    }
+    for (var _key2 in name) {
+      this.data(_key2, name[_key2]);
+    }
+    return this;
+  }
+  fn.data = data;
+  // @optional ./data.ts
+  // @require css/helpers/compute_style_int.ts
+  function getExtraSpace(ele, xAxis) {
+    return computeStyleInt(ele, "border".concat(xAxis ? 'Left' : 'Top', "Width")) + computeStyleInt(ele, "padding".concat(xAxis ? 'Left' : 'Top')) + computeStyleInt(ele, "padding".concat(xAxis ? 'Right' : 'Bottom')) + computeStyleInt(ele, "border".concat(xAxis ? 'Right' : 'Bottom', "Width"));
+  }
+  each([true, false], function (i, outer) {
+    each(['Width', 'Height'], function (i, prop) {
+      var name = "".concat(outer ? 'outer' : 'inner').concat(prop);
+      fn[name] = function (includeMargins) {
+        if (!this[0]) return;
+        if (isWindow(this[0])) return win[name];
+        return this[0]["".concat(outer ? 'offset' : 'client').concat(prop)] + (includeMargins && outer ? computeStyleInt(this[0], "margin".concat(i ? 'Top' : 'Left')) + computeStyleInt(this[0], "margin".concat(i ? 'Bottom' : 'Right')) : 0);
+      };
+    });
+  });
+  each(['width', 'height'], function (index, prop) {
+    fn[prop] = function (value) {
+      if (!this[0]) return isUndefined(value) ? undefined : this;
+      if (!arguments.length) {
+        if (isWindow(this[0])) return this[0][camelCase("outer-".concat(prop))];
+        return this[0].getBoundingClientRect()[prop] - getExtraSpace(this[0], !index);
+      }
+      var valueNumber = parseInt(value, 10);
+      return this.each(function (i, ele) {
+        if (!isElement(ele)) return;
+        var boxSizing = computeStyle(ele, 'boxSizing');
+        ele.style[prop] = getSuffixedValue(prop, valueNumber + (boxSizing === 'border-box' ? getExtraSpace(ele, !index) : 0));
+      });
+    };
+  });
+  // @optional ./inner_outer.ts
+  // @optional ./normal.ts
+  // @require css/helpers/compute_style.ts
+  var defaultDisplay = {};
+  function getDefaultDisplay(tagName) {
+    if (defaultDisplay[tagName]) return defaultDisplay[tagName];
+    var ele = createElement(tagName);
+    doc.body.insertBefore(ele, null);
+    var display = computeStyle(ele, 'display');
+    doc.body.removeChild(ele);
+    return defaultDisplay[tagName] = display !== 'none' ? display : 'block';
+  }
+  // @require css/helpers/compute_style.ts
+  function isHidden(ele) {
+    return computeStyle(ele, 'display') === 'none';
+  }
+  var displayProperty = '___cd';
+  fn.toggle = function (force) {
+    return this.each(function (i, ele) {
+      var show = isUndefined(force) ? isHidden(ele) : force;
+      if (show) {
+        ele.style.display = ele[displayProperty] || '';
+        if (isHidden(ele)) {
+          ele.style.display = getDefaultDisplay(ele.tagName);
+        }
+      } else {
+        ele[displayProperty] = computeStyle(ele, 'display');
+        ele.style.display = 'none';
+      }
+    });
+  };
+  fn.hide = function () {
+    return this.toggle(false);
+  };
+  fn.show = function () {
+    return this.toggle(true);
+  };
+  // @optional ./hide.ts
+  // @optional ./show.ts
+  // @optional ./toggle.ts
+  function hasNamespaces(ns1, ns2) {
+    return !ns2 || !some.call(ns2, function (ns) {
+      return ns1.indexOf(ns) < 0;
+    });
+  }
+  var eventsNamespace = '___ce',
+    eventsNamespacesSeparator = '.',
+    eventsFocus = {
+      focus: 'focusin',
+      blur: 'focusout'
+    },
+    eventsHover = {
+      mouseenter: 'mouseover',
+      mouseleave: 'mouseout'
+    },
+    eventsMouseRe = /^(mouse|pointer|contextmenu|drag|drop|click|dblclick)/i;
+  // @require ./variables.ts
+  function getEventNameBubbling(name) {
+    return eventsHover[name] || eventsFocus[name] || name;
+  }
+  // @require ./variables.ts
+  function getEventsCache(ele) {
+    return ele[eventsNamespace] = ele[eventsNamespace] || {};
+  }
+  // @require core/guid.ts
+  // @require events/helpers/get_events_cache.ts
+  function addEvent(ele, name, namespaces, selector, callback) {
+    callback.guid = callback.guid || cash.guid++;
+    var eventCache = getEventsCache(ele);
+    eventCache[name] = eventCache[name] || [];
+    eventCache[name].push([namespaces, selector, callback]);
+    ele.addEventListener(name, callback);
+  }
+  // @require ./variables.ts
+  function parseEventName(eventName) {
+    var parts = eventName.split(eventsNamespacesSeparator);
+    return [parts[0], parts.slice(1).sort()]; // [name, namespace[]]
+  }
+  // @require ./get_events_cache.ts
+  // @require ./has_namespaces.ts
+  // @require ./parse_event_name.ts
+  function removeEvent(ele, name, namespaces, selector, callback) {
+    var cache = getEventsCache(ele);
+    if (!name) {
+      for (name in cache) {
+        removeEvent(ele, name, namespaces, selector, callback);
+      }
+    } else if (cache[name]) {
+      cache[name] = cache[name].filter(function (_ref) {
+        var _ref2 = _slicedToArray(_ref, 3),
+          ns = _ref2[0],
+          sel = _ref2[1],
+          cb = _ref2[2];
+        if (callback && cb.guid !== callback.guid || !hasNamespaces(ns, namespaces) || selector && selector !== sel) return true;
+        ele.removeEventListener(name, cb);
+      });
+    }
+  }
+  fn.off = function (eventFullName, selector, callback) {
+    var _this = this;
+    if (isUndefined(eventFullName)) {
+      this.each(function (i, ele) {
+        removeEvent(ele);
+      });
+    } else if (!isString(eventFullName)) {
+      for (var key in eventFullName) {
+        this.off(key, eventFullName[key]);
+      }
+    } else {
+      if (isFunction(selector)) {
+        callback = selector;
+        selector = '';
+      }
+      each(getSplitValues(eventFullName), function (i, eventFullName) {
+        var _parseEventName = parseEventName(getEventNameBubbling(eventFullName)),
+          _parseEventName2 = _slicedToArray(_parseEventName, 2),
+          name = _parseEventName2[0],
+          namespaces = _parseEventName2[1];
+        _this.each(function (i, ele) {
+          removeEvent(ele, name, namespaces, selector, callback);
+        });
+      });
+    }
+    return this;
+  };
+  function on(eventFullName, selector, callback, _one) {
+    var _this2 = this;
+    if (!isString(eventFullName)) {
+      for (var key in eventFullName) {
+        this.on(key, selector, eventFullName[key]);
+      }
+      return this;
+    }
+    if (isFunction(selector)) {
+      callback = selector;
+      selector = '';
+    }
+    each(getSplitValues(eventFullName), function (i, eventFullName) {
+      var _parseEventName3 = parseEventName(getEventNameBubbling(eventFullName)),
+        _parseEventName4 = _slicedToArray(_parseEventName3, 2),
+        name = _parseEventName4[0],
+        namespaces = _parseEventName4[1];
+      _this2.each(function (i, ele) {
+        var finalCallback = function finalCallback(event) {
+          if (event.namespace && !hasNamespaces(namespaces, event.namespace.split(eventsNamespacesSeparator))) return;
+          var thisArg = ele;
+          if (selector) {
+            var target = event.target;
+            while (!matches(target, selector)) {
+              if (target === ele) return;
+              target = target.parentNode;
+              if (!target) return;
+            }
+            thisArg = target;
+            event.___cd = true; // Delegate
+          }
+          if (event.___cd) {
+            Object.defineProperty(event, 'currentTarget', {
+              configurable: true,
+              get: function get() {
+                return thisArg;
+              }
+            });
+          }
+          var returnValue = callback.call(thisArg, event, event.data);
+          if (_one) {
+            removeEvent(ele, name, namespaces, selector, finalCallback);
+          }
+          if (returnValue === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+        };
+        finalCallback.guid = callback.guid = callback.guid || cash.guid++;
+        addEvent(ele, name, namespaces, selector, finalCallback);
+      });
+    });
+    return this;
+  }
+  fn.on = on;
+  function one(eventFullName, selector, callback) {
+    return this.on(eventFullName, selector, callback, true);
+  }
+  fn.one = one;
+  fn.ready = function (callback) {
+    if (doc.readyState !== 'loading') {
+      callback(cash);
+    } else {
+      doc.addEventListener('DOMContentLoaded', function () {
+        callback(cash);
+      });
+    }
+    return this;
+  };
+  fn.trigger = function (event, data) {
+    if (isString(event)) {
+      var _parseEventName5 = parseEventName(event),
+        _parseEventName6 = _slicedToArray(_parseEventName5, 2),
+        name = _parseEventName6[0],
+        namespaces = _parseEventName6[1],
+        type = eventsMouseRe.test(name) ? 'MouseEvents' : 'HTMLEvents';
+      event = doc.createEvent(type);
+      event.initEvent(name, true, true);
+      event.namespace = namespaces.join(eventsNamespacesSeparator);
+    }
+    event.data = data;
+    var isEventFocus = (event.type in eventsFocus);
+    return this.each(function (i, ele) {
+      if (isEventFocus && isFunction(ele[event.type])) {
+        ele[event.type]();
+      } else {
+        ele.dispatchEvent(event);
+      }
+    });
+  };
+  // @optional ./off.ts
+  // @optional ./on.ts
+  // @optional ./one.ts
+  // @optional ./ready.ts
+  // @optional ./trigger.ts
+  // @require core/pluck.ts
+  // @require core/variables.ts
+  function getValue(ele) {
+    if (ele.multiple && ele.options) return pluck(filter.call(ele.options, function (option) {
+      return option.selected && !option.disabled && !option.parentNode.disabled;
+    }), 'value');
+    return ele.value || '';
+  }
+  var queryEncodeSpaceRe = /%20/g;
+  function queryEncode(prop, value) {
+    return "&".concat(encodeURIComponent(prop), "=").concat(encodeURIComponent(value).replace(queryEncodeSpaceRe, '+'));
+  }
+  var skippableRe = /file|reset|submit|button|image/i,
+    checkableRe = /radio|checkbox/i;
+  fn.serialize = function () {
+    var query = '';
+    this.each(function (i, ele) {
+      each(ele.elements || [ele], function (i, ele) {
+        if (ele.disabled || !ele.name || ele.tagName === 'FIELDSET' || skippableRe.test(ele.type) || checkableRe.test(ele.type) && !ele.checked) return;
+        var value = getValue(ele);
+        if (!isUndefined(value)) {
+          var values = isArray(value) ? value : [value];
+          each(values, function (i, value) {
+            query += queryEncode(ele.name, value);
+          });
+        }
+      });
+    });
+    return query.slice(1);
+  };
+  function val(value) {
+    if (isUndefined(value)) return this[0] && getValue(this[0]);
+    return this.each(function (i, ele) {
+      if (ele.tagName === 'SELECT') {
+        var eleValue = isArray(value) ? value : isNull(value) ? [] : [value];
+        each(ele.options, function (i, option) {
+          option.selected = eleValue.indexOf(option.value) >= 0;
+        });
+      } else {
+        ele.value = isNull(value) ? '' : value;
+      }
+    });
+  }
+  fn.val = val;
+  fn.clone = function () {
+    return this.map(function (i, ele) {
+      return ele.cloneNode(true);
+    });
+  };
+  fn.detach = function () {
+    return this.each(function (i, ele) {
+      if (ele.parentNode) {
+        ele.parentNode.removeChild(ele);
+      }
+    });
+  };
+  var fragmentRe = /^\s*<(\w+)[^>]*>/,
+    singleTagRe = /^\s*<(\w+)\s*\/?>(?:<\/\1>)?\s*$/;
+  var containers = {
+    '*': div,
+    tr: tbody,
+    td: tr,
+    th: tr,
+    thead: table,
+    tbody: table,
+    tfoot: table
+  };
+  function parseHTML(html) {
+    if (!isString(html)) return [];
+    if (singleTagRe.test(html)) return [createElement(RegExp.$1)];
+    var fragment = fragmentRe.test(html) && RegExp.$1,
+      container = containers[fragment] || containers['*'];
+    container.innerHTML = html;
+    return cash(container.childNodes).detach().get();
+  }
+  cash.parseHTML = parseHTML;
+  fn.empty = function () {
+    return this.each(function (i, ele) {
+      while (ele.firstChild) {
+        ele.removeChild(ele.firstChild);
+      }
+    });
+  };
+  function html(html) {
+    if (isUndefined(html)) return this[0] && this[0].innerHTML;
+    return this.each(function (i, ele) {
+      ele.innerHTML = html;
+    });
+  }
+  fn.html = html;
+  fn.remove = function () {
+    return this.detach().off();
+  };
+  function text(text) {
+    if (isUndefined(text)) return this[0] ? this[0].textContent : '';
+    return this.each(function (i, ele) {
+      ele.textContent = text;
+    });
+  }
+  fn.text = text;
+  fn.unwrap = function () {
+    this.parent().each(function (i, ele) {
+      var $ele = cash(ele);
+      $ele.replaceWith($ele.children());
+    });
+    return this;
+  };
+  fn.offset = function () {
+    var ele = this[0];
+    if (!ele) return;
+    var rect = ele.getBoundingClientRect();
+    return {
+      top: rect.top + win.pageYOffset - docEle.clientTop,
+      left: rect.left + win.pageXOffset - docEle.clientLeft
+    };
+  };
+  fn.offsetParent = function () {
+    return cash(this[0] && this[0].offsetParent);
+  };
+  fn.position = function () {
+    var ele = this[0];
+    if (!ele) return;
+    return {
+      left: ele.offsetLeft,
+      top: ele.offsetTop
+    };
+  };
+  fn.children = function (comparator) {
+    return filtered(cash(unique(pluck(this, function (ele) {
+      return ele.children;
+    }))), comparator);
+  };
+  fn.contents = function () {
+    return cash(unique(pluck(this, function (ele) {
+      return ele.tagName === 'IFRAME' ? [ele.contentDocument] : ele.childNodes;
+    })));
+  };
+  fn.find = function (selector) {
+    return cash(unique(pluck(this, function (ele) {
+      return find(selector, ele);
+    })));
+  };
+  // @require core/variables.ts
+  // @require collection/filter.ts
+  // @require traversal/find.ts
+  var HTMLCDATARe = /^\s*<!(?:\[CDATA\[|--)|(?:\]\]|--)>\s*$/g,
+    scriptTypeRe = /^$|^module$|\/(java|ecma)script/i,
+    scriptAttributes = ['type', 'src', 'nonce', 'noModule'];
+  function evalScripts(node, doc) {
+    var collection = cash(node);
+    collection.filter('script').add(collection.find('script')).each(function (i, ele) {
+      if (scriptTypeRe.test(ele.type) && docEle.contains(ele)) {
+        // The script type is supported // The element is attached to the DOM // Using `documentElement` for broader browser support
+        var script = createElement('script');
+        script.text = ele.textContent.replace(HTMLCDATARe, '');
+        each(scriptAttributes, function (i, attr) {
+          if (ele[attr]) script[attr] = ele[attr];
+        });
+        doc.head.insertBefore(script, null);
+        doc.head.removeChild(script);
+      }
+    });
+  }
+  // @require ./eval_scripts.ts
+  function insertElement(anchor, target, left, inside) {
+    if (inside) {
+      // prepend/append
+      anchor.insertBefore(target, left ? anchor.firstElementChild : null);
+    } else {
+      // before/after
+      anchor.parentNode.insertBefore(target, left ? anchor : anchor.nextElementSibling);
+    }
+    evalScripts(target, anchor.ownerDocument);
+  }
+  // @require ./insert_element.ts
+  function insertSelectors(selectors, anchors, inverse, left, inside, reverseLoop1, reverseLoop2, reverseLoop3) {
+    each(selectors, function (si, selector) {
+      each(cash(selector), function (ti, target) {
+        each(cash(anchors), function (ai, anchor) {
+          var anchorFinal = inverse ? target : anchor,
+            targetFinal = inverse ? anchor : target;
+          insertElement(anchorFinal, !ai ? targetFinal : targetFinal.cloneNode(true), left, inside);
+        }, reverseLoop3);
+      }, reverseLoop2);
+    }, reverseLoop1);
+    return anchors;
+  }
+  fn.after = function () {
+    return insertSelectors(arguments, this, false, false, false, true, true);
+  };
+  fn.append = function () {
+    return insertSelectors(arguments, this, false, false, true);
+  };
+  fn.appendTo = function (selector) {
+    return insertSelectors(arguments, this, true, false, true);
+  };
+  fn.before = function () {
+    return insertSelectors(arguments, this, false, true);
+  };
+  fn.insertAfter = function (selector) {
+    return insertSelectors(arguments, this, true, false, false, false, false, true);
+  };
+  fn.insertBefore = function (selector) {
+    return insertSelectors(arguments, this, true, true);
+  };
+  fn.prepend = function () {
+    return insertSelectors(arguments, this, false, true, true, true, true);
+  };
+  fn.prependTo = function (selector) {
+    return insertSelectors(arguments, this, true, true, true, false, false, true);
+  };
+  fn.replaceWith = function (selector) {
+    return this.before(selector).remove();
+  };
+  fn.replaceAll = function (selector) {
+    cash(selector).replaceWith(this);
+    return this;
+  };
+  fn.wrapAll = function (selector) {
+    var structure = cash(selector),
+      wrapper = structure[0];
+    while (wrapper.children.length) wrapper = wrapper.firstElementChild;
+    this.first().before(structure);
+    return this.appendTo(wrapper);
+  };
+  fn.wrap = function (selector) {
+    return this.each(function (i, ele) {
+      var wrapper = cash(selector)[0];
+      cash(ele).wrapAll(!i ? wrapper : wrapper.cloneNode(true));
+    });
+  };
+  fn.wrapInner = function (selector) {
+    return this.each(function (i, ele) {
+      var $ele = cash(ele),
+        contents = $ele.contents();
+      contents.length ? contents.wrapAll(selector) : $ele.append(selector);
+    });
+  };
+  fn.has = function (selector) {
+    var comparator = isString(selector) ? function (i, ele) {
+      return find(selector, ele).length;
+    } : function (i, ele) {
+      return ele.contains(selector);
+    };
+    return this.filter(comparator);
+  };
+  fn.is = function (comparator) {
+    var compare = getCompareFunction(comparator);
+    return some.call(this, function (ele, i) {
+      return compare.call(ele, i, ele);
+    });
+  };
+  fn.next = function (comparator, _all) {
+    return filtered(cash(unique(pluck(this, 'nextElementSibling', _all))), comparator);
+  };
+  fn.nextAll = function (comparator) {
+    return this.next(comparator, true);
+  };
+  fn.not = function (comparator) {
+    var compare = getCompareFunction(comparator);
+    return this.filter(function (i, ele) {
+      return !compare.call(ele, i, ele);
+    });
+  };
+  fn.parent = function (comparator) {
+    return filtered(cash(unique(pluck(this, 'parentNode'))), comparator);
+  };
+  fn.index = function (selector) {
+    var child = selector ? cash(selector)[0] : this[0],
+      collection = selector ? this : cash(child).parent().children();
+    return indexOf.call(collection, child);
+  };
+  fn.closest = function (comparator) {
+    var filtered = this.filter(comparator);
+    if (filtered.length) return filtered;
+    var $parent = this.parent();
+    if (!$parent.length) return filtered;
+    return $parent.closest(comparator);
+  };
+  fn.parents = function (comparator) {
+    return filtered(cash(unique(pluck(this, 'parentElement', true))), comparator);
+  };
+  fn.prev = function (comparator, _all) {
+    return filtered(cash(unique(pluck(this, 'previousElementSibling', _all))), comparator);
+  };
+  fn.prevAll = function (comparator) {
+    return this.prev(comparator, true);
+  };
+  fn.siblings = function (comparator) {
+    return filtered(cash(unique(pluck(this, function (ele) {
+      return cash(ele).parent().children().not(ele);
+    }))), comparator);
+  };
+
+  function ownKeys$1(e, r) {
+    var t = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+      var o = Object.getOwnPropertySymbols(e);
+      r && (o = o.filter(function (r) {
+        return Object.getOwnPropertyDescriptor(e, r).enumerable;
+      })), t.push.apply(t, o);
+    }
+    return t;
+  }
+  function _objectSpread2$1(e) {
+    for (var r = 1; r < arguments.length; r++) {
+      var t = null != arguments[r] ? arguments[r] : {};
+      r % 2 ? ownKeys$1(Object(t), !0).forEach(function (r) {
+        _defineProperty$1(e, r, t[r]);
+      }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys$1(Object(t)).forEach(function (r) {
+        Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+      });
+    }
+    return e;
+  }
+  function _toPrimitive$1(t, r) {
+    if ("object" != _typeof(t) || !t) return t;
+    var e = t[Symbol.toPrimitive];
+    if (void 0 !== e) {
+      var i = e.call(t, r || "default");
+      if ("object" != _typeof(i)) return i;
+      throw new TypeError("@@toPrimitive must return a primitive value.");
+    }
+    return ("string" === r ? String : Number)(t);
+  }
+  function _toPropertyKey$1(t) {
+    var i = _toPrimitive$1(t, "string");
+    return "symbol" == _typeof(i) ? i : String(i);
+  }
+  function _typeof$1(o) {
+    "@babel/helpers - typeof";
+
+    return _typeof$1 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
+      return typeof o;
+    } : function (o) {
+      return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
+    }, _typeof$1(o);
+  }
+  function _classCallCheck$1(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+  function _defineProperties$1(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, _toPropertyKey$1(descriptor.key), descriptor);
+    }
+  }
+  function _createClass$1(Constructor, protoProps, staticProps) {
+    if (protoProps) _defineProperties$1(Constructor.prototype, protoProps);
+    if (staticProps) _defineProperties$1(Constructor, staticProps);
+    Object.defineProperty(Constructor, "prototype", {
+      writable: false
+    });
+    return Constructor;
+  }
+  function _defineProperty$1(obj, key, value) {
+    key = _toPropertyKey$1(key);
+    if (key in obj) {
+      Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+      });
+    } else {
+      obj[key] = value;
+    }
+    return obj;
+  }
+  function _inherits$1(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function");
+    }
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        writable: true,
+        configurable: true
+      }
+    });
+    Object.defineProperty(subClass, "prototype", {
+      writable: false
+    });
+    if (superClass) _setPrototypeOf$1(subClass, superClass);
+  }
+  function _getPrototypeOf$1(o) {
+    _getPrototypeOf$1 = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) {
+      return o.__proto__ || Object.getPrototypeOf(o);
+    };
+    return _getPrototypeOf$1(o);
+  }
+  function _setPrototypeOf$1(o, p) {
+    _setPrototypeOf$1 = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) {
+      o.__proto__ = p;
+      return o;
+    };
+    return _setPrototypeOf$1(o, p);
+  }
+  function _isNativeReflectConstruct$1() {
+    if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+    if (Reflect.construct.sham) return false;
+    if (typeof Proxy === "function") return true;
+    try {
+      Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+  function _assertThisInitialized$1(self) {
+    if (self === void 0) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
+    return self;
+  }
+  function _possibleConstructorReturn$1(self, call) {
+    if (call && (_typeof(call) === "object" || typeof call === "function")) {
+      return call;
+    } else if (call !== void 0) {
+      throw new TypeError("Derived constructors may only return object or undefined");
+    }
+    return _assertThisInitialized$1(self);
+  }
+  function _createSuper$1(Derived) {
+    var hasNativeReflectConstruct = _isNativeReflectConstruct$1();
+    return function _createSuperInternal() {
+      var Super = _getPrototypeOf$1(Derived),
+        result;
+      if (hasNativeReflectConstruct) {
+        var NewTarget = _getPrototypeOf$1(this).constructor;
+        result = Reflect.construct(Super, arguments, NewTarget);
+      } else {
+        result = Super.apply(this, arguments);
+      }
+      return _possibleConstructorReturn$1(this, result);
+    };
+  }
+  function _superPropBase$1(object, property) {
+    while (!Object.prototype.hasOwnProperty.call(object, property)) {
+      object = _getPrototypeOf$1(object);
+      if (object === null) break;
+    }
+    return object;
+  }
+  function _get$1() {
+    if (typeof Reflect !== "undefined" && Reflect.get) {
+      _get$1 = Reflect.get.bind();
+    } else {
+      _get$1 = function _get(target, property, receiver) {
+        var base = _superPropBase$1(target, property);
+        if (!base) return;
+        var desc = Object.getOwnPropertyDescriptor(base, property);
+        if (desc.get) {
+          return desc.get.call(arguments.length < 3 ? target : receiver);
+        }
+        return desc.value;
+      };
+    }
+    return _get$1.apply(this, arguments);
+  }
+  function _toConsumableArray$1(arr) {
+    return _arrayWithoutHoles$1(arr) || _iterableToArray$1(arr) || _unsupportedIterableToArray$1(arr) || _nonIterableSpread$1();
+  }
+  function _arrayWithoutHoles$1(arr) {
+    if (Array.isArray(arr)) return _arrayLikeToArray$1(arr);
+  }
+  function _iterableToArray$1(iter) {
+    if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
+  }
+  function _unsupportedIterableToArray$1(o, minLen) {
+    if (!o) return;
+    if (typeof o === "string") return _arrayLikeToArray$1(o, minLen);
+    var n = Object.prototype.toString.call(o).slice(8, -1);
+    if (n === "Object" && o.constructor) n = o.constructor.name;
+    if (n === "Map" || n === "Set") return Array.from(o);
+    if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray$1(o, minLen);
+  }
+  function _arrayLikeToArray$1(arr, len) {
+    if (len == null || len > arr.length) len = arr.length;
+    for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
+    return arr2;
+  }
+  function _nonIterableSpread$1() {
+    throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+  }
+  function _createForOfIteratorHelper(o, allowArrayLike) {
+    var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"];
+    if (!it) {
+      if (Array.isArray(o) || (it = _unsupportedIterableToArray$1(o)) || allowArrayLike && o && typeof o.length === "number") {
+        if (it) o = it;
+        var i = 0;
+        var F = function F() {};
+        return {
+          s: F,
+          n: function n() {
+            if (i >= o.length) return {
+              done: true
+            };
+            return {
+              done: false,
+              value: o[i++]
+            };
+          },
+          e: function e(_e) {
+            throw _e;
+          },
+          f: F
+        };
+      }
+      throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+    }
+    var normalCompletion = true,
+      didErr = false,
+      err;
+    return {
+      s: function s() {
+        it = it.call(o);
+      },
+      n: function n() {
+        var step = it.next();
+        normalCompletion = step.done;
+        return step;
+      },
+      e: function e(_e2) {
+        didErr = true;
+        err = _e2;
+      },
+      f: function f() {
+        try {
+          if (!normalCompletion && it.return != null) it.return();
+        } finally {
+          if (didErr) throw err;
+        }
+      }
+    };
+  }
+
+  // tslint:disable variable-name ban-types no-empty
+  var levels = ['error', 'warn', 'info', 'debug', 'trace'];
+  var Log = /*#__PURE__*/function () {
+    function Log() {
+      var prefix = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+      var level = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+      _classCallCheck$1(this, Log);
+      this.console = window.console;
+      this.level = level;
+      this.prefix = prefix;
+      this.buildLogFunctions();
+    }
+    _createClass$1(Log, [{
+      key: "shouldLog",
+      value: function shouldLog(level) {
+        return level <= this.level;
+      }
+      /**
+       * Sets the logging level
+       *
+       * @param level logging level to change the logger into
+       */
+    }, {
+      key: "setLoggingLevel",
+      value: function setLoggingLevel(level) {
+        this.level = typeof level === 'string' ? levels.indexOf(level.toLowerCase()) + 1 : level || 0 /* NONE */;
+        this.buildLogFunctions();
+      }
+    }, {
+      key: "getLoggingLevel",
+      value: function getLoggingLevel() {
+        return this.level;
+      }
+      /**
+       *
+       * sets the logging level so that all log lines will be logged with as such
+       *
+       * `[INFO]({PREFIX}): ...`
+       *
+       * @param {string} prefix logging prefix
+       */
+    }, {
+      key: "setPrefix",
+      value: function setPrefix(prefix) {
+        this.prefix = prefix;
+        this.buildLogFunctions();
+      }
+    }, {
+      key: "getPrefix",
+      value: function getPrefix() {
+        return this.prefix;
+      }
+    }, {
+      key: "buildLogFunctions",
+      value: function buildLogFunctions() {
+        var _this = this;
+        levels.forEach(function (value, i) {
+          var level = levels[i];
+          _this[level] = _this.shouldLog(i + 1) ? _this.getLogFn(level) : function () {};
+        });
+      }
+    }, {
+      key: "getLogFn",
+      value: function getLogFn(consoleMethod) {
+        return Function.prototype.bind.call(this.console.log, this.console, "[".concat(consoleMethod.toUpperCase(), "]").concat(this.prefix ? '(' + this.prefix + ')' : '', ":"));
+      }
+    }]);
+    return Log;
+  }();
+  function setLoggingLevel(level) {
+    Logger.setLoggingLevel(level);
+  }
+  function getLoggingLevel() {
+    return Logger.getLoggingLevel();
+  }
+  var Logger = new Log();
+  var CustomEvents;
+  (function (CustomEvents) {
+    CustomEvents["OnEventSend"] = "interactions:onEventSend";
+    CustomEvents["OnBeforeEventSend"] = "interactions:onBeforeEventSend";
+    CustomEvents["OnException"] = "interactions:onException";
+    CustomEvents["OnPageMatchStatusUpdated"] = "interactions:onPageMatchStatusUpdated";
+    CustomEvents["OnInit"] = "interactions:onInit";
+    CustomEvents["OnInitSitemap"] = "interactions:onInitSitemap";
+    CustomEvents["OnShutDown"] = "interactions:onShutDown";
+    CustomEvents["OnSetAnonymousId"] = "interactions:onSetAnonymousId";
+    CustomEvents["OnResetAnonymousId"] = "interactions:onResetAnonymousId";
+    CustomEvents["OnClearPersistedIdentities"] = "interactions:onClearPersistedIdentities";
+    CustomEvents["OnClearCookie"] = "interactions:onClearCookie";
+    CustomEvents["OnConsentRevoke"] = "interactions:onConsentRevoke";
+    CustomEvents["OnBeforeInit"] = "interactions:onBeforeInit";
+  })(CustomEvents || (CustomEvents = {}));
+  // Sitemap re-init catalog rejection
+  var SITEMAP_REINIT = "sitemap_reinit";
+  // Channel
+  var DEFAULT_CHANNEL = "Web";
+  var IDENTITY_COOKIE_PREFIX = '_sfid';
+  var STORAGE_INFO = {
+    anonymousId: {
+      ids: {
+        // No local storage ID for visitor cookie
+      },
+      timeoutDays: 730 // 2 years
+    }
+  };
+  function sha1(r) {
+    var o,
+      e,
+      t,
+      f,
+      n,
+      a = [],
+      c = [e = 1732584193, t = 4023233417, ~e, ~t, 3285377520],
+      u = [],
+      d = unescape(encodeURI(r)) + "",
+      g = d.length;
+    for (u[r = --g / 4 + 2 | 15] = 8 * g; ~g;) u[g >> 2] |= d.charCodeAt(g) << 8 * ~g--;
+    for (o = g = 0; o < r; o += 16) {
+      for (e = c; g < 80; e = [e[4] + (a[g] = g < 16 ? ~~u[o + g] : 2 * d | d < 0) + 1518500249 + [t & f | ~t & n, d = 341275144 + (t ^ f ^ n), 882459459 + (t & f | t & n | f & n), d + 1535694389][g++ / 5 >> 2] + ((d = e[0]) << 5 | d >>> 27), d, t << 30 | t >>> 2, f, n]) d = a[g - 3] ^ a[g - 8] ^ a[g - 14] ^ a[g - 16], t = e[1], f = e[2], n = e[3];
+      for (g = 5; g;) c[--g] += e[g];
+    }
+    for (d = ""; g < 40;) d += (c[g >> 3] >> 4 * (7 - g++) & 15).toString(16);
+    return d;
+  }
+
+  // XXX: this is a workaround for how typescript/jest both import the sha1 package differently
+  //
+  //      here's the situation - the sha1 package contains both an ES6 module (index.mjs) and a CommonJS
+  //      module (index.js) which leads to the following behaviors:
+  //      * typescript compilation - the MJS version is resolved which uses `export default sha1`
+  //      * jest transformation - the CJS version is resolved which uses `module.exports = sha1`
+  //
+  //      i'm not sure if this can be worked around via config or it's just a weird edge case around
+  //      the transition towards ES6 compliant support in libraries.
+  var sha1$1 = sha1.default ? sha1.default : sha1;
+
+  /**
+   * A sha1 of the current account, dataset and cookieDomainHash joined with periods
+   */
+  var cookieHash;
+  var cookieDomain = window.location.hostname;
+  var generateCookieDomainHash = function generateCookieDomainHash() {
+    return sha1$1(cookieDomain + '/').slice(0, 4); // 4 hexits = 16 bits
+  };
+  // See convertMcisVisitorToSalesforceIdentity in MCIS module
+  var getCookieDomain = function getCookieDomain() {
+    return cookieDomain;
+  };
+  var setCookieDomain = function setCookieDomain(domain) {
+    cookieDomain = domain;
+    setCookieHash();
+  };
+  var setCookieHash = function setCookieHash() {
+    cookieHash = sha1$1("".concat(generateCookieDomainHash())).slice(0, 4);
+  };
+  var getCookieName = function getCookieName() {
+    return "".concat(IDENTITY_COOKIE_PREFIX, "_").concat(cookieHash);
+  };
+  var secureCookie;
+  // jsCookie is a vanilla javascript library, so we set the type definitions for js-cookie 2.2 from '@types/js-cookie'
+  var Cookie = js_cookie;
+  document.addEventListener(CustomEvents.OnClearCookie, function (event) {
+    var options = event.detail && event.detail.options || {};
+    if (options.domain) {
+      setCookieDomain(event.detail.options.domain);
+    }
+    remove(_objectSpread2$1({
+      domain: getCookieDomain()
+    }, options));
+  });
+  var read = function read() {
+    return Cookie.getJSON(getCookieName());
+  };
+  var write = function write(cookieValue, daysToExpire) {
+    if (secureCookie) {
+      Cookie.set(getCookieName(), cookieValue, {
+        expires: daysToExpire,
+        domain: getCookieDomain(),
+        secure: true
+      });
+    } else {
+      Cookie.set(getCookieName(), cookieValue, {
+        expires: daysToExpire,
+        domain: getCookieDomain()
+      });
+    }
+    if (!Cookie.get(getCookieName())) {
+      Logger.warn("Web SDK cookie (_sfid) could not be set. This is possibly due to a restricted top level domain. See https://publicsuffix.org/learn/ for more information.");
+    }
+  };
+  var remove = function remove(options) {
+    Cookie.remove(getCookieName(), options);
+  };
+  var writeIdentityCookie = function writeIdentityCookie(identityCookie) {
+    Cookies.write(identityCookie, STORAGE_INFO.anonymousId.timeoutDays);
+  };
+  var writeAnonymousIdToCookie = function writeAnonymousIdToCookie(anonymousId) {
+    writeIdentityCookie(_objectSpread2$1(_objectSpread2$1({}, read()), {}, {
+      anonymousId: anonymousId
+    }));
+  };
+  var writeConsentsToCookie = function writeConsentsToCookie(consents) {
+    writeIdentityCookie(_objectSpread2$1(_objectSpread2$1({}, read()), {}, {
+      consents: consents
+    }));
+  };
+  var setSecureAttributeOnCookie = function setSecureAttributeOnCookie(setSecureCookieAttribute) {
+    secureCookie = setSecureCookieAttribute;
+  };
+  var Cookies = {
+    read: read,
+    write: write,
+    remove: remove
+  };
+
+  // The only thing we have to fear is fear itself, and:
+  var spiders = [/bot/i, /spider/i, /facebookexternalhit/i, /simplepie/i, /yahooseeker/i, /embedly/i, /quora link preview/i, /outbrain/i, /vkshare/i, /monit/i, /Pingability/i, /Monitoring/i, /WinHttpRequest/i, /Apache-HttpClient/i, /getprismatic.com/i, /python-requests/i, /Twurly/i, /yandex/i, /browserproxy/i, /crawler/i, /Qwantify/i, /Yahoo! Slurp/i, /pinterest/i, /Tumblr\/14.0.835.186/i, /Tumblr Agent 14.0/i];
+  var isSpider = function isSpider(ua) {
+    return spiders.some(function (spider) {
+      return spider.test(ua);
+    });
+  };
+  var userAgentIsRobot = function userAgentIsRobot() {
+    return isSpider(getUserAgent());
+  };
+  var getUserAgent = function getUserAgent() {
+    return window.navigator.userAgent || '';
+  };
+  var getNavigatorPlatform = function getNavigatorPlatform() {
+    return window.navigator.platform || '';
+  };
+  var isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 && navigator.userAgent && navigator.userAgent.indexOf('CriOS') == -1 && navigator.userAgent.indexOf('FxiOS') == -1;
+
+  /* resolved locally */
+  /**
+   * generateUuid
+   * @return {String} a pseudo-unique ID to fingerprint a user.
+   */
+  function generateUuid() {
+    var dateTime = new Date().getTime;
+    var raw = getUserAgent() + getNavigatorPlatform() + dateTime + JSON.stringify({}) + Math.random();
+    return sha1$1(raw).slice(0, 16);
+  }
+
+  // TODO: Any good reason to have it be an object with an ID?
+  // export interface AnonymousIdentity {
+  //     id?: string;
+  // }
+  var anonymousId = "";
+  document.addEventListener(CustomEvents.OnResetAnonymousId, function (event) {
+    var options = event.detail && event.detail.options || {};
+    if (options.domain) {
+      setCookieDomain(options.domain);
+    }
+    Cookies.remove(_objectSpread2$1({
+      domain: getCookieDomain()
+    }, options));
+    loadAnonymousIdentity();
+  });
+  document.addEventListener(CustomEvents.OnSetAnonymousId, function (event) {
+    if (event.detail && event.detail.newAnonymousId) {
+      writeAnonymousIdToCookie(event.detail.newAnonymousId);
+    }
+  });
+  var getAnonymousId = function getAnonymousId() {
+    return anonymousId;
+  };
+  var setAnonymousId = function setAnonymousId(newAnonymousId) {
+    anonymousId = newAnonymousId;
+    if (newAnonymousId) {
+      document.dispatchEvent(new CustomEvent(CustomEvents.OnSetAnonymousId, {
+        detail: {
+          newAnonymousId: newAnonymousId
+        }
+      }));
+    } else {
+      Logger.warn('Attempted to setAnonymousId but not parameter is undefined');
+    }
+  };
+  var loadAnonymousIdentity = function loadAnonymousIdentity() {
+    if (!identityCookieExists()) {
+      setAnonymousId(generateUuid());
+      Logger.debug("Created new anonymous identity record. anonymousId: ".concat(getAnonymousId()));
+    } else {
+      var identityCookie = Cookies.read();
+      anonymousId = identityCookie.anonymousId;
+      // rewrite cookie to reset TTL and potential secure cookie attribute
+      setAnonymousId(anonymousId);
+      Logger.debug("Loaded anonymous identity record from cookie: ".concat(JSON.stringify(getAnonymousId())));
+    }
+    return getAnonymousId();
+  };
+  var identityCookieExists = function identityCookieExists() {
+    var identityCookie = Cookies.read();
+    return !!(identityCookie && _typeof$1(identityCookie) === "object" && Object.keys(identityCookie).length > 0);
+  };
+  var Signal = /*#__PURE__*/function () {
+    function Signal() {
+      _classCallCheck$1(this, Signal);
+      this.listeners = [];
+    }
+    _createClass$1(Signal, [{
+      key: "on",
+      value: function on(listener) {
+        var _this = this;
+        (this.listeners = this.listeners || []).push(listener);
+        return function () {
+          _this.listeners = _this.listeners.filter(function (i) {
+            return i !== listener;
+          });
+        };
+      }
+    }, {
+      key: "once",
+      value: function once(listener) {
+        var _this2 = this;
+        return this.on(function () {
+          _this2.unbindAll();
+          try {
+            for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+              args[_key] = arguments[_key];
+            }
+            listener.apply(_this2, args);
+          } catch (e) {
+            Logger.error('Signal listener callback error: ' + e);
+          }
+        });
+      }
+    }, {
+      key: "emit",
+      value: function emit() {
+        var _this3 = this;
+        for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+          args[_key2] = arguments[_key2];
+        }
+        this.listeners.length !== 0 && this.listeners.forEach(function (listener) {
+          try {
+            listener.apply(_this3, args);
+          } catch (e) {
+            Logger.error('Signal listener callback error: ' + e);
+          }
+        });
+      }
+    }, {
+      key: "unbindAll",
+      value: function unbindAll() {
+        this.listeners = [];
+      }
+    }]);
+    return Signal;
+  }();
+  var unbindMySignals = function unbindMySignals(typeWithSignals) {
+    Logger.debug('Unbinding all signals for type: ', typeWithSignals);
+    Object.keys(typeWithSignals).forEach(function (signal) {
+      if (typeWithSignals[signal].unbindAll) {
+        typeWithSignals[signal].unbindAll();
+      }
+    });
+  };
+  var Signals = /*#__PURE__*/_createClass$1(function Signals() {
+    _classCallCheck$1(this, Signals);
+  });
+  Signals.onEventSend = new Signal();
+  Signals.onFireException = new Signal();
+  Signals.onPageMatchStatusUpdated = new Signal();
+  Signals.onInitSitemap = new Signal();
+  Signals.unbindAll = function () {
+    unbindMySignals(Signals);
+  };
+  var sitemapState = {
+    result: {
+      currentPage: null,
+      matchedConfig: null,
+      matchStatus: null
+    },
+    config: {
+      pageTypes: []
+    }
+  };
+  var currentKey = null;
+  var getSitemapConfig = function getSitemapConfig() {
+    return sitemapState.config;
+  };
+  var getSitemapResult = function getSitemapResult() {
+    return sitemapState.result;
+  };
+  var getCurrentSitemapKey = function getCurrentSitemapKey() {
+    return currentKey;
+  };
+  var setCurrentSitemapKey = function setCurrentSitemapKey(key) {
+    currentKey = key;
+  };
+  var MatchStatus;
+  (function (MatchStatus) {
+    MatchStatus["Pending"] = "pending";
+    MatchStatus["Running"] = "running";
+    MatchStatus["Selected"] = "selected";
+    MatchStatus["Matched"] = "matched";
+    MatchStatus["Rejected"] = "rejected";
+  })(MatchStatus || (MatchStatus = {}));
+  var matchPageConfig = function matchPageConfig(pageConfigs) {
+    return new Promise(function (resolve, reject) {
+      var defaultPageConfig = sitemapState.config.pageTypeDefault;
+      if (defaultPageConfig) {
+        setDefaultPageConfigToPending(defaultPageConfig);
+      }
+      if (defaultPageConfig && !pageConfigs.length) {
+        selectPageMatchStatus(defaultPageConfig);
+        resolve(defaultPageConfig);
+        return;
+      }
+      setPageConfigsToPending(pageConfigs);
+      pageConfigs.map(function (pageConfig) {
+        isPageMatch(pageConfig).then(function (isMatch) {
+          if (isMatch) {
+            if (defaultPageConfig) {
+              rejectPageMatchStatus(defaultPageConfig);
+            }
+            selectPageMatchStatus(pageConfig);
+            resolve(pageConfig);
+          } else {
+            rejectPageMatchStatus(pageConfig);
+            if (!unresolvedPageMatchExists(pageConfigs)) {
+              if (defaultPageConfig) {
+                selectPageMatchStatus(defaultPageConfig);
+                resolve(defaultPageConfig);
+              } else {
+                reject("No matching page found");
+              }
+            }
+          }
+        }).catch(function (e) {
+          if (e !== SITEMAP_REINIT) Signals.onFireException.emit(new Error("isMatch failed while evaluating the ".concat(pageConfig.name, " page config")), 'Site-wide Javascript');
+        });
+      });
+    });
+  };
+  var removeOutstandingPageMatchResolvers = function removeOutstandingPageMatchResolvers() {
+    var state = sitemapState;
+    if (state.result.matchStatus) {
+      state.result.matchStatus.forEach(function (s) {
+        if (s.status === MatchStatus.Running) {
+          s._reject(SITEMAP_REINIT);
+        }
+      });
+      sitemapState.result.matchStatus = [];
+    }
+    Signals.onPageMatchStatusUpdated.emit(sitemapState.result.matchStatus);
+  };
+  var setPageConfigsToPending = function setPageConfigsToPending(pageConfigs) {
+    pageConfigs.forEach(function (config) {
+      handleUpdateResultMatchStatus({
+        pageName: config.name,
+        status: MatchStatus.Pending
+      });
+    });
+  };
+  var setDefaultPageConfigToPending = function setDefaultPageConfigToPending(defaultPageConfig) {
+    handleUpdateResultMatchStatus({
+      pageName: defaultPageConfig.name,
+      status: MatchStatus.Pending
+    });
+  };
+  var selectPageMatchStatus = function selectPageMatchStatus(pageConfig) {
+    handleUpdateResultMatchStatus({
+      pageName: pageConfig.name,
+      endTime: Date.now(),
+      status: sitemapState.result.matchStatus.find(function (s) {
+        return s.status === MatchStatus.Selected;
+      }) ? MatchStatus.Matched : MatchStatus.Selected
+    });
+  };
+  var rejectPageMatchStatus = function rejectPageMatchStatus(pageConfig) {
+    handleUpdateResultMatchStatus({
+      pageName: pageConfig.name,
+      status: MatchStatus.Rejected,
+      endTime: Date.now()
+    });
+  };
+  var unresolvedPageMatchExists = function unresolvedPageMatchExists(pageConfigs) {
+    var unresolvedMatches = sitemapState.result.matchStatus.filter(function (pageConfig) {
+      return pageConfig.status === MatchStatus.Rejected;
+    }, 0).length;
+    return unresolvedMatches < pageConfigs.length;
+  };
+  var isPageMatch = function isPageMatch(pageConfig) {
+    return new Promise(function (resolve, reject) {
+      handleUpdateResultMatchStatus({
+        pageName: pageConfig.name,
+        status: MatchStatus.Running,
+        startTime: Date.now(),
+        _reject: reject
+      });
+      if (typeof pageConfig.isMatch === 'function') {
+        var funcValue = pageConfig.isMatch();
+        if (_typeof$1(funcValue) === 'object') {
+          funcValue.then(function (isMatch) {
+            resolve(isMatch);
+          }).catch(function () {
+            // TODO: log this, do anything else?
+          });
+        } else {
+          resolve(funcValue);
+        }
+      } else {
+        Signals.onFireException.emit(new Error("isMatch failed while evaluating the ".concat(pageConfig.name, " page config. isMatch must be a function.")), 'Site-wide Javascript');
+      }
+    });
+  };
+  var handleUpdateResultMatchStatus = function handleUpdateResultMatchStatus(matchStatus) {
+    sitemapState.result.matchStatus = [].concat(_toConsumableArray$1(sitemapState.result.matchStatus || []), [matchStatus]);
+    Signals.onPageMatchStatusUpdated.emit(sitemapState.result.matchStatus);
+  };
+
+  /*
+   * Copyright (C) 2010-2019 Evergage, Inc.
+   * All rights reserved.
+   */
+  var CatalogObjectInteractionName;
+  (function (CatalogObjectInteractionName) {
+    CatalogObjectInteractionName["ViewCatalogObject"] = "View Catalog Object";
+    CatalogObjectInteractionName["ViewCatalogObjectDetail"] = "View Catalog Object Detail";
+    CatalogObjectInteractionName["QuickViewCatalogObject"] = "Quick View Catalog Object";
+    CatalogObjectInteractionName["ShareCatalogObject"] = "Share Catalog Object";
+    CatalogObjectInteractionName["ReviewCatalogObject"] = "Review Catalog Object";
+    CatalogObjectInteractionName["CommentCatalogObject"] = "Comment Catalog Object";
+    CatalogObjectInteractionName["FavoriteCatalogObject"] = "Favorite Catalog Object";
+  })(CatalogObjectInteractionName || (CatalogObjectInteractionName = {}));
+  /* CART */
+  var CartInteractionName;
+  (function (CartInteractionName) {
+    CartInteractionName["AddToCart"] = "Add To Cart";
+    CartInteractionName["RemoveFromCart"] = "Remove From Cart";
+    CartInteractionName["ReplaceCart"] = "Replace Cart";
+  })(CartInteractionName || (CartInteractionName = {}));
+  var OrderInteractionName;
+  (function (OrderInteractionName) {
+    OrderInteractionName["Purchase"] = "Purchase";
+    OrderInteractionName["Preorder"] = "Preorder";
+    OrderInteractionName["Cancel"] = "Cancel";
+    OrderInteractionName["Ship"] = "Ship";
+    OrderInteractionName["Deliver"] = "Deliver";
+    OrderInteractionName["Return"] = "Return";
+    OrderInteractionName["Exchange"] = "Exchange";
+  })(OrderInteractionName || (OrderInteractionName = {}));
+  var MetadataUpdateInteractionName;
+  (function (MetadataUpdateInteractionName) {
+    MetadataUpdateInteractionName["MetadataUpdate"] = "MetadataUpdate";
+  })(MetadataUpdateInteractionName || (MetadataUpdateInteractionName = {}));
+  var ConsentPurpose;
+  (function (ConsentPurpose) {
+    ConsentPurpose["Tracking"] = "Tracking";
+  })(ConsentPurpose || (ConsentPurpose = {}));
+
+  (function (ConsentStatus) {
+    ConsentStatus["OptIn"] = "Opt In";
+    ConsentStatus["OptOut"] = "Opt Out";
+  })(exports.ConsentStatus || (exports.ConsentStatus = {}));
+
+  /**
+   *
+   * #### Basic usage example:
+   * ```javascript
+   * try {
+   *     // do something
+   * } catch(e) {
+   *     SalesforceInteractions.sendException(e, "Login");
+   * }
+   * ```
+   *
+   *
+   * @param exception An Error object for the exception
+   * @param errorSection A tag for categorizing the error
+   * @param dontLogException Whether to send but silently not log the exception
+   *
+   */
+  var sendException = function sendException(exception, errorSection, dontLogException) {
+    Signals.onFireException.emit(exception, errorSection);
+    Logger.warn('sendException', {
+      event: event,
+      errorSection: errorSection
+    });
+  };
+  var currentConsents = [];
+  var getConsents = function getConsents() {
+    return currentConsents;
+  };
+  var findCurrentConsent = function findCurrentConsent(consentToFind) {
+    return currentConsents.find(function (currentConsent) {
+      return consentToFind.purpose == currentConsent.consent.purpose;
+    });
+  };
+  var updateConsents = function updateConsents(consents) {
+    handleConsentsUpdate(consents, true);
+  };
+  var handleConsentsUpdate = function handleConsentsUpdate(consents, sendRevoke) {
+    if (Array.isArray(consents)) {
+      consents.forEach(function (c) {
+        handleSingleConsent(c, sendRevoke);
+      });
+    } else {
+      handleSingleConsent(consents, sendRevoke);
+    }
+    writeConsentsToCookie(currentConsents);
+  };
+  var handleSingleConsent = function handleSingleConsent(consent, sendRevoke) {
+    if (!validateConsent(consent)) {
+      return;
+    }
+    var foundConsent = findCurrentConsent(consent);
+    if (foundConsent) {
+      handleExistingConsent(foundConsent, consent, sendRevoke);
+    } else {
+      handleNewConsent(consent, sendRevoke);
+    }
+  };
+  var handleExistingConsent = function handleExistingConsent(currentConsent, newConsent, sendRevoke) {
+    var preUpdateStatus = currentConsent.consent.status;
+    if (currentConsent.consent.status != newConsent.status || currentConsent.consent.provider != newConsent.provider) {
+      currentConsent.consent = newConsent;
+      currentConsent.lastUpdateTime = new Date().toISOString();
+    }
+    if (sendRevoke && preUpdateStatus == exports.ConsentStatus.OptIn && newConsent.status == exports.ConsentStatus.OptOut) {
+      revokeConsent(currentConsent);
+    }
+  };
+  var handleNewConsent = function handleNewConsent(newConsent, sendRevoke) {
+    var consentToStore = {
+      consent: newConsent,
+      lastUpdateTime: new Date().toISOString()
+    };
+    currentConsents.push(consentToStore);
+    if (sendRevoke && consentToStore.consent.status == exports.ConsentStatus.OptOut) {
+      revokeConsent(consentToStore);
+    }
+  };
+  var validateConsent = function validateConsent(consent) {
+    if (consent && _typeof$1(consent) == "object" && consent.purpose && consent.provider && consent.status) {
+      return true;
+    } else {
+      sendException(new Error("Invalid consent, check that consent is a valid object and all fields are defined: ".concat(JSON.stringify(consent))), "Salesforce Web SDK");
+      return false;
+    }
+  };
+  var revokeConsent = function revokeConsent(revokedConsent) {
+    document.dispatchEvent(new CustomEvent(CustomEvents.OnConsentRevoke, {
+      detail: {
+        revokedConsent: revokedConsent
+      }
+    }));
+  };
+  var setConsentLastSentTimes = function setConsentLastSentTimes(consents) {
+    var date = new Date().toISOString();
+    consents.forEach(function (consent) {
+      var foundConsent = findCurrentConsent(consent);
+      foundConsent.lastSentTime = date;
+    });
+    writeConsentsToCookie(currentConsents);
+  };
+  // do not update consents, and potentially send a consent revoke event, unless
+  // an opt-in consent exists in either the consents passed into init or the consents stored in the cookie
+  var resolveConsents = function resolveConsents(consents) {
+    loadConsentFromCookie();
+    Promise.resolve(consents).then(function (resolvedConsents) {
+      if (resolvedConsents && resolvedConsents.length > 0) {
+        updateConsents(resolvedConsents);
+      }
+    });
+  };
+  var loadConsentFromCookie = function loadConsentFromCookie() {
+    var identityCookie = Cookies.read();
+    if (identityCookie) {
+      currentConsents = identityCookie.consents || [];
+    }
+  };
+  var consentOptInExists = function consentOptInExists(consents) {
+    return consents.findIndex(function (consent) {
+      return consent.status == exports.ConsentStatus.OptIn;
+    }) >= 0;
+  };
+  var currentConsentOptInExists = function currentConsentOptInExists() {
+    return consentOptInExists(currentConsents.map(function (currentConsent) {
+      return currentConsent.consent;
+    }));
+  };
+  var prepareEvent = function prepareEvent(event) {
+    prepareSourcePayload(event);
+    prepareUserPayload(event);
+    prepareConsentPayload(event);
+  };
+  var prepareSourcePayload = function prepareSourcePayload(event) {
+    event.source = event.source || {};
+    event.source = _objectSpread2$1(_objectSpread2$1({}, event.source || {}), {}, {
+      pageType: event.source.pageType || getPageTypeFromSitemapState(),
+      url: event.source.url || window.location.href,
+      urlReferrer: event.source.urlReferrer || document.referrer,
+      channel: event.source.channel || DEFAULT_CHANNEL
+    });
+  };
+  var prepareUserPayload = function prepareUserPayload(event) {
+    event.user = _objectSpread2$1(_objectSpread2$1({}, event.user || {}), {}, {
+      anonymousId: getAnonymousId()
+    });
+  };
+  var prepareConsentPayload = function prepareConsentPayload(event) {
+    if (event.consents) {
+      handleConsentsUpdate(event.consents, false);
+    }
+    event.consents = getConsents().filter(function (consent) {
+      return !consent.lastSentTime || new Date(consent.lastUpdateTime) >= new Date(consent.lastSentTime);
+    }).map(function (consentWithMetadata) {
+      return consentWithMetadata.consent;
+    });
+    setConsentLastSentTimes(event.consents);
+  };
+  var getPageTypeFromSitemapState = function getPageTypeFromSitemapState() {
+    if (sitemapState.result.currentPage && sitemapState.result.currentPage.source) {
+      return sitemapState.result.currentPage.source.pageType;
+    }
+  };
+  document.addEventListener(CustomEvents.OnConsentRevoke, function (event) {
+    if (event.detail && event.detail.revokedConsent) {
+      var consentRevokeEvent = {
+        interaction: {
+          name: MetadataUpdateInteractionName.MetadataUpdate
+        },
+        consents: [event.detail.revokedConsent.consent]
+      };
+      sendConsentRevokeEvent(consentRevokeEvent);
+    }
+  });
+  var sendEvent = function sendEvent(event) {
+    return sendEventWithConsentCheck(event, currentConsentOptInExists).catch(function (error) {
+      Logger.error(error.message);
+      Signals.onFireException.emit(error, 'Site-wide JavaScript');
+      return event;
+    });
+  };
+  var sendConsentRevokeEvent = function sendConsentRevokeEvent(event) {
+    sendEventWithConsentCheck(event, function () {
+      return true;
+    }).then(function () {
+      return Logger.debug('Consent revoked');
+    }, function (error) {
+      return Signals.onFireException.emit(error, 'Site-wide JavaScript');
+    });
+  };
+  var sendEventWithConsentCheck = function sendEventWithConsentCheck(event, consentChecker) {
+    event = handleOnActionEvent(event);
+    prepareEvent(event);
+    if (consentChecker && !consentChecker()) {
+      Logger.debug('No opt-in consents provided. Event will still be dispatched.');
+    }
+    Logger.debug('Sent event: ', event);
+    Signals.onEventSend.emit(event);
+    return Promise.resolve(event);
+  };
+  var handleOnActionEvent = function handleOnActionEvent(event) {
+    event = matchedConfigOnActionEvent(event);
+    event = globalOnActionEvent(event);
+    return event;
+  };
+  var matchedConfigOnActionEvent = function matchedConfigOnActionEvent(event) {
+    var matchedConfig = sitemapState.result.matchedConfig;
+    try {
+      event = matchedConfig && matchedConfig.onActionEvent ? matchedConfig.onActionEvent(event) : event;
+      if (_typeof$1(event) === 'object') {
+        return event;
+      } else {
+        Signals.onFireException.emit(new Error("onActionEvent failed for the ".concat(sitemapState.result.matchedConfig.name, " page config. Must return an object or null.")), 'Site-wide Javascript');
+      }
+    } catch (e) {
+      Signals.onFireException.emit(new Error("onActionEvent failed for the ".concat(sitemapState.result.matchedConfig.name, " page config. ").concat(e.message, ".")), 'Site-wide Javascript');
+    }
+  };
+  var globalOnActionEvent = function globalOnActionEvent(event) {
+    var siteMapConfig = sitemapState.config;
+    try {
+      event = siteMapConfig.global && siteMapConfig.global.onActionEvent ? siteMapConfig.global.onActionEvent(event) : event;
+      if (_typeof$1(event) === 'object') {
+        return event;
+      } else {
+        Signals.onFireException.emit(new Error("onActionEvent failed for the global page config. Must return an object or null."), 'Site-wide Javascript');
+      }
+    } catch (e) {
+      Signals.onFireException.emit(new Error("onActionEvent failed for the global page config. ".concat(e.message, ".")), 'Site-wide Javascript');
+    }
+  };
+  var processInteraction = function processInteraction(pageConfig) {
+    return new Promise(function (resolve, reject) {
+      Signals.onInitSitemap.once(function () {
+        return reject(SITEMAP_REINIT);
+      });
+      var interaction = {
+        name: null
+      };
+      var interactionConfigPromises = [];
+      Object.keys(pageConfig.interaction).forEach(function (key) {
+        var valueFromConfig = pageConfig.interaction[key];
+        var interactionConfigPromise = resolveAndCleanValue(valueFromConfig, key).then(function (resolvedValue) {
+          interaction[key] = resolvedValue;
+        });
+        interactionConfigPromises.push(interactionConfigPromise);
+      });
+      Promise.all(interactionConfigPromises).then(function () {
+        resolve(interaction);
+      }).catch(function (e) {
+        Signals.onFireException.emit(new Error("Catalog object interaction config was rejected"), 'Site-wide Javascript');
+      });
+    });
+  };
+  var resolveAndCleanValue = function resolveAndCleanValue(value, key) {
+    try {
+      setCurrentSitemapKey(key);
+      if (_typeof$1(value) === "object" && !Array.isArray(value) && Object.keys(value).length > 0) {
+        return buildNestedAttributes(value);
+      } else {
+        return Promise.resolve(value).then(function (resolvedNotNestedValue) {
+          return typeof resolvedNotNestedValue === "function" ? resolvedNotNestedValue() : resolvedNotNestedValue;
+        });
+      }
+    } catch (e) {
+      Signals.onFireException.emit(new Error("getValue for ".concat(key, " failed on ").concat(sitemapState.result.matchedConfig.name, " while evaluating custom function. ").concat(e.message, ".")), 'Site-wide Javascript');
+    }
+  };
+  var buildNestedAttributes = function buildNestedAttributes(nestedAttributeConfig) {
+    var nestedAttributes = {};
+    var nestedAttributeKeys = Object.keys(nestedAttributeConfig);
+    var resolvedNestedAttributes = {};
+    nestedAttributeKeys.forEach(function (nestedKey) {
+      var nestedAttributeValue = nestedAttributeConfig[nestedKey];
+      var resolvedNestedAttributeValue = resolveAndCleanValue(nestedAttributeValue, nestedKey);
+      nestedAttributes[nestedKey] = resolvedNestedAttributeValue;
+    });
+    return Promise.all(Object.values(nestedAttributes)).then(function (values) {
+      values.forEach(function (value, index) {
+        var key = nestedAttributeKeys[index];
+        resolvedNestedAttributes[key] = value;
+      });
+      return resolvedNestedAttributes;
+    });
+  };
+  var listenerSearchInterval;
+  var startListenerSearch = function startListenerSearch() {
+    cancelListenerSearch();
+    if (pageHasMissingListeners()) {
+      listenerSearchInterval = setInterval(function () {
+        var updated = false;
+        var intervalTimerStart = new Date().getTime();
+        var listenerState = sitemapState.result.matchedConfig.listeners.map(function (d) {
+          if (d.selectorFound) {
+            return d;
+          } else {
+            var listener = attemptToBindListener(d);
+            updated = listener.selectorFound || updated;
+            return listener;
+          }
+        });
+        if (updated) {
+          Object.assign(sitemapState.result.matchedConfig, _objectSpread2$1(_objectSpread2$1({}, sitemapState.result.matchedConfig), {}, {
+            listeners: listenerState
+          }));
+        }
+        var intervalTimerEnd = new Date().getTime();
+        var intervalRunningTime = intervalTimerEnd - intervalTimerStart;
+        if (intervalRunningTime > 50 || !pageHasMissingListeners()) {
+          cancelListenerSearch();
+        }
+      }, 1000);
+    }
+  };
+  var pageHasMissingListeners = function pageHasMissingListeners() {
+    if (sitemapState.result.matchedConfig) {
+      var listeners = sitemapState.result.matchedConfig.listeners;
+      if (listeners) {
+        return listeners.filter(function (d) {
+          return !d.selectorFound;
+        }).length;
+      } else {
+        return false;
+      }
+    } else {
+      return false;
+    }
+  };
+  var cancelListenerSearch = function cancelListenerSearch() {
+    if (typeof listenerSearchInterval === 'number') {
+      clearInterval(listenerSearchInterval);
+    }
+    listenerSearchInterval = null;
+  };
+  var sendEventWithCallback = function sendEventWithCallback(event, listener) {
+    try {
+      listener.callback(event);
+    } catch (e) {
+      Signals.onFireException.emit(new Error("Listener callback on ".concat(listener.bind, " bound to ").concat(listener.selector, " failed for the ").concat(sitemapState.result.matchedConfig.name, " page config. ").concat(e.message, ".")), 'Site-wide Javascript');
+    }
+  };
+  var attemptToBindListener = function attemptToBindListener(listenerConfig) {
+    var elements = cash(listenerConfig.selector);
+    var listener = _objectSpread2$1(_objectSpread2$1({}, listenerConfig), {}, {
+      selectorFound: elements.length > 0
+    });
+    elements.on(listener.bind, function (event) {
+      sendEventWithCallback(event, listener);
+    });
+    return listener;
+  };
+  var removeCurrentListeners = function removeCurrentListeners() {
+    if (sitemapState.result && sitemapState.result.matchedConfig && sitemapState.result.matchedConfig.listeners) {
+      sitemapState.result.matchedConfig.listeners.forEach(function (listener) {
+        cash(listener.selector).off(listener.bind);
+      });
+    }
+  };
+  var setConfig = function setConfig(config) {
+    config.global = config.global || {};
+    if (_typeof$1(config.global) != "object") {
+      Signals.onFireException.emit(new Error("The global config has a type of ".concat(_typeof$1(config.global), ", but it must be an object")), 'Sitewide Javascript');
+    }
+    Object.assign(sitemapState.config, _objectSpread2$1({}, config));
+    Signals.onInitSitemap.emit(sitemapState.config);
+  };
+  var initSitemap = function initSitemap(siteMapConfig) {
+    run(siteMapConfig);
+    return true;
+  };
+  var build = function build(config) {
+    matchPageConfig(config.pageTypes).then(mergeConfigWithGlobal).then(handleConfig).catch(function (e) {
+      if (e !== SITEMAP_REINIT) Signals.onFireException.emit(new Error("Unhandled exception: ".concat(e)), 'Site-wide Javascript');
+    });
+  };
+  var handleConfig = function handleConfig(pageConfig) {
+    sitemapState.result.matchedConfig = _objectSpread2$1(_objectSpread2$1({}, pageConfig), {}, {
+      listeners: processListeners(pageConfig)
+    });
+    sitemapState.result.currentPage = _objectSpread2$1(_objectSpread2$1({}, sitemapState.result.currentPage || {}), {}, {
+      source: {
+        pageType: pageConfig.name,
+        locale: processLocale(pageConfig)
+      },
+      user: {
+        anonymousId: null // TODO: this gets filled in during sendEvent, a little strange
+      },
+      interaction: null,
+      pageView: true
+    });
+    return pageConfig.interaction ? processInteraction(pageConfig).then(function (interaction) {
+      sitemapState.result.currentPage.interaction = interaction;
+    }) : Promise.resolve();
+  };
+  var processListeners = function processListeners(pageConfig) {
+    return (pageConfig.listeners || []).map(function (listenerConfig) {
+      return attemptToBindListener(listenerConfig);
+    });
+  };
+  var processLocale = function processLocale(pageConfig) {
+    return typeof pageConfig.locale === "function" ? pageConfig.locale() : pageConfig.locale;
+  };
+  var mergeDeep = function mergeDeep() {
+    var isObject = function isObject(obj) {
+      return obj && _typeof$1(obj) === 'object';
+    };
+    for (var _len = arguments.length, objects = new Array(_len), _key = 0; _key < _len; _key++) {
+      objects[_key] = arguments[_key];
+    }
+    return objects.reduce(function (prev, obj) {
+      Object.keys(obj).forEach(function (key) {
+        var pVal = prev[key];
+        var oVal = obj[key];
+        if (Array.isArray(pVal) && Array.isArray(oVal)) {
+          Object.assign(prev, _defineProperty$1({}, key, pVal.concat.apply(pVal, _toConsumableArray$1(oVal))));
+        } else if (isObject(pVal) && isObject(oVal)) {
+          Object.assign(prev, _defineProperty$1({}, key, mergeDeep(pVal, oVal)));
+        } else {
+          Object.assign(prev, _defineProperty$1({}, key, oVal));
+        }
+      });
+      return prev;
+    }, {});
+  };
+  var mergeConfigWithGlobal = function mergeConfigWithGlobal(pageConfig) {
+    var global = sitemapState.config.global || {};
+    var globalOnActionEvent = global.onActionEvent;
+    delete global.onActionEvent;
+    var mergedConfig = mergeDeep(global, pageConfig);
+    global.onActionEvent = globalOnActionEvent;
+    return mergedConfig;
+  };
+  var validatePageConfigs = function validatePageConfigs(siteMapConfig) {
+    try {
+      validatePageTypeConfigs(siteMapConfig.pageTypes);
+      return true;
+    } catch (e) {
+      Signals.onFireException.emit(new Error(e), 'Sitemap');
+      return false;
+    }
+  };
+  var validatePageTypeConfigs = function validatePageTypeConfigs(pageConfigs) {
+    pageConfigs.forEach(function (pageConfig) {
+      if (!pageConfig.name || !pageConfig.isMatch) {
+        throw new Error("All page configs must have a name and isMatch attribute defined");
+      }
+    });
+  };
+  var processResult = function processResult() {
+    var result = sitemapState.result;
+    sendEvent(sitemapState.result.currentPage);
+    sitemapState.result = result;
+  };
+  var run = function run(siteMapConfig) {
+    setConfig(siteMapConfig);
+    removeCurrentListeners();
+    removeOutstandingPageMatchResolvers();
+    cancelListenerSearch();
+    sitemapState.result.currentPage = null;
+    if (!validatePageConfigs(siteMapConfig)) {
+      return;
+    }
+    matchPageConfig(siteMapConfig.pageTypes).then(mergeConfigWithGlobal).then(handleConfig).then(processResult).then(startListenerSearch).catch(function (e) {
+      if (e !== SITEMAP_REINIT) Signals.onFireException.emit(new Error("Unhandled exception: ".concat(e)), 'Site-wide Javascript');
+    });
+  };
+  function listener(bind, selector, callback) {
+    if (typeof callback === "function") {
+      return {
+        bind: bind,
+        selector: selector,
+        callback: callback
+      };
+    } else {
+      return null;
+    }
+  }
+  var fromSelector = function fromSelector(selector, transform) {
+    return function () {
+      if (typeof selector != 'string') {
+        Signals.onFireException.emit(new Error("getValue for ".concat(getCurrentSitemapKey(), " failed on ").concat(sitemapState.result.matchedConfig.name, ". Selector must be a string.")), 'Site-wide Javascript');
+        return null;
+      }
+      var resolvedValue = cash(selector).first().text();
+      resolvedValue = internalTransform(transform, resolvedValue);
+      return resolvedValue;
+    };
+  };
+  var fromSelectorAttribute = function fromSelectorAttribute(selector, attribute, transform) {
+    return function () {
+      if (typeof selector != 'string') {
+        Signals.onFireException.emit(new Error("getValue for ".concat(getCurrentSitemapKey(), " failed on ").concat(sitemapState.result.matchedConfig.name, ". Selector must be a string.")), 'Site-wide Javascript');
+        return null;
+      }
+      if (typeof attribute != 'string') {
+        Signals.onFireException.emit(new Error("getValue for ".concat(getCurrentSitemapKey(), " failed on ").concat(sitemapState.result.matchedConfig.name, ". Attribute must be a string.")), 'Site-wide Javascript');
+        return null;
+      }
+      var resolvedValue = cash(selector).first().attr(attribute);
+      resolvedValue = internalTransform(transform, resolvedValue);
+      return resolvedValue;
+    };
+  };
+  var fromSelectorMultiple = function fromSelectorMultiple(selector, transform) {
+    return function () {
+      if (typeof selector != 'string') {
+        Signals.onFireException.emit(new Error("getValue for ".concat(getCurrentSitemapKey(), " failed on ").concat(sitemapState.result.matchedConfig.name, ". Selector must be a string.")), 'Site-wide Javascript');
+        return null;
+      }
+      var selectedElements = cash(selector);
+      var resolvedValue = selectedElements.get().map(function (elem) {
+        return cash(elem).text();
+      });
+      resolvedValue = internalTransform(transform, resolvedValue);
+      return resolvedValue;
+    };
+  };
+  var fromSelectorAttributeMultiple = function fromSelectorAttributeMultiple(selector, attribute, transform) {
+    return function () {
+      if (typeof selector != 'string') {
+        Signals.onFireException.emit(new Error("getValue for ".concat(getCurrentSitemapKey(), " failed on ").concat(sitemapState.result.matchedConfig.name, ". Selector must be a string.")), 'Site-wide Javascript');
+        return null;
+      }
+      if (typeof attribute != 'string') {
+        Signals.onFireException.emit(new Error("getValue for ".concat(getCurrentSitemapKey(), " failed on ").concat(sitemapState.result.matchedConfig.name, ". Attribute must be a string.")), 'Site-wide Javascript');
+        return null;
+      }
+      var selectedElements = cash(selector);
+      var resolvedValue = selectedElements.get().map(function (elem) {
+        return cash(elem).attr(attribute);
+      });
+      resolvedValue = internalTransform(transform, resolvedValue);
+      return resolvedValue;
+    };
+  };
+  var fromItemProp = function fromItemProp(itemProp, transform) {
+    return function () {
+      var resolvedValue = cash("[itemprop='" + itemProp + "']").first().attr("content");
+      resolvedValue = internalTransform(transform, resolvedValue);
+      return resolvedValue;
+    };
+  };
+  var fromMeta = function fromMeta(metaTag, transform) {
+    return function () {
+      var resolvedValue = cash("meta[name='" + metaTag + "']").first().attr("content") || cash("meta[property='" + metaTag + "']").first().attr("content");
+      resolvedValue = internalTransform(transform, resolvedValue);
+      return resolvedValue;
+    };
+  };
+  var fromWindow = function fromWindow(path, transform) {
+    return function () {
+      var resolvedValue = getValueFromNestedObject(path);
+      resolvedValue = internalTransform(transform, resolvedValue);
+      return resolvedValue;
+    };
+  };
+  var fromJsonLd = function fromJsonLd(path, transform) {
+    return function () {
+      var json = cash("script[type='application/ld+json']").first().text();
+      try {
+        var parsedJson = JSON.parse(json);
+        if (!path) {
+          return internalTransform(transform, parsedJson);
+        } else {
+          var resolvedValue = getValueFromNestedObject(path, parsedJson);
+          return internalTransform(transform, resolvedValue);
+        }
+      } catch (e) {
+        Signals.onFireException.emit(new Error("Parsing JSON-LD for ".concat(getCurrentSitemapKey(), " failed on ").concat(sitemapState.result.matchedConfig.name, ". ").concat(e)), 'Site-wide Javascript');
+      }
+    };
+  };
+  var fromCanonical = function fromCanonical(transform) {
+    return function () {
+      var resolvedValue = cash('link[rel=canonical]').attr("href");
+      resolvedValue = internalTransform(transform, resolvedValue);
+      return resolvedValue;
+    };
+  };
+  var fromHref = function fromHref(transform) {
+    return function () {
+      var resolvedValue = window.location.href;
+      resolvedValue = internalTransform(transform, resolvedValue);
+      return resolvedValue;
+    };
+  };
+  var buildCategoryId = function buildCategoryId(selector, startFrom, ignoreLast, transform) {
+    return function () {
+      var elements = Array.from(cash(selector));
+      if (startFrom) {
+        elements = elements.slice(startFrom);
+      }
+      if (ignoreLast) {
+        elements = elements.slice(0, -1);
+      }
+      var idParts = [];
+      elements.forEach(function (elem) {
+        var idPart = cash(elem).text().trim();
+        if (idPart) {
+          idParts.push(idPart);
+        } else {
+          Signals.onFireException.emit(new Error("buildCategoryId for ".concat(getCurrentSitemapKey(), " failed on ").concat(sitemapState.result.matchedConfig.name, ". A category part is null.")), 'Site-wide Javascript');
+        }
+      });
+      var categoryId = idParts.join('|');
+      categoryId = internalTransform(transform, categoryId);
+      return categoryId;
+    };
+  };
+  var buildCategoryIdAttribute = function buildCategoryIdAttribute(selector, attribute, startFrom, ignoreLast, transform) {
+    return function () {
+      var elements = Array.from(cash(selector));
+      if (startFrom) {
+        elements = elements.slice(startFrom);
+      }
+      if (ignoreLast) {
+        elements = elements.slice(0, -1);
+      }
+      var idParts = [];
+      elements.forEach(function (elem) {
+        var idPart = cash(elem).attr(attribute).trim();
+        if (idPart) {
+          idParts.push(idPart);
+        } else {
+          Signals.onFireException.emit(new Error("buildCategoryId for ".concat(getCurrentSitemapKey(), " failed on ").concat(sitemapState.result.matchedConfig.name, ". A category part is null.")), 'Site-wide Javascript');
+        }
+      });
+      var categoryId = idParts.join('|');
+      categoryId = internalTransform(transform, categoryId);
+      return categoryId;
+    };
+  };
+  var internalTransform = function internalTransform(transformFunc, resolvedValue) {
+    if (transformFunc) {
+      try {
+        return transformFunc(resolvedValue);
+      } catch (e) {
+        Signals.onFireException.emit(new Error("getValue for ".concat(getCurrentSitemapKey(), " failed on ").concat(sitemapState.result.matchedConfig.name, " inside of the custom transform function. ").concat(e)), 'Site-wide Javascript');
+        return null;
+      }
+    }
+    return resolvedValue;
+  };
+  var getValueFromNestedObject = function getValueFromNestedObject(path, obj) {
+    var cur = obj || window;
+    var elems = path.split('.');
+    var match;
+    var _iterator = _createForOfIteratorHelper(elems),
+      _step;
+    try {
+      for (_iterator.s(); !(_step = _iterator.n()).done;) {
+        var elem = _step.value;
+        match = /(\w+)\[([0-9]+)\]/.exec(elem);
+        if (cur[elem]) {
+          cur = cur[elem];
+        } else if (match) {
+          if (cur[match[1]]) {
+            cur = cur[match[1]][parseInt(match[2], 10)];
+            if (!cur) {
+              return null;
+            }
+          }
+        } else {
+          return null;
+        }
+      }
+    } catch (err) {
+      _iterator.e(err);
+    } finally {
+      _iterator.f();
+    }
+    return cur;
+  };
+  var resolvers = {
+    fromSelector: fromSelector,
+    fromSelectorAttribute: fromSelectorAttribute,
+    fromSelectorMultiple: fromSelectorMultiple,
+    fromSelectorAttributeMultiple: fromSelectorAttributeMultiple,
+    fromItemProp: fromItemProp,
+    fromMeta: fromMeta,
+    fromWindow: fromWindow,
+    fromJsonLd: fromJsonLd,
+    fromCanonical: fromCanonical,
+    fromHref: fromHref,
+    buildCategoryId: buildCategoryId,
+    buildCategoryIdAttribute: buildCategoryIdAttribute
+  };
+
+  // tslint:disable variable-name
+  var cashDom = cash;
+  var unbindByIds = {};
+  var bind = function bind(trueFunc) {
+    var bindId = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : Math.random().toString(36).slice(2);
+    var timeout = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 2000;
+    var checkInterval = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 100;
+    if (typeof trueFunc !== "function") return;
+    return new Promise(function (resolve, reject) {
+      var currentRunTime = 0;
+      var interval = setInterval(function () {
+        try {
+          currentRunTime += checkInterval;
+          var resolvedValue = trueFunc();
+          if (resolvedValue) {
+            unbind(bindId);
+            resolve(resolvedValue);
+          } else if (currentRunTime >= timeout) {
+            unbind(bindId);
+            resolve(false);
+          }
+        } catch (e) {
+          unbind(bindId);
+          reject(e);
+        }
+      }, checkInterval);
+      unbindByIds[bindId] = function () {
+        clearInterval(interval);
+      };
+    });
+  };
+  var unbind = function unbind(bindId) {
+    if (!bindId || typeof bindId !== "string" || typeof unbindByIds[bindId] !== "function") return null;
+    unbindByIds[bindId]();
+    delete unbindByIds[bindId];
+  };
+  var getBindings = function getBindings() {
+    return unbindByIds;
+  };
+  var clearBindings = function clearBindings() {
+    for (var id in unbindByIds) {
+      if (unbindByIds.hasOwnProperty(id) && typeof unbindByIds[id] === "function") {
+        unbind(id);
+      }
+    }
+  };
+  var resolveWhenTrue = {
+    bind: bind,
+    unbind: unbind,
+    getBindings: getBindings,
+    clearBindings: clearBindings
+  };
+  var util = {
+    resolveWhenTrue: resolveWhenTrue
+  };
+  var lifecycle = {
+    state: "shutDown" /* SHUT_DOWN */
+  };
+  var getLifecycleState = function getLifecycleState() {
+    return lifecycle.state;
+  };
+  var setLifecycleState = function setLifecycleState(state) {
+    return lifecycle.state = state;
+  };
+  var sdkConfig = {
+    cookieDomain: null,
+    consents: null
+  };
+  var getSdkConfig = function getSdkConfig() {
+    return sdkConfig;
+  };
+  var setSdkConfig = function setSdkConfig(newSdkConfig) {
+    if (newSdkConfig.cookieDomain) {
+      // TODO: change this maybe to event dispatch/listener
+      setCookieDomain(newSdkConfig.cookieDomain);
+    }
+    setCookieHash();
+    sdkConfig = _objectSpread2$1(_objectSpread2$1({}, sdkConfig), newSdkConfig);
+  };
+  var DisplayUtils = function () {
+    var unbindByIds = {};
+    function generateId() {
+      var id = Math.random().toString(36).slice(2);
+      while (unbindByIds[id]) {
+        id = Math.random().toString(36).slice(2);
+      }
+      return id;
+    }
+    function getBindId(providedId, defaultId, useRandomId) {
+      return useRandomId ? generateId() : providedId || defaultId;
+    }
+    function buildBaseMethods(bindId, useRandomId) {
+      return {
+        pageElementLoaded: function pageElementLoaded(targetSelector, observerSelector) {
+          if (typeof observerSelector !== "string" || observerSelector === "") {
+            observerSelector = cashDom("body").length > 0 ? "body" : "html";
+          }
+          if (typeof targetSelector !== "string" || targetSelector === "") {
+            throw new Error("[pageElementLoaded] Invalid arguments");
+          }
+          return new Promise(function (resolve) {
+            var targetElements = cashDom(targetSelector);
+            if (targetElements.length > 0) {
+              resolve(targetElements[0]);
+            } else {
+              var observerNode = cashDom(observerSelector)[0];
+              if (!observerNode) {
+                throw new Error("pageElementLoaded cannot be bound. observerSelector ".concat(observerSelector, " is not on the page"));
+              }
+              var observer = new MutationObserver(function (mutationList, observer) {
+                var _iterator = _createForOfIteratorHelper(mutationList),
+                  _step;
+                try {
+                  for (_iterator.s(); !(_step = _iterator.n()).done;) {
+                    var mutationRecord = _step.value;
+                    if (mutationRecord.addedNodes && mutationRecord.addedNodes.length > 0) {
+                      var _iterator2 = _createForOfIteratorHelper(mutationRecord.addedNodes),
+                        _step2;
+                      try {
+                        for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+                          var addedNode = _step2.value;
+                          var targetElement = cashDom(addedNode).is(targetSelector) ? addedNode : cashDom(addedNode).find(targetSelector).get(0);
+                          if (targetElement) {
+                            if (bindId) {
+                              bindingMethods.unbind(bindId);
+                            } else {
+                              observer.disconnect();
+                            }
+                            resolve(targetElement);
+                            return;
+                          }
+                        }
+                      } catch (err) {
+                        _iterator2.e(err);
+                      } finally {
+                        _iterator2.f();
+                      }
+                    }
+                  }
+                } catch (err) {
+                  _iterator.e(err);
+                } finally {
+                  _iterator.f();
+                }
+              });
+              observer.observe(observerNode, {
+                childList: true,
+                subtree: true
+              });
+            }
+            bindId = getBindId(bindId, "<pageElementLoaded>" + targetSelector, useRandomId);
+            unbindByIds[bindId] = function () {
+              observer && observer.disconnect();
+            };
+          });
+        },
+        pageElementVisible: function pageElementVisible(selector, percentage) {
+          var threshold = percentage || 0;
+          if (typeof selector !== "string" || selector === "" || typeof threshold !== "number" || threshold < 0 || threshold > 1) {
+            throw new Error("[pageElementVisible] Invalid arguments");
+          }
+          return new Promise(function (resolve) {
+            var target = cashDom(selector);
+            var options = {
+              threshold: threshold
+            };
+            var observer = new IntersectionObserver(callbackFn, options);
+            function callbackFn(entries, observer) {
+              for (var i = 0; i < entries.length; i++) {
+                if (entries[i].isIntersecting) {
+                  if (bindId) {
+                    bindingMethods.unbind(bindId);
+                  } else {
+                    observer.disconnect();
+                  }
+                  resolve(entries[i]);
+                  break;
+                }
+              }
+            }
+            observer.observe(target[0]);
+            bindId = getBindId(bindId, "<pageElementVisible>" + selector, useRandomId);
+            unbindByIds[bindId] = function () {
+              observer.disconnect();
+            };
+          });
+        },
+        pageExit: function pageExit(delay) {
+          delay = delay || 0;
+          if (typeof delay !== "number" || delay < 0) {
+            throw new Error("[pageExit] Invalid arguments");
+          }
+          return new Promise(function (resolve) {
+            var $target = cashDom(document);
+            var events = "mousemove";
+            var timer;
+            function onmousemove(e) {
+              clearTimeout(timer);
+              if (e.pageY - window.pageYOffset <= 10) {
+                timer = delay > 0 ? setTimeout(callbackFn.bind(this, e), delay) : callbackFn.call(this, e);
+              }
+            }
+            function callbackFn(e) {
+              if (bindId) {
+                bindingMethods.unbind(bindId);
+              } else {
+                $target.off(events, onmousemove);
+              }
+              clearTimeout(timer);
+              resolve(e);
+            }
+            $target.on(events, onmousemove);
+            bindId = getBindId(bindId, "<pageExit>", useRandomId);
+            unbindByIds[bindId] = function () {
+              $target.off(events, onmousemove);
+            };
+          });
+        },
+        pageInactive: function pageInactive(ms) {
+          if (typeof ms !== "number" || ms <= 0) {
+            throw new Error("[pageInactive] Invalid arguments");
+          }
+          function _pageInactive(ms, state) {
+            var promise = new Promise(function (resolve) {
+              var $target = cashDom(document);
+              var resetEvents = "mousemove click scroll keyup keydown";
+              var idleTimer;
+              function callbackFn(e) {
+                e = e || new Event("pageInactive");
+                if (bindId && !state.isSubscribe) {
+                  bindingMethods.unbind(bindId);
+                } else {
+                  $target.off(resetEvents, resetTimer);
+                }
+                resolve(e);
+              }
+              function resetTimer(e) {
+                clearTimeout(idleTimer);
+                idleTimer = setTimeout(callbackFn.bind(this, e), ms);
+              }
+              resetTimer();
+              $target.on(resetEvents, resetTimer);
+            });
+            promise.subscribe = function subscribe(callback) {
+              delete promise.subscribe;
+              state.isSubscribe = true;
+              promise.then(function (event) {
+                event.disconnect = function () {
+                  if (bindId) {
+                    bindingMethods.unbind(bindId);
+                  } else {
+                    state.isDisconnected = true;
+                  }
+                };
+                callback(event);
+                !state.isDisconnected && _pageInactive(ms, state).subscribe(callback);
+              });
+              return promise;
+            };
+            return promise;
+          }
+          var state = {
+            isDisconnected: false,
+            isSubscribe: false
+          };
+          bindId = getBindId(bindId, "<pageInactive>", useRandomId);
+          unbindByIds[bindId] = function () {
+            state.isDisconnected = true;
+          };
+          return _pageInactive(ms, state);
+        },
+        pageScroll: function pageScroll(percentage) {
+          if (typeof percentage !== "number" || percentage < 0 || percentage > 1) {
+            throw new Error("[pageScroll] Invalid arguments");
+          }
+          return new Promise(function (resolve) {
+            var $target = cashDom(document);
+            var events = "scroll";
+            function callbackFn(e) {
+              resolve(e);
+              if (bindId) {
+                bindingMethods.unbind(bindId);
+              } else {
+                $target.off(events, onScroll);
+              }
+            }
+            function onScroll(e) {
+              var scrollPercentage = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+              if (scrollPercentage >= percentage) {
+                callbackFn.call(this, e);
+              }
+            }
+            $target.on(events, onScroll);
+            bindId = getBindId(bindId, "<pageScroll>", useRandomId);
+            unbindByIds[bindId] = function () {
+              $target.off(events, onScroll);
+            };
+          });
+        }
+      };
+    }
+    function buildBindingMethods() {
+      return {
+        bind: function bind(id) {
+          if (id && unbindByIds[id]) {
+            unbindByIds[id]();
+            delete unbindByIds[id];
+          }
+          return buildBaseMethods(id);
+        },
+        unbind: function unbind(id) {
+          if (!id || typeof id !== "string" || typeof unbindByIds[id] !== "function") return null;
+          unbindByIds[id]();
+          delete unbindByIds[id];
+        },
+        getBindings: function getBindings() {
+          return unbindByIds;
+        },
+        clearBindings: function clearBindings() {
+          for (var id in unbindByIds) {
+            if (unbindByIds.hasOwnProperty(id)) {
+              unbindByIds[id]();
+              delete unbindByIds[id];
+            }
+          }
+        }
+      };
+    }
+    var baseMethods = buildBaseMethods(null, true);
+    var bindingMethods = buildBindingMethods();
+    return Object.assign(baseMethods, bindingMethods);
+  }();
+  var EventRateLimiter = /*#__PURE__*/function () {
+    function EventRateLimiter(eventLimiterConfig) {
+      var _this = this;
+      _classCallCheck$1(this, EventRateLimiter);
+      this.clearRateLimiter = function () {
+        _this.sentEvents = [];
+      };
+      this.eventWithinLimitTimeRange = function (limitTimeRange, eventWithTime, now) {
+        return now - eventWithTime.time < limitTimeRange;
+      };
+      this.getTimeRangeMax = function () {
+        return _this.eventRateLimiterConfig.globalTimeRange;
+      };
+      this.removeOldEvents = function (now) {
+        var timeRangeMax = _this.getTimeRangeMax();
+        for (var index = _this.sentEvents.length - 1; index >= 0; index--) {
+          if (!_this.eventWithinLimitTimeRange(timeRangeMax, _this.sentEvents[index], now)) {
+            _this.sentEvents.splice(0, index + 1);
+            break;
+          }
+        }
+      };
+      this.checkGlobalLimits = function (index, eventTime) {
+        var _this$eventRateLimite = _objectSpread2$1({}, _this.eventRateLimiterConfig),
+          globalLimit = _this$eventRateLimite.globalLimit,
+          globalTimeRange = _this$eventRateLimite.globalTimeRange;
+        if (_this.eventWithinLimitTimeRange(globalTimeRange, _this.sentEvents[index], eventTime)) {
+          _this.globalCounter++;
+          if (_this.globalCounter > globalLimit) {
+            Logger.info("Event rate limit exceeded. More than ".concat(globalLimit, " events ") + "sent in ".concat(globalTimeRange, "ms."));
+            return true;
+          }
+        }
+        return false;
+      };
+      this.checkLimits = function (index, eventToRateLimit) {
+        return _this.checkGlobalLimits(index, eventToRateLimit.time);
+      };
+      this.sentEvents = [];
+      this.eventRateLimiterConfig = eventLimiterConfig;
+    }
+    _createClass$1(EventRateLimiter, [{
+      key: "resetCounters",
+      value: function resetCounters() {
+        this.globalCounter = 0;
+      }
+    }, {
+      key: "isTriggerLimitExceeded",
+      value: function isTriggerLimitExceeded(extraFields) {
+        var now = Date.now();
+        var eventToRateLimit = _objectSpread2$1(_objectSpread2$1({}, extraFields), {}, {
+          time: now
+        });
+        this.sentEvents.push(eventToRateLimit);
+        this.removeOldEvents(now);
+        this.resetCounters();
+        // Actions in reverse chronological order, loop backwards to start with most recent.
+        for (var index = this.sentEvents.length - 1; index >= 0; index--) {
+          if (this.checkLimits(index, eventToRateLimit)) {
+            return true;
+          }
+        }
+        return false;
+      }
+    }]);
+    return EventRateLimiter;
+  }();
+  var InteractionEventRateLimiter = /*#__PURE__*/function (_EventRateLimiter) {
+    _inherits$1(InteractionEventRateLimiter, _EventRateLimiter);
+    var _super = _createSuper$1(InteractionEventRateLimiter);
+    function InteractionEventRateLimiter(interactionRateLimiterConfig) {
+      var _this2;
+      _classCallCheck$1(this, InteractionEventRateLimiter);
+      _this2 = _super.call(this, interactionRateLimiterConfig);
+      _this2.getTimeRangeMax = function () {
+        return _this2.eventRateLimiterConfig.perInteractionTimeRange ? Math.max(_this2.eventRateLimiterConfig.globalTimeRange, _this2.eventRateLimiterConfig.perInteractionTimeRange) : _this2.eventRateLimiterConfig.globalTimeRange;
+      };
+      _this2.checkInteractionLimits = function (index, eventTime, interactionName) {
+        if (_this2.eventRateLimiterConfig.perInteractionLimit && _this2.eventRateLimiterConfig.perInteractionTimeRange && _this2.eventWithinLimitTimeRange(_this2.eventRateLimiterConfig.perInteractionTimeRange, _this2.sentEvents[index], eventTime) && _this2.sentEvents[index].name === interactionName) {
+          _this2.perEventCounter++;
+          if (_this2.perEventCounter > _this2.eventRateLimiterConfig.perInteractionLimit) {
+            Logger.info("Event rate limit exceeded. More than ".concat(_this2.eventRateLimiterConfig.perInteractionLimit, " events ") + "with interaction name of ".concat(interactionName, " sent in ").concat(_this2.eventRateLimiterConfig.perInteractionTimeRange, "ms."));
+            return true;
+          }
+        }
+        return false;
+      };
+      _this2.checkLimits = function (index, interactionToRateLimit) {
+        return _this2.checkGlobalLimits(index, interactionToRateLimit.time) || _this2.checkInteractionLimits(index, interactionToRateLimit.time, interactionToRateLimit.name);
+      };
+      return _this2;
+    }
+    _createClass$1(InteractionEventRateLimiter, [{
+      key: "resetCounters",
+      value: function resetCounters() {
+        _get$1(_getPrototypeOf$1(InteractionEventRateLimiter.prototype), "resetCounters", this).call(this);
+        this.perEventCounter = 0;
+      }
+    }, {
+      key: "isTriggerLimitExceeded",
+      value: function isTriggerLimitExceeded(interactionEventInfo) {
+        return _get$1(_getPrototypeOf$1(InteractionEventRateLimiter.prototype), "isTriggerLimitExceeded", this).call(this, interactionEventInfo);
+      }
+    }]);
+    return InteractionEventRateLimiter;
+  }(EventRateLimiter);
+  var unbindOnFireException;
+  var unbindOnSendEvent;
+  var unbindOnPageMatchStatusUpdated;
+  var unbindOnInitSitemap;
+  function unbindPublicSignalsToDocument() {
+    if (unbindOnFireException) {
+      unbindOnFireException();
+    }
+    if (unbindOnSendEvent) {
+      unbindOnSendEvent();
+    }
+    if (unbindOnPageMatchStatusUpdated) {
+      unbindOnPageMatchStatusUpdated();
+    }
+    if (unbindOnInitSitemap) {
+      unbindOnInitSitemap();
+    }
+  }
+  function bindPublicSignalsToDocument() {
+    unbindOnFireException = Signals.onFireException.on(function (error, context) {
+      document.dispatchEvent(new CustomEvent(CustomEvents.OnException, {
+        detail: {
+          error: error,
+          context: context
+        }
+      }));
+    });
+    unbindOnSendEvent = Signals.onEventSend.on(function (actionEvent) {
+      var canceled = !document.dispatchEvent(new CustomEvent(CustomEvents.OnBeforeEventSend, {
+        detail: {
+          actionEvent: actionEvent
+        },
+        cancelable: true
+      }));
+      if (!canceled) {
+        document.dispatchEvent(new CustomEvent(CustomEvents.OnEventSend, {
+          detail: {
+            actionEvent: actionEvent
+          }
+        }));
+      }
+    });
+    unbindOnPageMatchStatusUpdated = Signals.onPageMatchStatusUpdated.on(function (matchStatus) {
+      document.dispatchEvent(new CustomEvent(CustomEvents.OnPageMatchStatusUpdated, {
+        detail: {
+          matchStatus: matchStatus
+        }
+      }));
+    });
+    unbindOnInitSitemap = Signals.onInitSitemap.on(function (sitemapConfig) {
+      document.dispatchEvent(new CustomEvent(CustomEvents.OnInitSitemap, {
+        detail: {
+          sitemapConfig: sitemapConfig
+        }
+      }));
+    });
+  }
+  function checkEnv() {
+    if (userAgentIsRobot()) {
+      return shutDown('You are a robot.');
+    }
+    // Casting visibilityState to avoid complaints about 'prerender' no longer being a valid VisibilityState value
+    // in TypeScript 3.7.  Some browsers might still return this, even though it's deprecated.
+    var preRendered = document.visibilityState === 'prerender';
+    if (preRendered && isSafari) {
+      return shutDown('Page is pre-rendered and loaded in Safari.');
+    }
+    return true;
+  }
+  function shutDown(message) {
+    unbindPublicSignalsToDocument();
+    document.dispatchEvent(new CustomEvent(CustomEvents.OnShutDown, {
+      detail: {
+        message: message
+      }
+    }));
+    setLifecycleState("shutDown" /* SHUT_DOWN */);
+    return false;
+  }
+  // returns a Promise that is resolved or rejected based on initialization of the Web SDK itself
+  // and not around validating anything around consent
+  var init = function init() {
+    var sdkConfig = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    if (!checkEnv()) {
+      return Promise.reject();
+    }
+    if (getLifecycleState() == "initialized" /* INITIALIZED */) {
+      shutDown("reinitializing Web SDK");
+    }
+    setSdkConfig(sdkConfig);
+    document.dispatchEvent(new CustomEvent(CustomEvents.OnBeforeInit, {
+      detail: {
+        sdkConfig: getSdkConfig()
+      }
+    }));
+    bindPublicSignalsToDocument();
+    loadAnonymousIdentity();
+    setLifecycleState("initialized" /* INITIALIZED */);
+    document.dispatchEvent(new CustomEvent(CustomEvents.OnInit, {
+      detail: {
+        sdkConfig: getSdkConfig()
+      }
+    }));
+    resolveConsents(getSdkConfig().consents);
+    return Promise.resolve();
+  };
+  var reinit = function reinit() {
+    // W-9974392: don't restore the initial configured consent because it may have changed, use the actual values instead
+    var consents = getConsents().map(function (consentWithMetadata) {
+      return consentWithMetadata.consent;
+    });
+    init(_objectSpread2$1(_objectSpread2$1({}, getSdkConfig()), {}, {
+      consents: consents
+    })).then(function () {
+      initSitemap(sitemapState.config);
+    });
+  };
+  // TODO: is there a better way to do this? We need to export as an ES module but also expose
+  // something on the global namespace.
+  window.SalesforceInteractions = {
+    init: init,
+    reinit: reinit,
+    sendEvent: sendEvent,
+    sendException: sendException,
+    getAnonymousId: getAnonymousId,
+    setAnonymousId: setAnonymousId,
+    getCookieDomain: getCookieDomain,
+    setCookieDomain: setCookieDomain,
+    updateConsents: updateConsents,
+    getConsents: getConsents,
+    ConsentStatus: exports.ConsentStatus,
+    log: Logger,
+    getLoggingLevel: getLoggingLevel,
+    setLoggingLevel: setLoggingLevel,
+    initSitemap: initSitemap,
+    getSitemapConfig: getSitemapConfig,
+    getSitemapResult: getSitemapResult,
+    CatalogObjectInteractionName: CatalogObjectInteractionName,
+    CartInteractionName: CartInteractionName,
+    OrderInteractionName: OrderInteractionName,
+    listener: listener,
+    build: build,
+    cashDom: cashDom,
+    resolvers: resolvers,
+    util: util,
+    DisplayUtils: DisplayUtils,
+    CustomEvents: CustomEvents
+  };
+
+  // tslint:disable variable-name
+  var PROD_TRACKER_DOMAIN = 'evergage.com'; // TODO: use evgcdn?
+  var PROD_CDN_DOMAIN = "cdn.".concat(PROD_TRACKER_DOMAIN);
+  var DEFAULT_CONFIG = {
+    sendEvents: true,
+    /* defaults for client values */
+    minimumActivityTimeToRegister: 300,
+    timeOnPageTimerLengthMillis: 60000,
+    /* defaults for server values */
+    trackAnonymousVisitors: true,
+    corsAllowedOrigins: ['*'],
+    identityAttributes: [],
+    rememberMeUserIdsMillis: 63072000000,
+    actionRateLimiterConfig: {
+      globalLimit: 10,
+      globalTimeRange: 5000,
+      perActionLimit: 5,
+      perActionTimeRange: 2000
+    },
+    pingRateLimiterConfig: {
+      globalLimit: 10,
+      globalTimeRange: 5000
+    },
+    campaignStatRateLimiterConfig: {
+      globalLimit: 10,
+      globalTimeRange: 5000,
+      perExperienceLimit: 5,
+      perExperienceTimeRange: 2000
+    },
+    errorRateLimiterConfig: {
+      globalLimit: 10,
+      globalTimeRange: 5000
+    }
+  };
+  // TODO: Typescript beacon - Version hard coded for now...
+  var BEACON_VERSION = 16;
+  // Cookie ID's
+  var COOKIE_NAME_PREFIX = '_evg';
+  var VISITOR_COOKIE_ID = 'a';
+  var NAMED_COOKIE_ID_CLASSIC = 'n';
+  // Test Messages Query Parameter
+  var TEST_MESSAGES_QUERY_PARAM = "evergageTestMessages";
+  var READABLE_EVENT_QUERY_PARAM = "isReadableEvent";
+  // Event receiver paths
+  var MESSAGE_STAT_RECEIVER_PATH = '/msreceiver';
+  var EVENT_RECEIVER_PATH = '/api2/event/';
+  var PING_RECEIVER_PATH = '/pr';
+  var ERROR_RECEIVER_PATH = '/er';
+  // Maximum GET request size. Most browsers (not IE) have limit around 8kb.
+  /** @const */
+  var MAX_GET_REQUEST_SIZE = 8192;
+  // Custom field names and values are each truncated before being sent in the request or recorded in the cookie.
+  // @sync com.apptegic.common.domain.data.validation.DefaultEventValidator.DEFAULT_MAX_FIELD_VALUE_LENGTH_CHARS
+  /** @const */
+  var CUSTOM_FIELD_MAX_LENGTH = 1024;
+  // URL fields ("url" and "urlref") are each truncated before being sent in the request or recorded in the cookie.
+  // @sync com.apptegic.common.domain.data.validation.DefaultEventValidator.DEFAULT_MAX_URL_VALUE_LENGTH_CHARS
+  /** @const */
+  var URL_FIELDS_MAX_LENGTH = 3072;
+  var TITLE_FIELD_MAX_LENGTH = 1024;
+  var CampaignStatType;
+  (function (CampaignStatType) {
+    CampaignStatType["Impression"] = "i";
+    CampaignStatType["Clickthrough"] = "c";
+    CampaignStatType["Dismissal"] = "d";
+    CampaignStatType["Unsubscribe"] = "u";
+    CampaignStatType["Send"] = "s";
+  })(CampaignStatType || (CampaignStatType = {}));
+  (function (ItemType) {
+    ItemType["Product"] = "Product";
+    ItemType["Category"] = "Category";
+  })(exports.ItemType || (exports.ItemType = {}));
+  var McisCatalogObjectInteractionName;
+  (function (McisCatalogObjectInteractionName) {
+    McisCatalogObjectInteractionName["StopQuickViewCatalogObject"] = "Stop Quick View Catalog Object";
+  })(McisCatalogObjectInteractionName || (McisCatalogObjectInteractionName = {}));
+  var McisConsentPurpose = {
+    Personalization: "Personalization"
+  };
+  var itemIdKeys;
+  (function (itemIdKeys) {
+    itemIdKeys["_id"] = "_id";
+    itemIdKeys["categories"] = "categories";
+    itemIdKeys["dimensions"] = "dimensions";
+    itemIdKeys["relatedCatalogObjects"] = "relatedCatalogObjects";
+  })(itemIdKeys || (itemIdKeys = {}));
+
+  (function (EvergageCustomEvents) {
+    EvergageCustomEvents["OnEventResponse"] = "evergage:onEventResponse";
+    EvergageCustomEvents["OnEventSend"] = "evergage:onEventSend";
+    EvergageCustomEvents["OnStatSend"] = "evergage:onStatSend";
+    EvergageCustomEvents["OnException"] = "evergage:onException";
+    EvergageCustomEvents["OnTemplateDisplayEnd"] = "evergage:onTemplateDisplayEnd";
+    EvergageCustomEvents["OnPageMatchStatusUpdated"] = "evergage:onPageMatchStatusUpdated";
+    EvergageCustomEvents["OnInit"] = "evergage:onInit";
+    EvergageCustomEvents["OnInitSitemap"] = "evergage:onInitSitemap";
+    EvergageCustomEvents["OnShutDown"] = "evergage:onShutDown";
+    EvergageCustomEvents["OnConsentRevoke"] = "evergage:onConsentRevoke";
+  })(exports.CustomEvents || (exports.CustomEvents = {}));
+  var McisCustomEvents;
+  (function (McisCustomEvents) {
+    McisCustomEvents["OnEventResponse"] = "mcis:onEventResponse";
+    McisCustomEvents["OnStatSend"] = "mcis:onStatSend";
+    McisCustomEvents["OnTemplateDisplayEnd"] = "mcis:onTemplateDisplayEnd";
+    McisCustomEvents["OnBeforeEventSend"] = "mcis:onBeforeEventSend";
+    McisCustomEvents["OnInit"] = "mcis:onInit";
+  })(McisCustomEvents || (McisCustomEvents = {}));
+
+  var state = {
+    endpointConfig: {},
+    beaconConfig: DEFAULT_CONFIG,
+    beaconState: null
+  };
+  var setBeaconState = function setBeaconState(beaconState) {
+    state.beaconState = beaconState;
+  };
+  var getConfig = function getConfig() {
+    var endpointConfig = state.endpointConfig,
+      config = state.beaconConfig;
+    return _objectSpread2(_objectSpread2({}, endpointConfig), config);
+  };
+  var getSdkConfig$1 = function getSdkConfig() {
+    var config = getConfig();
+    return ['account', 'dataset', 'cookieDomain', 'consents', 'cdnUrl', 'trackerUrl', 'siteConfigVersion', 'minimumActivityTimeToRegister', 'timeOnPageTimerLengthMillis', 'sendEvents', 'trackAnonymousVisitors', 'doNotTrackPingRequestsForActions', 'trackContextualRelatedItems', 'identityAttributes', 'actionRateLimiterConfig', 'pingRateLimiterConfig', 'campaignStatRateLimiterConfig', 'errorRateLimiterConfig'].reduce(function (obj, key) {
+      return obj[key] = config[key], obj;
+    }, {});
+  };
+
+  function addEventListener(target, eventType, eventHandler, useCapture) {
+    if (target.addEventListener) {
+      target.addEventListener(eventType, eventHandler, useCapture);
+      return true;
+    }
+    return false;
+  }
+  function removeEventListener(target, eventType, eventHandler, useCapture) {
+    if (target.removeEventListener) {
+      target.removeEventListener(eventType, eventHandler, useCapture);
+      return true;
+    }
+    return false;
+  }
+  function isObject(property) {
+    return _typeof(property) === 'object';
+  }
+  function urlParse(href) {
+    var parser = document.createElement('a');
+    parser.href = href;
+    return parser;
+  }
+
+  // jsCookie is a vanilla javascript library, so we set the type definitions for js-cookie 2.2 from '@types/js-cookie'
+  var Cookie$1 = js_cookie;
+  /**
+   * A sha1 of the current account, dataset and cookieDomainHash joined with periods
+   */
+  var cookieHash$1;
+  document.addEventListener(CustomEvents.OnClearCookie, function (event) {
+    var options = event.detail && event.detail.options || {};
+    remove$1(VISITOR_COOKIE_ID, _objectSpread2({
+      domain: state.beaconConfig.cookieDomain
+    }, options));
+    remove$1(NAMED_COOKIE_ID_CLASSIC, _objectSpread2({
+      domain: state.beaconConfig.cookieDomain
+    }, options));
+  });
+  var generateCookieDomainHash$1 = function generateCookieDomainHash(cookieDomain) {
+    return sha1$1(cookieDomain + '/').slice(0, 4); // 4 hexits = 16 bits
+  };
+  var setCookieHash$1 = function setCookieHash(account, dataset, cookieDomain) {
+    cookieHash$1 = sha1$1("".concat(account, ".").concat(dataset, ".").concat(generateCookieDomainHash$1(cookieDomain))).slice(0, 4);
+  };
+  var getCookieName$1 = function getCookieName(cookieShortId) {
+    return "".concat(COOKIE_NAME_PREFIX).concat(cookieShortId, "_").concat(cookieHash$1);
+  };
+  var read$1 = function read(cookieShortId) {
+    return Cookie$1.getJSON(getCookieName$1(cookieShortId));
+  };
+  var write$1 = function write(cookieShortId, cookieValue, daysToExpire, cookieDomain) {
+    // check if secureCookie is on or off
+    if (state.beaconConfig.secureCookie) {
+      Cookie$1.set(getCookieName$1(cookieShortId), cookieValue, {
+        expires: daysToExpire,
+        domain: cookieDomain,
+        secure: true
+      });
+    } else {
+      Cookie$1.set(getCookieName$1(cookieShortId), cookieValue, {
+        expires: daysToExpire,
+        domain: cookieDomain
+      });
+    }
+    if (!Cookie$1.get(getCookieName$1(cookieShortId))) {
+      Logger.warn("Web SDK cookie (_evga) for the Interaction Studio module could not be set. This is possibly due to a restricted top level domain. See https://publicsuffix.org/learn/ for more information.");
+    }
+  };
+  var remove$1 = function remove(cookieShortId, options) {
+    Cookie$1.remove(getCookieName$1(cookieShortId), options);
+  };
+  var McisCookies = {
+    setCookieHash: setCookieHash$1,
+    read: read$1,
+    write: write$1,
+    remove: remove$1
+  };
+
+  var parseMcisVisitorCookie = function parseMcisVisitorCookie(visitorCookie) {
+    return {
+      uuid: visitorCookie.uuid,
+      affinityId: visitorCookie.affinityId,
+      persistedUserId: visitorCookie.puid,
+      persistedAccountId: visitorCookie.paid
+    };
+  };
+  var buildVisitorCookie = function buildVisitorCookie(visitor) {
+    return {
+      uuid: visitor.uuid,
+      puid: visitor.persistedUserId,
+      paid: visitor.persistedAccountId,
+      affinityId: visitor.affinityId
+    };
+  };
+  var updateVisitor = function updateVisitor(updatedVisitor) {
+    var mergedVisitor = _objectSpread2(_objectSpread2({}, getVisitor()), updatedVisitor);
+    McisCookies.write(VISITOR_COOKIE_ID, buildVisitorCookie(mergedVisitor), STORAGE_INFO.anonymousId.timeoutDays, state.beaconConfig.cookieDomain);
+    var visitorCookie = McisCookies.read(VISITOR_COOKIE_ID);
+    if (visitorCookie) {
+      Logger.debug("Stored visitor cookie. ".concat(JSON.stringify(visitorCookie)));
+    }
+    return mergedVisitor;
+  };
+  var getCurrentDomainWithoutWWW = function getCurrentDomainWithoutWWW(currentDomain) {
+    return currentDomain.indexOf("www") === 0 ? currentDomain.substring(4, currentDomain.length) : currentDomain;
+  };
+  var convertClassicAnonymousCookie = function convertClassicAnonymousCookie(visitorCookie) {
+    if (!visitorCookie || _typeof(visitorCookie) === "object") {
+      return;
+    }
+    McisCookies.remove(VISITOR_COOKIE_ID, {
+      domain: state.beaconConfig.cookieDomain
+    });
+    McisCookies.remove(VISITOR_COOKIE_ID, {
+      domain: getCurrentDomainWithoutWWW(location.hostname)
+    });
+    var cookieParts = visitorCookie.split(".");
+    if (cookieParts.length > 0) {
+      updateVisitor({
+        uuid: cookieParts[0]
+      });
+      if (cookieParts.length > 1 && cookieParts[1]) {
+        updateVisitor({
+          affinityId: cookieParts[1]
+        });
+      }
+    }
+  };
+  var convertClassicNamedCookie = function convertClassicNamedCookie(classicNamedCookie) {
+    if (!classicNamedCookie || _typeof(classicNamedCookie) !== "object") {
+      return;
+    }
+    McisCookies.remove(NAMED_COOKIE_ID_CLASSIC, {
+      domain: state.beaconConfig.cookieDomain
+    });
+    McisCookies.remove(NAMED_COOKIE_ID_CLASSIC, {
+      domain: getCurrentDomainWithoutWWW(location.hostname)
+    });
+    if (classicNamedCookie.puid && typeof classicNamedCookie.puid === "string") {
+      updateVisitor({
+        persistedUserId: classicNamedCookie.puid
+      });
+    }
+    if (classicNamedCookie.paid && typeof classicNamedCookie.paid === "string") {
+      updateVisitor({
+        persistedAccountId: classicNamedCookie.paid
+      });
+    }
+  };
+  var handleClassicCookie = function handleClassicCookie(visitorCookie, classicNamedCookie) {
+    convertClassicAnonymousCookie(visitorCookie);
+    convertClassicNamedCookie(classicNamedCookie);
+  };
+  var classicCookieExists = function classicCookieExists(visitorCookie, classicNamedCookie) {
+    return typeof visitorCookie === "string" && visitorCookie.length > 0 || classicNamedCookie != null && _typeof(classicNamedCookie) === "object";
+  };
+  var cookieExists = function cookieExists(visitorCookie) {
+    return !!(visitorCookie && _typeof(visitorCookie) === "object" && Object.keys(visitorCookie).length > 0);
+  };
+  var convertMcisVisitorToSalesforceIdentity = function convertMcisVisitorToSalesforceIdentity() {
+    var uuid = getVisitor().uuid;
+    setAnonymousId(uuid);
+  };
+  var getVisitor = function getVisitor() {
+    var visitorCookie = McisCookies.read(VISITOR_COOKIE_ID);
+    return cookieExists(visitorCookie) ? parseMcisVisitorCookie(visitorCookie) : {};
+  };
+  var loadVisitor = function loadVisitor() {
+    var visitorCookie = McisCookies.read(VISITOR_COOKIE_ID);
+    var classicNamedCookie = McisCookies.read(NAMED_COOKIE_ID_CLASSIC);
+    if (cookieExists(visitorCookie)) {
+      // If existing Mcis cookie exists load that. If visitor.uuid is not the same as baseSDK anonymousId keep them in sync
+      var visitor = updateVisitor(parseMcisVisitorCookie(visitorCookie));
+      if (visitor.uuid !== getAnonymousId()) {
+        convertMcisVisitorToSalesforceIdentity();
+      }
+      Logger.debug("Loaded visitor record from cookie: ".concat(JSON.stringify(getVisitor())));
+    } else {
+      // Convert classic cookie if it exists
+      if (classicCookieExists(visitorCookie, classicNamedCookie)) {
+        handleClassicCookie(visitorCookie, classicNamedCookie);
+        convertMcisVisitorToSalesforceIdentity();
+        Logger.debug("Classic cookie detected with anonymousId: ".concat(getVisitor().uuid));
+      } else {
+        // Load existing baseSDK cookie if it exists. Otherwise generate a new visitor and sync.
+        if (identityCookieExists()) {
+          updateVisitor({
+            uuid: getAnonymousId()
+          });
+        } else {
+          updateVisitor({
+            uuid: generateUuid()
+          });
+          convertMcisVisitorToSalesforceIdentity();
+        }
+        Logger.debug("Created new visitor record. anonymousId: ".concat(getVisitor().uuid));
+      }
+    }
+    return getVisitor();
+  };
+  var hasNamedUser = function hasNamedUser(event) {
+    if (!event) return false;
+    var _ref = event || {},
+      _ref$user = _ref.user,
+      user = _ref$user === void 0 ? {} : _ref$user;
+    var attributesAndIdentities = _objectSpread2(_objectSpread2({}, user.attributes), user.identities);
+    var hasIdentityAttribute = Object.keys(attributesAndIdentities).some(function (a) {
+      return state.beaconConfig.identityAttributes.includes(a);
+    });
+    return hasIdentityAttribute || !!user.id || !!getVisitor().persistedUserId;
+  };
+
+  var DEFAULT_SETTINGS = {
+    canonicalizeIds: false,
+    runOnTranslatedPage: false,
+    setDefaultListPrice: false,
+    truncateTranslated: true
+  };
+  var mcisSitemapState = {
+    result: _objectSpread2(_objectSpread2({}, getSitemapResult()), {}, {
+      backgroundPage: null
+    }),
+    config: _objectSpread2(_objectSpread2({}, getSitemapConfig()), {}, {
+      settings: DEFAULT_SETTINGS,
+      currentKey: null
+    }),
+    campaignResponses: []
+  };
+  var getCurrentPage = function getCurrentPage() {
+    return mcisSitemapState.result.currentPage || {};
+  };
+  var getState = function getState() {
+    mcisSitemapState.config.currentKey = getCurrentSitemapKey();
+    return mcisSitemapState;
+  };
+  var getSitemapResult$1 = function getSitemapResult() {
+    var mcisSitemapState = getState();
+    return mcisSitemapState.result || null;
+  };
+  var getSitemapConfig$1 = function getSitemapConfig() {
+    var mcisSitemapState = getState();
+    return mcisSitemapState.config || null;
+  };
+  var getCampaignResponses = function getCampaignResponses() {
+    var mcisSitemapState = getState();
+    return mcisSitemapState.campaignResponses || [];
+  };
+
+  var SESSION_ONLY_ATTRIBUTE_NAME = "customer_non_consent";
+  var shouldIncludeAnonFlag = function shouldIncludeAnonFlag(event) {
+    return !event["userId" /* USER_ID */] && !event["_persistedUserId" /* PERSISTED_USER_ID */] && !event["_persistedAccountId" /* PERSISTED_ACCOUNT_ID */];
+  };
+  var addBaseParamsToEvent = function addBaseParamsToEvent(event) {
+    event[".bv" /* BEACON_VERSION */] = BEACON_VERSION; // hard coded for now.
+    event["_ak" /* ACCOUNT_KEY_PARAMETER */] = state.endpointConfig.account;
+    event["_ds" /* DATASET_NAME_PARAMETER */] = state.endpointConfig.dataset;
+    event[".scv" /* SITE_CONFIG_VERSION */] = state.endpointConfig.siteConfigVersion;
+    event["channel" /* CHANNEL */] = DEFAULT_CHANNEL; // hard coded for now.
+    event["_r" /* RANDOM_PARAM */] = String(Math.random()).slice(2, 8);
+  };
+  var addUserFieldsToEvent = function addUserFieldsToEvent(flatEvent) {
+    var visitor = getVisitor();
+    if (flatEvent["userId" /* USER_ID */]) {
+      flatEvent["_reqPersistedEntityIds" /* REQ_PERSISTED_ENTITY_IDS */] = "";
+    } else if (visitor.persistedUserId) {
+      flatEvent["_persistedUserId" /* PERSISTED_USER_ID */] = visitor.persistedUserId;
+    }
+    // Temporary to enable the anonymous personalization feature early for a customer.
+    addSessionOnly(flatEvent);
+    if (state.beaconConfig.trackAnonymousVisitors) {
+      // we pass the anon id always
+      flatEvent[".anonId" /* ANON_ID */] = visitor.uuid;
+      // TODO: figure out what to do with affinityId
+      if (visitor.affinityId != null) {
+        flatEvent[".aaId" /* ANON_AFFINITY_ID */] = visitor.affinityId;
+      }
+      if (shouldIncludeAnonFlag(flatEvent)) {
+        flatEvent["_anon" /* ANON */] = 'true';
+      }
+    }
+    return flatEvent;
+  };
+  var addSessionOnly = function addSessionOnly(flatEvent) {
+    if (mcisSitemapState && mcisSitemapState.result && mcisSitemapState.result.currentPage && mcisSitemapState.result.currentPage.user && mcisSitemapState.result.currentPage.user.attributes && mcisSitemapState.result.currentPage.user.attributes[SESSION_ONLY_ATTRIBUTE_NAME]) {
+      flatEvent[SESSION_ONLY_ATTRIBUTE_NAME] = mcisSitemapState.result.currentPage.user.attributes[SESSION_ONLY_ATTRIBUTE_NAME];
+    }
+  };
+  var CUSTOM_FIELD_MAX_LENGTH$1 = 1024;
+  var numToTrimTo = CUSTOM_FIELD_MAX_LENGTH$1 - 50;
+  var numCharsThreeQuarters = Math.round(0.75 * numToTrimTo);
+  var numCharsOneQuarter = Math.round(0.25 * numToTrimTo);
+  var trimLogComponent = function trimLogComponent(value) {
+    var logComponentString = "".concat(value); //converts value to a string
+    // Trim even if it's within 50 of the max custom field length, just to be sure
+    if (logComponentString == null || logComponentString.length <= numToTrimTo) {
+      // No trimming required.
+      return logComponentString;
+    }
+    var numCharsBeginning = numCharsThreeQuarters;
+    var numCharsEnding = numCharsOneQuarter;
+    if (numCharsBeginning + numCharsEnding != numToTrimTo) {
+      numCharsBeginning += numToTrimTo - (numCharsBeginning + numCharsEnding);
+    }
+    var separatorString = " ... ";
+    if (numCharsEnding > 10) {
+      numCharsEnding -= separatorString.length;
+    } else if (numCharsBeginning > 10) {
+      numCharsBeginning -= separatorString.length;
+    }
+    return logComponentString.substring(0, numCharsBeginning) + separatorString + logComponentString.substring(logComponentString.length - numCharsEnding);
+  };
+  var parseExceptionCommon = function parseExceptionCommon(flatEvent, _ref) {
+    var header = _ref.header,
+      fileName = _ref.fileName,
+      line = _ref.line,
+      column = _ref.column;
+    if (!!header) {
+      flatEvent[".ef" /* ERROR_HEADER */] = trimLogComponent(header);
+    }
+    flatEvent[".eu" /* ERROR_FILE_NAME */] = trimLogComponent(fileName);
+    flatEvent[".el" /* ERROR_LINE */] = trimLogComponent(line);
+    flatEvent[".ec" /* ERROR_COLUMN */] = trimLogComponent(column);
+    return flatEvent;
+  };
+  var SAFARI_PROP_MAP = _defineProperty(_defineProperty(_defineProperty({}, ".eu" /* ERROR_FILE_NAME */, 'sourceURL'), ".el" /* ERROR_LINE */, 'line'), ".ec" /* ERROR_COLUMN */, 'column');
+  var MOZILLA_PROP_MAP = _defineProperty(_defineProperty(_defineProperty({}, ".eu" /* ERROR_FILE_NAME */, 'fileName'), ".el" /* ERROR_LINE */, 'lineNumber'), ".ec" /* ERROR_COLUMN */, 'columnNumber');
+  var parseException = function parseException(flatEvent, exception, propMap) {
+    if (!exception) {
+      return flatEvent;
+    }
+    return parseExceptionCommon(flatEvent, {
+      header: !!exception.stack && typeof exception.stack === "string" && exception.stack.substring(0, exception.stack.indexOf("@")),
+      fileName: exception[propMap[".eu" /* ERROR_FILE_NAME */]],
+      line: exception[propMap[".el" /* ERROR_LINE */]],
+      column: exception[propMap[".ec" /* ERROR_COLUMN */]]
+    });
+  };
+  var parseDefaultException = function parseDefaultException(flatEvent, exception) {
+    if (!exception || !exception.stack || typeof exception.stack !== "string") {
+      return flatEvent;
+    }
+    var caller_line = exception.stack.split("\n")[1];
+    var fullLine = caller_line.substring(caller_line.indexOf("at ") + 3);
+    var matches = fullLine.match(/(.*) \((.*):(\d+):(\d+)\)/);
+    if (Array.isArray(matches)) {
+      return parseExceptionCommon(flatEvent, {
+        header: matches[1],
+        fileName: matches[2],
+        line: matches[3],
+        column: matches[4]
+      });
+    }
+    return flatEvent;
+  };
+  var getBrowserInfo = function getBrowserInfo() {
+    var agent = window.navigator.userAgent.toLowerCase();
+    var name = "unknown" /* UNKNOWN */;
+    var regexName = '';
+    switch (true) {
+      case agent.indexOf("edge") > -1:
+        name = "ie" /* MSIE */;
+        regexName = 'edge';
+        break;
+      case agent.indexOf("trident") > -1:
+        name = "ie" /* MSIE */;
+        regexName = 'trident';
+        break;
+      case agent.indexOf("chrome") > -1 && !!window['chrome']:
+        name = "chrome" /* CHROME */;
+        regexName = name;
+        break;
+      case agent.indexOf("firefox") > -1:
+        name = "mozilla" /* MOZILLA */;
+        regexName = name;
+        break;
+      case agent.indexOf("safari") > -1:
+        name = "safari" /* SAFARI */;
+        regexName = name;
+        break;
+    }
+    if (name !== "unknown" /* UNKNOWN */) {
+      var regex = new RegExp("".concat(regexName, "/(.*?)s"), 'gm');
+      var match = regex.exec(agent);
+      var version = parseInt(!!match && match[1]);
+      return {
+        name: name,
+        version: isNaN(version) ? null : version
+      };
+    }
+    return {
+      name: name,
+      version: null
+    };
+  };
+  var addErrorFieldsToEvent = function addErrorFieldsToEvent(flatEvent, exception, context) {
+    var message = exception.message;
+    flatEvent[".em" /* ERROR_MESSAGE */] = trimLogComponent(message || exception);
+    flatEvent[".es" /* ERROR_SECTION */] = context;
+    var browser = getBrowserInfo();
+    flatEvent[".vt" /* BROWSER_NAME */] = browser.name;
+    if (!!browser.version) {
+      flatEvent[".vn" /* BROWSER_VERSION */] = browser.version;
+    }
+    switch (browser.name) {
+      case "safari" /* SAFARI */:
+        parseException(flatEvent, exception, SAFARI_PROP_MAP);
+        break;
+      case "mozilla" /* MOZILLA */:
+        parseException(flatEvent, exception, MOZILLA_PROP_MAP);
+        break;
+      default:
+        parseDefaultException(flatEvent, exception);
+        break;
+    }
+    return flatEvent;
+  };
+  var toFlatItem = function toFlatItem(catalogPayload) {
+    var itemType = Object.keys(catalogPayload)[0];
+    if (!itemType) {
+      return {};
+    }
+    var item = catalogPayload[itemType];
+    var flatPingRequestItem = {
+      type: itemType,
+      _id: item._id
+    };
+    /* the check for state.beaconConfig.trackContextualRelatedItems has been removed
+       and all ping requests now send Contextual Related Items by default */
+    if (Array.isArray(item.categories)) {
+      flatPingRequestItem.categories = item.categories.map(function (category) {
+        if (typeof category === 'string') {
+          return {
+            _id: category,
+            type: exports.ItemType.Category
+          };
+        }
+        return category;
+      });
+    }
+    if (isObject(item.dimensions) || isObject(item.relatedCatalogObjects)) {
+      flatPingRequestItem.dimensions = {};
+      var relatedCatalogObjects = item.relatedCatalogObjects || item.dimensions;
+      for (var catalogObject in relatedCatalogObjects) {
+        if (relatedCatalogObjects.hasOwnProperty(catalogObject)) {
+          var values = relatedCatalogObjects[catalogObject];
+          Array.isArray(values) ? flatPingRequestItem.dimensions[catalogObject] = values : flatPingRequestItem.dimensions[catalogObject] = [values];
+        }
+      }
+    }
+    return flatPingRequestItem;
+  };
+  var getFlatItemStats = function getFlatItemStats(catalogItems) {
+    var serverItemsInStat = [];
+    Object.keys(catalogItems).forEach(function (itemTypeKey) {
+      serverItemsInStat = serverItemsInStat.concat(getFlatItemStatsForItemType(itemTypeKey, catalogItems[itemTypeKey]));
+    });
+    return serverItemsInStat;
+  };
+  var getFlatItemStatsForItemType = function getFlatItemStatsForItemType(itemTypeKey, items) {
+    return items.map(function (itemId) {
+      var keyForStat = itemTypeKeyToCampaignStatName(itemTypeKey);
+      return {
+        _id: itemId,
+        type: keyForStat,
+        tagType: keyForStat === "t" ? itemTypeKey : undefined
+      };
+    });
+  };
+  var itemTypeKeyToCampaignStatName = function itemTypeKeyToCampaignStatName(itemType) {
+    switch (itemType) {
+      case "Product":
+        return "p";
+      case "Article":
+        return "a";
+      case "Blog":
+        return "b";
+      case "Category":
+        return "c";
+      case "Promotion":
+        return "P";
+      default:
+        return "t";
+      //Assume it's a dimension and the input param is the tagType.
+    }
+  };
+  var toFlatCampaignStat = function toFlatCampaignStat(stat) {
+    var campaignStat = {
+      type: "e" /* Experience */,
+      id: stat.experienceId,
+      stat: CampaignStatType[stat.stat],
+      ug: stat.control ? 'Control' : undefined
+    };
+    if (stat.catalog) {
+      campaignStat["piks"] = getFlatItemStats(stat.catalog);
+    }
+    return campaignStat;
+  };
+  var toFlatStat = function toFlatStat(event) {
+    var flatEvent = {};
+    flatEvent[".cStat" /* CAMPAIGN_STATS */] = JSON.stringify(event.campaignStats.map(toFlatCampaignStat));
+    addBaseParamsToEvent(flatEvent);
+    addUserFieldsToEvent(flatEvent);
+    return flatEvent;
+  };
+  var toFlatError = function toFlatError(error, context) {
+    var flatError = {};
+    addBaseParamsToEvent(flatError);
+    addUserFieldsToEvent(flatError);
+    addErrorFieldsToEvent(flatError, error, context);
+    return flatError;
+  };
+  var toFlatPing = function toFlatPing(event) {
+    var flatEvent = {};
+    flatEvent[".top" /* TIME_ON_PAGE */] = '' + event.timeOnPageMillis;
+    if (event.catalog && Object.keys(event.catalog).length > 0) {
+      flatEvent["item" /* ITEM */] = JSON.stringify(toFlatItem(event.catalog));
+    }
+    if (event.action) {
+      flatEvent["action" /* ACTION */] = event.action;
+    }
+    addPerformanceFieldsToEvent(flatEvent, event);
+    addBaseParamsToEvent(flatEvent);
+    addUserFieldsToEvent(flatEvent);
+    return flatEvent;
+  };
+  var addPerformanceFieldsToEvent = function addPerformanceFieldsToEvent(flatEvent, pingEvent) {
+    if (pingEvent.performance) {
+      addPerformanceFieldNotNull(".tt" /* NETWORK_TIME */, pingEvent.performance.networkTime, flatEvent);
+      addPerformanceFieldNotNull(".ttdns" /* EVENT_DNS_TIME */, pingEvent.performance.eventDnsTime, flatEvent);
+      addPerformanceFieldNotNull(".dt" /* DOM_LOAD_TIME */, pingEvent.performance.domLoadTime, flatEvent);
+      addPerformanceFieldNotNull(".lt" /* PAGE_LOAD_TIME */, pingEvent.performance.pageLoadTime, flatEvent);
+      addPerformanceFieldNotNull(".bt" /* SDK_LOAD_TIME */, pingEvent.performance.sdkLoadTime, flatEvent);
+      addPerformanceFieldNotNull(".pt" /* SDK_PARSE_TIME */, pingEvent.performance.sdkParseTime, flatEvent);
+      addPerformanceFieldNotNull(".btdns" /* SDK_DNS_TIME */, pingEvent.performance.sdkDnsTime, flatEvent);
+    }
+  };
+  var addPerformanceFieldNotNull = function addPerformanceFieldNotNull(performanceKey, performanceValue, flatEvent) {
+    if (performanceValue) {
+      flatEvent[performanceKey] = performanceValue;
+    }
+  };
+
+  var has = Object.prototype.hasOwnProperty,
+    undef;
+
+  /**
+   * Decode a URI encoded string.
+   *
+   * @param {String} input The URI encoded string.
+   * @returns {String|Null} The decoded string.
+   * @api private
+   */
+  function decode(input) {
+    try {
+      return decodeURIComponent(input.replace(/\+/g, ' '));
+    } catch (e) {
+      return null;
+    }
+  }
+
+  /**
+   * Simple query string parser.
+   *
+   * @param {String} query The query string that needs to be parsed.
+   * @returns {Object}
+   * @api public
+   */
+  function querystring(query) {
+    var parser = /([^=?&]+)=?([^&]*)/g,
+      result = {},
+      part;
+    while (part = parser.exec(query)) {
+      var key = decode(part[1]),
+        value = decode(part[2]);
+
+      //
+      // Prevent overriding of existing properties. This ensures that build-in
+      // methods like `toString` or __proto__ are not overriden by malicious
+      // querystrings.
+      //
+      // In the case if failed decoding, we want to omit the key/value pairs
+      // from the result.
+      //
+      if (key === null || value === null || key in result) continue;
+      result[key] = value;
+    }
+    return result;
+  }
+
+  /**
+   * Transform a query string to an object.
+   *
+   * @param {Object} obj Object that should be transformed.
+   * @param {String} prefix Optional prefix.
+   * @returns {String}
+   * @api public
+   */
+  function querystringify(obj, prefix) {
+    prefix = prefix || '';
+    var pairs = [],
+      value,
+      key;
+
+    //
+    // Optionally prefix with a '?' if needed
+    //
+    if ('string' !== typeof prefix) prefix = '?';
+    for (key in obj) {
+      if (has.call(obj, key)) {
+        value = obj[key];
+
+        //
+        // Edge cases where we actually want to encode the value to an empty
+        // string instead of the stringified value.
+        //
+        if (!value && (value === null || value === undef || isNaN(value))) {
+          value = '';
+        }
+        key = encodeURIComponent(key);
+        value = encodeURIComponent(value);
+
+        //
+        // If we failed to encode the strings, we should bail out as we don't
+        // want to add invalid strings to the query.
+        //
+        if (key === null || value === null) continue;
+        pairs.push(key + '=' + value);
+      }
+    }
+    return pairs.length ? prefix + pairs.join('&') : '';
+  }
+
+  //
+  // Expose the module.
+  //
+  var stringify = querystringify;
+  var parse = querystring;
+
+  var ExperienceRateLimiter = /*#__PURE__*/function (_EventRateLimiter) {
+    _inherits(ExperienceRateLimiter, _EventRateLimiter);
+    var _super = _createSuper(ExperienceRateLimiter);
+    function ExperienceRateLimiter(eventLimiterConfig) {
+      var _this;
+      _classCallCheck(this, ExperienceRateLimiter);
+      _this = _super.call(this, eventLimiterConfig);
+      _this.getTimeRangeMax = function () {
+        return _this.eventRateLimiterConfig.perExperienceTimeRange ? Math.max(_this.eventRateLimiterConfig.globalTimeRange, _this.eventRateLimiterConfig.perExperienceTimeRange) : _this.eventRateLimiterConfig.globalTimeRange;
+      };
+      _this.checkExperienceLimits = function (index, eventTime) {
+        if (_this.eventRateLimiterConfig.perExperienceLimit && _this.eventRateLimiterConfig.perExperienceTimeRange && _this.eventWithinLimitTimeRange(_this.eventRateLimiterConfig.perExperienceTimeRange, _this.sentEvents[index], eventTime) && _this.sentEvents[index].experienceIds) {
+          var eventExperienceIds = _this.sentEvents[index].experienceIds;
+          for (var experienceIdIndex = 0; experienceIdIndex < eventExperienceIds.length; experienceIdIndex++) {
+            var experienceId = eventExperienceIds[experienceIdIndex];
+            if (!_this.experienceRates.has(experienceId)) {
+              _this.experienceRates.set(experienceId, 0);
+            }
+            _this.experienceRates.set(experienceId, _this.experienceRates.get(experienceId) + 1);
+            if (_this.experienceRates.get(experienceId) > _this.eventRateLimiterConfig.perExperienceLimit) {
+              Logger.info("Event rate limit exceeded. More than ".concat(_this.eventRateLimiterConfig.perExperienceLimit, " events ") + "with experience id of ".concat(experienceId, " sent in ").concat(_this.eventRateLimiterConfig.perExperienceTimeRange, "ms."));
+              return true;
+            }
+          }
+        }
+      };
+      _this.checkLimits = function (index, experienceEventToRateLimit) {
+        return _this.checkGlobalLimits(index, experienceEventToRateLimit.time) || _this.checkExperienceLimits(index, experienceEventToRateLimit.time);
+      };
+      return _this;
+    }
+    _createClass(ExperienceRateLimiter, [{
+      key: "resetCounters",
+      value: function resetCounters() {
+        _get(_getPrototypeOf(ExperienceRateLimiter.prototype), "resetCounters", this).call(this);
+        this.experienceRates = new Map();
+      }
+    }, {
+      key: "isTriggerLimitExceeded",
+      value: function isTriggerLimitExceeded(experienceEventInfo) {
+        return _get(_getPrototypeOf(ExperienceRateLimiter.prototype), "isTriggerLimitExceeded", this).call(this, experienceEventInfo);
+      }
+    }]);
+    return ExperienceRateLimiter;
+  }(EventRateLimiter);
+
+  var OneWayReceiver = /*#__PURE__*/function () {
+    function OneWayReceiver(baseURL) {
+      _classCallCheck(this, OneWayReceiver);
+      this.baseURL = baseURL;
+    }
+    _createClass(OneWayReceiver, [{
+      key: "send",
+      value: function send(params) {
+        prepareParamValues(params);
+        var url = this.baseURL + '?' + stringify(params);
+        if (navigator && navigator.sendBeacon) {
+          var blob = new Blob([], {
+            type: 'application/x-www-form-urlencoded'
+          });
+          return navigator.sendBeacon(url, blob);
+        } else {
+          var xhr = new XMLHttpRequest();
+          xhr.open('GET', url, true);
+          xhr.send();
+        }
+      }
+    }]);
+    return OneWayReceiver;
+  }();
+  var ErrorReceiver = /*#__PURE__*/function (_OneWayReceiver) {
+    _inherits(ErrorReceiver, _OneWayReceiver);
+    var _super = _createSuper(ErrorReceiver);
+    function ErrorReceiver(baseUrl, eventRateLimiter) {
+      var _this;
+      _classCallCheck(this, ErrorReceiver);
+      _this = _super.call(this, baseUrl);
+      _this.eventRateLimiter = eventRateLimiter || new EventRateLimiter({
+        globalLimit: state.beaconConfig.errorRateLimiterConfig.globalLimit,
+        globalTimeRange: state.beaconConfig.errorRateLimiterConfig.globalTimeRange
+      });
+      return _this;
+    }
+    _createClass(ErrorReceiver, [{
+      key: "send",
+      value: function send(params) {
+        if (this.eventRateLimiter.isTriggerLimitExceeded()) {
+          Logger.warn('Error event rate limiter triggered.');
+        } else {
+          return _get(_getPrototypeOf(ErrorReceiver.prototype), "send", this).call(this, params);
+        }
+      }
+    }]);
+    return ErrorReceiver;
+  }(OneWayReceiver);
+  var PingReceiver = /*#__PURE__*/function (_OneWayReceiver2) {
+    _inherits(PingReceiver, _OneWayReceiver2);
+    var _super2 = _createSuper(PingReceiver);
+    function PingReceiver(baseUrl, eventRateLimiter) {
+      var _this2;
+      _classCallCheck(this, PingReceiver);
+      _this2 = _super2.call(this, baseUrl);
+      _this2.eventRateLimiter = eventRateLimiter || new EventRateLimiter({
+        globalLimit: state.beaconConfig.pingRateLimiterConfig.globalLimit,
+        globalTimeRange: state.beaconConfig.pingRateLimiterConfig.globalTimeRange
+      });
+      return _this2;
+    }
+    _createClass(PingReceiver, [{
+      key: "send",
+      value: function send(params) {
+        if (this.eventRateLimiter.isTriggerLimitExceeded()) {
+          Logger.warn('Ping event rate limiter triggered.');
+        } else {
+          return _get(_getPrototypeOf(PingReceiver.prototype), "send", this).call(this, params);
+        }
+      }
+    }]);
+    return PingReceiver;
+  }(OneWayReceiver);
+  var CampaignStatReceiver = /*#__PURE__*/function (_OneWayReceiver3) {
+    _inherits(CampaignStatReceiver, _OneWayReceiver3);
+    var _super3 = _createSuper(CampaignStatReceiver);
+    function CampaignStatReceiver(baseUrl, eventRateLimiter) {
+      var _this3;
+      _classCallCheck(this, CampaignStatReceiver);
+      _this3 = _super3.call(this, baseUrl);
+      _this3.eventRateLimiter = eventRateLimiter || new ExperienceRateLimiter({
+        globalLimit: state.beaconConfig.campaignStatRateLimiterConfig.globalLimit,
+        globalTimeRange: state.beaconConfig.campaignStatRateLimiterConfig.globalTimeRange,
+        perExperienceLimit: state.beaconConfig.campaignStatRateLimiterConfig.perExperienceLimit,
+        perExperienceTimeRange: state.beaconConfig.campaignStatRateLimiterConfig.perExperienceTimeRange
+      });
+      return _this3;
+    }
+    _createClass(CampaignStatReceiver, [{
+      key: "send",
+      value: function send(params, experienceIds) {
+        experienceIds = experienceIds ? experienceIds : [];
+        if (this.eventRateLimiter.isTriggerLimitExceeded({
+          experienceIds: experienceIds
+        })) {
+          Logger.warn('Campaign Stat event rate limiter triggered.');
+        } else {
+          return _get(_getPrototypeOf(CampaignStatReceiver.prototype), "send", this).call(this, params);
+        }
+      }
+    }]);
+    return CampaignStatReceiver;
+  }(OneWayReceiver);
+  var prepareParamValues = function prepareParamValues(params) {
+    Object.keys(params).forEach(function (key) {
+      var value = params[key];
+      if (typeof value == 'number' || typeof value === 'boolean' || value == null) {
+        return;
+      } else if (typeof value == 'string') {
+        params[key] = truncateParamValue(key, value);
+      } else if (typeof value == 'function') {
+        delete params[key];
+      } else {
+        params[key] = JSON.stringify(value);
+      }
+    });
+  };
+  var truncateParamValue = function truncateParamValue(key, value) {
+    switch (key) {
+      case "url" /* URL */:
+      case "urlref" /* URLREF */:
+        return value.substring(0, URL_FIELDS_MAX_LENGTH);
+      case "title" /* TITLE */:
+        return value.substring(0, TITLE_FIELD_MAX_LENGTH);
+      default:
+        return value.substring(0, CUSTOM_FIELD_MAX_LENGTH);
+    }
+  };
+  var campaignStatReceiverUrl = function campaignStatReceiverUrl(trackerURL) {
+    return trackerURL + MESSAGE_STAT_RECEIVER_PATH;
+  };
+  var pingReceiverUrl = function pingReceiverUrl(trackerURL) {
+    return trackerURL + PING_RECEIVER_PATH;
+  };
+  var errorReceiverUrl = function errorReceiverUrl(trackerURL) {
+    return trackerURL + ERROR_RECEIVER_PATH;
+  };
+  var campaignStatReceiver;
+  var pingReceiver;
+  var errorReceiver;
+  var initOneWayReceivers = function initOneWayReceivers(baseURL) {
+    var campaignStatCurrentEventRateLimiter = campaignStatReceiver ? campaignStatReceiver.eventRateLimiter : null;
+    campaignStatReceiver = new CampaignStatReceiver(campaignStatReceiverUrl(baseURL), campaignStatCurrentEventRateLimiter);
+    var pingCurrentEventRateLimiter = pingReceiver ? pingReceiver.eventRateLimiter : null;
+    pingReceiver = new PingReceiver(pingReceiverUrl(baseURL), pingCurrentEventRateLimiter);
+    var errorCurrentEventRateLimiter = errorReceiver ? errorReceiver.eventRateLimiter : null;
+    errorReceiver = new ErrorReceiver(errorReceiverUrl(baseURL), errorCurrentEventRateLimiter);
+  };
+
+  var sentPageLoadTime = false;
+  var sentDomLoadTime = false;
+  var sentSdkTimes = false;
+  var performanceMetrics = {
+    sdkLoadTime: null,
+    sdkParseTime: null,
+    sdkDnsTime: null,
+    pageLoadTime: null,
+    domLoadTime: null,
+    networkTime: null,
+    eventDnsTime: null //.ttdns
+  };
+  var setSdkLoadTime = function setSdkLoadTime() {
+    performanceMetrics.sdkLoadTime = Math.round((getSdkRequestTiming() || {}).duration) || null;
+  };
+  var setSdkParseTime = function setSdkParseTime() {
+    if (window.evergageBeaconParseTimeStart && window.window.evergageBeaconParseTimeEnd) {
+      performanceMetrics.sdkParseTime = window.evergageBeaconParseTimeEnd - window.evergageBeaconParseTimeStart;
+    }
+  };
+  var setSdkDnsTime = function setSdkDnsTime() {
+    var sdkRequestTiming = getSdkRequestTiming();
+    if (sdkRequestTiming && sdkRequestTiming.domainLookupEnd != undefined && sdkRequestTiming.domainLookupStart != undefined) {
+      performanceMetrics.sdkDnsTime = Math.round(sdkRequestTiming.domainLookupEnd - sdkRequestTiming.domainLookupStart);
+    }
+  };
+  var setNetworkTime = function setNetworkTime() {
+    performanceMetrics.networkTime = Math.round((getEventRequestTiming() || {}).duration) || null;
+  };
+  var setEventDnsTime = function setEventDnsTime() {
+    var eventRequestTiming = getEventRequestTiming();
+    if (eventRequestTiming) {
+      performanceMetrics.eventDnsTime = Math.round(eventRequestTiming.domainLookupEnd - eventRequestTiming.domainLookupStart) || null;
+    }
+  };
+  var setDomLoadTime = function setDomLoadTime() {
+    var navigationTiming = getNavigationTiming();
+    if (navigationTiming && navigationTiming.domContentLoadedEventEnd > 0) {
+      if (isPerformanceNavigationTiming(navigationTiming)) {
+        performanceMetrics.domLoadTime = Math.round(navigationTiming.domContentLoadedEventEnd) || null;
+      } else {
+        performanceMetrics.domLoadTime = Math.round(navigationTiming.domContentLoadedEventEnd - window.performance.timing.navigationStart) || null;
+      }
+    }
+  };
+  var setPageLoadTime = function setPageLoadTime() {
+    var navigationTiming = getNavigationTiming();
+    if (navigationTiming) {
+      if (isPerformanceNavigationTiming(navigationTiming)) {
+        performanceMetrics.pageLoadTime = Math.round(navigationTiming.loadEventEnd) || null;
+      } else {
+        performanceMetrics.pageLoadTime = Math.round(navigationTiming.loadEventEnd - window.performance.timing.navigationStart) || null;
+      }
+    }
+  };
+  // only sent on last PR before exiting page
+  var getEventRequestTiming = function getEventRequestTiming() {
+    if (window.performance.getEntriesByType) {
+      var requestPerformances = window.performance.getEntriesByType("resource");
+      return requestPerformances.reverse().find(function (perf) {
+        return perf.name.indexOf("/api2/event/") >= 0;
+      });
+    }
+    return null;
+  };
+  var getSdkRequestTiming = function getSdkRequestTiming() {
+    if (window.performance.getEntriesByType) {
+      var requestPerformances = window.performance.getEntriesByType("resource");
+      return requestPerformances.find(function (perf) {
+        return /\/evergage(Small)?(\.min)?\.js$/.test(perf.name);
+      });
+    }
+    return null;
+  };
+  var getNavigationTiming = function getNavigationTiming() {
+    if (window.performance.getEntriesByType) {
+      var performanceEntryList = window.performance.getEntriesByType("navigation");
+      if (performanceEntryList && performanceEntryList.length > 0) {
+        var navigationTimings = performanceEntryList[0];
+        if (!navigationTimings) {
+          navigationTimings = window.performance.timing;
+        }
+        return navigationTimings;
+      }
+    }
+    return null;
+  };
+  var clearMetricsSentInEvent = function clearMetricsSentInEvent(event) {
+    for (var metric in event.performance) {
+      performanceMetrics[metric] = null;
+    }
+  };
+  var setLoadTimeMetricsBeforeSend = function setLoadTimeMetricsBeforeSend() {
+    if (!sentDomLoadTime) {
+      setDomLoadTime();
+      if (performanceMetrics.domLoadTime) {
+        sentDomLoadTime = true;
+      }
+    }
+    if (!sentPageLoadTime) {
+      setPageLoadTime();
+      if (performanceMetrics.pageLoadTime) {
+        sentPageLoadTime = true;
+      }
+    }
+  };
+  var setSdkTimeMetricsBeforeSend = function setSdkTimeMetricsBeforeSend() {
+    if (!sentSdkTimes) {
+      setSdkLoadTime();
+      setSdkParseTime();
+      setSdkDnsTime();
+      sentSdkTimes = true;
+    }
+  };
+  var isPerformanceNavigationTiming = function isPerformanceNavigationTiming(navigationTiming) {
+    return navigationTiming.entryType != undefined;
+  };
+
+  var getPathnameFromLocation = function getPathnameFromLocation(location) {
+    if (!location) {
+      return '';
+    }
+    return location.pathname;
+  };
+  var getPathname = function getPathname(url) {
+    if (!url) {
+      return '';
+    }
+    return getPathnameFromLocation(urlParse(url));
+  };
+  var getParameterByName = function getParameterByName(name, url) {
+    var queryString = typeof url === "undefined" ? location.search : url;
+    var parsed = parse(queryString);
+    return parsed[name] || '';
+  };
+  var extractFirstGroup = function extractFirstGroup(regex, str) {
+    var matcher = regex.exec(str);
+    if (matcher && matcher.length === 2) {
+      return matcher[1];
+    } else {
+      return null;
+    }
+  };
+  var getLastPathComponent = function getLastPathComponent(url) {
+    return extractFirstGroup(/[/]?([^/]*)[/]?$/, getPathname(url));
+  };
+  var qualifyUrl = function qualifyUrl(unqualified) {
+    if (typeof unqualified !== 'string' || unqualified.trim() === '') {
+      return null;
+    }
+    var parser = urlParse(unqualified);
+    // get qualified url
+    return parser.href;
+  };
+  var removeQueryString = function removeQueryString(url) {
+    if (!url) {
+      return '';
+    }
+    var parser = urlParse(url);
+    var pathname = getPathnameFromLocation(parser);
+    var isHttpOrHttpsUri = parser.protocol === 'http:' && parser.port === '80' || parser.protocol === 'https:' && parser.port === '443';
+    var host = isHttpOrHttpsUri ? parser.hostname : parser.host;
+    return [parser.protocol, '//', host, pathname].join('');
+  };
+  var getLastPathComponentWithoutExtension = function getLastPathComponentWithoutExtension(url) {
+    var last = getLastPathComponent(qualifyUrl(url));
+    var indexOfDot = last.lastIndexOf('.');
+    if (indexOfDot >= 0) {
+      return last.substring(0, indexOfDot);
+    } else {
+      return last;
+    }
+  };
+  var getUtagFirstForField = function getUtagFirstForField(fieldName) {
+    var utagData = window.utag_data;
+    if (utagData && utagData[fieldName] && utagData[fieldName].length >= 0) {
+      if (Array.isArray(utagData[fieldName])) {
+        return utagData[fieldName][0];
+      } else {
+        return utagData[fieldName];
+      }
+    }
+  };
+  var getFloatValue = function getFloatValue(text) {
+    if (text && typeof text === 'string') {
+      var asFloat = parseFloat(text.replace(/[^0-9.]+/g, ''));
+      if (isNaN(asFloat)) {
+        return null;
+      } else {
+        return asFloat;
+      }
+    } else {
+      return null;
+    }
+  };
+  var getIntegerValue = function getIntegerValue(text) {
+    if (text && typeof text === 'string') {
+      var asInt = parseInt(text.trim().replace(/[^0-9.]+/g, ''), 10);
+      if (isNaN(asInt)) {
+        return null;
+      } else {
+        return asInt;
+      }
+    } else {
+      return null;
+    }
+  };
+  var buildLineItemFromPageState = function buildLineItemFromPageState(quantitySelector) {
+    if (mcisSitemapState.result.currentPage && mcisSitemapState.result.currentPage.catalog) {
+      var pageData = mcisSitemapState.result.currentPage.catalog[exports.ItemType.Product];
+      if (!pageData) {
+        return null;
+      }
+      return {
+        _id: pageData._id,
+        price: pageData.price,
+        quantity: getFloatValue(cash(quantitySelector).val())
+      };
+    }
+  };
+  var buildLineItemFromBasePageState = function buildLineItemFromBasePageState(quantitySelector) {
+    var result = getSitemapResult();
+    if (result.currentPage && result.currentPage.interaction && result.currentPage.interaction["catalogObject"]) {
+      var catalogObject = result.currentPage.interaction["catalogObject"];
+      if (!catalogObject) {
+        return null;
+      }
+      return {
+        catalogObjectType: catalogObject.type,
+        catalogObjectId: catalogObject.id,
+        price: catalogObject.attributes && catalogObject.attributes.price ? catalogObject.attributes.price : null,
+        quantity: getFloatValue(cash(quantitySelector).val())
+      };
+    }
+  };
+  var cookie = js_cookie;
+  var resolveWhenTrue$1 = util.resolveWhenTrue;
+  var util$1 = {
+    extractFirstGroup: extractFirstGroup,
+    getLastPathComponent: getLastPathComponent,
+    getLastPathComponentWithoutExtension: getLastPathComponentWithoutExtension,
+    getParameterByName: getParameterByName,
+    getPathname: getPathname,
+    qualifyUrl: qualifyUrl,
+    removeQueryString: removeQueryString,
+    getFloatValue: getFloatValue,
+    getIntegerValue: getIntegerValue,
+    getUtagFirstForField: getUtagFirstForField,
+    getValueFromNestedObject: getValueFromNestedObject,
+    buildLineItemFromPageState: buildLineItemFromPageState,
+    resolveWhenTrue: resolveWhenTrue$1,
+    cookie: cookie
+  };
+
+  var buildCart = function buildCart(lineItemConfig) {
+    return new Promise(function (resolve, reject) {
+      checkSitemapReinit(reject);
+      resolveAndCleanValue$1(lineItemConfig, "lineItems", false, true).then(function (data) {
+        var resolvedCart = {
+          complete: {
+            Product: []
+          }
+        };
+        var lineItems;
+        if (Object.keys(data).length === 0) {
+          resolve(resolvedCart);
+        }
+        lineItems = resolveAndCleanValue$1(data, "lineItems", true, false);
+        resolvedCart.complete['Product'] = lineItems;
+        resolve(resolvedCart);
+      }).catch(function () {
+        sendException(new Error("Cart Config was rejected"), 'Site-wide Javascript');
+      });
+    });
+  };
+  var resolveAndCleanValue$1 = function resolveAndCleanValue(value, key, clean, buildAttributes) {
+    try {
+      var resolvedValue;
+      setCurrentSitemapKey(key);
+      if (value) {
+        if ((key === "dimensions" || key === "relatedCatalogObjects" || key === "lineItems" || key === "attributes") && buildAttributes) {
+          resolvedValue = buildNestedAttributes$1(value, key);
+        } else {
+          resolvedValue = typeof value === "function" ? value() : value;
+          if (key === "categories" && Array.isArray(resolvedValue) && _typeof(resolvedValue[0]) !== "object" && resolvedValue[0].type !== "c" && typeof resolvedValue[0]._id !== "string") {
+            resolvedValue = buildCategoriesAttribute(resolvedValue);
+          } else if (key === "lineItems" && _typeof(resolvedValue) === "object") {
+            resolvedValue = buildMultipleLineItem(resolvedValue);
+          }
+        }
+      }
+      return clean ? cleanValue(key, resolvedValue, mcisSitemapState.config.settings.canonicalizeIds) : resolvedValue;
+    } catch (e) {
+      sendException(new Error("getValue for ".concat(key, " failed on ").concat(mcisSitemapState.result.matchedConfig.name, " while evaluating custom function. ").concat(e.message, ".")), 'Site-wide Javascript');
+    }
+  };
+  var setItemValue = function setItemValue(value, key, item) {
+    if (value && _typeof(value) === "object" && typeof value.then === "function") {
+      sendException(new Error("getValue for ".concat(key, " failed on ").concat(mcisSitemapState.result.matchedConfig.name, " while evaluating custom function. ").concat(key, " cannot be a Promise.")), 'Site-wide Javascript');
+    } else if (value || typeof value === "number" || typeof value === "boolean") {
+      item[key] = value;
+    }
+  };
+  var buildItem = function buildItem(itemConfig, itemType) {
+    return new Promise(function (resolve, reject) {
+      checkSitemapReinit(reject);
+      var idKeys = Object.keys(itemIdKeys);
+      var catalogPromises = [];
+      for (var _i = 0, _idKeys = idKeys; _i < _idKeys.length; _i++) {
+        var key = _idKeys[_i];
+        var resolvedValue = resolveAndCleanValue$1(itemConfig[key], key, false, true);
+        catalogPromises.push(resolvedValue);
+      }
+      Promise.all(catalogPromises).then(function (values) {
+        var item = {
+          _id: null
+        };
+        values.forEach(function (value, index) {
+          var currentKey = idKeys[index];
+          var resolvedValue = resolveAndCleanValue$1(value, currentKey, true, false);
+          setItemValue(resolvedValue, currentKey, item);
+        });
+        Object.keys(itemConfig).forEach(function (key) {
+          if (idKeys.includes(key)) return;
+          var valueFromConfig = itemConfig[key];
+          var resolvedValue = resolveAndCleanValue$1(valueFromConfig, key, true, true);
+          setItemValue(resolvedValue, key, item);
+        });
+        var resolvedItem = _defineProperty({}, itemType, item);
+        resolve(resolvedItem);
+      }).catch(function () {
+        sendException(new Error("Catalog Config was rejected"), 'Site-wide Javascript');
+      });
+    });
+  };
+  var buildOrder = function buildOrder(orderConfig) {
+    return new Promise(function (resolve, reject) {
+      checkSitemapReinit(reject);
+      var orderPromises = [];
+      var orderConfigKeys = Object.keys(orderConfig);
+      orderConfigKeys.forEach(function (key) {
+        setCurrentSitemapKey(key);
+        var valueFromConfig = orderConfig[key];
+        var resolvedValue = resolveAndCleanValue$1(valueFromConfig, key, false, true);
+        orderPromises.push(resolvedValue);
+      });
+      Promise.all(orderPromises).then(function (values) {
+        var order = {};
+        var resolvedOrder = {
+          Product: {}
+        };
+        values.forEach(function (value, index) {
+          var orderConfigKey = orderConfigKeys[index];
+          order[orderConfigKey] = resolveAndCleanValue$1(value, orderConfigKey, true, false);
+        });
+        resolvedOrder["Product"] = order;
+        resolve(resolvedOrder);
+      }).catch(function () {
+        sendException(new Error("Order Config was rejected"), 'Site-wide Javascript');
+      });
+    });
+  };
+  var buildMultipleLineItem = function buildMultipleLineItem(multipleLineItem) {
+    var numItems;
+    if (multipleLineItem._id) {
+      numItems = multipleLineItem._id.length;
+    } else if (multipleLineItem.sku) {
+      numItems = multipleLineItem.sku.length;
+    } else {
+      sendException(new Error("Either _id or sku must be defined for lineItems"), 'Sitemap');
+    }
+    var unformattedLineItems = [];
+    var _loop = function _loop() {
+      var _Object$entries$_i = _slicedToArray(_Object$entries[_i2], 2),
+        key = _Object$entries$_i[0],
+        value = _Object$entries$_i[1];
+      if (value.length != numItems) {
+        sendException(new Error("Resolving multiple values for ".concat(key, " failed on ").concat(mcisSitemapState.result.matchedConfig.name, ". ").concat(key, " does not have the same number of values as _id")), 'Site-wide Javascript');
+      } else {
+        value.forEach(function (val, i) {
+          if (!unformattedLineItems[i]) {
+            unformattedLineItems[i] = {
+              _id: null,
+              quantity: null
+            };
+          }
+          unformattedLineItems[i][key] = val;
+        });
+      }
+    };
+    for (var _i2 = 0, _Object$entries = Object.entries(multipleLineItem); _i2 < _Object$entries.length; _i2++) {
+      _loop();
+    }
+    return unformattedLineItems;
+  };
+  var buildCategoriesAttribute = function buildCategoriesAttribute(categoriesValue) {
+    return categoriesValue.map(function (categoryId) {
+      return {
+        type: "c",
+        _id: categoryId
+      };
+    });
+  };
+  var buildNestedAttributes$1 = function buildNestedAttributes(nestedAttributeConfig, key) {
+    var nestedAttributes = {};
+    var nestedAttributeKeys = Object.keys(nestedAttributeConfig);
+    var resolvedNestedAttributes = {};
+    nestedAttributeKeys.forEach(function (nestedKey) {
+      var nestedAttributeValue = nestedAttributeConfig[nestedKey];
+      nestedAttributes[nestedKey] = resolveAndCleanValue$1(nestedAttributeValue, nestedKey, false, true);
+    });
+    if (key === "lineItems" || key === "dimensions" || key === "relatedCatalogObjects") {
+      return Promise.all(Object.values(nestedAttributes)).then(function (values) {
+        values.forEach(function (value, index) {
+          var key = nestedAttributeKeys[index];
+          var resolvedValue = resolveAndCleanValue$1(value, key, false, false);
+          if (resolvedValue) resolvedNestedAttributes[key] = resolvedValue;
+        });
+        return resolvedNestedAttributes;
+      });
+    }
+    return nestedAttributes;
+  };
+  var cleanValue = function cleanValue(key, value) {
+    var canonicalizeIds = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+    if (Array.isArray(value)) {
+      if (key === "lineItems") {
+        value = cleanLineItems(value, canonicalizeIds);
+      } else {
+        value = value.map(function (val) {
+          return cleanSingleValue(key, val, canonicalizeIds);
+        });
+      }
+    } else {
+      value = cleanSingleValue(key, value, canonicalizeIds);
+    }
+    return value;
+  };
+  var cleanLineItems = function cleanLineItems(lineItems) {
+    var canonicalizeIds = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+    return lineItems.map(function (lineItem) {
+      return cleanLineItem(lineItem, canonicalizeIds);
+    });
+  };
+  var cleanLineItem = function cleanLineItem(lineItem) {
+    var canonicalizeIds = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+    for (var lineItemKey in lineItem) {
+      if (lineItemKey === "item") {
+        for (var itemKey in lineItem[lineItemKey]) {
+          lineItem[lineItemKey][itemKey] = cleanValue(itemKey, lineItem[lineItemKey][itemKey], canonicalizeIds);
+        }
+      } else {
+        lineItem[lineItemKey] = cleanValue(lineItemKey, lineItem[lineItemKey], canonicalizeIds);
+      }
+    }
+    return lineItem;
+  };
+  var cleanSingleValue = function cleanSingleValue(key, value) {
+    var canonicalizeIds = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+    var currentValue = value;
+    if ((key === 'price' || key === 'listPrice' || key === 'totalValue' || key === 'rating') && typeof currentValue === 'string') {
+      currentValue = getFloatValue(currentValue);
+    }
+    if (key === 'url' || key === 'imageUrl') {
+      currentValue = qualifyUrl(currentValue);
+    }
+    if ((key === '_id' || key === 'sku' || key === 'orderId') && typeof currentValue === 'number') {
+      currentValue = currentValue.toString();
+    }
+    if (canonicalizeIds && typeof currentValue === 'string' && (key === '_id' || key === 'sku' || key === 'orderId' || key === 'alternateId' || key === 'parentId')) {
+      currentValue = currentValue.toUpperCase();
+    }
+    if (typeof currentValue === 'string') {
+      if (currentValue.indexOf('&') >= 0) {
+        var textarea = document.createElement('textarea');
+        Object.assign(textarea, {
+          innerHTML: currentValue
+        });
+        currentValue = textarea.value;
+      }
+      currentValue = currentValue.trim();
+    }
+    if (key === 'description' && typeof currentValue === 'string' && currentValue.length > 200) {
+      currentValue = currentValue.substr(0, 197) + '...';
+    }
+    if ((key === 'quantity' || key === 'inventoryCount' || key === 'numRatings') && typeof currentValue === 'string') {
+      currentValue = getIntegerValue(currentValue);
+    }
+    return currentValue;
+  };
+  var checkSitemapReinit = function checkSitemapReinit(promiseReject) {
+    document.addEventListener(exports.CustomEvents.OnInitSitemap, function () {
+      promiseReject(SITEMAP_REINIT);
+    }, {
+      once: true
+    });
+  };
+
+  /*
+   * Copyright 2010-2021 salesforce.com, inc.
+   * All Rights Reserved. Company Confidential.
+   */
+  var currentOptOutPersonalizationExists = function currentOptOutPersonalizationExists() {
+    return consentExists({
+      purpose: McisConsentPurpose.Personalization,
+      status: exports.ConsentStatus.OptOut
+    });
+  };
+  var consentExists = function consentExists(consent) {
+    return getConsents().some(function (currentConsentWithMetadata) {
+      return currentConsentWithMetadata.consent.purpose === consent.purpose && currentConsentWithMetadata.consent.status === consent.status;
+    });
+  };
+
+  /*
+   * Copyright 2010-2021 salesforce.com, inc.
+   * All Rights Reserved. Company Confidential.
+   */
+  var canSendEvent = function canSendEvent(event) {
+    if (!state.beaconConfig.trackAnonymousVisitors && !hasNamedUser(event)) {
+      Logger.debug("An anonymous event has been blocked. trackAnonymous has been turned off and event has no named user.");
+      return false;
+    }
+    return !currentOptOutPersonalizationExists() && state.beaconConfig.sendEvents;
+  };
+
+  var _excluded = ["sdkLoadTime", "sdkParseTime"],
+    _excluded2 = ["id", "type"],
+    _excluded3 = ["Category"];
+  var timeOnPage = 0;
+  var lastActiveTimestamp = -1;
+  var lastPingRequestSent = -1;
+  var activityPingRequestTimeout;
+  var setUserInactiveTimeout;
+  var sendPing = function sendPing(event) {
+    return canSendEvent(event) ? pingReceiver.send(toFlatPing(event)) : Promise.resolve(event);
+  };
+  function cancelActivityTracking() {
+    Logger.debug('Cancelling activity tracking.');
+    clearTimeout(activityPingRequestTimeout);
+    activityPingRequestTimeout = -1;
+    removeEventListener(window, 'pagehide', pagehideFunction);
+    removeEventListener(window, 'blur', windowBlurFunction);
+    removeEventListener(window, 'focus', windowFocusFunction);
+    removeEventListener(document, 'mousemove keydown scroll click', activityRegistered);
+  }
+  function refreshActivityTrackingBeforeSendEvent(event) {
+    var actionEvent = event.detail && event.detail.actionEvent;
+    if (!actionEvent) return;
+    if (actionEvent.itemAction && actionEvent.itemAction.includes('View')) {
+      setupActivityTimers();
+    } else if (actionEvent.interaction && isViewCatalogInteraction(actionEvent.interaction.name)) {
+      setupActivityTimers();
+    }
+  }
+  function isViewCatalogInteraction(name) {
+    return name === CatalogObjectInteractionName.ViewCatalogObject || name === CatalogObjectInteractionName.ViewCatalogObjectDetail || name === CatalogObjectInteractionName.QuickViewCatalogObject || name === McisCatalogObjectInteractionName.StopQuickViewCatalogObject;
+  }
+  function sendExistingActivityTimersAndClear(dontSendSmallIncrements) {
+    if (activityPingRequestTimeout !== -1) {
+      sendActivityPingRequest(false, dontSendSmallIncrements);
+      clearTimeout(activityPingRequestTimeout);
+      activityPingRequestTimeout = -1;
+    }
+  }
+  function setupActivityTimers() {
+    if (state.beaconConfig.doNotTrackPingRequestsForActions) {
+      return;
+    }
+    sendExistingActivityTimersAndClear(true);
+    document.removeEventListener(exports.CustomEvents.OnEventSend, refreshActivityTrackingBeforeSendEvent);
+    document.addEventListener(exports.CustomEvents.OnEventSend, refreshActivityTrackingBeforeSendEvent);
+    var possibleNewTimestamp = Date.now();
+    if (lastActiveTimestamp === -1 || possibleNewTimestamp - lastActiveTimestamp >= state.beaconConfig.minimumActivityTimeToRegister) {
+      lastActiveTimestamp = possibleNewTimestamp;
+    }
+    activityPingRequestTimeout = setTimeout(function () {
+      sendActivityPingRequest(true);
+    }, state.beaconConfig.timeOnPageTimerLengthMillis);
+    Logger.info('Setting up time on page listeners.');
+    removeEventListener(window, 'pagehide', pagehideFunction);
+    addEventListener(window, 'pagehide', pagehideFunction);
+    removeEventListener(window, 'blur', windowBlurFunction);
+    addEventListener(window, 'blur', windowBlurFunction);
+    removeEventListener(window, 'focus', windowFocusFunction);
+    addEventListener(window, 'focus', windowFocusFunction);
+    removeEventListener(document, 'mousemove keydown scroll click', activityRegistered);
+    addEventListener(document, 'mousemove keydown scroll click', activityRegistered);
+  }
+  function sendActivityPingRequest(shouldResetTimer, dontSendSmallIncrements) {
+    var currentTime = Date.now();
+    if (lastActiveTimestamp !== -1) {
+      var timeSinceLastActive = currentTime - lastActiveTimestamp;
+      if (state.beaconConfig.timeOnPageTimerLengthMillis < timeSinceLastActive) {
+        setUserInactive();
+      } else {
+        Logger.trace("Evergage: timeOnPage before: sendActivityPingRequest: ".concat(timeOnPage));
+        timeOnPage += timeSinceLastActive;
+        Logger.trace("Evergage: timeOnPage after: sendActivityPingRequest: ".concat(timeOnPage));
+        if (setUserInactiveTimeout !== -1) {
+          clearTimeout(setUserInactiveTimeout);
+        }
+        setUserInactiveTimeout = setTimeout(setUserInactive, state.beaconConfig.timeOnPageTimerLengthMillis - timeSinceLastActive);
+      }
+    }
+    if (timeOnPage > 0) {
+      // The user's clock probably got set back.  Rezero the clock so future activity will get correctly tracked
+      timeOnPage = Math.min(timeOnPage, state.beaconConfig.timeOnPageTimerLengthMillis);
+      if (dontSendSmallIncrements !== true || timeOnPage >= 2000) {
+        var pingEvent = buildPingRequest(timeOnPage);
+        sendPing(pingEvent);
+        clearMetricsSentInEvent(pingEvent);
+      }
+      timeOnPage = 0;
+    }
+    // The user's clock probably got set back.  Rezero the clock so future activity will get correctly tracked
+    if (timeOnPage < 0) {
+      timeOnPage = 0;
+    }
+    if (shouldResetTimer) {
+      if (activityPingRequestTimeout !== -1) {
+        clearTimeout(activityPingRequestTimeout);
+      }
+      // only reason not to reset is if multiple viewItem calls occur on the same page
+      activityPingRequestTimeout = setTimeout(function () {
+        sendActivityPingRequest(true);
+      }, state.beaconConfig.timeOnPageTimerLengthMillis);
+    }
+  }
+  function buildPingRequest(time) {
+    var pingEvent = {
+      timeOnPageMillis: time
+    };
+    var currentPage = getCurrentPage();
+    var catalogPayload = {};
+    if (currentPage && currentPage.itemAction && currentPage.catalog) {
+      catalogPayload = currentPage.catalog;
+    } else if (currentPage && currentPage.interaction && currentPage.interaction["catalogObject"]) {
+      catalogPayload = convertCatalogObjectToCatalogPayload(currentPage.interaction["catalogObject"]);
+    }
+    if (Object.keys(catalogPayload).length !== 0) {
+      pingEvent.catalog = catalogPayload;
+    }
+    if (currentPage && currentPage.interaction && currentPage.interaction.name != null) {
+      pingEvent.action = currentPage.interaction.name;
+    } else if (currentPage && currentPage.action != null) {
+      pingEvent.action = currentPage.action;
+    }
+    setPerformanceMetricsOnPingEvent(pingEvent);
+    return pingEvent;
+  }
+  function setPerformanceMetricsOnPingEvent(pingEvent) {
+    setLoadTimeMetricsBeforeSend();
+    pingEvent.performance = {};
+    var pingEventMetrics = _objectWithoutProperties(performanceMetrics, _excluded);
+    for (var metric in pingEventMetrics) {
+      if (performanceMetrics[metric]) {
+        pingEvent.performance[metric] = performanceMetrics[metric];
+      }
+    }
+  }
+  function convertCatalogObjectToCatalogPayload(catalogObject) {
+    var catalogPayload = {};
+    var id = catalogObject.id,
+      type = catalogObject.type,
+      catalog = _objectWithoutProperties(catalogObject, _excluded2);
+    if (id && type) {
+      catalogPayload[catalogObject.type] = {
+        _id: id
+      };
+    }
+    if (catalogObject.relatedCatalogObjects) {
+      var _catalog$relatedCatal = catalog.relatedCatalogObjects,
+        Category = _catalog$relatedCatal.Category,
+        relatedCatalogObjects = _objectWithoutProperties(_catalog$relatedCatal, _excluded3);
+      if (Array.isArray(Category)) {
+        catalogPayload[catalogObject.type].categories = buildCategoriesAttribute(Category);
+      }
+      if (Object.keys(relatedCatalogObjects).length !== 0) {
+        catalogPayload[catalogObject.type].relatedCatalogObjects = relatedCatalogObjects;
+      }
+    }
+    return catalogPayload;
+  }
+  function pagehideFunction() {
+    sendExistingActivityTimersAndClear();
+  }
+  function windowBlurFunction(event) {
+    try {
+      Logger.trace('Evergage: window blurred');
+      setUserInactive();
+    } catch (exception) {
+      sendException(exception, 'windowBlurFunction');
+    }
+  }
+  function windowFocusFunction(event) {
+    try {
+      Logger.trace('Evergage: window focused');
+      activityRegistered();
+    } catch (exception) {
+      sendException(exception, 'windowFocusFunction');
+    }
+  }
+  function setUserInactive() {
+    try {
+      if (setUserInactiveTimeout !== -1) {
+        clearTimeout(setUserInactiveTimeout);
+        setUserInactiveTimeout = -1;
+      }
+      var currentTime = Date.now();
+      var timeToAdd = 0;
+      if (lastActiveTimestamp !== -1) {
+        timeToAdd = currentTime - lastActiveTimestamp;
+      }
+      if (lastPingRequestSent !== -1) {
+        var timeSinceLastPingRequest = currentTime - lastPingRequestSent;
+        if (timeSinceLastPingRequest < timeToAdd || timeToAdd === 0) {
+          timeToAdd = timeSinceLastPingRequest;
+        }
+      }
+      Logger.trace("Evergage: timeOnPage before: setUserInactive: ".concat(timeOnPage));
+      timeOnPage += timeToAdd;
+      Logger.trace("Evergage: timeOnPage after: setUserInactive: ".concat(timeOnPage));
+      lastActiveTimestamp = -1;
+    } catch (exception) {
+      sendException(exception, 'setUserInactive');
+    }
+  }
+  function activityRegistered() {
+    Logger.trace('activity registered');
+    try {
+      if (setUserInactiveTimeout !== -1) {
+        clearTimeout(setUserInactiveTimeout);
+        setUserInactiveTimeout = -1;
+      }
+      var possibleNewTimestamp = Date.now();
+      if (lastActiveTimestamp === -1 || possibleNewTimestamp - lastActiveTimestamp >= state.beaconConfig.minimumActivityTimeToRegister) {
+        if (lastActiveTimestamp !== -1) {
+          Logger.trace("Evergage: timeOnPage before: activityRegistered: ".concat(timeOnPage));
+          timeOnPage += possibleNewTimestamp - Math.max(lastActiveTimestamp, lastPingRequestSent);
+          Logger.trace("Evergage: timeOnPage after: activityRegistered: ".concat(timeOnPage));
+        }
+        lastActiveTimestamp = possibleNewTimestamp;
+      }
+    } catch (exception) {
+      sendException(exception, 'activityRegistered');
+    }
+  }
+  var sendPingWithPerformanceTiming = function sendPingWithPerformanceTiming() {
+    sendExistingActivityTimersAndClear();
+    setupActivityTimers();
+  };
+  var Activity = {
+    setupActivityTimers: setupActivityTimers,
+    activityRegistered: activityRegistered,
+    setUserInactive: setUserInactive
+  };
+
+  (function (ItemAction) {
+    ItemAction["ViewItem"] = "View Item";
+    ItemAction["ViewItemOutOfStock"] = "View Item Out Of Stock";
+    ItemAction["ViewItemDetail"] = "View Item Detail";
+    ItemAction["QuickViewItem"] = "Quick View Item";
+    ItemAction["StopQuickViewItem"] = "Stop Quick View Item";
+    ItemAction["ViewCategory"] = "View Category";
+    ItemAction["ViewTag"] = "View Tag";
+    ItemAction["AddToCart"] = "Add To Cart";
+    ItemAction["ViewCart"] = "View Cart";
+    ItemAction["Purchase"] = "Purchase";
+    ItemAction["Share"] = "Share";
+    ItemAction["Review"] = "Review";
+    ItemAction["Comment"] = "Comment";
+    ItemAction["Favorite"] = "Favorite";
+    ItemAction["Search"] = "Search";
+    ItemAction["SearchViewResults"] = "Search View Results";
+    ItemAction["SearchClick"] = "Search Click";
+    ItemAction["ClickThrough"] = "Click Through";
+    ItemAction["UpdateLineItem"] = "Update Line Item";
+    ItemAction["RemoveFromCart"] = "Remove From Cart";
+    ItemAction["ViewBanditItems"] = "View Bandit Items";
+  })(exports.ItemAction || (exports.ItemAction = {}));
+
+  function createCustomError(errorOrMessage, extraProperties) {
+    var error = typeof errorOrMessage === 'string' ? new Error(errorOrMessage) : errorOrMessage;
+    for (var property in extraProperties) {
+      Object.defineProperty(error, property, {
+        value: extraProperties[property],
+        enumerable: false
+      });
+    }
+    return error;
+  }
+  var EventReceiver = /*#__PURE__*/function () {
+    function EventReceiver(baseURL, eventRateLimiter) {
+      _classCallCheck(this, EventReceiver);
+      this.baseURL = baseURL;
+      this.eventRateLimiter = eventRateLimiter || new InteractionEventRateLimiter({
+        globalLimit: state.beaconConfig.actionRateLimiterConfig.globalLimit,
+        globalTimeRange: state.beaconConfig.actionRateLimiterConfig.globalTimeRange,
+        perInteractionLimit: state.beaconConfig.actionRateLimiterConfig.perActionLimit,
+        perInteractionTimeRange: state.beaconConfig.actionRateLimiterConfig.perActionTimeRange
+      });
+    }
+    _createClass(EventReceiver, [{
+      key: "handleSpecialEvent",
+      value: function handleSpecialEvent(event) {
+        var action = event.interaction && event.interaction.name ? event.interaction.name : event.itemAction;
+        if (action === exports.ItemAction.QuickViewItem || action === CatalogObjectInteractionName.QuickViewCatalogObject) {
+          mcisSitemapState.result = _objectSpread2(_objectSpread2({}, mcisSitemapState.result), {}, {
+            backgroundPage: mcisSitemapState.result.backgroundPage || mcisSitemapState.result.currentPage,
+            currentPage: _objectSpread2({}, event)
+          });
+          if (action === exports.ItemAction.QuickViewItem) {
+            mcisSitemapState.result.currentPage.action = event.action || exports.ItemAction.QuickViewItem;
+            mcisSitemapState.result.currentPage.itemAction = exports.ItemAction.QuickViewItem;
+          }
+        } else if (action === exports.ItemAction.StopQuickViewItem || action === McisCatalogObjectInteractionName.StopQuickViewCatalogObject) {
+          mcisSitemapState.result = _objectSpread2(_objectSpread2({}, mcisSitemapState.result), {}, {
+            backgroundPage: null,
+            currentPage: mcisSitemapState.result.backgroundPage || mcisSitemapState.result.currentPage
+          });
+        }
+      }
+    }, {
+      key: "handlePersistedIdentityInResponse",
+      value: function handlePersistedIdentityInResponse(response) {
+        var visitor = {};
+        var persistedUserId = response.persistedUserId,
+          anonAffinityId = response.anonAffinityId;
+        if (persistedUserId) {
+          var entityId = persistedUserId.entityId,
+            accountId = persistedUserId.accountId;
+          if (entityId) {
+            visitor.persistedUserId = entityId;
+          }
+          if (accountId) {
+            visitor.persistedAccountId = accountId;
+          }
+        }
+        if (anonAffinityId && anonAffinityId !== visitor.affinityId) {
+          visitor.affinityId = anonAffinityId;
+        }
+        updateVisitor(visitor);
+      }
+    }, {
+      key: "handlePerformanceTimingBeforeEvent",
+      value: function handlePerformanceTimingBeforeEvent() {
+        setLoadTimeMetricsBeforeSend();
+        setSdkTimeMetricsBeforeSend();
+      }
+    }, {
+      key: "handlePerformanceTimingInResponse",
+      value: function handlePerformanceTimingInResponse() {
+        setNetworkTime();
+        setEventDnsTime();
+        sendPingWithPerformanceTiming();
+      }
+      /*
+          Prevent errors if InteractionStudioTools sets wrong flag due to being out of date
+          TODO: Can be removed once W-10501653 is implemented
+       */
+    }, {
+      key: "handleDebug",
+      value: function handleDebug(actionEvent) {
+        if (actionEvent.interaction && actionEvent.interaction.name && actionEvent.debug && actionEvent.debug.explanations) {
+          actionEvent.explain = actionEvent.debug.explanations;
+          delete actionEvent.debug.explanations;
+        }
+      }
+    }, {
+      key: "onEventSend",
+      value: function onEventSend(actionEvent) {
+        var _this = this;
+        this.handlePerformanceTimingBeforeEvent();
+        var shouldSendEvent = document.dispatchEvent(new CustomEvent(exports.CustomEvents.OnEventSend, {
+          detail: {
+            actionEvent: actionEvent
+          },
+          cancelable: true
+        })) && document.dispatchEvent(new CustomEvent(McisCustomEvents.OnBeforeEventSend, {
+          detail: {
+            actionEvent: actionEvent
+          },
+          cancelable: true
+        }));
+        if (!shouldSendEvent) {
+          Logger.debug('MCIS Module onBeforeEventSend cancelled.');
+          return;
+        }
+        this.handleDebug(actionEvent);
+        this.handleSpecialEvent(actionEvent);
+        Logger.debug('Sending event: ', actionEvent);
+        this.send(actionEvent).then(function (response) {
+          clearMetricsSentInEvent(actionEvent);
+          if (actionEvent.pageView || actionEvent.flags && actionEvent.flags.pageView) {
+            _this.handlePerformanceTimingInResponse();
+          }
+          _this.handlePersistedIdentityInResponse(response);
+          Logger.debug('Received event response: ', response);
+          if (response.campaignResponses) {
+            var experienceIdsFromEvent = response.campaignResponses.map(function (campaignResponseFromEvent) {
+              return campaignResponseFromEvent.experienceId;
+            });
+            mcisSitemapState.campaignResponses = [].concat(_toConsumableArray(response.campaignResponses), _toConsumableArray(mcisSitemapState.campaignResponses.filter(function (campaignResponse) {
+              return !experienceIdsFromEvent.includes(campaignResponse.experienceId);
+            })));
+          }
+          document.dispatchEvent(new CustomEvent(exports.CustomEvents.OnEventResponse, {
+            detail: {
+              response: response,
+              actionEvent: actionEvent
+            }
+          }));
+          document.dispatchEvent(new CustomEvent(McisCustomEvents.OnEventResponse, {
+            detail: {
+              response: response,
+              actionEvent: actionEvent
+            }
+          }));
+        }).catch(function (error) {
+          sendException(error, 'Server Response'); // TODO: check if redispatch on Evergage namespace
+        });
+      }
+    }, {
+      key: "send",
+      value: function send(payload) {
+        var _this2 = this;
+        return new Promise(function (resolve, reject) {
+          var interactionName = payload["action" /* ACTION */] || payload.interaction && payload.interaction.name;
+          if (_this2.eventRateLimiter.isTriggerLimitExceeded({
+            name: interactionName
+          })) {
+            reject(new Error('Event Rate Limiter triggered'));
+            return;
+          }
+          var payloadString;
+          try {
+            payloadString = JSON.stringify(payload);
+          } catch (e) {
+            return reject(e);
+          }
+          var xhr = new XMLHttpRequest();
+          xhr.onload = function () {
+            if (this.status >= 200 && this.status < 300) {
+              try {
+                var responseJson = JSON.parse(xhr.response);
+                resolve(responseJson);
+              } catch (e) {
+                reject(createCustomError(e, {
+                  status: this.status,
+                  statusText: xhr.statusText
+                }));
+              }
+            } else {
+              reject(createCustomError("Response was not OK: ".concat(xhr.responseText), {
+                status: this.status,
+                statusText: xhr.statusText
+              }));
+            }
+          };
+          xhr.onerror = function () {
+            if (xhr.responseType === "" || xhr.responseType === "text") {
+              var message = xhr.responseText || xhr.statusText;
+              if (message) {
+                reject(createCustomError("Response error: ".concat(message), {
+                  status: this.status,
+                  statusText: xhr.statusText
+                }));
+                return; // <- Remove this if we want to always log.debug
+              }
+            }
+            Logger.debug("An error was sent with no text.  \
+                                    This is un-actionable so it is being logged instead of written.");
+          };
+          if (payload.debug && payload.debug.explanations || payload.explain) {
+            xhr.withCredentials = true;
+          }
+          if (getParameterByName(READABLE_EVENT_QUERY_PARAM) == 'true') {
+            _this2.sendPost(xhr, _this2.baseURL, payloadString);
+            return;
+          }
+          try {
+            if (!/^[\x20-\x7E]+$/.test(payloadString)) {
+              throw new Error('GET request payload contains non-ASCII characters, try sending POST request');
+            }
+            var _payload = encodeURIComponent(window.btoa(payloadString));
+            var url = _this2.baseURL + '?event=' + _payload;
+            if (url.length > MAX_GET_REQUEST_SIZE) {
+              throw new Error('GET request URL exceeds 8192 characters, try sending POST request');
+            }
+            _this2.sendGet(xhr, url);
+          } catch (e) {
+            _this2.sendPost(xhr, _this2.baseURL, payloadString);
+          }
+        });
+      }
+    }, {
+      key: "sendGet",
+      value: function sendGet(xhr, url) {
+        xhr.open('GET', url, true);
+        xhr.setRequestHeader('Accept', 'application/json, text/javascript, */*; q=0.01');
+        xhr.send();
+      }
+    }, {
+      key: "sendPost",
+      value: function sendPost(xhr, url, payload) {
+        xhr.open('POST', url, true);
+        xhr.setRequestHeader('Accept', 'application/json, text/javascript, */*; q=0.01');
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.send('event=' + encodeURIComponent(payload));
+      }
+    }]);
+    return EventReceiver;
+  }();
+  var eventReceiverUrl = function eventReceiverUrl(trackerURL) {
+    return trackerURL + EVENT_RECEIVER_PATH + state.endpointConfig.dataset;
+  };
+  var eventReceiver;
+  var initEventReceivers = function initEventReceivers(baseURL) {
+    var currentEventRateLimiter = eventReceiver ? eventReceiver.eventRateLimiter : null;
+    eventReceiver = new EventReceiver(eventReceiverUrl(baseURL), currentEventRateLimiter);
+  };
+
+  var processContentZonesForMatchedConfig = function processContentZonesForMatchedConfig(pageConfig) {
+    return (pageConfig.contentZones || []).reduce(function (allZones, zoneConfig) {
+      var foundContentZone = attemptToFindContentZone(zoneConfig);
+      if (typeof (foundContentZone || {}).name === "string" && (foundContentZone || {}).name !== "") allZones.push(foundContentZone);
+      return allZones;
+    }, []);
+  };
+  var processContentZonesForCurrentPage = function processContentZonesForCurrentPage(pageConfig) {
+    return (pageConfig.contentZones || []).reduce(function (allZones, zoneConfig) {
+      var foundContentZone = attemptToFindContentZone(zoneConfig);
+      if (typeof (foundContentZone || {}).name === "string" && (foundContentZone || {}).name !== "") allZones.push((foundContentZone || {}).name);
+      return allZones;
+    }, []);
+  };
+  var attemptToFindContentZone = function attemptToFindContentZone(zoneConfig) {
+    var selectorFound = !(zoneConfig || {}).selector || cashDom((zoneConfig || {}).selector).length > 0;
+    return _objectSpread2(_objectSpread2({}, zoneConfig), {}, {
+      selectorFound: selectorFound
+    });
+  };
+  var getContentZoneSelector = function getContentZoneSelector(contentZoneName) {
+    var matchedConfig = mcisSitemapState.result.matchedConfig;
+    var _ref = matchedConfig || {},
+      contentZones = _ref.contentZones;
+    if (!contentZones) {
+      return null;
+    }
+    var contentZone = contentZones.find(function (contentZone) {
+      return contentZone.name === contentZoneName;
+    });
+    return !!contentZone && !!contentZone.selector ? contentZone.selector : null;
+  };
+
+  var listenerAndContentZoneSearchInterval;
+  var startListenerAndContentZoneSearch = function startListenerAndContentZoneSearch() {
+    var listenerSearch = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+    cancelListenerAndContentZoneSearch();
+    if (pageHasMissingZonesOrListeners(listenerSearch)) {
+      listenerAndContentZoneSearchInterval = setInterval(function () {
+        var updated = false;
+        var intervalTimerStart = new Date().getTime();
+        var matchedConfig = mcisSitemapState.result.matchedConfig || {};
+        var listenerState = matchedConfig.listeners || [];
+        var contentZoneState = matchedConfig.contentZones || [];
+        if (listenerSearch) {
+          listenerState = listenerState.map(function (d) {
+            if (d.selectorFound) {
+              return d;
+            } else {
+              var listener = attemptToBindListener(d);
+              updated = listener.selectorFound || updated;
+              return listener;
+            }
+          });
+        }
+        contentZoneState = contentZoneState.map(function (c) {
+          if (c.selectorFound) {
+            return c;
+          } else {
+            var contentZone = attemptToFindContentZone(c);
+            updated = contentZone.selectorFound || updated;
+            return contentZone;
+          }
+        });
+        if (updated) {
+          Object.assign(mcisSitemapState.result.matchedConfig, _objectSpread2(_objectSpread2({}, mcisSitemapState.result.matchedConfig), {}, {
+            contentZones: contentZoneState,
+            listeners: listenerState
+          }));
+        }
+        var intervalTimerEnd = new Date().getTime();
+        var intervalRunningTime = intervalTimerEnd - intervalTimerStart;
+        if (intervalRunningTime > 50 || !pageHasMissingZonesOrListeners(listenerSearch)) {
+          cancelListenerAndContentZoneSearch();
+        }
+      }, 1000);
+    }
+  };
+  var pageHasMissingZonesOrListeners = function pageHasMissingZonesOrListeners(listenerSearch) {
+    if (mcisSitemapState.result.matchedConfig) {
+      var _mcisSitemapState$res = mcisSitemapState.result.matchedConfig,
+        listeners = _mcisSitemapState$res.listeners,
+        contentZones = _mcisSitemapState$res.contentZones;
+      var hasMissingListeners,
+        hasMissingContentZones = false;
+      if (listeners && listenerSearch) {
+        hasMissingListeners = !!listeners.filter(function (d) {
+          return !d.selectorFound;
+        }).length;
+      }
+      if (contentZones) {
+        hasMissingContentZones = !!contentZones.filter(function (c) {
+          return !c.selectorFound;
+        }).length;
+      }
+      return hasMissingListeners || hasMissingContentZones;
+    } else {
+      return false;
+    }
+  };
+  var cancelListenerAndContentZoneSearch = function cancelListenerAndContentZoneSearch() {
+    if (typeof listenerAndContentZoneSearchInterval === 'number') {
+      clearInterval(listenerAndContentZoneSearchInterval);
+    }
+    listenerAndContentZoneSearchInterval = null;
+  };
+  var removeCurrentListeners$1 = function removeCurrentListeners() {
+    if (mcisSitemapState.result && mcisSitemapState.result.matchedConfig && mcisSitemapState.result.matchedConfig.listeners) {
+      mcisSitemapState.result.matchedConfig.listeners.forEach(function (listener) {
+        cashDom(listener.selector).off(listener.bind);
+      });
+    }
+  };
+
+  var DO_NOT_TRUNCATE = {
+    _id: true,
+    id: true,
+    currency: true,
+    inventoryCount: true,
+    price: true,
+    tagType: true,
+    type: true
+  };
+  var detectTranslate = function detectTranslate() {
+    // These checks can't trigger cross origin error
+    var googleTranslate = cashDom('script[src*="//translate.googleusercontent.com"]').length > 0;
+    var chromeTranslate = cashDom('html.translated-ltr').length > 0 || cashDom('html.translated-rtl').length > 0;
+    if (googleTranslate || chromeTranslate) {
+      Logger.debug('page is translated');
+      return true;
+    }
+    try {
+      var bingTranslate = cashDom(window.parent.document).find('script[src*="//www.microsofttranslator.com"]').length > 0;
+      var worldLingoTranslate = cashDom(window.parent.document).find('frame[src*="//www.worldlingo.com"]').length > 0;
+      if (bingTranslate || worldLingoTranslate) {
+        Logger.debug('page is translated');
+        return true;
+      } else {
+        Logger.debug('page is not translated');
+        return false;
+      }
+    } catch (e) {
+      // These checks can cause cross origin error
+      Logger.debug('exception caught, assuming page is untranslated ' + e);
+      return false;
+    }
+  };
+  var truncateTranslatedCatalog = function truncateTranslatedCatalog(catalogPayload) {
+    Object.keys(catalogPayload).forEach(function (itemKey) {
+      var item = catalogPayload[itemKey];
+      Object.keys(item).forEach(function (key) {
+        if (!DO_NOT_TRUNCATE[key]) {
+          delete item[key]; // tslint:disable-line no-delete no-object-mutation
+        }
+      });
+    });
+    return catalogPayload;
+  };
+  var truncateTranslatedInteraction = function truncateTranslatedInteraction(catalogObject) {
+    Object.keys(catalogObject).forEach(function (key) {
+      if (!DO_NOT_TRUNCATE[key]) {
+        delete catalogObject[key];
+      }
+    });
+    return catalogObject;
+  };
+  var shouldTruncateTranslated = function shouldTruncateTranslated() {
+    return mcisSitemapState.config && mcisSitemapState.config.settings && mcisSitemapState.config.settings.truncateTranslated && detectTranslate();
+  };
+
+  var _excluded$1 = ["anonymousId"];
+  var sendStructuredEvent = function sendStructuredEvent(event) {
+    var shouldPrepareEvent = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+    if (shouldPrepareEvent) prepareEvent(event);
+    if (!canSendEvent(event)) {
+      return Promise.resolve(event);
+    }
+    prepareStructuredEvent(event);
+    validateStructuredEvent(event);
+    eventReceiver.onEventSend(event);
+    return new Promise(function (resolve) {
+      document.addEventListener(exports.CustomEvents.OnEventResponse, function (event) {
+        if (event && event.detail && event.detail.response) {
+          resolve(event.detail.response);
+        }
+      });
+    });
+  };
+  var prepareStructuredEvent = function prepareStructuredEvent(event) {
+    prepareUserPayload$1(event);
+    addMcisFields(event);
+  };
+  var prepareUserPayload$1 = function prepareUserPayload(event) {
+    var visitor = getVisitor();
+    var _ref = event.user || {},
+      anonymousId = _ref.anonymousId,
+      user = _objectWithoutProperties(_ref, _excluded$1);
+    event.user = _objectSpread2(_objectSpread2({}, user || {}), {}, {
+      anonId: visitor.uuid
+    });
+  };
+  var addMcisFields = function addMcisFields(actionEvent) {
+    addPersistedUserIdIfNecessary(actionEvent);
+    prepareAccountPayload(actionEvent);
+    prepareDebugPayload(actionEvent);
+    prepareSourcePayload$1(actionEvent);
+    preparePerformancePayload(actionEvent);
+  };
+  var addPersistedUserIdIfNecessary = function addPersistedUserIdIfNecessary(event) {
+    var visitor = getVisitor();
+    if (visitor.persistedUserId) {
+      event.user.encryptedId = visitor.persistedUserId;
+    }
+  };
+  var prepareAccountPayload = function prepareAccountPayload(event) {
+    var visitor = getVisitor();
+    event.account = event.account || {};
+    if (visitor.persistedAccountId) {
+      event.account.encryptedId = visitor.persistedAccountId;
+    }
+  };
+  var prepareSourcePayload$1 = function prepareSourcePayload(event) {
+    var isPageViewEvent = event.pageView || (event.flags || {}).pageView;
+    event.source = _objectSpread2(_objectSpread2({}, event.source || {}), {}, {
+      beaconVersion: BEACON_VERSION,
+      configVersion: state.endpointConfig.siteConfigVersion,
+      contentZones: prepareContentZonesForSourcePayload(event.source, isPageViewEvent)
+    });
+  };
+  var prepareDebugPayload = function prepareDebugPayload(event) {
+    var experienceIds = getParameterByName(TEST_MESSAGES_QUERY_PARAM);
+    if (experienceIds) {
+      event.debug ? event.debug.testMessages = experienceIds : event.debug = {
+        testMessages: experienceIds
+      };
+    }
+  };
+  var preparePerformancePayload = function preparePerformancePayload(event) {
+    if (performanceMetrics.domLoadTime || performanceMetrics.pageLoadTime || performanceMetrics.sdkParseTime || performanceMetrics.sdkLoadTime || performanceMetrics.sdkDnsTime) {
+      event.performance = _objectSpread2(_objectSpread2(_objectSpread2(_objectSpread2(_objectSpread2({}, performanceMetrics.domLoadTime && {
+        domLoadTime: performanceMetrics.domLoadTime
+      }), performanceMetrics.pageLoadTime && {
+        pageLoadTime: performanceMetrics.pageLoadTime
+      }), performanceMetrics.sdkParseTime && {
+        sdkParseTime: performanceMetrics.sdkParseTime
+      }), performanceMetrics.sdkLoadTime && {
+        sdkLoadTime: performanceMetrics.sdkLoadTime
+      }), performanceMetrics.sdkDnsTime && {
+        sdkDnsTime: performanceMetrics.sdkDnsTime
+      });
+    }
+  };
+  var prepareContentZonesForSourcePayload = function prepareContentZonesForSourcePayload(eventSource, pageView) {
+    return (eventSource.contentZones || []).reduce(function (allZones, contentZone) {
+      if (!pageView && _typeof(contentZone) === "object" && (contentZone || {}).name) {
+        Logger.warn("Using content zone objects in 'sendEvent' will soon be deprecated in favor of zone names as strings");
+      }
+      var contentZoneName = typeof contentZone === "string" && contentZone !== "" ? contentZone : (contentZone || {}).name;
+      if (typeof contentZoneName === "string" && contentZoneName !== "") allZones.push(contentZoneName);
+      return allZones;
+    }, []);
+  };
+  var validateStructuredEvent = function validateStructuredEvent(event) {
+    return validateRelatedCatalogObjects(event);
+  };
+  var validateRelatedCatalogObjects = function validateRelatedCatalogObjects(event) {
+    if (event.catalog && Object.keys(event.catalog).length > 0) {
+      Object.keys(event.catalog).forEach(function (itemType) {
+        if (event.catalog[itemType]) {
+          if (event.catalog[itemType].dimensions && event.catalog[itemType].relatedCatalogObjects) {
+            sendException(new Error("Catalog cannot include both dimensions and relatedCatalogObjects"), "Sitemap");
+            return false;
+          }
+          var relatedCatalogObjects = event.catalog[itemType].relatedCatalogObjects || event.catalog[itemType].dimensions;
+          if (relatedCatalogObjects && isObject(relatedCatalogObjects)) {
+            Object.keys(relatedCatalogObjects).forEach(function (catalogObject) {
+              if (!Array.isArray(relatedCatalogObjects[catalogObject])) {
+                sendException(new Error("".concat(catalogObject, " is not an array. Related Catalog Objects must have type of string[]")), "Sitemap");
+                return false;
+              }
+            });
+          }
+        }
+      });
+    }
+    return true;
+  };
+
+  var deepCopyActionEvent = function deepCopyActionEvent(actionEvent) {
+    // TODO: Look into more efficient ways to deepCopy the actionEvent
+    var mcisActionEvent;
+    try {
+      mcisActionEvent = JSON.parse(JSON.stringify(actionEvent));
+    } catch (e) {
+      sendException(e, 'Copy ActionEvent');
+    }
+    return mcisActionEvent;
+  };
+  var handleInteractionEvent = function handleInteractionEvent(actionEvent) {
+    if (actionEvent.interaction && actionEvent.interaction["catalogObject"] && shouldTruncateTranslated()) {
+      truncateTranslatedInteraction(actionEvent.interaction["catalogObject"]);
+    }
+    cleanInteractionCatalogValues(actionEvent.interaction);
+    addMcisFields(actionEvent);
+    prepareContentZonesForEvent(actionEvent);
+  };
+  var cleanInteractionCatalogValues = function cleanInteractionCatalogValues(interaction) {
+    if (interaction) {
+      if ("catalogObject" in interaction) {
+        cleanCatalogInteraction(interaction.catalogObject);
+      } else if ("lineItem" in interaction) {
+        cleanCatalogInteraction(interaction.lineItem);
+      } else if ("lineItems" in interaction) {
+        interaction.lineItems.map(function (lineItem) {
+          return cleanCatalogInteraction(lineItem);
+        });
+      } else if ("order" in interaction) {
+        cleanCatalogInteraction(interaction.order);
+      }
+    }
+  };
+  var cleanCatalogInteraction = function cleanCatalogInteraction(interactionTypeData) {
+    if (_typeof(interactionTypeData) === "object") {
+      for (var _i = 0, _Object$keys = Object.keys(interactionTypeData); _i < _Object$keys.length; _i++) {
+        var key = _Object$keys[_i];
+        var currentValue = interactionTypeData[key];
+        if (key === "lineItems" && Array.isArray(currentValue)) {
+          currentValue.map(function (lineItem) {
+            if (lineItem.catalogObjectId && typeof lineItem.catalogObjectId === "string") {
+              lineItem.catalogObjectId = lineItem.catalogObjectId.trim();
+            }
+          });
+        } else if (key === "relatedCatalogObjects") {
+          for (var _i2 = 0, _Object$keys2 = Object.keys(currentValue); _i2 < _Object$keys2.length; _i2++) {
+            var catalogObject = _Object$keys2[_i2];
+            if (Array.isArray(currentValue[catalogObject])) {
+              currentValue[catalogObject] = currentValue[catalogObject].map(function (val) {
+                if (typeof val === "string") {
+                  return val.trim();
+                }
+              });
+            }
+          }
+        } else if (key === "catalogObjectId" || key === "id") {
+          if (typeof currentValue === "string") {
+            interactionTypeData[key] = currentValue.trim();
+          }
+        }
+      }
+    }
+  };
+  var prepareContentZonesForEvent = function prepareContentZonesForEvent(event) {
+    if (event && event.source && Array.isArray(event.source.contentZones) && event.source.contentZones.length > 0) {
+      return;
+    }
+    var matchedConfig = getSitemapResult().matchedConfig;
+    //TODO: Better way is to hook into baseSDK handleConfig instead of relying on event.pageView
+    if (matchedConfig && event.pageView) {
+      mcisSitemapState.result.matchedConfig = _objectSpread2(_objectSpread2({}, matchedConfig), {}, {
+        contentZones: processContentZonesForMatchedConfig(matchedConfig)
+      });
+      mcisSitemapState.result.currentPage = _objectSpread2(_objectSpread2({}, mcisSitemapState.result.currentPage || {}), {}, {
+        source: _objectSpread2(_objectSpread2({}, mcisSitemapState.result.currentPage.source || {}), {}, {
+          contentZones: processContentZonesForCurrentPage(matchedConfig)
+        })
+      });
+      event.source.contentZones = mcisSitemapState.result.currentPage.source.contentZones;
+      startListenerAndContentZoneSearch(false);
+    }
+  };
+
+  var sendEvent$1 = function sendEvent(event) {
+    event = handleOnActionEvent$1(event);
+    if (event.action === MetadataUpdateInteractionName.MetadataUpdate) {
+      return sendStructuredEvent(event, false);
+    }
+    return sendStructuredEvent(event);
+  };
+  var handleOnActionEvent$1 = function handleOnActionEvent(event) {
+    event = matchedConfigOnActionEvent$1(event);
+    event = globalOnActionEvent$1(event);
+    return event;
+  };
+  var matchedConfigOnActionEvent$1 = function matchedConfigOnActionEvent(event) {
+    var matchedConfig = mcisSitemapState.result.matchedConfig;
+    try {
+      event = matchedConfig && matchedConfig.onActionEvent ? matchedConfig.onActionEvent(event) : event; // TODO: better typing?
+      if (_typeof(event) === 'object') {
+        return event;
+      } else {
+        sendException(new Error("onActionEvent failed for the ".concat(mcisSitemapState.result.matchedConfig.name, " page config. Must return an object or null.")), 'Site-wide Javascript');
+      }
+    } catch (e) {
+      sendException(new Error("onActionEvent failed for the ".concat(mcisSitemapState.result.matchedConfig.name, " page config. ").concat(e.message, ".")), 'Site-wide Javascript');
+    }
+  };
+  var globalOnActionEvent$1 = function globalOnActionEvent(event) {
+    var siteMapConfig = mcisSitemapState.config;
+    try {
+      event = siteMapConfig.global && siteMapConfig.global.onActionEvent ? siteMapConfig.global.onActionEvent(event) : event; // TODO: better typing?
+      if (_typeof(event) === 'object') {
+        return event;
+      } else {
+        sendException(new Error("onActionEvent failed for the global page config. Must return an object or null."), 'Site-wide Javascript');
+      }
+    } catch (e) {
+      sendException(new Error("onActionEvent failed for the global page config. ".concat(e.message, ".")), 'Site-wide Javascript');
+    }
+  };
+
+  var onSalesforceSitemapInit = function onSalesforceSitemapInit() {
+    mcisSitemapState.config = _objectSpread2(_objectSpread2({}, mcisSitemapState.config), getSitemapConfig());
+    cancelListenerAndContentZoneSearch();
+  };
+  var onSalesforceEventSend = function onSalesforceEventSend(event) {
+    var actionEvent = event.detail.actionEvent;
+    //TODO: BaseSDK should send a copy of the event that doesn't modify the original
+    var mcisEvent = deepCopyActionEvent(actionEvent);
+    if (!mcisEvent) {
+      Logger.warn('MCIS Module cannot parse event');
+      return;
+    }
+    var baseSitemapResult = getSitemapResult();
+    // Overlay baseSitemapResult on mcisSitemapState.result, keeping mcisSitemapState.result.currentPage if set
+    mcisSitemapState.result = _objectSpread2(_objectSpread2(_objectSpread2({}, mcisSitemapState.result), baseSitemapResult), {
+      currentPage: mcisSitemapState.result.currentPage
+    });
+    /*
+     * If the incoming actionEvent is the same as the baseSitemapResult's currentPage set
+     * mcisSitemapState.result.currentPage to a copy of the incoming actionEvent. mcisSitemapState.result.currentPage
+     * will reflect MCIS specific fields and baseSitemapResult.currentPage will not be changed when MCIS processes the event
+     */
+    if (actionEvent === baseSitemapResult.currentPage) {
+      mcisSitemapState.result.currentPage = mcisEvent;
+    }
+    if (!canSendEvent(actionEvent) || !mcisSitemapState.config.settings.runOnTranslatedPage && detectTranslate()) {
+      return;
+    }
+    handleInteractionEvent(mcisEvent);
+    eventReceiver.onEventSend(mcisEvent);
+  };
+  var onSalesforcePageMatchStatusUpdated = function onSalesforcePageMatchStatusUpdated(event) {
+    // Always use baseSDK's matchStatus if it exists for mcisSitemapState.
+    mcisSitemapState.result.matchStatus = getSitemapResult().matchStatus;
+    document.dispatchEvent(new CustomEvent(exports.CustomEvents.OnPageMatchStatusUpdated, {
+      detail: {
+        matchStatus: event.detail.matchStatus
+      }
+    }));
+  };
+  var onSalesforceException = function onSalesforceException(event) {
+    if (event && event.detail) {
+      var error = event.detail.error;
+      var context = event.detail.context;
+      document.dispatchEvent(new CustomEvent(exports.CustomEvents.OnException, {
+        detail: {
+          error: error,
+          context: context
+        }
+      }));
+      var errorEvent = toFlatError(error, context);
+      if (canSendEvent(errorEvent)) errorReceiver.send(errorEvent);
+    }
+  };
+  var onSalesforceConsentRevoke = function onSalesforceConsentRevoke(event) {
+    document.dispatchEvent(new CustomEvent(exports.CustomEvents.OnConsentRevoke, {
+      detail: {
+        revokedConsent: event.detail.revokedConsent
+      }
+    }));
+  };
+  var onSalesforceSetAnonymousId = function onSalesforceSetAnonymousId(event) {
+    if (event.detail && event.detail.newAnonymousId) {
+      var visitor = getVisitor();
+      var newAnonymousId = event.detail.newAnonymousId;
+      if (visitor.uuid !== newAnonymousId) {
+        updateVisitor({
+          uuid: newAnonymousId
+        });
+      }
+    }
+  };
+  var handleConsentRevokeEvent = function handleConsentRevokeEvent(event) {
+    var actionEvent = event.detail.actionEvent;
+    if (actionEvent.interaction && actionEvent.interaction.name === MetadataUpdateInteractionName.MetadataUpdate) {
+      event.preventDefault();
+      var mcisActionEvent = {
+        action: MetadataUpdateInteractionName.MetadataUpdate,
+        consents: actionEvent.consents,
+        source: actionEvent.source,
+        user: actionEvent.user
+      };
+      sendEvent$1(mcisActionEvent);
+    }
+  };
+  var bindSalesforceEventListeners = function bindSalesforceEventListeners() {
+    unbindSalesforceEventListeners();
+    document.addEventListener(CustomEvents.OnInitSitemap, onSalesforceSitemapInit);
+    document.addEventListener(CustomEvents.OnEventSend, onSalesforceEventSend);
+    document.addEventListener(CustomEvents.OnPageMatchStatusUpdated, onSalesforcePageMatchStatusUpdated);
+    document.addEventListener(CustomEvents.OnException, onSalesforceException);
+    document.addEventListener(CustomEvents.OnConsentRevoke, onSalesforceConsentRevoke);
+    document.addEventListener(CustomEvents.OnSetAnonymousId, onSalesforceSetAnonymousId);
+  };
+  var unbindSalesforceEventListeners = function unbindSalesforceEventListeners() {
+    document.removeEventListener(CustomEvents.OnInitSitemap, onSalesforceSitemapInit);
+    document.removeEventListener(CustomEvents.OnEventSend, onSalesforceEventSend);
+    document.removeEventListener(CustomEvents.OnPageMatchStatusUpdated, onSalesforcePageMatchStatusUpdated);
+    document.removeEventListener(CustomEvents.OnException, onSalesforceException);
+    document.removeEventListener(CustomEvents.OnConsentRevoke, onSalesforceConsentRevoke);
+    document.removeEventListener(CustomEvents.OnSetAnonymousId, onSalesforceSetAnonymousId);
+  };
+
+  var _excluded$2 = ["cookieDomain", "consents"];
+  var mcisInit = function mcisInit(mcisSdkConfig) {
+    if (state.beaconState == "running" /* RUNNING */) {
+      return shutDown("reinitializing MCIS Module");
+    }
+    var cookieDomain = mcisSdkConfig.cookieDomain,
+      consents = mcisSdkConfig.consents,
+      beaconConfig = _objectWithoutProperties(mcisSdkConfig, _excluded$2);
+    if (cookieDomain) state.beaconConfig.cookieDomain = cookieDomain;
+    if (consents) state.beaconConfig.consents = consents;
+    var _state$endpointConfig = state.endpointConfig,
+      account = _state$endpointConfig.account,
+      dataset = _state$endpointConfig.dataset,
+      trackerUrl = _state$endpointConfig.trackerUrl;
+    state.beaconConfig = _objectSpread2(_objectSpread2({}, state.beaconConfig), {}, {
+      trackerUrl: trackerUrl
+    }, beaconConfig);
+    var sdkConfig = getSdkConfig$1();
+    var shouldInit = document.dispatchEvent(new CustomEvent(exports.CustomEvents.OnInit, {
+      detail: {
+        beaconConfig: sdkConfig
+      },
+      cancelable: true
+    }));
+    document.dispatchEvent(new CustomEvent(McisCustomEvents.OnInit, {
+      detail: {
+        sdkConfig: sdkConfig
+      }
+    }));
+    if (shouldInit) {
+      //Use cookieDomain from the baseSDK
+      var baseCookieDomain = getCookieDomain();
+      McisCookies.setCookieHash(account, dataset, baseCookieDomain);
+      loadVisitor();
+      initReceivers(state.beaconConfig.trackerUrl);
+      bindSalesforceEventListeners();
+      Activity.setupActivityTimers();
+      // TODO: make sure that removing previous beacon state conditional here is properly handled
+      Logger.debug("Initialized Tracking Beacon v".concat(BEACON_VERSION, " for account[").concat(account, "] dataset[").concat(dataset, "]"));
+      setBeaconState("running" /* RUNNING */);
+      return true;
+    } else {
+      unbindSalesforceEventListeners();
+      cancelActivityTracking();
+      Logger.debug('IS Module initialization canceled due to a preventDefault call in a listener for the OnInit event.');
+      return false;
+    }
+  };
+  var initReceivers = function initReceivers(trackerUrl) {
+    initEventReceivers(trackerUrl);
+    initOneWayReceivers(trackerUrl);
+  };
+
+  function listener$1(bind, selector, optionsOrCallback) {
+    var callbackFunction;
+    if (_typeof(optionsOrCallback) === "object") {
+      callbackFunction = function callbackFunction() {
+        Logger.warn("ListenerOptions are deprecated. Please use a callback in the Listener instead.");
+        var event = _objectSpread2(_objectSpread2({}, optionsOrCallback), {}, {
+          user: {}
+        });
+        sendEvent$1(event);
+      };
+    } else {
+      callbackFunction = optionsOrCallback;
+    }
+    return listener(bind, selector, callbackFunction);
+  }
+  var processListeners$1 = function processListeners(pageConfig) {
+    return (pageConfig.listeners || []).map(function (listenerConfig) {
+      return attemptToBindListener(listenerConfig);
+    });
+  };
+
+  var setConfig$1 = function setConfig$1(config) {
+    setConfig(config);
+    document.dispatchEvent(new CustomEvent(exports.CustomEvents.OnInitSitemap, {
+      detail: {
+        sitemapConfig: mcisSitemapState.config
+      }
+    }));
+  };
+  var runSpecificConfig = function runSpecificConfig(pageConfig) {
+    Object.assign(mcisSitemapState.config, {
+      pageTypes: [pageConfig]
+    });
+    run$1(mcisSitemapState.config);
+  };
+  var initSitemap$1 = function initSitemap(siteMapConfig) {
+    run$1(siteMapConfig);
+    return true;
+  };
+  var isOrderConfig = function isOrderConfig(pageConfig) {
+    return pageConfig.itemAction === exports.ItemAction.Purchase || !!(pageConfig && pageConfig.order);
+  };
+  var isCartConfig = function isCartConfig(pageConfig) {
+    return pageConfig.itemAction === exports.ItemAction.ViewCart || !!(pageConfig && pageConfig.cart && pageConfig.cart.complete);
+  };
+  var build$1 = function build(config) {
+    matchPageConfig(config.pageTypes) // TODO: better typing solution?
+    .then(mergeConfigWithGlobal$1).then(handleConfig$1).catch(function (e) {
+      if (e !== SITEMAP_REINIT) sendException(new Error("Unhandled exception: ".concat(e)), 'Site-wide Javascript');
+    });
+  };
+  var handleConfig$1 = function handleConfig(pageConfig) {
+    mcisSitemapState.result.matchedConfig = _objectSpread2(_objectSpread2({}, pageConfig), {}, {
+      contentZones: processContentZonesForMatchedConfig(pageConfig),
+      listeners: processListeners$1(pageConfig)
+    });
+    mcisSitemapState.result.currentPage = _objectSpread2(_objectSpread2({}, mcisSitemapState.result.currentPage || {}), {}, {
+      action: processPageLoadAction(pageConfig),
+      itemAction: processItemAction(pageConfig),
+      source: {
+        pageType: pageConfig.name,
+        locale: processLocale$1(pageConfig),
+        contentZones: processContentZonesForCurrentPage(pageConfig)
+      },
+      flags: {
+        pageView: true
+      },
+      user: {},
+      performance: {},
+      debug: {}
+    });
+    return handleCatalog(pageConfig);
+  };
+  var handleCatalog = function handleCatalog(pageConfig) {
+    if (isCartConfig(pageConfig)) {
+      return processCartConfig(pageConfig).then(function (data) {
+        mcisSitemapState.result.currentPage.itemAction = exports.ItemAction.ViewCart;
+        mcisSitemapState.result.currentPage.cart = data;
+      });
+    } else if (isOrderConfig(pageConfig)) {
+      return processOrderConfig(pageConfig).then(function (data) {
+        mcisSitemapState.result.currentPage.itemAction = exports.ItemAction.Purchase;
+        mcisSitemapState.result.currentPage.order = data;
+      });
+    } else {
+      return processCatalogConfig(pageConfig).then(function (data) {
+        mcisSitemapState.result.currentPage.catalog = data;
+      });
+    }
+  };
+  var processCartConfig = function processCartConfig(pageConfig) {
+    var cartPayload = {};
+    if (!pageConfig.catalog && !pageConfig.cart && !pageConfig.order) {
+      return Promise.resolve(cartPayload);
+    }
+    var cartConfig;
+    if (pageConfig.cart) {
+      cartConfig = pageConfig.cart;
+    } else if (pageConfig.order || pageConfig.catalog) {
+      var transformedItemType = {};
+      var pageConfigCartObject = pageConfig.order || pageConfig.catalog;
+      Object.keys(pageConfigCartObject).forEach(function (itemTypeKey) {
+        var itemType = pageConfigCartObject[itemTypeKey];
+        if (itemType && itemType.lineItems) {
+          transformedItemType[itemTypeKey] = itemType.lineItems;
+        }
+      });
+      cartConfig = {
+        complete: transformedItemType
+      };
+    }
+    if (cartConfig.complete) {
+      var completeCartConfig = cartConfig.complete;
+      for (var itemKey in completeCartConfig) {
+        if (!Array.isArray(itemKey.match(/[A-Z]/))) {
+          sendException(new Error("Item types must be capitalized. Did you mean ".concat(itemKey.replace(/^\w/, function (letter) {
+            return letter.toUpperCase();
+          }), "?")), 'Sitewide Javascript');
+          return Promise.resolve(cartPayload);
+        }
+        if (itemKey !== "Product") {
+          sendException(new Error('Item type must be Product'), 'Sitewide Javascript');
+          return Promise.resolve(cartPayload);
+        }
+        return buildCart(completeCartConfig[itemKey]);
+      }
+    }
+  };
+  var processOrderConfig = function processOrderConfig(pageConfig) {
+    var orderPayload = {};
+    if (!pageConfig.catalog && !pageConfig.order) {
+      return Promise.resolve(orderPayload);
+    }
+    var orderConfigWithItemType = pageConfig.order || pageConfig.catalog;
+    for (var itemKey in orderConfigWithItemType) {
+      if (!Array.isArray(itemKey.match(/[A-Z]/))) {
+        sendException(new Error("Item types must be capitalized. Did you mean ".concat(itemKey.replace(/^\w/, function (letter) {
+          return letter.toUpperCase();
+        }), "?")), 'Sitewide Javascript');
+        return Promise.resolve(orderPayload);
+      }
+      if (itemKey !== "Product") {
+        sendException(new Error('Item type must be Product'), 'Sitewide Javascript');
+        return Promise.resolve(orderPayload);
+      }
+      var orderConfig = orderConfigWithItemType[itemKey];
+      return buildOrder(orderConfig);
+    }
+  };
+  var processCatalogConfig = function processCatalogConfig(pageConfig) {
+    var catalogPayload = {};
+    if (!pageConfig.catalog) {
+      return Promise.resolve(catalogPayload);
+    }
+    for (var itemKey in pageConfig.catalog) {
+      if (!Array.isArray(itemKey.match(/[A-Z]/))) {
+        sendException(new Error("Item types must be capitalized. Did you mean ".concat(itemKey.replace(/^\w/, function (letter) {
+          return letter.toUpperCase();
+        }), "?")), 'Sitewide Javascript');
+        return Promise.resolve(catalogPayload);
+      }
+      var itemConfig = pageConfig.catalog[itemKey];
+      return processItemConfig(itemConfig, itemKey);
+    }
+  };
+  var processItemConfig = function processItemConfig(itemConfig, itemKey) {
+    return buildItem(itemConfig, itemKey).then(function (data) {
+      Object.keys(data).forEach(function (itemType) {
+        if (!data[itemType]._id) {
+          sendException(new Error("Invalid ".concat(itemKey, ", missing _id for the ").concat(mcisSitemapState.result.matchedConfig.name, " page config.")), 'Site-wide Javascript');
+        }
+      });
+      return shouldTruncateTranslated() ? truncateTranslatedCatalog(data) : data;
+    });
+  };
+  var processLocale$1 = function processLocale(pageConfig) {
+    return typeof pageConfig.locale === "function" ? pageConfig.locale() : pageConfig.locale;
+  };
+  var processPageLoadAction = function processPageLoadAction(pageConfig) {
+    return typeof pageConfig.action === "function" ? pageConfig.action() : pageConfig.action;
+  };
+  var processItemAction = function processItemAction(pageConfig) {
+    return pageConfig.catalog ? pageConfig.itemAction || exports.ItemAction.ViewItem : null;
+  };
+  var mergeDeep$1 = function mergeDeep() {
+    var isObject = function isObject(obj) {
+      return obj && _typeof(obj) === 'object';
+    };
+    for (var _len = arguments.length, objects = new Array(_len), _key = 0; _key < _len; _key++) {
+      objects[_key] = arguments[_key];
+    }
+    return objects.reduce(function (prev, obj) {
+      Object.keys(obj).forEach(function (key) {
+        var pVal = prev[key];
+        var oVal = obj[key];
+        if (Array.isArray(pVal) && Array.isArray(oVal)) {
+          Object.assign(prev, _defineProperty({}, key, pVal.concat.apply(pVal, _toConsumableArray(oVal))));
+        } else if (isObject(pVal) && isObject(oVal)) {
+          Object.assign(prev, _defineProperty({}, key, mergeDeep(pVal, oVal)));
+        } else {
+          Object.assign(prev, _defineProperty({}, key, oVal));
+        }
+      });
+      return prev;
+    }, {});
+  };
+  var mergeConfigWithGlobal$1 = function mergeConfigWithGlobal(pageConfig) {
+    var global = mcisSitemapState.config.global || {};
+    var globalOnActionEvent = global.onActionEvent;
+    delete global.onActionEvent;
+    var mergedConfig = mergeDeep$1(global, pageConfig);
+    global.onActionEvent = globalOnActionEvent;
+    return mergedConfig;
+  };
+  var validatePageConfigs$1 = function validatePageConfigs(siteMapConfig) {
+    try {
+      validateGlobalConfig(siteMapConfig.global);
+      validateDefaultConfig(siteMapConfig.pageTypeDefault);
+      validatePageTypeConfigs$1(siteMapConfig.pageTypes);
+      return true;
+    } catch (e) {
+      sendException(new Error(e), 'Sitemap');
+      return false;
+    }
+  };
+  var validateDefaultConfig = function validateDefaultConfig(defaultConfig) {
+    if (defaultConfig) {
+      Object.keys(defaultConfig).forEach(function (key) {
+        if (key !== "contentZones" && key !== "listeners" && key !== "locale" && key !== "name" && key != "onActionEvent") {
+          throw new Error("".concat(key, " is not a valid default config attribute."));
+        }
+      });
+    }
+  };
+  var validateGlobalConfig = function validateGlobalConfig(globalConfig) {
+    if (globalConfig) {
+      Object.keys(globalConfig).forEach(function (key) {
+        if (key !== "contentZones" && key !== "listeners" && key !== "locale" && key != "onActionEvent") {
+          throw new Error("".concat(key, " is not a valid global config attribute."));
+        }
+        if (key === "contentZones" && globalConfig[key] && !Array.isArray(globalConfig[key])) {
+          throw new Error("global config: contentZones must be provided as an array of objects");
+        }
+      });
+    }
+  };
+  var validatePageTypeConfigs$1 = function validatePageTypeConfigs(pageConfigs) {
+    pageConfigs.forEach(function (pageConfig) {
+      if (!pageConfig.name || !pageConfig.isMatch) {
+        throw new Error("All page configs must have a name and isMatch attribute defined");
+      }
+      if (pageConfig && pageConfig.contentZones && !Array.isArray(pageConfig.contentZones)) {
+        throw new Error("".concat(pageConfig.name, " pageType config: contentZones must be provided as an array of objects"));
+      }
+    });
+  };
+  var processResult$1 = function processResult() {
+    var result = mcisSitemapState.result;
+    sendEvent$1(mcisSitemapState.result.currentPage);
+    mcisSitemapState.result = result;
+  };
+  var run$1 = function run(siteMapConfig) {
+    setConfig$1(siteMapConfig);
+    removeOutstandingPageMatchResolvers();
+    removeCurrentListeners$1();
+    cancelListenerAndContentZoneSearch();
+    if (!mcisSitemapState.config.settings.runOnTranslatedPage && detectTranslate()) {
+      return;
+    }
+    mcisSitemapState.result.currentPage = null;
+    if (!validatePageConfigs$1(siteMapConfig)) {
+      return;
+    }
+    matchPageConfig(siteMapConfig.pageTypes) // TODO: better typing solution?
+    .then(mergeConfigWithGlobal$1).then(handleConfig$1).then(processResult$1).then(function () {
+      return startListenerAndContentZoneSearch();
+    }).catch(function (e) {
+      if (e !== SITEMAP_REINIT) sendException(new Error("Unhandled exception: ".concat(e)), 'Site-wide Javascript');
+    });
+  };
+
+  var onSalesforceInit = function onSalesforceInit(event) {
+    var sdkConfig = event.detail.sdkConfig;
+    mcisInit(sdkConfig);
+  };
+  var onBeforeInit = function onBeforeInit(event) {
+    if (state.beaconConfig.secureCookie) {
+      setSecureAttributeOnCookie(true);
+    } else {
+      setSecureAttributeOnCookie(false);
+    }
+  };
+  var onSalesforceShutDown = function onSalesforceShutDown(event) {
+    var message = event.detail.message;
+    Logger.info("Shutting down MCIS Module: ".concat(message));
+    document.dispatchEvent(new CustomEvent(exports.CustomEvents.OnShutDown, {
+      detail: {
+        message: message
+      }
+    }));
+    setBeaconState("shutDown" /* SHUT_DOWN */);
+    unbindSalesforceEventListeners();
+  };
+  document.addEventListener(CustomEvents.OnInit, onSalesforceInit);
+  document.addEventListener(CustomEvents.OnShutDown, onSalesforceShutDown);
+  document.addEventListener(CustomEvents.OnBeforeInit, onBeforeInit);
+  var init$1 = function init$1() {
+    var beaconConfig = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    return new Promise(function (resolve) {
+      document.addEventListener(CustomEvents.OnBeforeEventSend, handleConsentRevokeEvent);
+      init(beaconConfig).catch(function (e) {});
+      if (state.beaconState === "running" /* RUNNING */) resolve(state);
+    });
+  };
+  var reinit$1 = function reinit() {
+    var consents = getConsents().map(function (consentWithMetadata) {
+      return consentWithMetadata.consent;
+    });
+    init$1(_objectSpread2(_objectSpread2({}, getConfig()), {}, {
+      consents: consents
+    })).then(function () {
+      initSitemap$1(mcisSitemapState.config);
+    });
+  };
+  function reset() {
+    Logger.debug('Unbinding signal subscriptions.');
+    try {
+      // Signals.unbindAll();
+    } catch (e) {
+      Logger.debug('Failed to unbind Experience.Signals', e);
+    }
+  }
+  var sendStat = function sendStat(event) {
+    var experienceIds = [];
+    event.campaignStats.forEach(function (campaignStat) {
+      var campaignResponse = mcisSitemapState.campaignResponses.find(function (campaignResponse) {
+        return campaignResponse.experienceId === campaignStat.experienceId;
+      });
+      document.dispatchEvent(new CustomEvent(exports.CustomEvents.OnStatSend, {
+        detail: {
+          campaignStat: campaignStat,
+          campaignResponse: campaignResponse
+        }
+      }));
+      document.dispatchEvent(new CustomEvent(McisCustomEvents.OnStatSend, {
+        detail: {
+          campaignStat: campaignStat,
+          campaignResponse: campaignResponse
+        }
+      }));
+      experienceIds.push(campaignStat.experienceId);
+    });
+    // filter out duplicates
+    experienceIds = Array.from(new Set(experienceIds));
+    return canSendEvent(event) ? campaignStatReceiver.send(toFlatStat(event), experienceIds) : Promise.resolve(event);
+  };
+  function determineTrackerUrl(endpointConfig) {
+    var account = endpointConfig.account;
+    return "https://".concat(account, ".").concat(PROD_TRACKER_DOMAIN);
+  }
+  function determineCdnUrl(endpointConfig) {
+    return "https://".concat(PROD_CDN_DOMAIN);
+  }
+  var configure = function configure(endpointConfig, config) {
+    if (state.beaconState == "running" /* RUNNING */) {
+      reset();
+    }
+    setBeaconState("initializing" /* INITIALIZING */);
+    state.endpointConfig = _objectSpread2(_objectSpread2({}, state.endpointConfig), endpointConfig);
+    var _state$endpointConfig = state.endpointConfig,
+      account = _state$endpointConfig.account,
+      dataset = _state$endpointConfig.dataset,
+      siteConfigVersion = _state$endpointConfig.siteConfigVersion;
+    if (!account || !dataset) {
+      return shutDown('account/dataset undefined. Check your beacon configuration.');
+    }
+    if (!siteConfigVersion) {
+      return shutDown('beacon config version undefined');
+    }
+    if (!state.endpointConfig.cdnUrl) state.endpointConfig.cdnUrl = determineCdnUrl();
+    if (!state.endpointConfig.cdnUrl) {
+      return shutDown('cdnUrl undefined. Check your beacon configuration.');
+    }
+    if (!state.endpointConfig.trackerUrl) state.endpointConfig.trackerUrl = determineTrackerUrl({
+      account: account,
+      dataset: dataset
+    });
+    if (!state.endpointConfig.trackerUrl) {
+      return shutDown('trackerUrl undefined. Check your beacon configuration.');
+    }
+    state.beaconConfig.trackerUrl = state.endpointConfig.trackerUrl;
+    state.beaconConfig = _objectSpread2(_objectSpread2({}, state.beaconConfig), config);
+    setBeaconState("configured" /* CONFIGURED */);
+  };
+  /**
+   * Used by the next-gen chrome and legacy chrome extensions
+   */
+  var getVersion = function getVersion() {
+    return BEACON_VERSION;
+  };
+  var removeCookies = function removeCookies(domain) {
+    if (domain) {
+      McisCookies.setCookieHash(state.endpointConfig.account, state.endpointConfig.dataset, domain);
+    }
+    document.dispatchEvent(new CustomEvent(CustomEvents.OnClearCookie, {
+      detail: {
+        options: {
+          domain: domain || state.beaconConfig.cookieDomain || getCurrentDomainWithoutWWW(location.hostname)
+        }
+      }
+    }));
+  };
+  /**
+   * @ignore
+   * no-op, deprecated
+   */
+  var addResponseListener = function addResponseListener(listener) {
+    Logger.warn("Evergage.addResponseListener is deprecated. Use the Evergage.CustomEvents.OnEventResponse event instead.");
+    return null;
+  };
+  /**
+   * @ignore
+   * no-op, deprecated
+   */
+  var addEventListener$1 = function addEventListener(listener) {
+    Logger.warn("Evergage.addEventListener is deprecated. Use the Evergage.CustomEvents.OnEventSend event instead.");
+    return null;
+  };
+  if (window.SalesforceInteractions) {
+    window.SalesforceInteractions.mcis = {
+      extractFirstGroup: util$1.extractFirstGroup,
+      getLastPathComponentWithoutExtension: util$1.getLastPathComponentWithoutExtension,
+      getParameterByName: util$1.getParameterByName,
+      getValueFromNestedObject: util$1.getValueFromNestedObject,
+      buildLineItemFromPageState: buildLineItemFromBasePageState,
+      cookie: util$1.cookie,
+      sendStat: sendStat,
+      getContentZoneSelector: getContentZoneSelector,
+      getSdkConfig: getSdkConfig$1,
+      getSitemapConfig: getSitemapConfig$1,
+      getSitemapResult: getSitemapResult$1,
+      getCampaignResponses: getCampaignResponses,
+      CustomEvents: McisCustomEvents,
+      ConsentPurpose: McisConsentPurpose,
+      CatalogObjectInteractionName: McisCatalogObjectInteractionName
+    };
+  }
+
+  exports.ConsentPurpose = McisConsentPurpose;
+  exports.DisplayUtils = DisplayUtils;
+  exports.addEventListener = addEventListener$1;
+  exports.addResponseListener = addResponseListener;
+  exports.build = build$1;
+  exports.cashDom = cashDom;
+  exports.configure = configure;
+  exports.getCampaignResponses = getCampaignResponses;
+  exports.getConfig = getConfig;
+  exports.getConsents = getConsents;
+  exports.getContentZoneSelector = getContentZoneSelector;
+  exports.getCurrentPage = getCurrentPage;
+  exports.getLoggingLevel = getLoggingLevel;
+  exports.getSitemapConfig = getSitemapConfig$1;
+  exports.getSitemapResult = getSitemapResult$1;
+  exports.getState = getState;
+  exports.getVersion = getVersion;
+  exports.init = init$1;
+  exports.initSitemap = initSitemap$1;
+  exports.listener = listener$1;
+  exports.log = Logger;
+  exports.reinit = reinit$1;
+  exports.removeCookies = removeCookies;
+  exports.resolvers = resolvers;
+  exports.runSpecificConfig = runSpecificConfig;
+  exports.sendEvent = sendEvent$1;
+  exports.sendException = sendException;
+  exports.sendStat = sendStat;
+  exports.setConfig = setConfig$1;
+  exports.setLoggingLevel = setLoggingLevel;
+  exports.shutDown = shutDown;
+  exports.updateConsents = updateConsents;
+  exports.util = util$1;
+
+  return exports;
+
+}({}));
 window.evergageBeaconParseTimeEnd = (new Date().getTime());
+//# sourceMappingURL=evergage.js.map
 
 (function configureEvergage() {
     try {
        Evergage.configure({
-           account: "partnerlistengageus",
-           dataset: "tomas_dev",
+           account: "v55685555553mx3rf3h3n3n3i091550196",
+           dataset: "sciex_prod",
            cdnUrl: "https://cdn.evergage.com",
-           trackerUrl: "https://partnerlistengageus.us-4.evergage.com",
-           siteConfigVersion: "5"
-       },{"allowBotTraffic":false,"corsAllowedOrigins":["*"],"defaultCurrency":"USD","defaultLocale":null,"disableQtipWindowScroll":false,"doNotStoreCookiesRequireProvidedAnonId":false,"doNotTrackPingRequestsForActions":false,"enableCorsRestrictedOrigins":false,"enableMessageRotation":false,"enableRememberMeUserIds":false,"enableTemplateEsc":false,"hideContentSections":false,"hideContentSectionsMillis":2500,"hidePagesForRedirect":false,"hidePagesForRedirectMillis":1000,"identityAttributes":["emailAddress","profileId","sfmcContactKey"],"lastModified":1743002509808,"preventSensitiveDataCapture":false,"rememberMeUserIdsMillis":63072000000,"secureCookie":true,"sendErrorEvents":true,"showPoweredBy":false,"siteConfigExecBeforePageReady":false,"spaRouteChangeTimeout":500,"trackAnonymousVisitors":true,"trackContextualRelatedItems":false,"trackSubdomainAsCompany":false,"trackUnknownPagesByTitle":false,"treatHashChangeAsPageLoad":false}       );
+           trackerUrl: "https://v55685555553mx3rf3h3n3n3i091550196.us-1.evergage.com",
+           siteConfigVersion: "4"
+       },{"allowBotTraffic":false,"corsAllowedOrigins":["*"],"defaultCurrency":"USD","defaultLocale":null,"disableQtipWindowScroll":false,"doNotStoreCookiesRequireProvidedAnonId":false,"doNotTrackPingRequestsForActions":false,"enableCorsRestrictedOrigins":false,"enableMessageRotation":false,"enableRememberMeUserIds":false,"enableTemplateEsc":false,"hideContentSections":false,"hideContentSectionsMillis":2500,"hidePagesForRedirect":false,"hidePagesForRedirectMillis":1000,"identityAttributes":["customerId","emailAddress","profileId","sfmcContactKey"],"lastModified":1747773961942,"preventSensitiveDataCapture":false,"rememberMeUserIdsMillis":63072000000,"secureCookie":true,"sendErrorEvents":true,"showPoweredBy":false,"siteConfigExecBeforePageReady":false,"spaRouteChangeTimeout":500,"trackAnonymousVisitors":true,"trackContextualRelatedItems":false,"trackSubdomainAsCompany":false,"trackUnknownPagesByTitle":false,"treatHashChangeAsPageLoad":false}       );
     } catch (e) {
           console.error(e);
     }
@@ -219,166 +6479,166 @@ window.evergageBeaconParseTimeEnd = (new Date().getTime());
 
 try {
     const CAMPAIGN_STAT_ATTRIBUTE = {
-    CAMPAIGN: "data-evg-campaign-id",
-    EXPERIENCE: "data-evg-experience-id",
-    USER_GROUP: "data-evg-user-group",
-    CLICKTHROUGH: "data-evg-clickthrough",
-    IGNORE_CLICKTHROUGH: "data-evg-ignore-clickthrough",
-    DISMISSAL: "data-evg-dismissal",
-    ITEM: "data-evg-item-id",
-    ITEM_TYPE: "data-evg-item-type"
-};
-
-const CAMPAIGN_STAT_TYPE = {
-    IMPRESSION: "Impression",
-    CLICKTHROUGH: "Clickthrough",
-    DISMISSAL: "Dismissal"
-};
-
-const CAMPAIGN_STAT_USER_GROUP = {
-    TEST: "Test",
-    CONTROL: "Control"
-};
-
-document.addEventListener(Evergage.CustomEvents.OnTemplateDisplayEnd, (event) => {
-    if (validateOnTemplateDisplayEndEvent(event)) {
-        const payload = event.detail.payload;
-        const campaignElement = getCampaignElementFromPayload(payload);
-        sendImpression(payload, campaignElement);
-        bindCampaignClickthroughsAndDismissals(campaignElement);
-    }
-});
-
-const sendImpression = (payload, campaignElement) => {
-    const userGroup = payload.userGroup;
-    const stat = {
-        control: userGroup === CAMPAIGN_STAT_USER_GROUP.CONTROL,
-        experienceId: payload.experience,
-        stat: CAMPAIGN_STAT_TYPE.IMPRESSION
-    };
-    const itemStats = generateItemStats(campaignElement);
-    if (Object.keys(itemStats).length > 0) {
-        stat.catalog = itemStats;
-    }
-    if (userGroup === CAMPAIGN_STAT_USER_GROUP.CONTROL || (userGroup === CAMPAIGN_STAT_USER_GROUP.TEST && campaignElement.length > 0)) {
-        Evergage.sendStat({campaignStats: [stat]});
-    } else {
-        Evergage.log.warn("campaignStatsTracking.js", "Experience", payload.experience, "not found in DOM.");
-    }
-};
-
-const generateItemStats = (campaignElement) => {
-    const catalogStats = {};
-    const itemNodes = Evergage.cashDom(campaignElement).find("[" + CAMPAIGN_STAT_ATTRIBUTE.ITEM_TYPE + "]");
-    if (!itemNodes || itemNodes.length === 0) {
-        return catalogStats;
-    }
-    Array.from(itemNodes).forEach(function(itemNode) {
-        const itemId = Evergage.cashDom(itemNode).attr(CAMPAIGN_STAT_ATTRIBUTE.ITEM);
-        const itemType = Evergage.cashDom(itemNode).attr(CAMPAIGN_STAT_ATTRIBUTE.ITEM_TYPE);
-        if (itemId && itemType) {
-            if (!catalogStats[itemType]) {
-                catalogStats[itemType] = [];
-            }
-            if (!catalogStats[itemType].includes(itemId)) {
-                catalogStats[itemType].push(itemId);
-            }
-        }
-    });
-    return catalogStats;
-}
-
-const buildCampaignSelector = (experienceId) => {
-    return `[${CAMPAIGN_STAT_ATTRIBUTE.EXPERIENCE}='${experienceId}']`
-}
-
-const getCampaignElementFromPayload = (payload) => {
-    const experienceId = payload.experience;
-    const campaignSelector = buildCampaignSelector(experienceId);
-    return Evergage.cashDom(campaignSelector);
-};
-
-const getCampaignClickthroughAndDismissalElements = (campaignElement) => {
-    const experienceId = Evergage.cashDom(campaignElement).attr(`${CAMPAIGN_STAT_ATTRIBUTE.EXPERIENCE}`);
-    const campaignSelector = buildCampaignSelector(experienceId);
-    return Evergage.cashDom(campaignElement).parent().find(`
-        ${campaignSelector}[${CAMPAIGN_STAT_ATTRIBUTE.CLICKTHROUGH}],
-        ${campaignSelector} a,
-        ${campaignSelector} [${CAMPAIGN_STAT_ATTRIBUTE.CLICKTHROUGH}],
-        ${campaignSelector} [${CAMPAIGN_STAT_ATTRIBUTE.DISMISSAL}]
-    `);
-};
-
-const sendClickthroughOrDismissal = (e) => {
-    if (Evergage.cashDom(e.target).closest(`[${CAMPAIGN_STAT_ATTRIBUTE.IGNORE_CLICKTHROUGH}]`).length > 0) {
-        return;
-    }
-    const campaignElement = Evergage.cashDom(e.target).closest(`[${CAMPAIGN_STAT_ATTRIBUTE.EXPERIENCE}]`);
-    if (campaignElement.length > 0  && Evergage.cashDom(e.target).closest(`
-        a,
-        [${CAMPAIGN_STAT_ATTRIBUTE.CLICKTHROUGH}],
-        [${CAMPAIGN_STAT_ATTRIBUTE.DISMISSAL}]`).length > 0) {
-
-        const stat = {
-            control: campaignElement.attr(CAMPAIGN_STAT_ATTRIBUTE.USER_GROUP) === CAMPAIGN_STAT_USER_GROUP.CONTROL,
-            experienceId: campaignElement.attr(CAMPAIGN_STAT_ATTRIBUTE.EXPERIENCE),
-            stat: Evergage.cashDom(e.target).closest(`[${CAMPAIGN_STAT_ATTRIBUTE.CLICKTHROUGH}]`).length > 0 || Evergage.cashDom(e.target).closest("a").length > 0
-                ? CAMPAIGN_STAT_TYPE.CLICKTHROUGH
-                : CAMPAIGN_STAT_TYPE.DISMISSAL
+            CAMPAIGN: "data-evg-campaign-id",
+            EXPERIENCE: "data-evg-experience-id",
+            USER_GROUP: "data-evg-user-group",
+            CLICKTHROUGH: "data-evg-clickthrough",
+            IGNORE_CLICKTHROUGH: "data-evg-ignore-clickthrough",
+            DISMISSAL: "data-evg-dismissal",
+            ITEM: "data-evg-item-id",
+            ITEM_TYPE: "data-evg-item-type"
         };
-
-        if (stat.stat === CAMPAIGN_STAT_TYPE.CLICKTHROUGH) {
-            const itemClickthroughStats = generateItemClickthroughStats(e.target);
-            if (Object.keys(itemClickthroughStats).length > 0) {
-                stat.catalog = itemClickthroughStats;
+        
+        const CAMPAIGN_STAT_TYPE = {
+            IMPRESSION: "Impression",
+            CLICKTHROUGH: "Clickthrough",
+            DISMISSAL: "Dismissal"
+        };
+        
+        const CAMPAIGN_STAT_USER_GROUP = {
+            TEST: "Test",
+            CONTROL: "Control"
+        };
+        
+        document.addEventListener(Evergage.CustomEvents.OnTemplateDisplayEnd, (event) => {
+            if (validateOnTemplateDisplayEndEvent(event)) {
+                const payload = event.detail.payload;
+                const campaignElement = getCampaignElementFromPayload(payload);
+                sendImpression(payload, campaignElement);
+                bindCampaignClickthroughsAndDismissals(campaignElement);
             }
+        });
+        
+        const sendImpression = (payload, campaignElement) => {
+            const userGroup = payload.userGroup;
+            const stat = {
+                control: userGroup === CAMPAIGN_STAT_USER_GROUP.CONTROL,
+                experienceId: payload.experience,
+                stat: CAMPAIGN_STAT_TYPE.IMPRESSION
+            };
+            const itemStats = generateItemStats(campaignElement);
+            if (Object.keys(itemStats).length > 0) {
+                stat.catalog = itemStats;
+            }
+            if (userGroup === CAMPAIGN_STAT_USER_GROUP.CONTROL || (userGroup === CAMPAIGN_STAT_USER_GROUP.TEST && campaignElement.length > 0)) {
+                Evergage.sendStat({campaignStats: [stat]});
+            } else {
+                Evergage.log.warn("campaignStatsTracking.js", "Experience", payload.experience, "not found in DOM.");
+            }
+        };
+        
+        const generateItemStats = (campaignElement) => {
+            const catalogStats = {};
+            const itemNodes = Evergage.cashDom(campaignElement).find("[" + CAMPAIGN_STAT_ATTRIBUTE.ITEM_TYPE + "]");
+            if (!itemNodes || itemNodes.length === 0) {
+                return catalogStats;
+            }
+            Array.from(itemNodes).forEach(function(itemNode) {
+                const itemId = Evergage.cashDom(itemNode).attr(CAMPAIGN_STAT_ATTRIBUTE.ITEM);
+                const itemType = Evergage.cashDom(itemNode).attr(CAMPAIGN_STAT_ATTRIBUTE.ITEM_TYPE);
+                if (itemId && itemType) {
+                    if (!catalogStats[itemType]) {
+                        catalogStats[itemType] = [];
+                    }
+                    if (!catalogStats[itemType].includes(itemId)) {
+                        catalogStats[itemType].push(itemId);
+                    }
+                }
+            });
+            return catalogStats;
         }
-
-        Evergage.sendStat({campaignStats: [stat]});
-    }
-};
-
-const generateItemClickthroughStats = (target) => {
-    const itemStats = {};
-    const itemId = Evergage.cashDom(target).closest("[" + CAMPAIGN_STAT_ATTRIBUTE.ITEM + "]").attr(CAMPAIGN_STAT_ATTRIBUTE.ITEM);
-    const itemType = Evergage.cashDom(target).closest("[" + CAMPAIGN_STAT_ATTRIBUTE.ITEM_TYPE + "]").attr(CAMPAIGN_STAT_ATTRIBUTE.ITEM_TYPE);
-
-    if (itemId && itemType) {
-        itemStats[itemType] = [itemId];
-    }
-    return itemStats;
-}
-
-const bindCampaignClickthroughsAndDismissals = (campaignElement) => {
-    const elements = getCampaignClickthroughAndDismissalElements(campaignElement);
-    elements.off("click", sendClickthroughOrDismissal);
-    elements.on("click", sendClickthroughOrDismissal);
-};
-
-const validateOnTemplateDisplayEndEvent = (event) => {
-    if (!event.detail) {
-        Evergage.log.warn("campaignStatsTracking.js", "No detail object found for onTemplateDisplayEndEvent", event);
-        return false;
-    }
-    if (!event.detail.payload) {
-        Evergage.log.warn("campaignStatsTracking.js", "No payload object found for onTemplateDisplayEndEvent", event);
-        return false;
-    }
-    if (!event.detail.payload.campaign) {
-        Evergage.log.warn("campaignStatsTracking.js", "No campaign found in payload object", event.detail);
-        return false;
-    }
-    if (!event.detail.payload.experience) {
-        Evergage.log.warn("campaignStatsTracking.js", "No experience found in payload object", event.detail);
-        return false;
-    }
-    if (!event.detail.payload.userGroup) {
-        Evergage.log.warn("campaignStatsTracking.js", "No user group found in payload object", event.detail);
-        return false;
-    }
-    return true;
-};
-
+        
+        const buildCampaignSelector = (experienceId) => {
+            return `[${CAMPAIGN_STAT_ATTRIBUTE.EXPERIENCE}='${experienceId}']`
+        }
+        
+        const getCampaignElementFromPayload = (payload) => {
+            const experienceId = payload.experience;
+            const campaignSelector = buildCampaignSelector(experienceId);
+            return Evergage.cashDom(campaignSelector);
+        };
+        
+        const getCampaignClickthroughAndDismissalElements = (campaignElement) => {
+            const experienceId = Evergage.cashDom(campaignElement).attr(`${CAMPAIGN_STAT_ATTRIBUTE.EXPERIENCE}`);
+            const campaignSelector = buildCampaignSelector(experienceId);
+            return Evergage.cashDom(campaignElement).parent().find(`
+                ${campaignSelector}[${CAMPAIGN_STAT_ATTRIBUTE.CLICKTHROUGH}],
+                ${campaignSelector} a,
+                ${campaignSelector} [${CAMPAIGN_STAT_ATTRIBUTE.CLICKTHROUGH}],
+                ${campaignSelector} [${CAMPAIGN_STAT_ATTRIBUTE.DISMISSAL}]
+            `);
+        };
+        
+        const sendClickthroughOrDismissal = (e) => {
+            if (Evergage.cashDom(e.target).closest(`[${CAMPAIGN_STAT_ATTRIBUTE.IGNORE_CLICKTHROUGH}]`).length > 0) {
+                return;
+            }
+            const campaignElement = Evergage.cashDom(e.target).closest(`[${CAMPAIGN_STAT_ATTRIBUTE.EXPERIENCE}]`);
+            if (campaignElement.length > 0  && Evergage.cashDom(e.target).closest(`
+                a,
+                [${CAMPAIGN_STAT_ATTRIBUTE.CLICKTHROUGH}],
+                [${CAMPAIGN_STAT_ATTRIBUTE.DISMISSAL}]`).length > 0) {
+        
+                const stat = {
+                    control: campaignElement.attr(CAMPAIGN_STAT_ATTRIBUTE.USER_GROUP) === CAMPAIGN_STAT_USER_GROUP.CONTROL,
+                    experienceId: campaignElement.attr(CAMPAIGN_STAT_ATTRIBUTE.EXPERIENCE),
+                    stat: Evergage.cashDom(e.target).closest(`[${CAMPAIGN_STAT_ATTRIBUTE.CLICKTHROUGH}]`).length > 0 || Evergage.cashDom(e.target).closest("a").length > 0
+                        ? CAMPAIGN_STAT_TYPE.CLICKTHROUGH
+                        : CAMPAIGN_STAT_TYPE.DISMISSAL
+                };
+        
+                if (stat.stat === CAMPAIGN_STAT_TYPE.CLICKTHROUGH) {
+                    const itemClickthroughStats = generateItemClickthroughStats(e.target);
+                    if (Object.keys(itemClickthroughStats).length > 0) {
+                        stat.catalog = itemClickthroughStats;
+                    }
+                }
+        
+                Evergage.sendStat({campaignStats: [stat]});
+            }
+        };
+        
+        const generateItemClickthroughStats = (target) => {
+            const itemStats = {};
+            const itemId = Evergage.cashDom(target).closest("[" + CAMPAIGN_STAT_ATTRIBUTE.ITEM + "]").attr(CAMPAIGN_STAT_ATTRIBUTE.ITEM);
+            const itemType = Evergage.cashDom(target).closest("[" + CAMPAIGN_STAT_ATTRIBUTE.ITEM_TYPE + "]").attr(CAMPAIGN_STAT_ATTRIBUTE.ITEM_TYPE);
+        
+            if (itemId && itemType) {
+                itemStats[itemType] = [itemId];
+            }
+            return itemStats;
+        }
+        
+        const bindCampaignClickthroughsAndDismissals = (campaignElement) => {
+            const elements = getCampaignClickthroughAndDismissalElements(campaignElement);
+            elements.off("click", sendClickthroughOrDismissal);
+            elements.on("click", sendClickthroughOrDismissal);
+        };
+        
+        const validateOnTemplateDisplayEndEvent = (event) => {
+            if (!event.detail) {
+                Evergage.log.warn("campaignStatsTracking.js", "No detail object found for onTemplateDisplayEndEvent", event);
+                return false;
+            }
+            if (!event.detail.payload) {
+                Evergage.log.warn("campaignStatsTracking.js", "No payload object found for onTemplateDisplayEndEvent", event);
+                return false;
+            }
+            if (!event.detail.payload.campaign) {
+                Evergage.log.warn("campaignStatsTracking.js", "No campaign found in payload object", event.detail);
+                return false;
+            }
+            if (!event.detail.payload.experience) {
+                Evergage.log.warn("campaignStatsTracking.js", "No experience found in payload object", event.detail);
+                return false;
+            }
+            if (!event.detail.payload.userGroup) {
+                Evergage.log.warn("campaignStatsTracking.js", "No user group found in payload object", event.detail);
+                return false;
+            }
+            return true;
+        };
+        
 } catch (e) {
     if (typeof window.Evergage === "object" && typeof window.Evergage.getVersion === "function" && window.Evergage.getVersion() >= 5) {
         Evergage.sendException(e, "beaconExtension: Campaign Stats Tracking:campaignStatsTracking.js");
@@ -388,223 +6648,223 @@ const validateOnTemplateDisplayEndEvent = (event) => {
 
 try {
     /**
- *  Personalization Flicker Defense
- */
-Evergage.FlickerDefender = Evergage.FlickerDefender || (() => {
-    const personalizationSectionsSelector = "head > style.evergagePersonalizationSections";
-
-    let personalizedSectionsString = "";
-    let sectionsHaveEverBeenHidden = false;
-    let hasBeenHidden = false;
-    let shouldReshowNow = false;
-    let hiddenSections = {};
-
-    const timeoutOptions = {
-        pageMatchTimeout: 1000,
-        redisplayTimeout: Evergage.getConfig().hideContentSectionsMillis || 2500
-    }
-
-    const utils = {
-        getGlobalContentZoneSelectors: () => {
-            return ((Evergage.getState().config.global || {}).contentZones || [])
-                .filter((contentZone) => (contentZone || {}).selector)
-                .map((contentZone) => contentZone.selector);
-        },
-        getPageTypeContentZoneSelectors: () => {
-            const { pageTypes } = Evergage.getState().config;
-            return pageTypes.length < 1
-                ? []
-                : pageTypes
-                    .map((pageType) => pageType.contentZones || [])
-                    .reduce((acc, contentZonesArr) => acc.concat(contentZonesArr), [])
-                    .filter((contentZone) => (contentZone || {}).selector)
-                    .map((contentZone) => contentZone.selector);
-        },
-        buildContentZoneSelectors: () => {
-            return [
-                ...new Set([
-                    ...utils.getGlobalContentZoneSelectors(),
-                    ...utils.getPageTypeContentZoneSelectors()
-                ])
-            ];
-        },
-        addToPersonalizedSectionsString: (selector) => {
-            if (typeof selector === "string") {
-                try {
-                    document.querySelector(selector);
-                    if (personalizedSectionsString !== "") {
-                        personalizedSectionsString += ", ";
-                    }
-                    personalizedSectionsString += selector;
-                } catch (exception) {
-                    Evergage.sendException(exception, "hideSectionsInvalidCSSSelector");
-                }
+         *  Personalization Flicker Defense
+         */
+        Evergage.FlickerDefender = Evergage.FlickerDefender || (() => {
+            const personalizationSectionsSelector = "head > style.evergagePersonalizationSections";
+        
+            let personalizedSectionsString = "";
+            let sectionsHaveEverBeenHidden = false;
+            let hasBeenHidden = false;
+            let shouldReshowNow = false;
+            let hiddenSections = {};
+        
+            const timeoutOptions = {
+                pageMatchTimeout: 1000,
+                redisplayTimeout: Evergage.getConfig().hideContentSectionsMillis || 2500
             }
-        },
-        hasBeenReshown: () => {
-            return Evergage.cashDom(personalizationSectionsSelector).length === 0;
-        }
-    };
-
-    const actions = {
-        hideSections: () => {
-            if (sectionsHaveEverBeenHidden) return;
-
-            const selectors = utils.buildContentZoneSelectors();
-            if (selectors.length === 0) {
-                Evergage.log.debug("Evergage: Issue with malformed request in hideSections.");
-                return;
-            }
-            for (const selector of selectors) {
-                utils.addToPersonalizedSectionsString(selector);
-            }
-
-            if (!personalizedSectionsString) return;
-
-            const head = document.head || document.getElementsByTagName("head")[0];
-            const style = document.createElement("style");
-            Evergage.cashDom(style)
-                .attr({ type: "text/css", class: "evergagePersonalizationSections" })
-                .text(`${personalizedSectionsString} { visibility: hidden !important; }`);
-
-            clearTimeout(window.evergageReshowPersonalizedSectionsTimeout);
-            window.evergageReshowPersonalizedSectionsTimeout = setTimeout(function () {
-                if (utils.hasBeenReshown()) return;
-                shouldReshowNow = true;
-                actions.reshowPersonalizedSectionsNow();
-            }, timeoutOptions.redisplayTimeout);
-
-            head.appendChild(style);
-            sectionsHaveEverBeenHidden = true;
-        },
-        reshowPersonalizedSections: () => {
-            if (utils.hasBeenReshown()) return;
-            try {
-                if (typeof window.requestAnimationFrame === "function") {
-                    Evergage.log.info("Evergage: Scheduling for next animation frame redisplay of sections of the page marked for personalization.");
-                    window.requestAnimationFrame(actions.reshowPersonalizedSectionsNow);
-                } else {
-                    actions.reshowPersonalizedSectionsNow();
-                }
-            } catch (exception) {
-                Evergage.sendException(exception, "reshowPersonalizedSections");
-            }
-        },
-        reshowReadyPersonalizedSections: () => {
-            Evergage.cashDom(personalizationSectionsSelector).text(`${personalizedSectionsString} { visibility: hidden !important }`);
-            Evergage.log.info(`Evergage: Redisplaying the following sections of the page marked for personalization: ${personalizedSectionsString}`);
-        },
-        reshowAllPersonalizedSections: () => {
-            Evergage.cashDom(personalizationSectionsSelector).remove();
-            Evergage.log.info("Evergage: Redisplaying outstanding sections of the page marked for personalization.");
-        },
-        reshowPersonalizedSectionsNow: () => {
-            if (utils.hasBeenReshown()) return;
-            try {
-                if (shouldReshowNow || Object.keys(hiddenSections).length === 0) {
-                    actions.reshowAllPersonalizedSections();
-                } else if (Object.keys(hiddenSections).length > 0) {
-                    personalizedSectionsString = "";
-                    for (const contentZone in hiddenSections) {
-                        utils.addToPersonalizedSectionsString(hiddenSections[contentZone]);
-                    }
-                    actions.reshowReadyPersonalizedSections();
-                }
-            } catch (exception) {
-                Evergage.sendException(exception, "reshowPersonalizedSectionsNow");
-            }
-        }
-    };
-
-    const beaconListeners = {
-        addOnInit: () => {
-            document.addEventListener(Evergage.CustomEvents.OnInit, (domEvent) => {
-                clearTimeout(window.evergagePageMatchTimeout);
-                window.evergagePageMatchTimeout = setTimeout(function () {
-                    const { pageType } = (Evergage.getCurrentPage().source || {});
-                    if (utils.hasBeenReshown() || (typeof pageType === "string" && pageType !== "")) return;
-                    shouldReshowNow = true;
-                    actions.reshowPersonalizedSectionsNow();
-                }, timeoutOptions.pageMatchTimeout);
-            });
-        },
-        addPageMatchStatusUpdated: () => {
-            document.addEventListener(Evergage.CustomEvents.OnPageMatchStatusUpdated, (domEvent) => {
-                if (!hasBeenHidden) {
-                    actions.hideSections();
-                    if (Evergage.cashDom(personalizationSectionsSelector).length > 0) {
-                        hasBeenHidden = true;
-                    }
-                }
-            });
-        },
-        addOnEventResponse: () => {
-            document.addEventListener(Evergage.CustomEvents.OnEventResponse, (domEvent) => {
-                const { campaignResponses } = ((domEvent.detail || {}).response || {});
-                if ((campaignResponses || []).length >= 1) {
-                    personalizedSectionsString = "";
-                    for (const campaign of campaignResponses) {
-                        const { contentZone } = ((campaign || {}).payload || {});
-                        const contentZoneSelector = Evergage.getContentZoneSelector(((campaign || {}).payload || {}).contentZone);
-                        if (typeof contentZoneSelector === "string") {
-                            hiddenSections[contentZone] = contentZoneSelector;
-                            utils.addToPersonalizedSectionsString(contentZoneSelector);
+        
+            const utils = {
+                getGlobalContentZoneSelectors: () => {
+                    return ((Evergage.getState().config.global || {}).contentZones || [])
+                        .filter((contentZone) => (contentZone || {}).selector)
+                        .map((contentZone) => contentZone.selector);
+                },
+                getPageTypeContentZoneSelectors: () => {
+                    const { pageTypes } = Evergage.getState().config;
+                    return pageTypes.length < 1
+                        ? []
+                        : pageTypes
+                            .map((pageType) => pageType.contentZones || [])
+                            .reduce((acc, contentZonesArr) => acc.concat(contentZonesArr), [])
+                            .filter((contentZone) => (contentZone || {}).selector)
+                            .map((contentZone) => contentZone.selector);
+                },
+                buildContentZoneSelectors: () => {
+                    return [
+                        ...new Set([
+                            ...utils.getGlobalContentZoneSelectors(),
+                            ...utils.getPageTypeContentZoneSelectors()
+                        ])
+                    ];
+                },
+                addToPersonalizedSectionsString: (selector) => {
+                    if (typeof selector === "string") {
+                        try {
+                            document.querySelector(selector);
+                            if (personalizedSectionsString !== "") {
+                                personalizedSectionsString += ", ";
+                            }
+                            personalizedSectionsString += selector;
+                        } catch (exception) {
+                            Evergage.sendException(exception, "hideSectionsInvalidCSSSelector");
                         }
                     }
-                    if (!personalizedSectionsString) {
-                        actions.reshowPersonalizedSections();
+                },
+                hasBeenReshown: () => {
+                    return Evergage.cashDom(personalizationSectionsSelector).length === 0;
+                }
+            };
+        
+            const actions = {
+                hideSections: () => {
+                    if (sectionsHaveEverBeenHidden) return;
+        
+                    const selectors = utils.buildContentZoneSelectors();
+                    if (selectors.length === 0) {
+                        Evergage.log.debug("Evergage: Issue with malformed request in hideSections.");
                         return;
                     }
-
-                    Evergage.cashDom(personalizationSectionsSelector).text(`${personalizedSectionsString} { visibility: hidden !important; }`);
-                } else {
-                    actions.reshowPersonalizedSections();
+                    for (const selector of selectors) {
+                        utils.addToPersonalizedSectionsString(selector);
+                    }
+        
+                    if (!personalizedSectionsString) return;
+        
+                    const head = document.head || document.getElementsByTagName("head")[0];
+                    const style = document.createElement("style");
+                    Evergage.cashDom(style)
+                        .attr({ type: "text/css", class: "evergagePersonalizationSections" })
+                        .text(`${personalizedSectionsString} { visibility: hidden !important; }`);
+        
+                    clearTimeout(window.evergageReshowPersonalizedSectionsTimeout);
+                    window.evergageReshowPersonalizedSectionsTimeout = setTimeout(function () {
+                        if (utils.hasBeenReshown()) return;
+                        shouldReshowNow = true;
+                        actions.reshowPersonalizedSectionsNow();
+                    }, timeoutOptions.redisplayTimeout);
+        
+                    head.appendChild(style);
+                    sectionsHaveEverBeenHidden = true;
+                },
+                reshowPersonalizedSections: () => {
+                    if (utils.hasBeenReshown()) return;
+                    try {
+                        if (typeof window.requestAnimationFrame === "function") {
+                            Evergage.log.info("Evergage: Scheduling for next animation frame redisplay of sections of the page marked for personalization.");
+                            window.requestAnimationFrame(actions.reshowPersonalizedSectionsNow);
+                        } else {
+                            actions.reshowPersonalizedSectionsNow();
+                        }
+                    } catch (exception) {
+                        Evergage.sendException(exception, "reshowPersonalizedSections");
+                    }
+                },
+                reshowReadyPersonalizedSections: () => {
+                    Evergage.cashDom(personalizationSectionsSelector).text(`${personalizedSectionsString} { visibility: hidden !important }`);
+                    Evergage.log.info(`Evergage: Redisplaying the following sections of the page marked for personalization: ${personalizedSectionsString}`);
+                },
+                reshowAllPersonalizedSections: () => {
+                    Evergage.cashDom(personalizationSectionsSelector).remove();
+                    Evergage.log.info("Evergage: Redisplaying outstanding sections of the page marked for personalization.");
+                },
+                reshowPersonalizedSectionsNow: () => {
+                    if (utils.hasBeenReshown()) return;
+                    try {
+                        if (shouldReshowNow || Object.keys(hiddenSections).length === 0) {
+                            actions.reshowAllPersonalizedSections();
+                        } else if (Object.keys(hiddenSections).length > 0) {
+                            personalizedSectionsString = "";
+                            for (const contentZone in hiddenSections) {
+                                utils.addToPersonalizedSectionsString(hiddenSections[contentZone]);
+                            }
+                            actions.reshowReadyPersonalizedSections();
+                        }
+                    } catch (exception) {
+                        Evergage.sendException(exception, "reshowPersonalizedSectionsNow");
+                    }
                 }
-            });
-        },
-        addOnTemplateDisplayEnd: () => {
-            document.addEventListener(Evergage.CustomEvents.OnTemplateDisplayEnd, (domEvent) => {
-                if (utils.hasBeenReshown()) return;
-                const { contentZone } = ((domEvent.detail || {}).payload || {});
-                if (typeof contentZone === "string" && hiddenSections[contentZone]) {
-                    delete hiddenSections[contentZone];
+            };
+        
+            const beaconListeners = {
+                addOnInit: () => {
+                    document.addEventListener(Evergage.CustomEvents.OnInit, (domEvent) => {
+                        clearTimeout(window.evergagePageMatchTimeout);
+                        window.evergagePageMatchTimeout = setTimeout(function () {
+                            const { pageType } = (Evergage.getCurrentPage().source || {});
+                            if (utils.hasBeenReshown() || (typeof pageType === "string" && pageType !== "")) return;
+                            shouldReshowNow = true;
+                            actions.reshowPersonalizedSectionsNow();
+                        }, timeoutOptions.pageMatchTimeout);
+                    });
+                },
+                addPageMatchStatusUpdated: () => {
+                    document.addEventListener(Evergage.CustomEvents.OnPageMatchStatusUpdated, (domEvent) => {
+                        if (!hasBeenHidden) {
+                            actions.hideSections();
+                            if (Evergage.cashDom(personalizationSectionsSelector).length > 0) {
+                                hasBeenHidden = true;
+                            }
+                        }
+                    });
+                },
+                addOnEventResponse: () => {
+                    document.addEventListener(Evergage.CustomEvents.OnEventResponse, (domEvent) => {
+                        const { campaignResponses } = ((domEvent.detail || {}).response || {});
+                        if ((campaignResponses || []).length >= 1) {
+                            personalizedSectionsString = "";
+                            for (const campaign of campaignResponses) {
+                                const { contentZone } = ((campaign || {}).payload || {});
+                                const contentZoneSelector = Evergage.getContentZoneSelector(((campaign || {}).payload || {}).contentZone);
+                                if (typeof contentZoneSelector === "string") {
+                                    hiddenSections[contentZone] = contentZoneSelector;
+                                    utils.addToPersonalizedSectionsString(contentZoneSelector);
+                                }
+                            }
+                            if (!personalizedSectionsString) {
+                                actions.reshowPersonalizedSections();
+                                return;
+                            }
+        
+                            Evergage.cashDom(personalizationSectionsSelector).text(`${personalizedSectionsString} { visibility: hidden !important; }`);
+                        } else {
+                            actions.reshowPersonalizedSections();
+                        }
+                    });
+                },
+                addOnTemplateDisplayEnd: () => {
+                    document.addEventListener(Evergage.CustomEvents.OnTemplateDisplayEnd, (domEvent) => {
+                        if (utils.hasBeenReshown()) return;
+                        const { contentZone } = ((domEvent.detail || {}).payload || {});
+                        if (typeof contentZone === "string" && hiddenSections[contentZone]) {
+                            delete hiddenSections[contentZone];
+                        }
+                        actions.reshowPersonalizedSections();
+                    });
+                },
+            };
+        
+            return {
+                setPageMatchTimeout: (millis) => {
+                    if (typeof millis === "number" && millis >= 0) {
+                        timeoutOptions.pageMatchTimeout = parseInt(millis);
+                    } else {
+                        Evergage.log.warn("flickerDefender.js", "setPageMatchTimeout: Passed argument must be a number and must be greater than or equal to 0", millis);
+                    }
+                },
+                setRedisplayTimeout: (millis) => {
+                    if (typeof millis === "number" && millis >= 0) {
+                        timeoutOptions.redisplayTimeout = parseInt(millis);
+                    } else {
+                        Evergage.log.warn("flickerDefender.js", "setRedisplayTimeout: Passed argument must be a number and must be greater than or equal to 0", millis);
+                    }
+                },
+                init: function() {
+                    for (const key in beaconListeners) {
+                        beaconListeners[key]();
+                    }
                 }
-                actions.reshowPersonalizedSections();
-            });
-        },
-    };
-
-    return {
-        setPageMatchTimeout: (millis) => {
-            if (typeof millis === "number" && millis >= 0) {
-                timeoutOptions.pageMatchTimeout = parseInt(millis);
-            } else {
-                Evergage.log.warn("flickerDefender.js", "setPageMatchTimeout: Passed argument must be a number and must be greater than or equal to 0", millis);
-            }
-        },
-        setRedisplayTimeout: (millis) => {
-            if (typeof millis === "number" && millis >= 0) {
-                timeoutOptions.redisplayTimeout = parseInt(millis);
-            } else {
-                Evergage.log.warn("flickerDefender.js", "setRedisplayTimeout: Passed argument must be a number and must be greater than or equal to 0", millis);
-            }
-        },
-        init: function() {
-            for (const key in beaconListeners) {
-                beaconListeners[key]();
-            }
+            };
+        })();
+        
+        if (window.SalesforceInteractions && window.SalesforceInteractions.mcis) {
+            window.SalesforceInteractions.mcis.FlickerDefender = Evergage.FlickerDefender;
         }
-    };
-})();
-
-if (window.SalesforceInteractions && window.SalesforceInteractions.mcis) {
-    window.SalesforceInteractions.mcis.FlickerDefender = Evergage.FlickerDefender;
-}
-
-if (typeof Evergage.FlickerDefender.init === "function" && (window.frameElement || {}).id !== "siteEditorFrame") {
-    Evergage.FlickerDefender.init();
-}
-
+        
+        if (typeof Evergage.FlickerDefender.init === "function" && (window.frameElement || {}).id !== "siteEditorFrame") {
+            Evergage.FlickerDefender.init();
+        }
+        
 } catch (e) {
     if (typeof window.Evergage === "object" && typeof window.Evergage.getVersion === "function" && window.Evergage.getVersion() >= 5) {
         Evergage.sendException(e, "beaconExtension: Flicker Defender:flickerDefender.js");
@@ -623,101 +6883,101 @@ try {
 
 try {
     // syncs with @frontend/packages/ui-chrome-extension/src/constants.ts#CUSTOM_EVENT.MESSAGE_FROM_INTERACTION_STUDIO_TOOLS_GEAR
-var VE_CUSTOM_EVENT_NAME = 'msg_from_interaction_studio_tools_gear';
-// syncs with @frontend/packages/ui-chrome-extension/src/constants.ts#EVENT_TYPE.MESSAGE_FROM_INTERACTION_STUDIO_TOOLS_GEAR
-var TO_LAUNCHER_MESSAGE_TYPE = 'nxve_messageFromInteractionStudioToolsGear';
-
-var TO_LAUNCHER_PAYLOAD_TYPE = 'beaconSDK_domEvent';
-
-function sendMessageToEvergageLauncher(message) {
-    try {
-        document.dispatchEvent(
-            new CustomEvent(VE_CUSTOM_EVENT_NAME, {
-                detail: JSON.stringify(message),
-            })
-        );
-    } catch (e) {
-        console.error(e);
-    }
-}
-
-var eventLinkId = null;
-
-if (Evergage !== null) {
-    document.addEventListener(Evergage.CustomEvents.OnInit, function (
-        domEvent
-    ) {
-        sendMessageToEvergageLauncher({
-            type: TO_LAUNCHER_MESSAGE_TYPE,
-            payload: {
-                type: TO_LAUNCHER_PAYLOAD_TYPE,
-                payload: {
-                    name: Evergage.CustomEvents.OnInit,
-                    detail: domEvent.detail,
-                },
-            },
-        });
-    });
-
-    document.addEventListener(Evergage.CustomEvents.OnEventSend, function (
-        domEvent
-    ) {
-        eventLinkId = Math.random().toString().slice(2);
-
-        const { actionEvent } = domEvent.detail || {};
-        actionEvent._toolsEventLinkId = eventLinkId;
-        if (actionEvent.interaction) {
-            actionEvent.explain = true;
-        } else {
-            actionEvent.debug = Object.assign(
-                (actionEvent.debug || {}),
-                { explanations: true }
-            );
+        var VE_CUSTOM_EVENT_NAME = 'msg_from_interaction_studio_tools_gear';
+        // syncs with @frontend/packages/ui-chrome-extension/src/constants.ts#EVENT_TYPE.MESSAGE_FROM_INTERACTION_STUDIO_TOOLS_GEAR
+        var TO_LAUNCHER_MESSAGE_TYPE = 'nxve_messageFromInteractionStudioToolsGear';
+        
+        var TO_LAUNCHER_PAYLOAD_TYPE = 'beaconSDK_domEvent';
+        
+        function sendMessageToEvergageLauncher(message) {
+            try {
+                document.dispatchEvent(
+                    new CustomEvent(VE_CUSTOM_EVENT_NAME, {
+                        detail: JSON.stringify(message),
+                    })
+                );
+            } catch (e) {
+                console.error(e);
+            }
         }
-
-        sendMessageToEvergageLauncher({
-            type: TO_LAUNCHER_MESSAGE_TYPE,
-            payload: {
-                type: TO_LAUNCHER_PAYLOAD_TYPE,
-                payload: {
-                    name: Evergage.CustomEvents.OnEventSend,
-                    detail: domEvent.detail,
-                },
-            },
-        });
-    });
-
-    document.addEventListener(Evergage.CustomEvents.OnEventResponse, function (
-        domEvent
-    ) {
-        if (domEvent.detail) {
-            const currentPage = Evergage.getCurrentPage();
-            const sitemapConfig = Evergage.getState().config;
-            const matchedPageConfig =
-                Evergage.getState().result &&
-                Evergage.getState().result.matchedConfig;
-
-            eventLinkId = null;
-
-            sendMessageToEvergageLauncher({
-                type: TO_LAUNCHER_MESSAGE_TYPE,
-                payload: {
-                    type: TO_LAUNCHER_PAYLOAD_TYPE,
+        
+        var eventLinkId = null;
+        
+        if (Evergage !== null) {
+            document.addEventListener(Evergage.CustomEvents.OnInit, function (
+                domEvent
+            ) {
+                sendMessageToEvergageLauncher({
+                    type: TO_LAUNCHER_MESSAGE_TYPE,
                     payload: {
-                        name: Evergage.CustomEvents.OnEventResponse,
-                        detail: {
-                            response: domEvent.detail.response,
-                            currentPage: currentPage,
-                            sitemapConfig: sitemapConfig,
-                            matchedPageConfig: matchedPageConfig,
+                        type: TO_LAUNCHER_PAYLOAD_TYPE,
+                        payload: {
+                            name: Evergage.CustomEvents.OnInit,
+                            detail: domEvent.detail,
                         },
                     },
-                },
+                });
+            });
+        
+            document.addEventListener(Evergage.CustomEvents.OnEventSend, function (
+                domEvent
+            ) {
+                eventLinkId = Math.random().toString().slice(2);
+        
+                const { actionEvent } = domEvent.detail || {};
+                actionEvent._toolsEventLinkId = eventLinkId;
+                if (actionEvent.interaction) {
+                    actionEvent.explain = true;
+                } else {
+                    actionEvent.debug = Object.assign(
+                        (actionEvent.debug || {}),
+                        { explanations: true }
+                    );
+                }
+        
+                sendMessageToEvergageLauncher({
+                    type: TO_LAUNCHER_MESSAGE_TYPE,
+                    payload: {
+                        type: TO_LAUNCHER_PAYLOAD_TYPE,
+                        payload: {
+                            name: Evergage.CustomEvents.OnEventSend,
+                            detail: domEvent.detail,
+                        },
+                    },
+                });
+            });
+        
+            document.addEventListener(Evergage.CustomEvents.OnEventResponse, function (
+                domEvent
+            ) {
+                if (domEvent.detail) {
+                    const currentPage = Evergage.getCurrentPage();
+                    const sitemapConfig = Evergage.getState().config;
+                    const matchedPageConfig =
+                        Evergage.getState().result &&
+                        Evergage.getState().result.matchedConfig;
+        
+                    eventLinkId = null;
+        
+                    sendMessageToEvergageLauncher({
+                        type: TO_LAUNCHER_MESSAGE_TYPE,
+                        payload: {
+                            type: TO_LAUNCHER_PAYLOAD_TYPE,
+                            payload: {
+                                name: Evergage.CustomEvents.OnEventResponse,
+                                detail: {
+                                    response: domEvent.detail.response,
+                                    currentPage: currentPage,
+                                    sitemapConfig: sitemapConfig,
+                                    matchedPageConfig: matchedPageConfig,
+                                },
+                            },
+                        },
+                    });
+                }
             });
         }
-    });
-}
-
+        
 } catch (e) {
     if (typeof window.Evergage === "object" && typeof window.Evergage.getVersion === "function" && window.Evergage.getVersion() >= 5) {
         Evergage.sendException(e, "beaconExtension: System Tools:interactionStudioTools.js");
@@ -727,231 +6987,231 @@ if (Evergage !== null) {
 
 try {
     Evergage.Surveys = Evergage.Surveys || (function() {
-
-    var SURVEY_ACTION = {
-        SUBMIT: "submit",
-        PAGE_NEXT: "pageNext",
-        PAGE_PREV: "pagePrev"
-    };
-
-    var SURVEY_EVENT_PARAM = {
-        SURVEY_ACTION: 'surveyAction',
-        SURVEY_ID: 'surveyId',
-        SURVEY_START_TIME: 'surveyStartTime'
-    };
-
-    var initialized = false;
-
-    function isInitialized() {
-        return (initialized || typeof window.Survey === 'object');
-    }
-
-    /**
-     * processSurveyResponses
-     * ** recursive **
-     * @param responses {object} a collection of survey element response values keyed by element.name (question.name)
-     * @param elements {object} a collection of SurveyElements for a given page or panel of a survey
-     * @param addResponseFn {function} invoked for each questionType element that has been processed
-     */
-    function processSurveyResponses(elements, survey, sender) {
-        try {
-
-            var shouldHandleElementAsPanel = function(element) {
-                return (element.type === 'panel'
-                        && Evergage.cashDom.isArray(element.elements)
-                        && element.elements.length !== 0
-                        && !isString(element.questionId));
+        
+            var SURVEY_ACTION = {
+                SUBMIT: "submit",
+                PAGE_NEXT: "pageNext",
+                PAGE_PREV: "pagePrev"
             };
-
-            var formatAnswer = function(answer) {
-                var result = (answer) ? answer : null;
-                if (result != null && Evergage.cashDom.isArray(result) || isPlainObject(result)) {
-                    result = JSON.stringify(result);
-                }
-                return result;
+        
+            var SURVEY_EVENT_PARAM = {
+                SURVEY_ACTION: 'surveyAction',
+                SURVEY_ID: 'surveyId',
+                SURVEY_START_TIME: 'surveyStartTime'
             };
-
-            var formatQuestionId = function(element, rowId) {
-                var questionId = "survey:" + survey.id + ":" + element.questionId;
-                if (isString(rowId)) {
-                    questionId += ":" + rowId;
-                }
-                return questionId;
-            };
-
-            var responses = [];
-            for (var elementIndex = 0; elementIndex < elements.length; elementIndex++) {
-                var element = elements[elementIndex];
-                if (shouldHandleElementAsPanel(element)) {
-                    responses = responses.concat(processSurveyResponses(element.elements, survey, sender));
-                } else {
-                    if (element.type === "matrix") {
-                        for (var rowIndex = 0; rowIndex < element.rows.length; rowIndex++) {
-                            var row = element.rows[rowIndex];
-                            var rowId = element.rowIds[rowIndex];
-                            var allRowsValues = sender.data[element.name] ? sender.data[element.name] : {};
-                            if (allRowsValues[row.value]) {
-                                var rowValue = allRowsValues[row.value];
-                                responses.push({ questionId: formatQuestionId(element, rowId), answer: rowValue });
+        
+            var initialized = false;
+        
+            function isInitialized() {
+                return (initialized || typeof window.Survey === 'object');
+            }
+        
+            /**
+             * processSurveyResponses
+             * ** recursive **
+             * @param responses {object} a collection of survey element response values keyed by element.name (question.name)
+             * @param elements {object} a collection of SurveyElements for a given page or panel of a survey
+             * @param addResponseFn {function} invoked for each questionType element that has been processed
+             */
+            function processSurveyResponses(elements, survey, sender) {
+                try {
+        
+                    var shouldHandleElementAsPanel = function(element) {
+                        return (element.type === 'panel'
+                                && Evergage.cashDom.isArray(element.elements)
+                                && element.elements.length !== 0
+                                && !isString(element.questionId));
+                    };
+        
+                    var formatAnswer = function(answer) {
+                        var result = (answer) ? answer : null;
+                        if (result != null && Evergage.cashDom.isArray(result) || isPlainObject(result)) {
+                            result = JSON.stringify(result);
+                        }
+                        return result;
+                    };
+        
+                    var formatQuestionId = function(element, rowId) {
+                        var questionId = "survey:" + survey.id + ":" + element.questionId;
+                        if (isString(rowId)) {
+                            questionId += ":" + rowId;
+                        }
+                        return questionId;
+                    };
+        
+                    var responses = [];
+                    for (var elementIndex = 0; elementIndex < elements.length; elementIndex++) {
+                        var element = elements[elementIndex];
+                        if (shouldHandleElementAsPanel(element)) {
+                            responses = responses.concat(processSurveyResponses(element.elements, survey, sender));
+                        } else {
+                            if (element.type === "matrix") {
+                                for (var rowIndex = 0; rowIndex < element.rows.length; rowIndex++) {
+                                    var row = element.rows[rowIndex];
+                                    var rowId = element.rowIds[rowIndex];
+                                    var allRowsValues = sender.data[element.name] ? sender.data[element.name] : {};
+                                    if (allRowsValues[row.value]) {
+                                        var rowValue = allRowsValues[row.value];
+                                        responses.push({ questionId: formatQuestionId(element, rowId), answer: rowValue });
+                                    }
+                                }
+                            } else {
+                                var answer = formatAnswer(sender.data[element.name]);
+                                if (answer) {
+                                    responses.push({ questionId: formatQuestionId(element), answer: answer });
+                                }
                             }
                         }
+                    }
+                    return responses;
+                } catch (e) {
+                    Evergage.log.error('Evergage: There was an error when attempting to ' +
+                                               'process survey responses: ', e);
+                }
+            }
+        
+            function isPlainObject(obj) {
+                if (typeof obj !== 'object' || obj === null) return false;
+                const proto = Object.getPrototypeOf(obj);
+                return proto === null || proto === Object.prototype;
+            }
+        
+            function isString(property) {
+                return typeof property === 'string' || property instanceof String;
+            }
+        
+            function handleSurveyAction(surveyAction, survey, sender) {
+        
+                try {
+                    if (surveyAction === SURVEY_ACTION.PAGE_NEXT) {
+                        return;
                     } else {
-                        var answer = formatAnswer(sender.data[element.name]);
-                        if (answer) {
-                            responses.push({ questionId: formatQuestionId(element), answer: answer });
+                        var surveyActionEvent = new SurveyActionEvent(surveyAction, survey.id, new Date().getTime());
+                        Evergage.cashDom.each(survey.config.pages, function(index, page) {
+                            surveyActionEvent.addResponses(processSurveyResponses(page.elements, survey, sender));
+                        });
+                        surveyActionEvent.send();
+                    }
+                } catch (e) {
+                    Evergage.log.error('Evergage: There was an error when attempting to ' +
+                                               'submit survey responses surveyId[' + message.surveyConfig.survey.id + ']: ', e);
+                }
+            }
+        
+            function renderSurvey(survey, renderTarget) {
+                if (typeof survey !== "object" || !renderTarget) return Evergage.log.error("Evergage: renderSurvey arguments are not valid");
+                return injectSurveyResourcesIntoPage().then(() => {
+                    try {
+                        if (surveyAlreadyRendered(survey.id, renderTarget)) return;
+                        window.Survey.JsonObject.metaData.addProperty("questionbase", "questionId");
+                        window.Survey.JsonObject.metaData.addProperty("questionbase", "rowIds");
+                        var surveyModel = new window.Survey.Model(survey.config);
+                        // eslint-disable-next-line new-cap
+                        Evergage.cashDom(renderTarget).Survey({
+                            model: surveyModel,
+                            onComplete: function(sender) {
+                                handleSurveyAction(SURVEY_ACTION.SUBMIT, survey, sender);
+                            },
+                            onPartialSend: function(sender) {
+                                handleSurveyAction(SURVEY_ACTION.PAGE_NEXT, survey, sender);
+                            }
+                        });
+                        Evergage.cashDom(renderTarget).attr("data-evg-survey-id", survey.id);
+                    } catch (e) {
+                        Evergage.log.error('Evergage: There was an error when attempting to render the survey', e);
+                    }
+                });
+            }
+        
+            function injectSurveyResourceIntoPage(type, url) {
+                try {
+                    var documentHead = document.head || document.getElementsByTagName('head')[0];
+                    var isStylesheet = (type === 'style');
+                    var surveyResourceElement = document.createElement(isStylesheet ? 'link' : 'script');
+                    surveyResourceElement.setAttribute('type', ((isStylesheet) ? 'text/css' : 'text/javascript'));
+                    surveyResourceElement.setAttribute('class', 'evergageSurvey-' + type);
+                    surveyResourceElement.setAttribute(((isStylesheet) ? 'href' : 'src'), url);
+                    if (isStylesheet) {
+                        surveyResourceElement.setAttribute('rel', 'stylesheet');
+                    }
+                    documentHead.appendChild(surveyResourceElement);
+                    Evergage.log.trace('Evergage: Injected survey resource of type[' + type + '] url[' + url + ']');
+                } catch (e) {
+                    Evergage.log.error('Evergage: There was an error when attempting to inject surveyJS resources into the page: ', e);
+                }
+        
+            }
+        
+            function injectSurveyResourcesIntoPage() {
+                return new Promise(resolve => {
+                    if (isInitialized()) {
+                        return resolve();
+                    }
+                    var SURVEY_JS_CDN_BASE_URL = '//cdn.evergage.com/evergage-content/3pp';
+                    var SURVEY_JS_VERSION = 'surveyjs-1.0.95';
+                    var SURVEY_JS_SCRIPT_NAME = 'survey.cash.min.js';
+                    var SURVEY_JS_STYLESHEET_NAME = 'survey.min.css';
+                    Object.entries({
+                        script: [SURVEY_JS_CDN_BASE_URL, SURVEY_JS_VERSION, SURVEY_JS_SCRIPT_NAME].join('/'),
+                        style: [SURVEY_JS_CDN_BASE_URL, SURVEY_JS_VERSION, SURVEY_JS_STYLESHEET_NAME].join('/')
+                    }).forEach(function(entry) {
+                        const [resourceType, resourceUrl] = entry
+                        injectSurveyResourceIntoPage(resourceType, resourceUrl);
+                    });
+                    var interval = setInterval(function(){
+                        if (Evergage.cashDom.fn.Survey != null && window.Survey != null) {
+                            clearInterval(interval);
+                            initialized = true;
+                            resolve();
                         }
-                    }
+                    }, 100);
+                })
+            }
+        
+            function surveyAlreadyRendered(surveyId, renderTarget) {
+                return Evergage.cashDom(renderTarget).attr("data-evg-survey-id") === surveyId;
+            }
+        
+            function SurveyActionEvent(surveyAction, surveyId, timestamp) {
+                this.params = { source: {}, attributes: {} };
+                this.params.source[SURVEY_EVENT_PARAM.SURVEY_ACTION] = surveyAction;
+                this.params.source[SURVEY_EVENT_PARAM.SURVEY_ID] = surveyId;
+                this.params.source[SURVEY_EVENT_PARAM.SURVEY_START_TIME] = timestamp;
+            }
+        
+            SurveyActionEvent.prototype.addResponses = function(responses) {
+                for (var i = 0; i < responses.length; i++) {
+                    var response = responses[i];
+                    this.addResponse(response.questionId, response.answer);
                 }
-            }
-            return responses;
-        } catch (e) {
-            Evergage.log.error('Evergage: There was an error when attempting to ' +
-                                       'process survey responses: ', e);
-        }
-    }
-
-    function isPlainObject(obj) {
-        if (typeof obj !== 'object' || obj === null) return false;
-        const proto = Object.getPrototypeOf(obj);
-        return proto === null || proto === Object.prototype;
-    }
-
-    function isString(property) {
-        return typeof property === 'string' || property instanceof String;
-    }
-
-    function handleSurveyAction(surveyAction, survey, sender) {
-
-        try {
-            if (surveyAction === SURVEY_ACTION.PAGE_NEXT) {
-                return;
-            } else {
-                var surveyActionEvent = new SurveyActionEvent(surveyAction, survey.id, new Date().getTime());
-                Evergage.cashDom.each(survey.config.pages, function(index, page) {
-                    surveyActionEvent.addResponses(processSurveyResponses(page.elements, survey, sender));
-                });
-                surveyActionEvent.send();
-            }
-        } catch (e) {
-            Evergage.log.error('Evergage: There was an error when attempting to ' +
-                                       'submit survey responses surveyId[' + message.surveyConfig.survey.id + ']: ', e);
-        }
-    }
-
-    function renderSurvey(survey, renderTarget) {
-        if (typeof survey !== "object" || !renderTarget) return Evergage.log.error("Evergage: renderSurvey arguments are not valid");
-        return injectSurveyResourcesIntoPage().then(() => {
-            try {
-                if (surveyAlreadyRendered(survey.id, renderTarget)) return;
-                window.Survey.JsonObject.metaData.addProperty("questionbase", "questionId");
-                window.Survey.JsonObject.metaData.addProperty("questionbase", "rowIds");
-                var surveyModel = new window.Survey.Model(survey.config);
-                // eslint-disable-next-line new-cap
-                Evergage.cashDom(renderTarget).Survey({
-                    model: surveyModel,
-                    onComplete: function(sender) {
-                        handleSurveyAction(SURVEY_ACTION.SUBMIT, survey, sender);
-                    },
-                    onPartialSend: function(sender) {
-                        handleSurveyAction(SURVEY_ACTION.PAGE_NEXT, survey, sender);
+            };
+        
+            SurveyActionEvent.prototype.addResponse = function(name, value) {
+                Evergage.log.trace('Evergage: Adding response to SurveyActionEvent: ' + JSON.stringify({ name: name, value: value }));
+                this.params.attributes[name] = value;
+            };
+        
+            SurveyActionEvent.prototype.send = function() {
+                Evergage.log.trace('Evergage: Tracking survey event: ', this.params);
+                Evergage.sendEvent({
+                    action: "Survey " + this.params.source[SURVEY_EVENT_PARAM.SURVEY_ACTION],
+                    source: this.params.source,
+                    user: {
+                        attributes: this.params.attributes
                     }
                 });
-                Evergage.cashDom(renderTarget).attr("data-evg-survey-id", survey.id);
-            } catch (e) {
-                Evergage.log.error('Evergage: There was an error when attempting to render the survey', e);
-            }
-        });
-    }
-
-    function injectSurveyResourceIntoPage(type, url) {
-        try {
-            var documentHead = document.head || document.getElementsByTagName('head')[0];
-            var isStylesheet = (type === 'style');
-            var surveyResourceElement = document.createElement(isStylesheet ? 'link' : 'script');
-            surveyResourceElement.setAttribute('type', ((isStylesheet) ? 'text/css' : 'text/javascript'));
-            surveyResourceElement.setAttribute('class', 'evergageSurvey-' + type);
-            surveyResourceElement.setAttribute(((isStylesheet) ? 'href' : 'src'), url);
-            if (isStylesheet) {
-                surveyResourceElement.setAttribute('rel', 'stylesheet');
-            }
-            documentHead.appendChild(surveyResourceElement);
-            Evergage.log.trace('Evergage: Injected survey resource of type[' + type + '] url[' + url + ']');
-        } catch (e) {
-            Evergage.log.error('Evergage: There was an error when attempting to inject surveyJS resources into the page: ', e);
+            };
+        
+            return {
+                renderSurvey: renderSurvey,
+                injectSurveyResourcesIntoPage: injectSurveyResourcesIntoPage
+            };
+        
+        })(window);
+        
+        if (window.SalesforceInteractions && window.SalesforceInteractions.mcis) {
+            window.SalesforceInteractions.mcis.Surveys = Evergage.Surveys;
         }
-
-    }
-
-    function injectSurveyResourcesIntoPage() {
-        return new Promise(resolve => {
-            if (isInitialized()) {
-                return resolve();
-            }
-            var SURVEY_JS_CDN_BASE_URL = '//cdn.evergage.com/evergage-content/3pp';
-            var SURVEY_JS_VERSION = 'surveyjs-1.0.95';
-            var SURVEY_JS_SCRIPT_NAME = 'survey.cash.min.js';
-            var SURVEY_JS_STYLESHEET_NAME = 'survey.min.css';
-            Object.entries({
-                script: [SURVEY_JS_CDN_BASE_URL, SURVEY_JS_VERSION, SURVEY_JS_SCRIPT_NAME].join('/'),
-                style: [SURVEY_JS_CDN_BASE_URL, SURVEY_JS_VERSION, SURVEY_JS_STYLESHEET_NAME].join('/')
-            }).forEach(function(entry) {
-                const [resourceType, resourceUrl] = entry
-                injectSurveyResourceIntoPage(resourceType, resourceUrl);
-            });
-            var interval = setInterval(function(){
-                if (Evergage.cashDom.fn.Survey != null && window.Survey != null) {
-                    clearInterval(interval);
-                    initialized = true;
-                    resolve();
-                }
-            }, 100);
-        })
-    }
-
-    function surveyAlreadyRendered(surveyId, renderTarget) {
-        return Evergage.cashDom(renderTarget).attr("data-evg-survey-id") === surveyId;
-    }
-
-    function SurveyActionEvent(surveyAction, surveyId, timestamp) {
-        this.params = { source: {}, attributes: {} };
-        this.params.source[SURVEY_EVENT_PARAM.SURVEY_ACTION] = surveyAction;
-        this.params.source[SURVEY_EVENT_PARAM.SURVEY_ID] = surveyId;
-        this.params.source[SURVEY_EVENT_PARAM.SURVEY_START_TIME] = timestamp;
-    }
-
-    SurveyActionEvent.prototype.addResponses = function(responses) {
-        for (var i = 0; i < responses.length; i++) {
-            var response = responses[i];
-            this.addResponse(response.questionId, response.answer);
-        }
-    };
-
-    SurveyActionEvent.prototype.addResponse = function(name, value) {
-        Evergage.log.trace('Evergage: Adding response to SurveyActionEvent: ' + JSON.stringify({ name: name, value: value }));
-        this.params.attributes[name] = value;
-    };
-
-    SurveyActionEvent.prototype.send = function() {
-        Evergage.log.trace('Evergage: Tracking survey event: ', this.params);
-        Evergage.sendEvent({
-            action: "Survey " + this.params.source[SURVEY_EVENT_PARAM.SURVEY_ACTION],
-            source: this.params.source,
-            user: {
-                attributes: this.params.attributes
-            }
-        });
-    };
-
-    return {
-        renderSurvey: renderSurvey,
-        injectSurveyResourcesIntoPage: injectSurveyResourcesIntoPage
-    };
-
-})(window);
-
-if (window.SalesforceInteractions && window.SalesforceInteractions.mcis) {
-    window.SalesforceInteractions.mcis.Surveys = Evergage.Surveys;
-}
 } catch (e) {
     if (typeof window.Evergage === "object" && typeof window.Evergage.getVersion === "function" && window.Evergage.getVersion() >= 5) {
         Evergage.sendException(e, "beaconExtension: Surveys:SurveyJS.js");
@@ -961,100 +7221,100 @@ if (window.SalesforceInteractions && window.SalesforceInteractions.mcis) {
 
 try {
     (function () {
-    var VE_LOCAL_STORAGE_KEY = 'evgVE';
-    var SITEMAP_EDITOR_LOCAL_STORAGE_KEY = 'evgVE-cdp-sitemap-editor';
-
-    var SdkNamespace = window.Evergage || window.SalesforceInteractions;
-
-    function injectEditorLaunchScript(isStandaloneSitemapEditor) {
-        try {
-            // getConfig() is not exposed on the Salesforce/CDP build of the SDK
-            var trackerUrl =
-                typeof SdkNamespace.getConfig === 'function' &&
-                SdkNamespace.getConfig().trackerUrl;
-
-            var baseUrl = !isStandaloneSitemapEditor && trackerUrl ? trackerUrl : 'https://cdn.evergage.com';
-            var scriptPath = isStandaloneSitemapEditor
-                ? '/evergage-content/sitemap-editor/4.0.2/launch.sitemap-editor.js'
-                : '/visual-editor/launch.js';
-
-            var scriptUrl = [baseUrl, scriptPath].join('');
-
-            var scriptTag = document.createElement('script');
-            scriptTag.setAttribute('id', 'salesforceInteractionsLauncherScript');
-            scriptTag.src = scriptUrl;
-
-            if (
-                document.getElementById('salesforceInteractionsLauncherScript') == null
-            ) {
-                document.head.appendChild(scriptTag);
-            } else {
-                SdkNamespace.log.info('Launch script is already here.');
+            var VE_LOCAL_STORAGE_KEY = 'evgVE';
+            var SITEMAP_EDITOR_LOCAL_STORAGE_KEY = 'evgVE-cdp-sitemap-editor';
+        
+            var SdkNamespace = window.Evergage || window.SalesforceInteractions;
+        
+            function injectEditorLaunchScript(isStandaloneSitemapEditor) {
+                try {
+                    // getConfig() is not exposed on the Salesforce/CDP build of the SDK
+                    var trackerUrl =
+                        typeof SdkNamespace.getConfig === 'function' &&
+                        SdkNamespace.getConfig().trackerUrl;
+        
+                    var baseUrl = !isStandaloneSitemapEditor && trackerUrl ? trackerUrl : 'https://cdn.evergage.com';
+                    var scriptPath = isStandaloneSitemapEditor
+                        ? '/evergage-content/sitemap-editor/4.0.2/launch.sitemap-editor.js'
+                        : '/visual-editor/launch.js';
+        
+                    var scriptUrl = [baseUrl, scriptPath].join('');
+        
+                    var scriptTag = document.createElement('script');
+                    scriptTag.setAttribute('id', 'salesforceInteractionsLauncherScript');
+                    scriptTag.src = scriptUrl;
+        
+                    if (
+                        document.getElementById('salesforceInteractionsLauncherScript') == null
+                    ) {
+                        document.head.appendChild(scriptTag);
+                    } else {
+                        SdkNamespace.log.info('Launch script is already here.');
+                    }
+                } catch (err) {
+                    SdkNamespace.log.error(
+                        'Failed to inject Salesforce Interactions Launcher script: ' + err
+                    );
+                }
             }
-        } catch (err) {
-            SdkNamespace.log.error(
-                'Failed to inject Salesforce Interactions Launcher script: ' + err
-            );
-        }
-    }
-
-    function getUrlBoolean(name) {
-        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-        var results = regex.exec(location.search);
-        return results === null ? null : results[1] === 'true';
-    }
-
-    var visualEditorParam = getUrlBoolean('evergageEditor');
-    var standaloneEditorParam = getUrlBoolean('salesforceInteractionsSitemapEditor');
-
-    var visualEditorEnabledInStorage = function () {
-        return window.localStorage[VE_LOCAL_STORAGE_KEY] === 'true';
-    };
-
-    var standloneSitemapEditorEnabledInStorage = function () {
-        return window.localStorage[SITEMAP_EDITOR_LOCAL_STORAGE_KEY] === 'true';
-    };
-
-    // honor and set local storage based off queryParam
-    if (visualEditorParam !== null) {
-        window.localStorage.setItem(VE_LOCAL_STORAGE_KEY, visualEditorParam);
-    }
-
-    if (standaloneEditorParam !== null) {
-        window.localStorage.setItem(
-            SITEMAP_EDITOR_LOCAL_STORAGE_KEY,
-            standaloneEditorParam
-        );
-    }
-
-    var inSiteEditorFrameContext =
-        window.frameElement && window.frameElement.id === 'siteEditorFrame';
-
-    // trigger off of localStorage only
-    // chrome extension reads/sets localStorage more easily than modifying the currentTab URL
-    if (
-        !visualEditorEnabledInStorage() &&
-        !standloneSitemapEditorEnabledInStorage() &&
-        !inSiteEditorFrameContext
-    ) {
-        return;
-    }
-
-    if (window.top === window.self || inSiteEditorFrameContext) {
-        document.addEventListener(
-            SdkNamespace.CustomEvents.OnInit,
-            (event) => {
-                injectEditorLaunchScript(
-                    standloneSitemapEditorEnabledInStorage()
+        
+            function getUrlBoolean(name) {
+                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                var results = regex.exec(location.search);
+                return results === null ? null : results[1] === 'true';
+            }
+        
+            var visualEditorParam = getUrlBoolean('evergageEditor');
+            var standaloneEditorParam = getUrlBoolean('salesforceInteractionsSitemapEditor');
+        
+            var visualEditorEnabledInStorage = function () {
+                return window.localStorage[VE_LOCAL_STORAGE_KEY] === 'true';
+            };
+        
+            var standloneSitemapEditorEnabledInStorage = function () {
+                return window.localStorage[SITEMAP_EDITOR_LOCAL_STORAGE_KEY] === 'true';
+            };
+        
+            // honor and set local storage based off queryParam
+            if (visualEditorParam !== null) {
+                window.localStorage.setItem(VE_LOCAL_STORAGE_KEY, visualEditorParam);
+            }
+        
+            if (standaloneEditorParam !== null) {
+                window.localStorage.setItem(
+                    SITEMAP_EDITOR_LOCAL_STORAGE_KEY,
+                    standaloneEditorParam
                 );
-                event.preventDefault();
-            },
-            { once: true }
-        );
-    }
-})();
-
+            }
+        
+            var inSiteEditorFrameContext =
+                window.frameElement && window.frameElement.id === 'siteEditorFrame';
+        
+            // trigger off of localStorage only
+            // chrome extension reads/sets localStorage more easily than modifying the currentTab URL
+            if (
+                !visualEditorEnabledInStorage() &&
+                !standloneSitemapEditorEnabledInStorage() &&
+                !inSiteEditorFrameContext
+            ) {
+                return;
+            }
+        
+            if (window.top === window.self || inSiteEditorFrameContext) {
+                document.addEventListener(
+                    SdkNamespace.CustomEvents.OnInit,
+                    (event) => {
+                        injectEditorLaunchScript(
+                            standloneSitemapEditorEnabledInStorage()
+                        );
+                        event.preventDefault();
+                    },
+                    { once: true }
+                );
+            }
+        })();
+        
 } catch (e) {
     if (typeof window.Evergage === "object" && typeof window.Evergage.getVersion === "function" && window.Evergage.getVersion() >= 5) {
         Evergage.sendException(e, "beaconExtension: Visual Editor:visualEditor.js");
@@ -1063,245 +7323,341 @@ try {
 
 
 try {
-var evgr = Evergage.resolvers;
-window._sf = SalesforceInteractions;
-
-const domIsInteractive = () => new Promise(c => { _sf.cashDom(() => { c(!0); }); });
-
-const tC = t => t.toLowerCase().split(" ").map(function (t) {
-    return t.charAt(0).toUpperCase() + t.slice(1);
-}).join(" ");
-
-const $cL = _sf.mcis.getParameterByName("category");
-
-let store_url = "https://www.tenthousand.cc/";
-let product_id = window.location.pathname.split('/')[2];
-let full_url = store_url + "/products/" + product_id + ".json";
-
-window.LevFunctions = {
-    getCurrentShopifyProduct(callback) {
-        let result;
-        $.ajax({
-            type: 'GET',
-            url: full_url,
-            dataType: 'json',
-            async: false,
-            success: function (data) {
-                result = data;
+        var evgr = Evergage.resolvers;
+        const checkCookie = (domain) => {
+            if (domain === "sciex.com") {
+                let cookieExist = document.cookie.split('; ').find((row) => row.startsWith('OptanonConsent'));
+                if (cookieExist && cookieExist.split("groups=")[1].includes('C0004%3A1')) {
+                    return [{
+                        provider: "OneTrust",
+                        purpose: SalesforceInteractions.mcis.ConsentPurpose.Personalization,
+                        status: SalesforceInteractions.ConsentStatus.OptIn
+                    }];
+                }
             }
-        });
-        return result;
-    },
-    getShopifyProductVariant() {
-        let selectedVariantId = window.location.href.split("variant=")[1];
-        let selectedVariantProductInfo = LevFunctions.getCurrentShopifyProduct().product.variants.find(item => selectedVariantId == item.id);
-
-        return selectedVariantProductInfo;
-    },
-    addToWishList() {
-        let wish = document.querySelector("a.add-to-wishlist-btn");
-        wish.addEventListener("click", () => {
-            _sf.sendEvent({
-                interaction: {
-                    name: _sf.CatalogObjectInteractionName.FavoriteCatalogObject,
-                    catalogObject: {
-                        type: LevFunctions.getCurrentShopifyProduct().product.product_type,
-                        id: LevFunctions.getShopifyProductVariant().id,
-                        attributes: {
-                            user: {
-                                wishListIds: LevFunctions.getShopifyProductVariant().id
-                            },
-                            sku: {
-                                id: LevFunctions.getShopifyProductVariant().sku
-                            }
-                        }
-                    }
-                }
-            });
-        }, true);
-    },
-    addToCart() {
-        let add = document.querySelector("button#AddToCart");
-        add.addEventListener("click", () => {
-            _sf.sendEvent({
-                interaction: {
-                    name: _sf.CartInteractionName.AddToCart,
-                    catalogObject: {
-                        type: LevFunctions.getCurrentShopifyProduct().product.product_type,
-                        id: LevFunctions.getShopifyProductVariant().id,
-                        attributes: {
-                            sku: {
-                                id: LevFunctions.getShopifyProductVariant().sku
-                            }
-                        }
-                    }
-                }
-            });
-        }, true);
-    }
-};
-
-_sf.init({
-    cookieDomain: "tenthousand.cc"
-}).then(() => {
-    const sitemapConfig = {
-        global: {
-            onActionEvent: (actionEvent) => {
-                const email = _sf.mcis.getValueFromNestedObject(
-                    "window._etmc.user_info.email"
-                );
-                if (email) {
+            return [{
+                provider: "OneTrust",
+                purpose: SalesforceInteractions.mcis.ConsentPurpose.Personalization,
+                status: SalesforceInteractions.ConsentStatus.OptOut
+            }];
+        };
+        
+        const getDomain = () => window.location.hostname;
+        
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        
+        function isValidEmail(email) {
+            return emailRegex.test(email);
+        }
+        
+        const sciexSitemapConfig = {
+            global: {
+                onActionEvent: (actionEvent) => {
                     actionEvent.user = actionEvent.user || {};
+                    actionEvent.user.attributes = actionEvent.user.attributes || {};
                     actionEvent.user.identities = actionEvent.user.identities || {};
-                    actionEvent.user.identities.emailAddress = email;
-                }
-                return actionEvent;
-            },
-            contentZones: [
-                { name: "global_infobar_top_of_page", selector: "header.site-header" },
-                { name: "global_infobar_bottom_of_page", selector: "footer.site-footer" }
-            ],
-            listeners: [
-                _sf.listener("submit", ".email-signup", () => {
-                    const email = _sf.cashDom("#dwfrm_mcsubscribe_email").val();
-                    if (email) {
-                        _sf.sendEvent({
-                            interaction: { name: "Email Sign Up - Footer" },
-                            user: {
-                                identities: { 
-                                    emailAddress: email 
-                                } }
-                        });
-                    }
-                })
-            ]
-        },
-        pageTypeDefault: {
-            name: "default",
-            interaction: {
-                name: "Default Page"
-            }
-        },
-        pageTypes: [
-            {
-                name: "Home",
-                isMatch: () => /^\/$/.test(window.location.pathname),
-                interaction: {
-                    name: "Homepage"
+                    return actionEvent;
                 },
-                contentZones: [
-                    { name: "home_hero", selector: ".hero-slide-content" },
-                    { name: "home_recommendations", selector: ".slider-section.hide-arrows" }
-                ]
+                contentZones: [{ name: "global_popup"}],
+                listeners: []
             },
-            {
-                name: "Login",
-                isMatch: () => /^\/account\/login/.test(window.location.pathname),
+            pageTypeDefault: {
+                name: "default",
                 interaction: {
-                    name: "Login"
+                    name: "Default Page"
+                }
+            },
+             pageTypes: [
+                {
+                        name: "Homepage",
+                        isMatch: () => /^\/$/.test(window.location.pathname),
+                        interaction: {
+                          name: "SCIEX Homepage",
+                        },
+                        contentZones: [
+                          { name: "HomePage_popup"}
+                        ],
+                    },
+              {
+                name: "SCIEX Products",
+                isMatch: () => {
+                  let regex = new RegExp("\/products$");
+                  return regex.test(window.location.href.split('?')[0].split('#')[0]);
+                },
+                interaction: {
+                  name: "SCIEX Products"
+                }
+              },
+              {
+                name: "SCIEX Category Page",
+                isMatch: () => {
+                  let regex = new RegExp("\/products\/[a-z0-9-]+$");
+                  return regex.test(window.location.href.split('?')[0].split('#')[0]);
+                },
+                interaction: {
+                  name: "SCIEX Category Page"
+                }
+              },
+              {
+                name: "SCIEX OS Software Landing Page",
+                isMatch: () => {
+                  let regex = new RegExp("/products\/software\/sciex-os-software");
+                  return regex.test(window.location.href.split('?')[0].split('#')[0]);
+                },
+                interaction: {
+                  name: "SCIEX OS Software Landing Page"
+                }
+              },
+              {
+                name: "SCIEX Sub Category Page",
+                isMatch: () => {
+                  let regex = new RegExp("\/products\/[a-z0-9-]+\/[a-z0-9-]+\/?$");
+                  let osSoftwareRegex = new RegExp("\/products\/software\/os-software-roi-calculator");
+                  return regex.test(window.location.href.split('?')[0].split('#')[0]) && !osSoftwareRegex.test(window.location.href.split('?')[0].split('#')[0]);
+                },
+                interaction: {
+                  name: "SCIEX Sub Category Page"
+                }
+              },
+              {
+                name: "SCIEX Product Detail Page",
+                isMatch: () => {
+                  let regex = new RegExp("/products\/+[a-z0-9-]+\/[a-z0-9-]+\/[a-z0-9-]+");
+                  return regex.test(window.location.href.split('?')[0].split('#')[0]);
+                },
+                interaction: {
+                  name: "SCIEX Product Detail Page"
+                }
+              },
+              {
+                name: "SCIEX Applications Landing Page",
+                isMatch: () => {
+                  let regex = new RegExp("/applications");
+                  return regex.test(window.location.href.split('?')[0].split('#')[0]);
+                },
+                interaction: {
+                  name: "SCIEX Applications Landing Page"
+                }
+              },
+        
+              {
+                name: "SCIEX OS Software Access Form",
+                isMatch: () => {
+                  let regex = new RegExp("\/Hidden\/landing-pages\/sciex-os-software-cloudshare");
+                  return regex.test(window.location.href.split('?')[0].split('#')[0]);
+                },
+                interaction: {
+                  name: "SCIEX OS Software Access Form"
+                }
+              },
+              {
+                name: "SCIEX Software ROI Calculator",
+                isMatch: () => {
+                  let regex = new RegExp("\/products\/software\/os-software-roi-calculator");
+                  return regex.test(window.location.href.split('?')[0].split('#')[0]);
+                },
+                interaction: {
+                  name: "SCIEX Software ROI Calculator"
+                }
+              },
+              {
+                name: "SCIEX Request Information",
+                isMatch: () => {
+                  let regex = new RegExp("\/form-pages\/request-information");
+                  return regex.test(window.location.href.split('?')[0].split('#')[0]);
+                },
+                interaction: {
+                  name: "SCIEX Request Information"
+                },
+                listeners: []
+              },
+              {
+                name: "SCIEX Product Request Form",
+                isMatch: () => {
+                  let regex = new RegExp("\/form-pages\/product-request");
+                  return regex.test(window.location.href.split('?')[0].split('#')[0]);
+                },
+                interaction: {
+                  name: "SCIEX Product Request Form"
+                },
+                listeners: []
+              },
+              {
+                name: "SCIEX Create an Account",
+                isMatch: () => {
+                  let regex = new RegExp("\/support\/create-account");
+                  return regex.test(window.location.href.split('?')[0].split('#')[0]);
+                },
+                interaction: {
+                  name: "SCIEX Create an Account"
                 },
                 listeners: [
-                    _sf.listener("click", "input[type='submit']", () => {
-                        const email = _sf.cashDom("input[id='CustomerEmail']").val();
-                        if (email) {
-                            _sf.sendEvent({
-                                interaction: { name: "Logged In" },
-                                user: { identities: { emailAddress: email } }
-                            });
+                  SalesforceInteractions.listener("click", "input[type=button].next_btn", async() => {
+                    let email = SalesforceInteractions.cashDom("form.regform input#accountEmail").val();
+                    let firstName = SalesforceInteractions.cashDom('form.regform input[name="firstName"]').val();
+                    let lastName = SalesforceInteractions.cashDom('form.regform input[name="lastName"]').val();
+        
+                    if (isValidEmail(email)) {
+                      SalesforceInteractions.sendEvent({
+                        interaction: {
+                          name: "SCIEX Create Account Form Submission"
+                        },
+                        user: {
+                          attributes: {
+                            emailAddress: email,
+                            firstName: firstName,
+                            lastName: lastName
+                          }
                         }
-                    })
+                      });
+                    }
+                  })
                 ]
-            },
-            {
-                name: "Collections",
-                isMatch: () => /\/collections\?category/.test(window.location.href),
-                interaction: {
-                    name: "Viewed " + tC($cL) + "Collection"
-                }
-            },
-            {
-                name: "Product Detail",
+              },
+              {
+                name: "SCIEX Now Support Page",
                 isMatch: () => {
-                    return !/^\/products\/digital-gift-card$/.test(window.location.pathname)
-                        .then(() => {
-                            return /\/products/.test(window.location.pathname);
-                        });
+                  let regex = new RegExp("/support$");
+                  return regex.test(window.location.href.split('?')[0].split('#')[0]);
                 },
                 interaction: {
-                    name: _sf.CatalogObjectInteractionName.ViewCatalogObject,
-                    catalogObject: {
-                        type: "Product",
-                        id: LevFunctions.getCurrentShopifyProduct().product.id,
-                        attributes: {
-                            sku: {
-                                id: LevFunctions.getCurrentShopifyProduct().product.variants[0].sku
-                            },
-                            name: LevFunctions.getCurrentShopifyProduct().product.title,
-                            description: _sf.resolvers.fromMeta("og:description"),
-                            url: _sf.resolvers.fromHref(),
-                            imageUrl: LevFunctions.getCurrentShopifyProduct().product.images[0].src,
-                            inventoryCount: LevFunctions.getCurrentShopifyProduct().product.variants[0].inventory_quantity,
-                            price: LevFunctions.getCurrentShopifyProduct().product.variants[0].price,
-                            rating: _sf.DisplayUtils.pageElementLoaded("div.yotpo-bottomline.pull-left.star-clickable", "html").then(
-                                (ele) => {
-                                    return _sf.cashDom("div.yotpo-bottomline.pull-left.star-clickable > span > span.sr-only")[0].innerText;
-                                }
-                            ),
-                        },
-                        relatedCatalogObjects: {
-                            Category: [LevFunctions.getCurrentShopifyProduct().product.handle],
-                            Color: LevFunctions.getCurrentShopifyProduct().product.variants[0].option1,
-                            Size: LevFunctions.getCurrentShopifyProduct().product.variants[0].option2,
-                            Inseam: LevFunctions.getCurrentShopifyProduct().product.variants[0].option3
-                        }
-                    }
+                  name: "SCIEX Now Support Page"
                 }
-            },
-            {
-                name: "Digital Gift Card",
-                isMatch: () => /^\/products\/digital-gift-card$/.test(window.location.pathname),
-                interaction: {
-                    name: _sf.CatalogObjectInteractionName.ViewCatalogObject,
-                    catalogObject: {
-                        type: "Product",
-                        id: LevFunctions.getCurrentShopifyProduct().product.id,
-                        attributes: {
-                            sku: {
-                                id: LevFunctions.getCurrentShopifyProduct().product.variants[0].id
-                            },
-                            name: tC(LevFunctions.getCurrentShopifyProduct().product.title),
-                            description: _sf.resolvers.fromMeta("og:description")(),
-                            url: _sf.resolvers.fromHref(),
-                            imageUrl: LevFunctions.getCurrentShopifyProduct().product.images[0].src,
-                            price: LevFunctions.getCurrentShopifyProduct().product.variants[0].price
-                        }
-                    }
-                }
-            },
-            {
-                name: "Article",
-                isMatch: () => /^\/blogs/.test(window.location.pathname),
-                interaction: {
-                    name: _sf.CatalogObjectInteractionName.ViewCatalogObject,
-                    catalogObject: {
-                        type: "Article",
-                        id: () => ShopifyAnalytics.meta.page.resourceId,
-                        attributes: {
-                            name: () => _sf.resolvers.fromMeta("og:title")(),
-                            url: _sf.resolvers.fromCanonical(),
-                            imageUrl: _sf.resolvers.fromMeta("og:image")(),
-                            description: _sf.resolvers.fromMeta("og:description")()
-                        },
-                        relatedCatalogObjects: {
-                            Category: tC(_sf.resolvers.fromSelector("p.athlete-trainings")())
-                        },
-                    },
+              },
+              {
+                name: "SCIEX Now Support Cases",
+                isMatch: () => {
+                  let regex = new RegExp("\/support\/support-cases");
+                  return regex.test(window.location.href.split('?')[0].split('#')[0]);
                 },
-            },
-        ]
-    };
-    _sf.initSitemap(sitemapConfig);
-});
+                interaction: {
+                  name: "SCIEX Now Support Cases"
+                }
+              },
+              {
+                name: "SCIEX Training Learning Hub Page",
+                isMatch: () => {
+                  let regex = new RegExp("\/support\/training$");
+                  return regex.test(window.location.href.split('?')[0].split('#')[0]);
+                },
+                interaction: {
+                  name: "SCIEX Training Learning Hub Page"
+                }
+              },
+              {
+                name: "SCIEX Training Course Catalog All",
+                isMatch: () => {
+                  let regex = new RegExp("\/support\/training\/course-catalog");
+                  let urlParams = new URLSearchParams(window.location.search);
+                  let isViewAll = (urlParams.get('view') == 'all' ? true : false);
+        
+                  return regex.test(window.location.href.split('?')[0].split('#')[0]) && isViewAll;
+                },
+                interaction: {
+                  name: "SCIEX Training Course Catalog All"
+                }
+              },
+              {
+                name: "SCIEX Virtual Training Programs",
+                isMatch: () => {
+                  let regex = new RegExp("/support/training/success-programs/success-virtual-training-program");
+                  return regex.test(window.location.href.split('?')[0].split('#')[0]);
+                },
+                interaction: {
+                  name: "SCIEX Virtual Training Programs"
+                }
+              },
+              {
+                name: "SCIEX Training Course Catalog",
+                isMatch: () => {
+                  let regex = new RegExp("\/support\/training\/course-catalog");
+                  let urlParams = new URLSearchParams(window.location.search);
+                  let isViewCustomer = (urlParams.get('view') == 'atcustomer' ? true : false);
+        
+                  return regex.test(window.location.href.split('?')[0].split('#')[0]) && isViewCustomer;
+                },
+                interaction: {
+                  name: "SCIEX Training Course Catalog"
+                }
+              },
+              {
+                name: "SCIEX Learning Manager Overview",
+                isMatch: () => {
+                  let regex = new RegExp("/support/training/learning-manager-overview");
+                  return regex.test(window.location.href.split('?')[0].split('#')[0]);
+                },
+                interaction: {
+                  name: "SCIEX Learning Manager Overview"
+                }
+              },
+              {
+                name: "SCIEX My Account Profile",
+                isMatch: () => {
+        
+                  let regex = new RegExp("\/support\/profile\/account-information$");
+                  return regex.test(window.location.href.split('?')[0].split('#')[0]);
+                },
+                interaction: {
+                  name: "SCIEX My Account Profile"
+                }
+              },
+              {
+                name: "SCIEX Knowledge Base Articles",
+                isMatch: () => {
+                  let regex = new RegExp("\/support\/knowledge-base-articles");
+                  return regex.test(window.location.href.split('?')[0].split('#')[0]);
+                },
+                interaction: {
+                  name: "SCIEX Knowledge Base Articles"
+                }
+              },
+              {
+                name: "SCIEX Service Landing Page",
+                isMatch: () => {
+                  let regex = new RegExp("\/support\/professional-lab-services");
+                  return regex.test(window.location.href.split('?')[0].split('#')[0]);
+                },
+                interaction: {
+                  name: "SCIEX Service Landing Page"
+                }
+              },
+              {
+                name: "SCIEX Request Support Form Page",
+                isMatch: () => {
+                  let regex = new RegExp("\/support\/request-support");
+                  return regex.test(window.location.href.split('?')[0].split('#')[0]);
+                },
+                interaction: {
+                  name: "SCIEX Request Support Form Page"
+                }
+              },
+              {
+                name: "SCIEX Contact Us",
+                isMatch: () => {
+                  let regex = new RegExp("\/about-us\/contact-us");
+                  return regex.test(window.location.href.split('?')[0].split('#')[0]);
+                },
+                interaction: {
+                  name: "SCIEX Contact Us"
+                }
+              }
+            ]
+        };
+        
+        const initializeMCP = () => {
+            const domain = getDomain();
+            const consent = checkCookie(domain);
+        
+            SalesforceInteractions.init({
+                cookieDomain: domain,
+                consents: consent
+            }).then(() => {
+                SalesforceInteractions.initSitemap(sciexSitemapConfig);
+            });
+        };
+        
+        initializeMCP();
+        
 } catch (e) {
     if (typeof window.Evergage === "object" && typeof window.Evergage.getVersion === "function" && window.Evergage.getVersion() >= 5) {
           console.error("siteWideJavascriptError" + e);    }

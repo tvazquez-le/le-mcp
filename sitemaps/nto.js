@@ -422,15 +422,7 @@ SalesforceInteractions.init({
         isMatch: () => /\/homepage/.test(window.location.href),
         interaction: {
           name: "Homepage",
-        },
-        contentZones: [
-          { name: "home_hero", selector: ".experience-carousel-bannerCarousel" },
-          {
-            name: "home_sub_hero",
-            selector: ".experience-carousel-bannerCarousel + .experience-component",
-          },
-          { name: "home_popup" },
-        ],
+        }
       },
       {
         name: "community_login",
